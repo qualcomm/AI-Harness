@@ -1,0 +1,591 @@
+/* dragon-task-orchestrator progress card (variant C: vertical timeline).
+   Chrome mirrors .chat-tool-card so the card reads as one more card in the
+   message flow; only the timeline and subtask rows are specific to it. */
+.dto-card {
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--card) 88%, var(--secondary) 12%);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--bg) 75%, transparent);
+  margin-top: 6px;
+}
+
+.dto-card__summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 13px;
+  background: none;
+  border: 0;
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dto-card__summary:hover {
+  background: color-mix(in srgb, var(--card) 70%, var(--bg-hover) 30%);
+}
+
+.dto-card__summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.dto-card__chevron {
+  color: var(--muted);
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.dto-card--open .dto-card__chevron {
+  transform: rotate(90deg);
+}
+
+.dto-card__title {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+.dto-card__count {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.dto-card__spacer {
+  flex: 1;
+}
+
+.dto-card__body {
+  padding: 0 13px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dto-section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+/* ---------- subtask layer groups ---------- */
+.dto-layer-group + .dto-layer-group {
+  margin-top: 8px;
+}
+
+.dto-layer-group__title {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 4px 0 2px;
+}
+
+/* ---------- subtask rows ---------- */
+.dto-subtask {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 5px 0;
+  border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+}
+
+.dto-subtask__idx {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  min-width: 18px;
+}
+
+.dto-subtask__desc {
+  flex: 1;
+  line-height: 1.55;
+}
+
+.dto-agent {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-2-subtle);
+  color: var(--accent-2);
+  white-space: nowrap;
+}
+
+/*
+ * Routing not yet resolved. Muted rather than accented so the row does not read as
+ * assigned: the plan is published before the classifier runs, and this badge is
+ * replaced by the real agent id seconds later.
+ */
+.dto-agent--pending {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--fg-subtle);
+}
+
+/*
+ * Acceptance criteria. A wrapping block rather than a `.dto-agent` badge: badges are
+ * nowrap and sized for short agent ids, so a sentence-long criterion overflowed the
+ * card sideways. Indented to the same gutter as the activity list so both read as
+ * detail belonging to the row above.
+ */
+.dto-criteria {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 2px 0 0 22px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.dto-criteria__label {
+  flex: none;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--warn-subtle);
+  color: var(--warn);
+  white-space: nowrap;
+}
+
+/* min-width:0 lets a long criterion wrap inside the flex row instead of forcing it wide. */
+.dto-criteria__text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.dto-criteria--none {
+  opacity: 0.7;
+}
+
+.dto-state {
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* Running indicator for a subtask currently delegated to its agent. */
+/*
+ * Indeterminate spinner.
+ *
+ * TWO THINGS HERE ARE ABOUT BEING SEEN, not decoration — an earlier version animated
+ * correctly and still read as a static dot:
+ *
+ * 1. HALF the ring is lit (top + right), not a quarter. A 90° arc on a circle this small
+ *    is only a few physical pixels, and the eye cannot track its angle; a 180° sweep is
+ *    unmistakable at the same size.
+ * 2. The unlit track is 15% of currentColor, not 30%. The lit arc and the track are the
+ *    same hue, so the alpha gap IS the contrast — at 30% against a muted grey there was
+ *    barely any.
+ *
+ * Sized 11px rather than 9px for the same reason: the ring has to survive a 2px border.
+ */
+.dto-spinner {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 5px;
+  vertical-align: -1px;
+  border: 2px solid color-mix(in srgb, currentColor 15%, transparent);
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  border-radius: 50%;
+  animation: dto-spin 0.7s linear infinite;
+}
+
+@keyframes dto-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dto-state--ok {
+  color: var(--ok);
+}
+
+.dto-state--err {
+  color: var(--danger);
+}
+
+/*
+ * A step never reached because an earlier one aborted the run.
+ *
+ * Muted rather than red on purpose: it is not a failure of this step, and colouring it
+ * like one would point at the wrong place when reading which step broke.
+ */
+.dto-state--skip {
+  color: var(--muted);
+}
+
+.dto-state--run {
+  color: var(--muted);
+}
+
+/* ---------- per-layer timeline ---------- */
+.dto-timeline {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.dto-tl {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+}
+
+.dto-tl__rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dto-tl__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-full);
+  margin-top: 5px;
+  background: var(--border-strong);
+}
+
+.dto-tl__dot--ok {
+  background: var(--ok);
+}
+
+.dto-tl__dot--err {
+  background: var(--danger);
+}
+
+.dto-tl__dot--skip {
+  background: var(--muted);
+}
+
+/*
+ * The in-progress step on the rail, pinging outward.
+ *
+ * The base ring is kept as the first shadow and only the second one animates, so the dot
+ * still reads as "current" at every frame of the cycle rather than disappearing at the
+ * trough — a marker that is invisible half the time is worse than a static one.
+ */
+.dto-tl__dot--run {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
+  animation: dto-halo 1.6s ease-out infinite;
+}
+
+@keyframes dto-halo {
+  from {
+    box-shadow:
+      0 0 0 3px var(--accent-subtle),
+      0 0 0 3px color-mix(in srgb, var(--accent) 45%, transparent);
+  }
+  to {
+    box-shadow:
+      0 0 0 3px var(--accent-subtle),
+      0 0 0 9px transparent;
+  }
+}
+
+.dto-tl__line {
+  flex: 1;
+  width: 1px;
+  background: color-mix(in srgb, var(--border-strong) 80%, transparent);
+  margin: 3px 0;
+}
+
+.dto-tl__content {
+  padding-bottom: 10px;
+}
+
+.dto-tl__head {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.dto-tl__title {
+  color: var(--text-strong);
+  font-size: 12px;
+}
+
+.dto-tl__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.dto-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: color-mix(in srgb, var(--card) 60%, var(--bg) 40%);
+}
+
+.dto-chip--ok {
+  border-color: color-mix(in srgb, var(--ok) 40%, transparent);
+  background: var(--ok-subtle);
+  color: var(--ok);
+}
+
+.dto-chip--err {
+  border-color: color-mix(in srgb, var(--danger) 40%, transparent);
+  background: var(--danger-subtle);
+  color: var(--danger);
+}
+
+.dto-chip--skip {
+  border-color: color-mix(in srgb, var(--muted) 30%, transparent);
+  color: var(--muted);
+}
+
+.dto-chip__agent {
+  font-family: var(--mono);
+}
+
+/* Live tool activity relayed from a subtask's child session. */
+/*
+ * "Summarizing…" row. Sits below the subtask list as a distinct block rather than as
+ * another subtask row, because it is a pipeline-level stage, not a task. Given a
+ * background so it stays findable in a long card — this is the one thing the user is
+ * waiting on for a couple of minutes.
+ */
+.dto-summarizing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 4px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-2-subtle);
+  font-size: 12.5px;
+  color: var(--accent-2);
+}
+
+.dto-summarizing__text {
+  line-height: 1.5;
+}
+
+/*
+ * "Re-decomposing…" block, occupying the slot the confirm bar just vacated.
+ *
+ * Column layout rather than the single row `.dto-summarizing` uses, because it carries
+ * the operator's own wording back — that quote is the load-bearing part (it confirms
+ * the text was received) and needs room to wrap.
+ */
+.dto-redecomposing {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 8px 0 4px;
+  padding: 9px 11px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-2-subtle);
+  font-size: 12.5px;
+  color: var(--accent-2);
+}
+
+.dto-redecomposing__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Quoted operator input: wraps and preserves their line breaks, and is visually set
+ * apart so it does not read as the card's own copy. */
+.dto-redecomposing__quote {
+  padding-left: 8px;
+  border-left: 2px solid currentColor;
+  color: var(--text);
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.dto-redecomposing__hint {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.dto-activity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 2px 0 6px 22px;
+  padding-left: 8px;
+  border-left: 1px solid var(--border-strong);
+}
+
+.dto-activity__row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  min-width: 0;
+}
+
+.dto-activity__dot {
+  flex: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.dto-activity__dot--ok {
+  background: var(--ok);
+}
+
+.dto-activity__dot--err {
+  background: var(--danger);
+}
+
+/*
+ * A tool call still in flight.
+ *
+ * Breathing rather than spinning: at 5px a rotating border reads as a flicker, and this
+ * dot sits in a column with the finished ok/err dots, so it has to stay the same shape to
+ * keep the column scannable. It never fades to nothing, for the same reason as the rail
+ * dot above.
+ */
+.dto-activity__dot--run {
+  background: var(--accent);
+  animation: dto-breathe 1.2s ease-in-out infinite;
+}
+
+@keyframes dto-breathe {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.7);
+  }
+}
+
+.dto-activity__tool {
+  font-family: var(--mono);
+  color: inherit;
+  flex: none;
+}
+
+.dto-activity__role {
+  flex: none;
+  font-size: 10px;
+  padding: 0 4px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+}
+
+/* The only flexible column: long urls/paths truncate instead of wrapping the row. */
+.dto-activity__detail {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--mono);
+  opacity: 0.85;
+}
+
+.dto-activity__pending {
+  flex: none;
+}
+
+/* Confirmation gate: only present while the orchestrator is blocked on an answer. */
+.dto-confirm {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border-strong));
+  background: color-mix(in srgb, var(--accent) 6%, var(--card));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dto-confirm__hint {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.dto-confirm__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dto-confirm__btn {
+  font: inherit;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--card);
+  color: inherit;
+  cursor: pointer;
+}
+
+.dto-confirm__btn:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.dto-confirm__btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.dto-confirm__btn--primary {
+  border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+  background: var(--accent);
+  color: var(--accent-fg, #fff);
+}
+
+.dto-confirm__input {
+  font: inherit;
+  font-size: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  color: inherit;
+  resize: vertical;
+}
+
+.dto-confirm__error {
+  font-size: 11px;
+  color: var(--danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dto-card__chevron {
+    transition: none;
+  }
+
+  /*
+   * Stopped mid-sweep the ring would read as a broken circle, so the static form is an
+   * even ring at full strength — still a visible "active" marker, just not a moving one.
+   */
+  .dto-spinner {
+    animation: none;
+    border-color: color-mix(in srgb, currentColor 55%, transparent);
+  }
+
+  /*
+   * Same rule for the two progress dots: the animation stops, the colour stays. Both are
+   * left at their most visible state by their `from`/`0%` frame, so dropping the animation
+   * costs nothing — which is why neither needs a static override here.
+   */
+  .dto-tl__dot--run,
+  .dto-activity__dot--run {
+    animation: none;
+  }
+}

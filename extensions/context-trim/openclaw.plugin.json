@@ -1,0 +1,83 @@
+{
+  "id": "context-trim",
+  "name": "Context Trim",
+  "description": "Replaces the default system prompt with a compact prompt for low-context local or edge models and summarizes project context instead of injecting large workspace files.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": { "type": "boolean" },
+      "targets": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "provider": { "type": "string" },
+            "model": { "type": "string" }
+          },
+          "required": ["provider", "model"]
+        }
+      },
+      "skills": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "includeProjectContext": { "type": "boolean" },
+      "projectFiles": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "perFileCharBudget": {
+        "type": "integer",
+        "minimum": 80,
+        "maximum": 8000
+      },
+      "totalProjectCharBudget": {
+        "type": "integer",
+        "minimum": 200,
+        "maximum": 20000
+      },
+      "extraInstructions": { "type": "string" },
+      "logging": { "type": "boolean" }
+    }
+  },
+  "uiHints": {
+    "enabled": {
+      "label": "Enable Context Trim Mode",
+      "help": "When enabled, this plugin can replace the default system prompt with a compact prompt for low-context models."
+    },
+    "targets": {
+      "label": "Provider + Model Targets",
+      "help": "Exact provider/model pairs that should use the compact prompt. The plugin only activates when both provider and model match a configured target."
+    },
+    "skills": {
+      "label": "Injected Skills",
+      "help": "Optional skill names to inject into the compact system prompt. Matching skills are loaded from the workspace or bundled skill sources and rendered into the Skills section."
+    },
+    "includeProjectContext": {
+      "label": "Include Project Context Summary",
+      "help": "When enabled, the plugin summarizes selected workspace files into a short Project Context section."
+    },
+    "projectFiles": {
+      "label": "Project Files",
+      "help": "Workspace files to summarize when building compact project context."
+    },
+    "perFileCharBudget": {
+      "label": "Per-file Character Budget",
+      "help": "Maximum characters to keep from each summarized workspace file."
+    },
+    "totalProjectCharBudget": {
+      "label": "Total Project Context Budget",
+      "help": "Maximum total characters across all summarized workspace files."
+    },
+    "extraInstructions": {
+      "label": "Extra Instructions",
+      "help": "Optional extra operator instructions appended to the compact system prompt."
+    },
+    "logging": {
+      "label": "Enable Logging",
+      "help": "Emit info logs when the plugin replaces the default system prompt."
+    }
+  }
+}

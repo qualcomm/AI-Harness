@@ -1,0 +1,14 @@
+{
+  "name": "@openclaw/dragon-task-orchestrator",
+  "version": "2026.7.30",
+  "description": "OpenClaw dynamic task decomposition and delegation plugin (delegation mode C)",
+  "type": "module",
+  "devDependencies": {
+    "openclaw": "workspace:*"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

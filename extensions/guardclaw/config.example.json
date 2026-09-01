@@ -1,0 +1,70 @@
+{
+  "$schema": "https://docs.openclaw.ai/schema.json",
+  "plugins": {
+    "enabled": ["guardclaw"]
+  },
+  "privacy": {
+    "enabled": true,
+    "checkpoints": {
+      "onUserMessage": ["ruleDetector"],
+      "onToolCallProposed": ["ruleDetector"],
+      "onToolCallExecuted": ["ruleDetector"]
+    },
+    "rules": {
+      "keywords": {
+        "S2": ["password", "api_key", "secret", "token", "credential", "auth_token"],
+        "S3": ["ssh", "id_rsa", "private_key", ".pem", ".key", ".env", "master_password"]
+      },
+      "patterns": {
+        "S2": [
+          "\\b(?:10|172\\.(?:1[6-9]|2\\d|3[01])|192\\.168)\\.\\d{1,3}\\.\\d{1,3}\\b",
+          "(?:mysql|postgres|mongodb|redis)://[^\\s]+",
+          "\\b(?:sk|key|token)-[A-Za-z0-9]{16,}\\b"
+        ],
+        "S3": ["-----BEGIN (?:RSA |EC |DSA |OPENSSH )?PRIVATE KEY-----", "AKIA[0-9A-Z]{16}"]
+      },
+      "tools": {
+        "S2": {
+          "tools": ["exec", "shell"],
+          "paths": ["~/secrets", "~/private"]
+        },
+        "S3": {
+          "tools": ["system.run", "sudo"],
+          "paths": ["~/.ssh", "/etc", "~/.aws", "~/.config/credentials", "/root"]
+        }
+      }
+    },
+    "localModel": {
+      "enabled": false,
+      "provider": "ollama",
+      "model": "llama3.2:3b",
+      "endpoint": "http://localhost:11434"
+    },
+    "guardAgent": {
+      "id": "guard",
+      "workspace": "~/.openclaw/workspace-guard",
+      "model": "ollama/llama3.2:3b"
+    },
+    "session": {
+      "isolateGuardHistory": true,
+      "baseDir": "~/.openclaw"
+    }
+  },
+  "agents": {
+    "list": [
+      {
+        "id": "main",
+        "workspace": "~/.openclaw/workspace-main",
+        "subagents": {
+          "allowAgents": ["guard"]
+        }
+      },
+      {
+        "id": "guard",
+        "workspace": "~/.openclaw/workspace-guard",
+        "model": "ollama/llama3.2:3b",
+        "description": "Local-only agent for sensitive operations"
+      }
+    ]
+  }
+}

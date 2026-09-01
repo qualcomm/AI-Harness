@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dragon-task-orchestrator 架构图</title>
+<style>
+  :root {
+    --ink:#16181d; --dim:#5b6270; --line:#dfe3e8; --band:#f6f7f9;
+    --host:#2b6cb0; --hook:#8b5cf6; --dyn:#1d7a4c; --fix:#c2410c; --int:#b45309; --danger:#c0392b;
+  }
+  *{box-sizing:border-box}
+  body{background:#fff;color:var(--ink);margin:0;padding:36px 24px 80px;
+       font:15px/1.6 -apple-system,"Segoe UI","Microsoft YaHei",system-ui,sans-serif}
+  main{max-width:1120px;margin:0 auto}
+  h1{font-size:25px;margin:0 0 4px}
+  h2{font-size:18px;margin:42px 0 14px;padding-bottom:7px;border-bottom:2px solid var(--ink)}
+  h3{font-size:14.5px;margin:24px 0 8px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px}
+  p.sub{color:var(--dim);font-size:13.5px;margin:0 0 3px}
+  code{background:var(--band);padding:1px 5px;border-radius:3px;font-size:12.5px;
+       font-family:ui-monospace,Consolas,monospace}
+  .lead{font-size:14px;color:var(--dim);margin:0 0 16px}
+
+  /* ── generic box ── */
+  .box{border:1px solid var(--line);border-left:3px solid var(--dim);background:#fff;
+       padding:9px 12px;font-size:13px}
+  .box b{display:block;font-size:13.5px;font-family:ui-monospace,Consolas,monospace}
+  .box span{color:var(--dim);font-size:12px;display:block;margin-top:2px;line-height:1.45}
+  .b-host{border-left-color:var(--host)} .b-hook{border-left-color:var(--hook)}
+  .b-dyn{border-left-color:var(--dyn)}  .b-fix{border-left-color:var(--fix)}
+  .b-int{border-left-color:var(--int)}  .b-stop{border-left-color:var(--danger);background:#fffafa}
+
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  .row > *{flex:1 1 0;min-width:150px}
+  .stack{display:flex;flex-direction:column;gap:8px}
+
+  .arrow{text-align:center;color:var(--dim);font-size:16px;line-height:1;margin:5px 0}
+  .arrow small{display:block;font-size:11.5px;margin-top:2px}
+
+  /* ── gate ladder ── */
+  .gate{display:grid;grid-template-columns:26px 1fr auto;gap:10px;align-items:center;
+        border:1px solid var(--line);padding:7px 11px;font-size:13px;margin-bottom:6px}
+  .gate i{font-family:ui-monospace,monospace;color:var(--dim);font-size:11.5px;font-style:normal}
+  .gate em{font-style:normal;color:var(--danger);font-size:12px;white-space:nowrap}
+  .gate.pass{border-left:3px solid var(--dyn)}
+  .gate.pass em{color:var(--dyn)}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px}
+  th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+  th{background:var(--band);font-weight:600}
+  td.m{font-family:ui-monospace,Consolas,monospace;white-space:nowrap;font-size:12px}
+
+  .note{border:1px solid var(--line);border-left:3px solid var(--int);background:#fffdf8;
+        padding:10px 13px;margin:13px 0;font-size:13px}
+  .note.stop{border-left-color:var(--danger);background:#fffafa}
+  .legend{font-size:12.5px;color:var(--dim);margin:8px 0 0}
+  .legend i{display:inline-block;width:9px;height:9px;margin:0 4px 0 14px;vertical-align:0}
+  .legend i:first-of-type{margin-left:0}
+  ul{padding-left:20px;margin:6px 0} li{margin:3px 0}
+  footer{margin-top:44px;padding-top:13px;border-top:1px solid var(--line);
+         color:var(--dim);font-size:12.5px}
+</style>
+</head>
+<body>
+<main>
+
+<h1>dragon-task-orchestrator 架构</h1>
+<p class="sub"><code>@openclaw/dragon-task-orchestrator</code> · 委派模式 <b>B + C</b> · 19 个模块 / 约 5,200 行</p>
+<p class="lead">数据取自源码本身：模块依赖来自各文件的 import，闸门顺序来自 <code>src/hooks.ts</code> 的实际控制流。</p>
+
+<h2>1. 插件在宿主中的位置</h2>
+
+<div class="row">
+  <div class="box b-host"><b>before_agent_reply</b><span>唯一入口。只能「放行」或「短路返回一条合成回复」</span></div>
+  <div class="box b-host"><b>before_tool_call / after_tool_call</b><span>只用于转发子任务内的工具活动到 UI</span></div>
+  <div class="box b-host"><b>registerGatewayMethod ×6</b><span>Control UI 的模式与流水线读写</span></div>
+  <div class="box b-host"><b>registerService</b><span>取 stateDir，供流水线持久化</span></div>
+</div>
+
+<div class="note stop">
+<b>一个约束决定了整体形态。</b><code>before_agent_reply</code> 无法「运行目标 agent 的真实流程并把文本交回来」——
+宿主没有这个 API。所以编排必须靠 <code>subagent.run()</code> 自己发起委派，
+而 <code>runLocally</code> 只能短路作答，用不了目标 agent 的真实工具。
+</div>
+
+<h2>2. 入口闸门：五道，顺序是关键</h2>
+<p class="lead"><code>src/hooks.ts</code> · 前四道是拒绝，第五道分派。</p>
+
+<div class="gate"><i>1</i><span>空白 prompt</span><em>放行</em></div>
+<div class="gate"><i>2</i><span><code>temp:</code> 内部会话（如归档时的 slug 生成）</span><em>放行</em></div>
+<div class="gate"><i>3</i><span>非请求触发：<code>cron</code> / <code>heartbeat</code> / <code>memory</code> / <code>overflow</code></span><em>放行</em></div>
+<div class="gate"><i>4</i><span>分类器自己的会话（<code>dtcls-</code>）</span><em>放行</em></div>
+<div class="gate pass"><i>5</i><span><b>子任务委派会话（<code>dtsub-</code>）</b> → 递归保护，就地处理转交</span><em>接管</em></div>
+<div class="gate pass"><i>6</i><span><b>会话模式分派</b> → <code>off</code> 放行 / <code>dynamic</code> / <code>pipeline</code></span><em>接管</em></div>
+
+<div class="note">
+<b>第 5 道必须在第 6 道之前。</b> 模式闸门放在委派分支之后，是为了让「运行中途切换模式」
+不会把已经在飞的转交打断 —— 也正因如此，固定流水线的步骤才能在模式为 <code>off</code> 时继续工作。
+</div>
+
+<h2>3. 两种编排模式：B 与 C</h2>
+
+<p class="lead">宿主原有 <b>模式 A</b>（单跳转交）。本插件实现另外两种，由会话模式选择 ——
+它们<b>共用入口、委派层与安全边界，编排策略完全不同</b>。</p>
+
+<div class="row">
+  <div class="box b-fix"><b>模式 B　固定流水线</b>
+    <span>会话模式 <code>pipeline</code> · <code>src/fixed-pipeline.ts</code><br>
+    <b>用户</b>预先定义顺序，运行时照做</span></div>
+  <div class="box b-dyn"><b>模式 C　动态拆解</b>
+    <span>会话模式 <code>dynamic</code> · <code>src/orchestrator.ts</code><br>
+    <b>模型</b>在运行时决定拆法与顺序</span></div>
+</div>
+
+<table>
+  <tr><th style="width:20%"></th><th style="width:40%">模式 B　固定流水线</th><th>模式 C　动态拆解</th></tr>
+  <tr><td><b>谁决定结构</b></td><td>用户，在 Control UI 里拖拽</td><td>模型（<code>dt-decomposer</code>）</td></tr>
+  <tr><td><b>模型调用</b></td><td><b>仅每步 1 次</b></td><td>拆解 1 + 分类 N + 每子任务 1 + 校验 N + 整合 1</td></tr>
+  <tr><td><b>执行形态</b></td><td>严格串行</td><td>按依赖分层，同层并发</td></tr>
+  <tr><td><b>传递内容</b></td><td>原始请求 + <b>仅上一步输出</b></td><td>原始请求 + <b>按 id 声明的那些依赖</b></td></tr>
+  <tr><td><b>失败处理</b></td><td><b>立即中断</b>，后续步骤标记 skipped</td><td>失败作为占位符传下去，其余子任务继续</td></tr>
+  <tr><td><b>最终回复</b></td><td><b>末步输出原样返回</b>，不整合</td><td><code>dt-summarizer</code> 合成</td></tr>
+  <tr><td><b>校验</b></td><td>无</td><td>有 <code>acceptanceCriteria</code> / <code>handoffContract</code> 即校验</td></tr>
+  <tr><td><b>持久化</b></td><td><b>流水线定义落盘</b>（stateDir）</td><td>无 —— 每次重新拆解</td></tr>
+  <tr><td><b>确认门</b></td><td>不适用（用户已亲自定义）</td><td>可选（<code>prdConfirmation</code>）</td></tr>
+</table>
+
+<div class="note">
+<b>为什么 B 不整合、不校验。</b> 两者都是刻意省掉的：末步输出<b>就是</b>交付物，再整合一遍要多付一次
+模型往返（实测约 100 秒）并可能压缩掉刚产出的内容；而顺序与职责都由用户指定，没有「模型是否理解对了」
+这个需要校验的问题。<b>模式 B 的模型调用次数等于步数</b>，这是它相对 C 的核心优势。
+</div>
+
+<h2>4. 模式 C 的六个阶段</h2>
+<p class="lead"><code>src/orchestrator.ts</code> 编排，每个阶段一个模块。</p>
+
+<div class="stack">
+  <div class="box b-int"><b>① decomposer　·　dt-decomposer</b><span>src/decomposer.ts — 拆成子任务，含 acceptanceCriteria / handoffContract / needsPriorResults。<br>存活 &lt; 2 个 → 放行（本来不需要拆）</span></div>
+  <div class="arrow">↓<small>ValidatedPlan</small></div>
+  <div class="box b-int"><b>② resolve-agent　·　dt-classifier ×N</b><span>src/resolve-agent.ts — 每个子任务独立分类到一个 agent id。一次调用只做一件事</span></div>
+  <div class="arrow">↓<small>Map&lt;subtaskId, agentId&gt;</small></div>
+  <div class="box b-dyn"><b>③ prd-approval（可选）</b><span>src/prd-approval.ts — 确认 / 取消 / 调整。「调整」带自然语言意见回到 ①</span></div>
+  <div class="arrow">↓</div>
+  <div class="box b-dyn"><b>④ pipeline　·　分层执行</b><span>src/pipeline.ts — 对 needsPriorResults 拓扑排序。同层 Promise.all 并发，层间是屏障</span></div>
+  <div class="arrow">↓<small>每个子任务 → delegate.ts → subagent.run()</small></div>
+  <div class="box b-dyn"><b>⑤ verify</b><span>src/verify.ts — 有 acceptanceCriteria 或 handoffContract 才校验。未通过重新委派，上限 maxVerifyRetries</span></div>
+  <div class="arrow">↓<small>SubtaskResult[]</small></div>
+  <div class="box b-int"><b>⑥ summarize　·　dt-summarizer</b><span>src/summarize.ts — 合成一条面向用户的回复，并挂上强制通知</span></div>
+</div>
+
+<h2>5. 模式 C 的层间传递：唯一的一条窄通道</h2>
+
+<p>依赖按 <b>子任务 id</b> 声明，不按层。下面是一个成功依赖实际穿过边界的全过程：</p>
+
+<table>
+  <tr><th style="width:22%">环节</th><th style="width:34%">位置</th><th>发生了什么</th></tr>
+  <tr><td>上游会话</td><td class="m">agent:&lt;id&gt;:dtsub-&lt;hash&gt;</td><td>工具结果、中间轮次全部留在这里</td></tr>
+  <tr><td>取出</td><td class="m">delegate.ts</td><td><code>getSessionMessages({ limit: 5 })</code> 只读末尾 5 条</td></tr>
+  <tr><td>过滤</td><td class="m">extractAssistantText</td><td>只保留 <code>type: "text"</code> —— <b>tool_call / tool_result 在此被丢弃</b></td></tr>
+  <tr><td>包装</td><td class="m">notices.ts</td><td><b>先转义</b> REFERENCE_DATA 标记，<b>后截断</b>到 <code>maxContextChars</code></td></tr>
+  <tr><td>拼装</td><td class="m">pipeline.ts</td><td>前置内容 + <code>---</code> + 子任务描述 + 交接指引（仅当被依赖）</td></tr>
+  <tr><td>下游 prompt</td><td class="m">subagent.run({ message })</td><td>契约的唯一内容通道 —— 无历史注入接口</td></tr>
+</table>
+
+<div class="note">
+<b>转义先于截断，顺序不能反。</b> 转义会加长文本，反过来做可能把一个边界标记切成两半。<br>
+<b>两个机制补偿这条窄通道：</b><code>handoffContract</code>（清单，同时进 worker 和校验器的提示词，漏项判不通过）
+与<b>会话指针</b>（附上依赖的子会话 key，可用 <code>sessions_history</code> 读完整过程）。
+</div>
+
+<h2>6. 模式 B 的执行流</h2>
+<p class="lead"><code>src/fixed-pipeline.ts</code> · 一次循环，无拆解器、无分类器、无整合。</p>
+
+<div class="stack">
+  <div class="box b-fix"><b>pipeline-store.ts　·　取出流水线定义</b><span>按 id 从 stateDir 读取。<b>请求时读取而非启动时缓存</b> —— 会话选中流水线之后、下一轮到来之前，它可能已被编辑或删除</span></div>
+  <div class="arrow">↓<small>Pipeline { name, steps[] }</small></div>
+  <div class="box b-fix"><b>emitPipelinePlanEvent</b><span>先广播计划，UI 立刻能画出全部步骤，不必等第一步跑完</span></div>
+  <div class="arrow">↓</div>
+  <div class="box b-fix"><b>逐步循环　for (index, step) of steps</b>
+    <span>每步四件事：<br>
+    1　<b>重新校验 agent 仍存在</b> —— <code>agents.list</code> 可能在保存流水线之后变过<br>
+    2　<code>buildStepMessage</code>：原始请求 + 上一步输出 + <b>本步指令放最后</b><br>
+    3　<code>setDelegationMeta</code> → <code>runDelegatedTask</code> → <code>subagent.run()</code><br>
+    4　<code>emitStepStatusEvent</code>（start / end，end 携带结果）</span></div>
+  <div class="arrow">↓<small>carry = 本步输出，喂给下一步</small></div>
+  <div class="box b-stop"><b>某步失败 → aborted = true</b>
+    <span>后续步骤<b>不执行</b>，但仍逐个发出 <code>status: "skipped"</code> 事件 ——
+    卡片靠「听到全部步骤的 end」判断运行结束，静默跳过会让它永远停在「等待中」</span></div>
+  <div class="arrow">↓</div>
+  <div class="box b-fix"><b>返回</b>
+    <span><b>全部成功</b> → 末步输出原样返回（仅受 <code>maxFinalReplyChars</code> 约束）<br>
+    <b>中途失败</b> → 已完成的产出 + 执行情况摘要（<b>保留已完成的工作</b>，那可能是几分钟的真实执行）<br>
+    <b>零产出</b> → 明确说明没有结果，而不是空回复</span></div>
+</div>
+
+<h3>三个设计决定</h3>
+<table>
+  <tr><th style="width:26%">决定</th><th>理由</th></tr>
+  <tr>
+    <td><b>本步指令放消息最后</b></td>
+    <td>超长消息按<b>保留尾部</b>截断（<code>truncateKeepTail</code>）。指令放前面，截断会先删掉唯一说明「要做什么」的部分。</td>
+  </tr>
+  <tr>
+    <td><b>agent 缺失时报错，<br>不回落到 defaultAgentId</b></td>
+    <td>用户点名了这个 agent。悄悄换一个会破坏这个功能存在的全部意义 —— 「固定」。</td>
+  </tr>
+  <tr>
+    <td><b>每步一个独立子会话</b></td>
+    <td>key 含 step index（<code>sha256(root:agentId:subtask:N)</code>），所以同一个 agent 在一条流水线里出现两次时，
+        第二次<b>看不到自己第一次的对话历史</b>。</td>
+  </tr>
+</table>
+
+<h3>持久化</h3>
+<div class="row">
+  <div class="box b-fix"><b>为什么不放 openclaw.json</b><span><code>config.patch</code> 对任何实质改动都会<b>安排网关重启</b>，
+    而拖拽调整步骤顺序是高频编辑 —— 每拖一次断开所有 WebSocket 显然不行</span></div>
+  <div class="box b-fix"><b>两套并发机制，都必需</b><span><b>revision 乐观锁</b>防一个编辑者覆盖另一个的工作；<br>
+    <b>写锁串行</b>防两个并发写交错成损坏文件 —— 单靠 revision 挡不住：两个写者可以都通过检查后再交错落盘</span></div>
+</div>
+
+<p style="font-size:13px;color:var(--dim);margin-top:10px">
+上限：50 条流水线 · 每条 20 步 · 名称 60 字符 · 指令 2000 字符 ·
+步骤不得指向内部 <code>dt-*</code> 身份（它们带 <code>tools.deny: ["*"]</code>，干不了实际工作）
+</p>
+
+<div class="note stop">
+<b>对宿主行为的依赖 —— 改宿主前必读。</b><code>subagent.run()</code> 不会重新进入本插件的
+<code>before_agent_reply</code>（2026-08-26 三方验证：钩子只从 <code>get-reply.ts</code> 调用；
+14 次运行只有 2 次钩子调用；子会话确实用了真实工具，而 <code>runLocally</code> 短路做不到）。
+如果宿主哪天把该钩子接进 embedded runner，<code>handleSubtaskDelegation</code> 会开始拦截这些步骤并可能
+<b>重新分类到别的 agent</b>，静默破坏「固定」这个保证。
+</div>
+
+<h2>7. 会话 key 派生</h2>
+
+<table>
+  <tr><th style="width:26%">用途</th><th style="width:36%">形态</th><th>派生方式</th></tr>
+  <tr><td>子任务工作 / 校验</td><td class="m">agent:&lt;id&gt;:dtsub-&lt;hash&gt;</td><td class="m">sha256(root : agentId : subtask : N)</td></tr>
+  <tr><td>拆解 / 分类 / 整合</td><td class="m">agent:dt-*:dtcls-&lt;hash&gt;</td><td class="m">sha256(root : agentId)</td></tr>
+</table>
+
+<ul>
+  <li><b>按子任务分会话</b>，不按 agent —— 同一个 agent 承担两个子任务时若共享会话，宿主的 per-session 队列会把它们串行化（实测 5m45s vs 约 3m 的可并发工作）。</li>
+  <li><b>key 是哈希，agent 内部猜不到</b> —— 这正是「会话指针」必须由插件下发的原因。</li>
+  <li><b>不含 <code>spawnedBy</code></b>：<code>subagent.run</code> 不传父子关系，所以这些会话在宿主看来是孤立顶层会话。默认 <code>visibility: "tree"</code> 因此看不到它们。</li>
+</ul>
+
+<h2>8. 模块依赖</h2>
+
+<h3>编排主链</h3>
+<div class="row">
+  <div class="box b-hook"><b>hooks.ts</b><span>371 行 · 闸门与分派</span></div>
+  <div class="box b-dyn"><b>orchestrator.ts</b><span>459 行 · dynamic 六阶段</span></div>
+  <div class="box b-dyn"><b>pipeline.ts</b><span>479 行 · 分层 + 委派</span></div>
+  <div class="box b-fix"><b>fixed-pipeline.ts</b><span>248 行 · 固定序列</span></div>
+</div>
+
+<h3>被共用的基础设施</h3>
+<table>
+  <tr><th style="width:24%">模块</th><th>职责</th><th style="width:30%">被谁使用</th></tr>
+  <tr><td class="m">delegate.ts</td><td>run → waitForRun → getSessionMessages → 抽文本</td><td>pipeline · fixed-pipeline · summarize · resolve-agent</td></tr>
+  <tr><td class="m">delegation-meta.ts</td><td>进程内元数据：hopCount / rootSessionKey / subtaskId / role</td><td>hooks · pipeline · fixed-pipeline · verify</td></tr>
+  <tr><td class="m">session-key.ts</td><td>key 派生与识别</td><td>hooks · pipeline · fixed-pipeline · summarize</td></tr>
+  <tr><td class="m">sanitize.ts</td><td><code>truncate</code> / <code>truncateKeepTail</code> / REFERENCE_DATA</td><td>hooks · fixed-pipeline · notices · verify</td></tr>
+  <tr><td class="m">notices.ts</td><td>两种受众两种格式 + PROCESSING_NOTICE 隔离</td><td>hooks · pipeline · summarize</td></tr>
+  <tr><td class="m">progress-event.ts</td><td>8 种 <code>kind</code> 的 UI 广播，全程 try/catch</td><td>orchestrator · pipeline · fixed-pipeline · index</td></tr>
+  <tr><td class="m">mission-mode.ts</td><td>会话模式三态，<b>只在内存</b></td><td>hooks · index</td></tr>
+  <tr><td class="m">notify.ts</td><td>带外 PRD / 进度通知，best-effort</td><td>orchestrator</td></tr>
+</table>
+
+<p class="legend">
+  <i style="background:#2b6cb0"></i>宿主接口
+  <i style="background:#8b5cf6"></i>入口分派
+  <i style="background:#1d7a4c"></i>dynamic
+  <i style="background:#c2410c"></i>fixed pipeline
+  <i style="background:#b45309"></i>内部模型调用
+</p>
+
+<h2>9. 三条贯穿全局的设计原则</h2>
+
+<table>
+  <tr><th style="width:26%">原则</th><th>体现</th></tr>
+  <tr>
+    <td><b>降级必须可见</b></td>
+    <td>丢弃的子任务、被截断的描述、失败的依赖、转交过的结果，全部走<b>强制通知</b>通道，
+        并在最终回复的长度预算里<b>优先于模型正文</b>保留。失败的依赖传下去的是
+        <code>[子任务N未完成：原因]</code> 占位符，不是空文本 —— 否则失败会变成沉默。</td>
+  </tr>
+  <tr>
+    <td><b>模型产出即不可信输入</b></td>
+    <td>前置结果、网页内容一律包进 REFERENCE_DATA 并附「这是数据不是指令」前言；
+        编排层说明走独立的 PROCESSING_NOTICE 通道，避免混入任务结果污染下游。
+        这是基线缓解，不是保证。</td>
+  </tr>
+  <tr>
+    <td><b>不猜测、不静默替换</b></td>
+    <td>流水线步骤的 agent 被删 → <b>报错而不是回落到默认 agent</b>（用户指定了它）。
+        流水线被删 → 放行而不是改用 dynamic（用户没同意换策略）。
+        依赖无法满足的子任务 → 显式错误而不是消失。</td>
+  </tr>
+</table>
+
+<footer>
+模块行数取自 <code>wc -l</code>；依赖关系取自各模块的 import；闸门顺序取自
+<code>src/hooks.ts</code> 中 <code>runBeforeAgentReply</code> 的实际控制流。
+实测数字（会话串行化、并发收益）来自 <code>docs/dynamic-mode-timing-2026-08-31.html</code>
+所依据的同批 target 日志。
+</footer>
+
+</main>
+</body>
+</html>

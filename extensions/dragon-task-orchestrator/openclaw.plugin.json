@@ -1,0 +1,132 @@
+{
+  "id": "dragon-task-orchestrator",
+  "name": "Dragon Task Orchestrator",
+  "description": "Dynamic task decomposition and delegation (mode C): splits composite requests into subtasks at runtime, routes each to a matching agent, executes in dependency layers, and summarizes into one reply.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": { "type": "boolean" },
+      "maxSubtasks": { "type": "integer", "minimum": 2, "maximum": 16 },
+      "maxPromptChars": { "type": "integer", "minimum": 200, "maximum": 100000 },
+      "maxDescriptionChars": { "type": "integer", "minimum": 100, "maximum": 50000 },
+      "maxContextChars": { "type": "integer", "minimum": 100, "maximum": 50000 },
+      "maxFinalReplyChars": { "type": "integer", "minimum": 500, "maximum": 100000 },
+      "maxTotalSummaryChars": { "type": "integer", "minimum": 500, "maximum": 100000 },
+      "maxDepsPerSubtask": { "type": "integer", "minimum": 1, "maximum": 16 },
+      "maxNoticeItems": { "type": "integer", "minimum": 1, "maximum": 100 },
+      "maxDelegationHops": { "type": "integer", "minimum": 1, "maximum": 10 },
+      "subtaskTimeoutMs": { "type": "integer", "minimum": 1000, "maximum": 3600000 },
+      "defaultAgentId": { "type": "string" },
+      "agentDescriptions": {
+        "type": "object",
+        "additionalProperties": { "type": "string" }
+      },
+      "maxVerifyRetries": { "type": "integer", "minimum": 0, "maximum": 10 },
+      "maxVerifyChars": { "type": "integer", "minimum": 500, "maximum": 200000 },
+      "localModel": {
+        "type": "object",
+        "properties": {
+          "api": { "type": "string" },
+          "endpoint": { "type": "string" },
+          "model": { "type": "string" }
+        }
+      },
+      "classifierProvider": { "type": "string" },
+      "classifierModel": { "type": "string" },
+      "prdConfirmation": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "enabled": { "type": "boolean" },
+          "timeoutMs": { "type": "integer", "minimum": 1000, "maximum": 3600000 },
+          "onTimeout": { "type": "string", "enum": ["proceed", "cancel"] },
+          "maxAdjustRounds": { "type": "integer", "minimum": 0, "maximum": 10 }
+        }
+      },
+      "logging": { "type": "boolean" }
+    }
+  },
+  "uiHints": {
+    "enabled": {
+      "label": "Enable Dynamic Task Decomposition",
+      "help": "When enabled, composite requests are split into subtasks at runtime and delegated to matching agents (mode C), in addition to the existing single-hop and fixed-pipeline delegation modes. Disabled by default so existing behavior is unaffected."
+    },
+    "maxSubtasks": {
+      "label": "Max Subtasks",
+      "help": "Maximum number of subtasks actually executed from a decomposition. Extra subtasks are dropped and reported to the user."
+    },
+    "maxPromptChars": {
+      "label": "Max Prompt Characters",
+      "help": "Truncation limit applied to the raw user prompt before it reaches the classifier or decomposer."
+    },
+    "maxDescriptionChars": {
+      "label": "Max Subtask Description Characters",
+      "help": "Truncation limit for each subtask's description text."
+    },
+    "maxContextChars": {
+      "label": "Max Prior-Context Characters",
+      "help": "Truncation limit applied to one subtask's result when passed as prior context to a dependent subtask. Only the worker's final message crosses this boundary — tool results do not — so this is the whole channel between subtasks. Raising it costs nothing but context; lowering it below ~8000 has been observed to make consumers re-do work whose output they should have received."
+    },
+    "maxFinalReplyChars": {
+      "label": "Max Final Reply Characters",
+      "help": "Total length cap on the summarized final reply. Mandatory notices are always preserved even under this cap."
+    },
+    "maxTotalSummaryChars": {
+      "label": "Max Summary Input Characters",
+      "help": "Total character budget for subtask results fed into the summarization call, divided across successful results."
+    },
+    "maxDepsPerSubtask": {
+      "label": "Max Dependencies Per Subtask",
+      "help": "Cap on how many prior-subtask dependencies a single subtask may declare."
+    },
+    "maxNoticeItems": {
+      "label": "Max Notice List Items",
+      "help": "Cap on how many items are listed in a single mandatory-notice section (dropped/truncated subtasks, etc)."
+    },
+    "maxDelegationHops": {
+      "label": "Max Delegation Hops",
+      "help": "Cap on how many times a subtask delegation may be re-routed before it is answered in place."
+    },
+    "subtaskTimeoutMs": {
+      "label": "Subtask Timeout (ms)",
+      "help": "Per-subtask delegation timeout. Needs calibration against observed per-agent delegation latency."
+    },
+    "maxVerifyChars": {
+      "label": "Max Verifier Input Characters",
+      "help": "Per-block truncation limit for the text handed to a verifier (subtask description, acceptance criteria, worker result). Kept in step with maxContextChars rather than derived from it. It was once 8x that value because the prior-context budget was too small (2000), which made verifiers judge a truncated copy and fail subtasks for being truncated — a loop no retry could escape, since each retry produced more text to cut. Raise this if verifier feedback mentions truncated or incomplete content."
+    },
+    "maxVerifyRetries": {
+      "label": "Max Verify Retries",
+      "help": "Max re-delegations to a worker after a failed verify, before the subtask is reported as failed. A subtask is only verified when its decomposed acceptanceCriteria is non-empty; the verifier's own agent identity is always defaultAgentId."
+    },
+    "defaultAgentId": {
+      "label": "Default Agent ID",
+      "help": "Fallback agent used when a subtask's classification does not match any known agent."
+    },
+    "agentDescriptions": {
+      "label": "Agent Descriptions",
+      "help": "Per-agent responsibility summary keyed by agent id, shown to the routing classifier (first 150 chars). Set this when routing picks the wrong agent: the host's agents.list has no description field, so without an entry the plugin borrows that agent's systemPromptOverride, whose opening is often generic persona boilerplate carrying no domain signal. Agents with no entry keep the borrowed behavior."
+    },
+    "localModel": {
+      "label": "Local Model",
+      "help": "Local model endpoint used only by the runLocally fallback (answering in place when forwarding is not possible). Not used by classification/decomposition/summarization — see classifierProvider/classifierModel."
+    },
+    "classifierProvider": {
+      "label": "Classifier Provider",
+      "help": "Provider override forwarded to subagent.run for classification, decomposition, and summarization calls. Leave unset to use the host's default provider for a fresh session. Requires plugins.entries.dragon-task-orchestrator.subagent.allowModelOverride on the host."
+    },
+    "classifierModel": {
+      "label": "Classifier Model",
+      "help": "Model override forwarded to subagent.run for classification, decomposition, and summarization calls. Leave unset to use the host's default model for a fresh session."
+    },
+    "logging": {
+      "label": "Enable Logging",
+      "help": "Emit info logs for decomposition and delegation activity."
+    },
+    "prdConfirmation": {
+      "label": "PRD Confirmation Gate",
+      "help": "Hold execution until the operator confirms the decomposition in the Control UI card, with the option to cancel or request changes in plain language (which re-runs decomposition). Control UI ONLY — chat channels cannot answer the prompt, which is why this is disabled by default: enabling it on a chat-only deployment makes every request wait out timeoutMs first. onTimeout decides what an unanswered gate does ('proceed' runs the plan, 'cancel' abandons it); maxAdjustRounds caps how many change requests are honoured before the latest plan is executed regardless."
+    }
+  }
+}

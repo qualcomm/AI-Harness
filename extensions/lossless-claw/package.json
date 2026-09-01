@@ -1,0 +1,65 @@
+{
+  "name": "@martian-engineering/lossless-claw",
+  "version": "0.9.2",
+  "description": "Lossless Context Management plugin for OpenClaw — DAG-based conversation summarization with incremental compaction",
+  "type": "module",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "author": "Josh Lehman <josh@martian.engineering>",
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "context-management",
+    "llm",
+    "summarization",
+    "conversation-memory",
+    "dag"
+  ],
+  "scripts": {
+    "build": "esbuild index.ts --bundle --platform=node --target=node22 --format=esm --outfile=dist/index.js --external:openclaw --external:\"@mariozechner/*\" --minify-whitespace",
+    "changeset": "changeset",
+    "release:verify": "npm run build && npm test && npm pack --dry-run",
+    "test": "vitest run --dir test",
+    "version-packages": "changeset version"
+  },
+  "files": [
+    "dist/",
+    "skills/",
+    "openclaw.plugin.json",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@mariozechner/pi-agent-core": "0.66.1",
+    "@mariozechner/pi-ai": "0.66.1",
+    "@mariozechner/pi-coding-agent": "0.66.1",
+    "@sinclair/typebox": "0.34.48"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.30.0",
+    "esbuild": "^0.28.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martian-Engineering/lossless-claw.git"
+  },
+  "homepage": "https://github.com/Martian-Engineering/lossless-claw#readme",
+  "bugs": {
+    "url": "https://github.com/Martian-Engineering/lossless-claw/issues"
+  }
+}

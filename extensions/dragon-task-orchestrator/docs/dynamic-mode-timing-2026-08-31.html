@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dynamic 模式耗时分析 · 2026-08-31</title>
+<style>
+  :root {
+    --ink: #16181d;
+    --dim: #5b6270;
+    --line: #e2e5ea;
+    --band: #f6f7f9;
+    --hot: #c0392b;
+    --warm: #d98207;
+    --cool: #1d7a4c;
+    --calm: #2b6cb0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: #ffffff;
+    color: var(--ink);
+    margin: 0;
+    padding: 40px 24px 80px;
+    font: 15px/1.65 -apple-system, "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  main { max-width: 1000px; margin: 0 auto; }
+  h1 { font-size: 25px; margin: 0 0 4px; letter-spacing: -.2px; }
+  h2 { font-size: 18px; margin: 44px 0 12px; padding-bottom: 7px; border-bottom: 2px solid var(--ink); }
+  h3 { font-size: 15px; margin: 26px 0 8px; }
+  .sub { color: var(--dim); font-size: 13.5px; margin: 0 0 4px; }
+  code { background: var(--band); padding: 1px 5px; border-radius: 3px; font-size: 12.5px;
+         font-family: ui-monospace, Consolas, monospace; }
+  pre { background: var(--band); border: 1px solid var(--line); border-left: 3px solid var(--dim);
+        padding: 12px 14px; overflow-x: auto; font-size: 12.5px; line-height: 1.55;
+        font-family: ui-monospace, Consolas, monospace; }
+
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 13.5px; }
+  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--band); font-weight: 600; }
+  td.n, th.n { text-align: right; font-family: ui-monospace, Consolas, monospace; white-space: nowrap; }
+
+  .kpis { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 8px; }
+  .kpi { flex: 1 1 150px; border: 1px solid var(--line); border-top: 3px solid var(--calm);
+         padding: 12px 14px; }
+  .kpi.hot { border-top-color: var(--hot); }
+  .kpi.cool { border-top-color: var(--cool); }
+  .kpi b { display: block; font-size: 22px; font-family: ui-monospace, Consolas, monospace; }
+  .kpi span { color: var(--dim); font-size: 12px; }
+
+  /* Stage bars: width is % of the 843.7s request. */
+  .bar { position: relative; background: var(--band); border: 1px solid var(--line); height: 22px; }
+  .bar > i { position: absolute; top: 0; bottom: 0; left: 0; display: block; }
+  .fill-work { background: #b7d4c4; }
+  .fill-start { background: #eec9a6; }
+  .fill-model { background: #bfd2ea; }
+  .fill-human { background: #dcdfe4; }
+
+  .legend { font-size: 12.5px; color: var(--dim); margin: 6px 0 0; }
+  .legend i { display: inline-block; width: 11px; height: 11px; margin: 0 4px 0 12px;
+              border: 1px solid var(--line); vertical-align: -1px; }
+  .legend i:first-of-type { margin-left: 0; }
+
+  .note { border: 1px solid var(--line); border-left: 3px solid var(--warm);
+          background: #fffdf8; padding: 11px 14px; margin: 14px 0; font-size: 13.5px; }
+  .note.bad { border-left-color: var(--hot); background: #fffafa; }
+  .note.ok  { border-left-color: var(--cool); background: #f9fdfb; }
+  .hot { color: var(--hot); font-weight: 600; }
+  .cool { color: var(--cool); font-weight: 600; }
+  ul { padding-left: 22px; } li { margin: 4px 0; }
+  footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--line);
+           color: var(--dim); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Dynamic 模式耗时分析</h1>
+<p class="sub">数据来源：<code>extensions/dragon-task-orchestrator/logs/gateway.log</code>，target 机器实测</p>
+<p class="sub">会话 <code>agent:main:dashboard:ca7a98b4</code> · 00:38:28 → 00:52:31 · 3 子任务 / 2 层 / 全部成功 / 零校验重试</p>
+
+<div class="kpis">
+  <div class="kpi"><b>843.7s</b><span>端到端（14 分 04 秒）</span></div>
+  <div class="kpi hot"><b>216.9s</b><span>供应商目录探测（25.7%）</span></div>
+  <div class="kpi"><b>11</b><span>LLM 运行次数</span></div>
+  <div class="kpi cool"><b>0</b><span>上下文溢出 / 校验重试</span></div>
+</div>
+
+<h2>1. 阶段拆分</h2>
+
+<p>阶段之间是屏障：下一层必须等上一层全部结束。条形宽度为占 843.7s 的比例。</p>
+
+<table>
+  <tr><th>阶段</th><th class="n">起</th><th class="n">止</th><th class="n">耗时</th><th class="n">占比</th><th style="width:26%">构成</th></tr>
+  <tr>
+    <td>请求进入 → 拆解开始</td><td class="n">00:38:28</td><td class="n">00:38:30</td>
+    <td class="n">2.1s</td><td class="n">0.2%</td>
+    <td><div class="bar"><i class="fill-work" style="width:100%"></i></div></td>
+  </tr>
+  <tr>
+    <td><b>拆解</b>（dt-decomposer）</td><td class="n">00:38:30</td><td class="n">00:39:59</td>
+    <td class="n">89.3s</td><td class="n">10.6%</td>
+    <td><div class="bar"><i class="fill-start" style="width:34%"></i><i class="fill-model" style="width:66%;left:34%"></i></div></td>
+  </tr>
+  <tr>
+    <td><b>路由</b>（dt-classifier ×3）</td><td class="n">00:39:59</td><td class="n">00:40:39</td>
+    <td class="n">40.0s</td><td class="n">4.7%</td>
+    <td><div class="bar"><i class="fill-start" style="width:74%"></i><i class="fill-model" style="width:26%;left:74%"></i></div></td>
+  </tr>
+  <tr>
+    <td>PRD 确认门（<b>人工</b>）</td><td class="n">00:40:39</td><td class="n">00:40:42</td>
+    <td class="n">3.4s</td><td class="n">0.4%</td>
+    <td><div class="bar"><i class="fill-human" style="width:100%"></i></div></td>
+  </tr>
+  <tr>
+    <td><b>第 1 层</b>（2 子任务并行）</td><td class="n">00:40:42</td><td class="n">00:44:20</td>
+    <td class="n">217.5s</td><td class="n">25.8%</td>
+    <td><div class="bar"><i class="fill-start" style="width:22%"></i><i class="fill-work" style="width:78%;left:22%"></i></div></td>
+  </tr>
+  <tr>
+    <td><b>第 2 层</b>（1 子任务）</td><td class="n">00:44:20</td><td class="n">00:51:21</td>
+    <td class="n">420.7s</td><td class="n">49.9%</td>
+    <td><div class="bar"><i class="fill-start" style="width:7%"></i><i class="fill-work" style="width:93%;left:7%"></i></div></td>
+  </tr>
+  <tr>
+    <td><b>整合</b>（dt-summarizer）</td><td class="n">00:51:21</td><td class="n">00:52:31</td>
+    <td class="n">70.7s</td><td class="n">8.4%</td>
+    <td><div class="bar"><i class="fill-start" style="width:42%"></i><i class="fill-model" style="width:58%;left:42%"></i></div></td>
+  </tr>
+</table>
+
+<p class="legend">
+  <i class="fill-work"></i>子任务实际工作
+  <i class="fill-start"></i>启动开销（目录探测）
+  <i class="fill-model"></i>模型生成
+  <i class="fill-human"></i>人工等待
+</p>
+
+<h2>2. 11 次 LLM 运行</h2>
+
+<p>3 个子任务展开成 11 次运行 —— 差额来自路由（每子任务一次分类）和校验（每子任务一次）。</p>
+
+<table>
+  <tr><th>阶段</th><th>agent</th><th>角色</th><th class="n">耗时</th><th>备注</th></tr>
+  <tr><td>拆解</td><td><code>dt-decomposer</code></td><td>拆解</td><td class="n">89.3s</td><td>含 26.6s 启动</td></tr>
+  <tr><td rowspan="3">路由</td><td><code>dt-classifier</code></td><td>子任务 0 分类</td><td class="n">37.5s</td><td rowspan="3">三次并发，但在 models.json 写锁上串行</td></tr>
+  <tr><td><code>dt-classifier</code></td><td>子任务 1 分类</td><td class="n">24.4s</td></tr>
+  <tr><td><code>dt-classifier</code></td><td>子任务 2 分类</td><td class="n">25.7s</td></tr>
+  <tr><td rowspan="4">第 1 层</td><td><code>research</code></td><td>子任务 0 工作</td><td class="n">207.7s</td><td>15×web_search + 2×web_fetch + 1×write</td></tr>
+  <tr><td><code>coding</code></td><td>子任务 1 工作</td><td class="n">151.7s</td><td>4×web_search　<span class="hot">← 路由可疑</span></td></tr>
+  <tr><td><code>coding</code></td><td>子任务 1 校验</td><td class="n">9.9s</td><td>一次通过</td></tr>
+  <tr><td><code>coding</code></td><td>子任务 0 校验</td><td class="n">7.9s</td><td>一次通过</td></tr>
+  <tr><td rowspan="2">第 2 层</td><td><code>writing</code></td><td>子任务 2 工作</td><td class="n"><b>382.2s</b></td><td>7×exec + 3×read + 1×edit + 1×write（12.3KB）</td></tr>
+  <tr><td><code>coding</code></td><td>子任务 2 校验</td><td class="n">36.7s</td><td>一次通过</td></tr>
+  <tr><td>整合</td><td><code>dt-summarizer</code></td><td>整合</td><td class="n">69.4s</td><td>含 25.4s 启动</td></tr>
+</table>
+
+<h2>3. 最大单项：供应商目录探测 216.9s（25.7%）</h2>
+
+<p>11 次 <code>ensureOpenClawModelsJson</code> 调用累计 216.9 秒，其中 6 次超过 20 秒、3 次命中缓存（&lt;100ms）。</p>
+
+<h3>元凶已点名</h3>
+
+<p>本轮新增的 per-provider 探针给出了确切归属。<b>探测已经并发（上限 8）</b>，所以一个 order 的耗时等于它<b>最慢那个供应商</b>的耗时：</p>
+
+<pre>catalog order=simple  14982ms
+  └─ probe simple/amazon-bedrock-mantle  14977ms   ← 几乎等于整个 order
+
+超过 5 秒的探测，全部出现次数：
+  7 ×  simple/amazon-bedrock-mantle   （14.2s ~ 25.0s）
+  2 ×  late/lmstudio                  （最高 14.5s）
+  1 ×  late/ollama                    （10.3s）
+
+其余 30 余个供应商全部 ≤ 4.4s
+  anthropic-vertex 4372ms · litellm 4398ms · qwen 4098ms · deepseek 4372ms …</pre>
+
+<div class="note bad">
+<b>根因：非 live 模式下探测完全没有超时。</b>
+<code>resolveLiveProviderCatalogTimeoutMs</code> 在非 live 模式返回 <code>null</code>，
+所以一个连不上的供应商想等多久就等多久。上面三个都<b>没有配置凭证</b> —— 探测注定失败，
+只是失败得很慢。
+</div>
+
+<h3>为什么缓存只能到这里</h3>
+
+<p><code>catalog memo</code> 命中 2 次、未命中 7 次。7 个不同的 key 对应 <b>7 个 agent</b>
+（<code>coding</code> / <code>research</code> / <code>writing</code> /
+<code>dt-decomposer</code> / <code>dt-classifier</code> / <code>dt-summarizer</code> + main）。</p>
+
+<div class="note">
+<b>这 7 个 key 是正确的，不是缺陷。</b>
+<code>agentDir</code> 必须在 key 里 —— 凭证按 agent 隔离
+（<code>auth-profiles.json</code> 是 per-agent），不同目录<b>确实可能</b>得到不同的目录结果。
+要压到 1 个 key 就得假设「所有 agent 凭证相同」，那是用正确性换速度。
+<b>缓存这条路已经走到头，剩下的收益在超时。</b>
+</div>
+
+<h3>已完成的两项优化，效果</h3>
+
+<table>
+  <tr><th>指标</th><th class="n">优化前</th><th class="n">本次</th><th class="n">变化</th></tr>
+  <tr><td><code>ensureOpenClawModelsJson</code> 累计</td><td class="n">338.2s</td><td class="n">216.9s</td><td class="n cool">−121.3s</td></tr>
+  <tr><td>其中 &gt;20s 的调用</td><td class="n">11</td><td class="n">6</td><td class="n cool">−5</td></tr>
+  <tr><td><code>catalog hooks total</code> 次数</td><td class="n">13</td><td class="n">7</td><td class="n cool">−6</td></tr>
+  <tr><td><code>simple</code> order 耗时</td><td class="n">12–32s</td><td class="n">14–25s</td><td class="n">被单一供应商托底</td></tr>
+</table>
+
+<h2>4. 第 2 层占了一半时间</h2>
+
+<p>420.7 秒里，382.2 秒是子任务 2（<code>writing</code>）自己的工作，启动开销只有 4ms（缓存命中）。
+这一段<b>不是开销，是真实工作</b>：7 次 <code>exec</code>、3 次 <code>read</code>、1 次 <code>edit</code>，
+最终写出 12.3KB 文档。</p>
+
+<div class="note ok">
+<b>前几轮的改动在这里见效了。</b>
+<code>maxContextChars</code> 2000→16000 与 <code>handoffContract</code> 落地后：
+子任务 2 <b>自发 <code>web_search</code> 次数为 0</b>（基线 5 次），
+上下文溢出 0 次（基线 1 次 48s 压缩），校验重试 0 次（基线 1 次）。
+它拿到了依赖的资料，不再重做上游的工作。
+</div>
+
+<h2>5. 顺带发现的非耗时问题</h2>
+
+<table>
+  <tr><th>#</th><th>问题</th><th>证据</th><th>影响</th></tr>
+  <tr>
+    <td>1</td><td><b>文件交接路径翻倍</b></td>
+    <td><code>read failed: ENOENT ...\workspace\writing\<b>writing</b>\hexicorridor_tourism.md</code>
+        <br>参数是 <code>writing/hexicorridor_tourism.md</code>，而 research 写的是裸名 <code>hexicorridor_tourism.md</code></td>
+    <td>一次无谓的失败读取。相对路径按各 agent 自己的目录解析，模型补的 <code>writing/</code> 前缀被叠加了一次</td>
+  </tr>
+  <tr>
+    <td>2</td><td><b>路由把检索任务给了 coding</b></td>
+    <td>子任务 1「成都自驾路线与国庆实用信息」→ <code>coding</code>，随后做了 4 次 <code>web_search</code></td>
+    <td>151.7s。<code>agentDescriptions</code> 里 <code>research</code> 才是负责检索的，<code>coding</code> 写的是「代码与本地文件」</td>
+  </tr>
+  <tr>
+    <td>3</td><td><code>unknown agent id "main"</code></td>
+    <td><code>✗ commands.list errorCode=INVALID_REQUEST</code>（2 次）</td>
+    <td>配置 <code>agents.list</code> 里没有 <code>main</code>，但会话 key 是 <code>agent:main:…</code></td>
+  </tr>
+  <tr>
+    <td>4</td><td>定价引导超时</td>
+    <td><code>[model-pricing] pricing bootstrap failed: TimeoutError</code></td>
+    <td>仅影响成本显示</td>
+  </tr>
+  <tr>
+    <td>5</td><td>一次 <code>web_fetch</code> 失败</td>
+    <td><code>gansu.gscn.com.cn</code> 不可达</td>
+    <td>外部站点问题，重试已处理，非缺陷</td>
+  </tr>
+</table>
+
+<h2>6. 下一步的收益估算</h2>
+
+<table>
+  <tr><th>动作</th><th class="n">预计收益</th><th>风险</th></tr>
+  <tr>
+    <td><b>给无凭证的供应商设短超时</b>（约 5s）</td>
+    <td class="n">≈ 75s</td>
+    <td>低。三个慢供应商都没有凭证，探测本就失败。<b>不要对已配凭证的供应商设短超时</b> —— 超时会让模型从目录里静默消失，用户会以为模型不存在</td>
+  </tr>
+  <tr>
+    <td>路由修正（子任务 1 应走 <code>research</code>）</td>
+    <td class="n">未知</td>
+    <td>需先确认是分类器判错还是 <code>defaultAgentId: coding</code> 兜底 —— 决定改提示词还是改描述</td>
+  </tr>
+  <tr>
+    <td>从交接指引里移除文件那条建议</td>
+    <td class="n">0（正确性）</td>
+    <td>低。两次实测两种失败；A2A 已提供读完整会话的正路</td>
+  </tr>
+  <tr>
+    <td>继续加深缓存</td>
+    <td class="n">0</td>
+    <td><b>不建议</b> —— 7 个 key 是正确行为，见 §3</td>
+  </tr>
+</table>
+
+<div class="note">
+<b>A2A 是一个数据点，不是问题。</b> transcript 指针已随前置内容下发、权限已开、无 <code>forbidden</code>，
+但 <code>sessions_history</code> 调用次数为 <b>0</b>。writing 拿到的前置正文已经够用。
+这与 §4 的结论一致：<code>maxContextChars</code> + <code>handoffContract</code> 已解决问题，A2A 目前是冗余的。
+</div>
+
+<footer>
+量取自 <code>[startup-diag]</code>、<code>[dragon-task-orchestrator]</code> 与
+<code>embedded run done</code> 日志行。阶段耗时按相邻里程碑时间戳相减；
+per-run 耗时取 <code>durationMs</code>，它从运行创建计起，因此<b>包含排队与启动</b>，
+故各行之和大于对应阶段的墙钟时间。
+</footer>
+
+</main>
+</body>
+</html>

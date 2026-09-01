@@ -1,50 +1,253 @@
-**After repository creation:**
-- [ ] Update this `README.md`. Update the Project Name, description, and all sections. Remove this checklist.
-- [ ] **Specify your license.** This template does NOT ship with a default license. Identify your project's approved license per your organization's license approval guidelines. 
-- [ ] **Create `LICENSE.txt`.** Replace the placeholder text in `LICENSE.txt` with the full text of your project's approved license.
-- [ ] **Update the License section** below to name your approved license and link to it.
-- [ ] Search this repo for "REPLACE-ME" and update all instances accordingly
-- [ ] Update `CONTRIBUTING.md` as needed
-- [ ] Review the workflows in `.github/workflows`, updating as needed. See https://docs.github.com/en/actions for information on what these files do and how they work.
-- [ ] Review and update the suggested Issue and PR templates as needed in `.github/ISSUE_TEMPLATE` and `.github/PULL_REQUEST_TEMPLATE`
-- [ ] Remove this checklist
+<h3 align="center">
+DragonClaw: Hybrid Edge‑Cloud Large‑Model Invocation Framework based on OpenClaw
+</h3>
 
-# Project Name
+<p align="center">
+  <img src="assets/dragonclaw logo.png" alt="DragonClaw Logo" width="200"/>
+</p>
 
-*\<update with your project name and a short description\>*
+<p align="center">
+    【<a href="./readme_zh.md"><b>中文</b></a> | English】
+</p>
 
-Project that does ... implemented in ... runs on Qualcomm® *\<processor\>*
+## Overview
 
-## Branches
+**DragonClaw** is a project built on top of **OpenClaw**, designed to support hybrid edge‑cloud large‑model invocation. It extends OpenClaw’s capabilities by allowing seamless integration of local (edge) models with remote (cloud) services, enabling flexible, high‑performance AI applications across diverse deployment scenarios.
 
-**main**: Primary development branch. Contributors should develop submissions based on this branch, and submit pull requests to this branch.
+Designed to tackle the AI Agent data leakage challenge, DragonClaw provides a comprehensive, customizable three‑tier security system (S1 passthrough / S2 desensitization / S3 local). It standardizes safety guardrails into a universal GuardAgent Protocol (Hooker → Detector → Action). Combined with intelligent edge‑cloud routing capabilities, developers can achieve seamless privacy protection — “public data to the cloud, private data stays local” — within OpenClaw without modifying any business logic, balancing the peak performance of large models with absolute security of sensitive data.
 
-## Requirements
+## Why DragonClaw
+Better adapt to the WoS platform, addressing core challenges such as local deployment, privacy protection, and edge‑cloud hybrid AI — delivering a more **convenient**, **secure**, and **cost‑efficient** user experience.
 
-List requirements to run the project, how to install them, instructions to use docker container, etc...
+## Feature List
+- Edge–cloud collaboration (Hybrid AI) (supported)
+- Privacy protection (supported)
+- Hybrid agent architecture (Efficient and flexible adaptation to diverse on‑device models for NPU) (ongoing)
+- Sandbox deployment, supporting Docker and Kubernetes runtimes(ongoing)
+- Security Health Check(supported)
+- Agent skills customization(ongoing)
+- One-click deployment(supported)
+- Out-of-the-box usability(ongoing)
+- Context trimming for 8K and 16K model (supported)
+- Long-term conversation memory (supported)
 
-## Installation Instructions
+## News
+- [2026-03-17] 🚀🚀🚀 Core features of **Hybrid AI** (Edge–cloud collaboration) and **Privacy protection** supported based on **OpenClaw**
+- [2026-04-28] 🚀🚀🚀 Context trimming for 8K and 16K model, Long-term conversation memory has been supported.
 
-How to install the software itself.
+## Installation
 
-## Usage
+Same as OpenClaw:
 
-Describe how to use the project.
+### 1. Clone the Repository
+```bash
+git clone https://github.qualcomm.com/WoSEcosystem/DragonClaw.git
+cd DragonClaw
+```
 
-## Development
+### 2. Install Dependencies + Build
 
-How to develop new features/fixes for the software. Maybe different than "usage". Also provide details on how to contribute via a [CONTRIBUTING.md file](CONTRIBUTING.md).
+```bash
+pnpm install
+pnpm build
+pnpm ui:build
+pnpm openclaw onboard // a wizard to config openclaw
+pnpm openclaw gateway run --verbose // start gateway
+```
 
-## Getting in Contact
+### 3. Install the Extension
 
-How to contact maintainers. E.g. GitHub Issues, GitHub Discussions could be indicated for many cases. However a mail list or list of Maintainer e-mails could be shared for other types of discussions. E.g.
+GuardClaw is included in the `extensions/guardclaw` directory. Enable it in your `openclaw.json` configuration:
 
-* [Report an Issue on GitHub](../../issues)
-* [Open a Discussion on GitHub](../../discussions)
-* [E-mail us](mailto:REPLACE-ME@qti.qualcomm.com) for general questions
+<!-- OpenClaw.json Configuration Guidance -->
+### OpenClaw.json Configuration Guidance
 
-## License
+To configure GuardClaw and other plugins, edit the `openclaw.json` file under `~/.openclaw/`. Below is a minimal example that enables GuardClaw with privacy settings and registers the guard agent:
 
-*\<update with your project name and license\>*
+```json
+{
+  "plugins": {
+    "entries": {
+      "guardclaw": {
+        "enabled": true,
+        "config": {
+          "privacy": {
+            "enabled": true,
+            "localModel": {
+              "enabled": true,
+              "provider": "openai",
+              "model": "openai/gpt-oss-20b",
+              "endpoint": "http://localhost:1234/v1"
+            },
+            "guardAgent": {
+              "id": "guard",
+              "workspace": "~/.openclaw/workspace-guard",
+              "model": "openai/gpt-oss-20b"
+            }
+          }
+        }
+      }
+    }
+  },
+  "agents": {
+    "list": [
+      {
+        "id": "main",
+        "workspace": "~/.openclaw/workspace-main",
+        "subagents": {
+          "allowAgents": ["guard"]
+        }
+      },
+      {
+        "id": "guard",
+        "workspace": "~/.openclaw/workspace-guard",
+        "model": "openai/gpt-oss-20b"
+      }
+    ]
+  }
+}
+```
 
-*\<REPLACE-ME\>* is licensed under the [REPLACE-ME with license name](https://spdx.org/licenses/REPLACE-ME-with-correct-URL-to-SPDX-license). See [LICENSE.txt](LICENSE.txt) for the full license text.
+Adjust the `privacy` fields to match your security requirements. For more advanced customization, see the `extensions/guardclaw` README and the GuardClaw documentation.
+
+### 4. Configure Guard
+
+Edit the `privacy` field under `plugins.entries.guardclaw.config` in `openclaw.json` (see the [Customization](#customization) section below for full details):
+
+```json
+{
+  "privacy": {
+    "enabled": true,
+    "localModel": {
+      "enabled": true,
+      "provider": "openai",
+      "model": "openai/gpt-oss-20b",
+      "endpoint": "http://localhost:1234/v1"
+    },
+    "guardAgent": {
+      "id": "guard",
+      "workspace": "~/.openclaw/workspace-guard",
+      "model": "openai/gpt-oss-20b"
+    }
+  }
+}
+```
+
+Also, add a `list` field under the `agents` section in `openclaw.json`:
+
+```json
+"list": [
+  {
+    "id": "main",
+    "workspace": "~/.openclaw/workspace-main",
+    "subagents": {
+      "allowAgents": ["guard"]
+    }
+  },
+  {
+    "id": "guard",
+    "workspace": "~/.openclaw/workspace-guard",
+    "model": "openai/gpt-oss-20b"
+  }
+]
+```
+
+5. Start LM Studio with gpt-oss-20b
+
+```bash
+# Install LM Studio (download from https://lmstudio.ai and follow the installer)
+# Launch LM Studio
+# In LM Studio, click "Add Model" → search for "gpt-oss-20b"
+# Click "Download" to fetch the model (requires ~40GB disk space)
+# After download, click "Serve" to start a local OpenAI‑compatible server
+# The server runs on http://localhost:1234 by default
+# Set the endpoint in your `openclaw.json` to:
+#   "endpoint": "http://localhost:1234/v1"
+```
+
+Then start OpenClaw as usual:
+
+```bash
+pnpm openclaw gateway run
+```
+
+GuardClaw will automatically intercept and route sensitive requests.
+
+## Customization
+
+GuardClaw supports custom configuration, rules, and more:
+
+### JSON Configuration — Rules & Models
+
+Edit the `privacy` field under `plugins.entries.guardclaw.config` in `openclaw.json`:
+
+```json
+{
+  "privacy": {
+    "rules": {
+      "keywords": {
+        "S2": ["password", "api_key", "token", "credential"],
+        "S3": ["ssh", "id_rsa", "private_key", ".pem", "master_password"]
+      },
+      "patterns": {
+        "S2": [
+          "\\b(?:10|172\\.(?:1[6-9]|2\\d|3[01])|192\\.168)\\.\\d{1,3}\\.\\d{1,3}\\b",
+          "(?:mysql|postgres|mongodb)://[^\\s]+"
+        ],
+        "S3": ["-----BEGIN (?:RSA |EC )?PRIVATE KEY-----", "AKIA[0-9A-Z]{16}"]
+      },
+      "tools": {
+        "S2": {
+          "tools": ["exec", "shell"],
+          "paths": ["~/secrets", "~/private"]
+        },
+        "S3": {
+          "tools": ["system.run", "sudo"],
+          "paths": ["~/.ssh", "/etc", "~/.aws", "/root"]
+        }
+      }
+    }
+  }
+}
+```
+
+### Custom Checkpoints & Detector Types
+
+Control which detectors run at which stage:
+
+```json
+{
+  "privacy": {
+    "checkpoints": {
+      "onUserMessage": ["ruleDetector", "localModelDetector"],
+      "onToolCallProposed": ["ruleDetector"],
+      "onToolCallExecuted": ["ruleDetector"]
+    }
+  }
+}
+```
+
+- `ruleDetector` — Fast rule‑based detection  
+- `localModelDetector` — LLM‑based semantic understanding (~1–2 s), recommended for `onUserMessage`
+
+### Custom Models
+
+```json
+{
+  "privacy": {
+    "localModel": {
+      "enabled": true,
+      "provider": "openai",
+      "model": "openai/gpt-oss-20b",
+      "endpoint": "http://localhost:1234/v1"
+    },
+    "guardAgent": {
+      "id": "guard",
+      "workspace": "~/.openclaw/workspace-guard",
+      "model": "openai/gpt-oss-20b"
+    }
+  }
+}
+```
+
+Any openai‑compatible model is supported.

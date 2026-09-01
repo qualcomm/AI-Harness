@@ -1,0 +1,401 @@
+/* =============================================
+   FIXED PIPELINE EDITOR
+   Two-column layout mirroring the agents page.
+   ============================================= */
+
+.pl-page {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 4px 0 24px;
+}
+
+@media (max-width: 860px) {
+  .pl-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Sidebar ───────────────────────────────── */
+
+.pl-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--panel);
+}
+
+.pl-sidebar__head {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.pl-sidebar__empty {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 6px 2px;
+}
+
+.pl-sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pl-sidebar__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 9px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text);
+  font-size: 13.5px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.pl-sidebar__item:hover {
+  background: var(--bg-hover);
+}
+
+.pl-sidebar__item--active {
+  background: var(--accent-subtle);
+  color: var(--accent);
+}
+
+.pl-sidebar__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pl-sidebar__count {
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ── Editor ────────────────────────────────── */
+
+.pl-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--panel);
+  min-width: 0;
+}
+
+.pl-editor--empty {
+  color: var(--muted);
+  font-size: 13.5px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.pl-editor__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pl-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.pl-input:focus,
+.pl-select:focus,
+.pl-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/*
+ * Unsaved marker. Editing is staged, not auto-saved, so this is the only signal that
+ * closing the page would lose work — it needs to be noticeable rather than subtle.
+ */
+.pl-dirty {
+  flex-shrink: 0;
+  font-size: 11.5px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full, 20px);
+  background: color-mix(in srgb, var(--warn, #fbbf24) 18%, transparent);
+  color: var(--warn, #fbbf24);
+}
+
+/* Same pill as .pl-dirty, in the success colour: the two occupy the same slot and are
+   mutually exclusive, so matching their shape makes the swap read as a state change
+   rather than as new content appearing. */
+.pl-saved {
+  flex-shrink: 0;
+  font-size: 11.5px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full, 20px);
+  background: color-mix(in srgb, var(--ok, #22c55e) 18%, transparent);
+  color: var(--ok, #22c55e);
+}
+
+.pl-editor--empty .pl-saved {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* ── Steps ─────────────────────────────────── */
+
+.pl-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pl-step {
+  display: grid;
+  grid-template-columns: 20px 22px 1fr;
+  gap: 8px;
+  align-items: start;
+  padding: 9px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  transition:
+    opacity 120ms ease,
+    border-color 120ms ease;
+}
+
+.pl-step--dragging {
+  opacity: 0.45;
+}
+
+/* Drop indicator on the row the pointer is over. A top border rather than a full
+ * highlight, so it reads as "insert here" instead of "this row is selected". */
+.pl-step--drop {
+  border-top-color: var(--accent);
+  box-shadow: inset 0 2px 0 0 var(--accent);
+}
+
+/*
+ * The handle is the only draggable element. Making the whole row draggable would break
+ * text selection inside the instruction textarea, since a drag starting in the text
+ * would move the row instead of selecting characters.
+ */
+.pl-step__handle {
+  cursor: grab;
+  user-select: none;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.pl-step__handle:active {
+  cursor: grabbing;
+}
+
+.pl-step__index {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.9;
+  text-align: right;
+}
+
+.pl-step__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.pl-step__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pl-select {
+  flex: 0 1 220px;
+  min-width: 0;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 13px;
+}
+
+/* An agent that no longer exists. Flagged rather than blanked so the user can see WHICH
+ * one went missing — a step silently reset to "choose an agent" hides the cause. */
+.pl-select--missing {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.pl-step__actions {
+  display: flex;
+  gap: 3px;
+  margin-left: auto;
+}
+
+.pl-icon-btn {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.pl-icon-btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+  color: var(--text);
+}
+
+.pl-icon-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pl-icon-btn--danger:hover:not(:disabled) {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.pl-textarea {
+  width: 100%;
+  padding: 6px 9px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 13px;
+  font-family: inherit;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* ── Footer ────────────────────────────────── */
+
+.pl-editor__foot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pl-hint {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.pl-editor__buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.pl-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.pl-btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+}
+
+.pl-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pl-btn--wide {
+  width: 100%;
+}
+
+.pl-btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.pl-btn--primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.pl-btn--danger:hover:not(:disabled) {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.pl-error {
+  padding: 8px 11px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* ── Plugin unavailable ────────────────────── */
+
+.pl-unavailable {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--panel);
+  grid-column: 1 / -1;
+}
+
+.pl-unavailable__icon {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.pl-unavailable__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5px;
+}
+
+.pl-unavailable p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
