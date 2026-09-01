@@ -43,9 +43,10 @@ Subtasks 0 and 1 run in parallel; subtask 2 waits for both and receives **only**
 
 What actually crosses the boundary is narrower than it looks. A consumer receives its dependency's **final assistant message** — not its tool results, not its intermediate turns. That text is truncated to `maxContextChars` and wrapped as reference data.
 
-Two mechanisms exist to keep that channel useful:
+Three mechanisms exist to keep that channel useful:
 
 - **`handoffContract`** — a checklist of named items the producer's final message must carry (a figure, a list, a source). It goes to the worker *and* to the verifier, so an omission fails rather than passing quietly. A checklist rather than a JSON schema, because workers legitimately produce prose and documents.
+- **Shared artifact directory** — a producer with a downstream consumer is given an absolute directory under `<stateDir>/artifacts/` to write overflow output into, and its consumers are handed the absolute paths of whatever it actually left there. One directory per subtask, so concurrent siblings never race over a filename. The listing comes from scanning the directory, not from the worker's claim, so a file named in the reply but never written is reported as a notice and fails verification instead of becoming a dead path the consumer hunts for. Needs no host capability — an absolute path resolves from any cwd.
 - **Transcript pointer** — each successful dependency's block carries its child session key, so a consumer that needs the full detail can read it with `sessions_history`. That read requires `tools.sessions.visibility: "all"` and `tools.agentToAgent.enabled` on the host; when either is off the tool refuses and the worker still has the summarized text.
 
 ### Failure handling
@@ -197,7 +198,7 @@ Marker wrapping is a baseline mitigation for indirect prompt injection, not a gu
 ## Known Limitations
 
 - **Provider catalog probing dominates short requests.** Each delegation calls `ensureOpenClawModelsJson`; a measured run spent 216.9s of 843.7s there. Probes are concurrent and memoized, but one uncredentialed provider can still take 14–25s because there is no probe timeout outside live mode.
-- **File hand-off between agents does not work by path.** Relative paths resolve against each agent's own workspace subdirectory, so a filename written by one agent is not readable by another under the same string. Use the transcript pointer instead.
+- **File hand-off between agents works only through the shared artifact directory.** Relative paths resolve against each agent's own workspace subdirectory, so a bare filename written by one agent is not readable by another under the same string. Producers with a downstream consumer are given an absolute path under `<stateDir>/artifacts/` and told to write there; consumers receive the scanned absolute paths of their dependencies' files. A file written anywhere else is still unreachable across agents.
 - **Reading a sibling's transcript needs `tools.sessions.visibility: "all"`.** Subtask sessions are created without a `spawnedBy` link, so the default `"tree"` visibility cannot see them — they are not parent/child, and the spawn relation is not recorded at all.
 
 ## Docs

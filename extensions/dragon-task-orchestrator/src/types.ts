@@ -36,6 +36,25 @@ export type SubtaskPlan = {
 export type DecomposePlan = { subtasks: SubtaskPlan[] };
 
 /**
+ * One file a subtask left in its shared artifact directory (see artifacts.ts).
+ *
+ * `uri` is an ABSOLUTE path, which is the entire point: `SubagentRunParams` has no
+ * cwd slot, so relative paths resolve against each agent's own workspace and cannot
+ * be handed across agents. Shaped after MCP's `resource_link` (uri/name/size) so the
+ * hand-off matches the standardized handle type rather than inventing a private one.
+ *
+ * Always produced by SCANNING the directory, never by parsing a worker's claim —
+ * that is what makes a claimed-but-absent file detectable instead of trusted.
+ */
+export type SubtaskArtifact = {
+  /** Absolute path. Handed to consumers verbatim. */
+  uri: string;
+  /** Path relative to the subtask's artifact directory. */
+  name: string;
+  bytes: number;
+};
+
+/**
  * Discriminated union so the status/error coupling is a compile-time constraint:
  * the type system cannot express `{status:"error"}` without `error`, nor
  * `{status:"ok"}` carrying one.
@@ -50,6 +69,14 @@ export type SubtaskResult =
       processingNotices: string[];
       /** Number of verify attempts taken before this result passed, when a verifier was configured. */
       verifyAttempts?: number;
+      /**
+       * Files this subtask actually left in its artifact directory (see artifacts.ts).
+       *
+       * The second hand-off channel: `text` is the summary the model reads, these are
+       * the full payloads it can read on demand. Absent/empty when the subtask wrote
+       * nothing or the artifact channel was unavailable.
+       */
+      artifacts?: SubtaskArtifact[];
     }
   | { id: number; agentId: string; text: ""; status: "error"; error: string };
 

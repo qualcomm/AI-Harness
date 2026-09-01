@@ -2,7 +2,11 @@
  * Tests for dependency layering and layered execution (tasks 4.10/4.11/4.12).
  */
 
-import { beforeEach, describe, expect, test, vi } from "vitest";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
+import { initArtifactRoot, resetArtifactRoot } from "../src/artifacts.js";
 import { resetDelegationMetaStore } from "../src/delegation-meta.js";
 import {
   idsWithDownstreamConsumers,
@@ -597,9 +601,18 @@ describe("runPipeline verify loop", () => {
  * These tests pin that the guidance is delivered, and delivered only where it applies.
  */
 describe("downstream hand-off guidance", () => {
+  // The artifact channel is normally initialized from the plugin's service `start`, which
+  // no test runs. Without a root the file route is omitted entirely by design (a handle
+  // that cannot be dereferenced is worse than none), so these tests supply a real
+  // temporary one rather than asserting against the degraded path.
   beforeEach(() => {
     resetDelegationMetaStore();
     agentByDescription.clear();
+    initArtifactRoot(fs.mkdtempSync(path.join(os.tmpdir(), "dt-artifacts-")));
+  });
+
+  afterEach(() => {
+    resetArtifactRoot();
   });
 
   /**
@@ -663,24 +676,29 @@ describe("downstream hand-off guidance", () => {
   });
 
   /**
-   * The overflow route names a FILENAME, never a path.
+   * The overflow route names a REAL directory, addressed absolutely.
    *
-   * An earlier version said "给出文件路径", which was actively misleading: relative paths
-   * resolve against each agent's own workspace subdirectory, so a bare name written by
-   * `research` lands in `workspace/research/` and a consumer looking under
-   * `workspace/writing/` gets ENOENT — measured in the 2026-08-27 19:33 run. The supported
-   * way to reach a dependency's full detail is its transcript (see the
-   * "dependency transcript pointer" suite), not a file path.
+   * This assertion is the reverse of what it used to be, deliberately. Two earlier
+   * versions both failed, in opposite directions: "给出文件路径" implied a path the
+   * consumer could reuse (it could not — relative paths resolve per-agent), and the
+   * "工作区文件 + 文件名" wording that replaced it was unusable for the same underlying
+   * reason. The 2026-08-31 00:48 run measured the cost: ENOENT on
+   * `...\workspace\writing\writing\hexicorridor_tourism.md`, 13 exec calls spent hunting,
+   * then a silent rewrite from the truncated summary, and the subtask still reported ok.
+   *
+   * A path is now correct to promise because the plugin creates the directory itself and
+   * hands over an absolute path, which does not depend on the agent's cwd (see
+   * artifacts.ts). The old wording must not come back.
    */
-  test("offers an overflow route without promising a cross-agent path", async () => {
+  test("offers an overflow route pointing at the shared artifact directory", async () => {
     const { runtime, seen } = captureMessages();
     await run(runtime, [sub(0, "gather"), sub(1, "write", [0])]);
 
     const producer = seen.find((c) => c.message.includes("gather"))!;
-    expect(producer.message).toContain("写入工作区文件");
-    expect(producer.message).toContain("文件名");
-    // Must not imply a path the consumer could reuse.
-    expect(producer.message).not.toContain("文件路径");
+    expect(producer.message).toContain("共享产物目录");
+    expect(producer.message).toContain("绝对路径");
+    // The per-agent workspace is exactly what cannot be used for a hand-off.
+    expect(producer.message).not.toContain("写入工作区文件");
   });
 
   /**

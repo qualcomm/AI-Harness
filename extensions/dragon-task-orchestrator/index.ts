@@ -1,4 +1,5 @@
 import type { OpenClawPluginApi } from "openclaw/plugin-sdk";
+import { initArtifactRoot } from "./src/artifacts.js";
 import { dragonTaskOrchestratorConfigSchema, resolveConfig } from "./src/config-schema.js";
 import { getDelegationMeta } from "./src/delegation-meta.js";
 import { registerHooks } from "./src/hooks.js";
@@ -251,6 +252,10 @@ const plugin = {
         initPipelineStore(ctx.stateDir, api.logger);
         const { pipelines } = listPipelines();
         logInfo(cfg.logging, api.logger, `loaded ${pipelines.length} fixed pipeline(s)`);
+        // Same `stateDir`, for the same reason: the shared artifact directory has to live
+        // somewhere the plugin owns, since every agent workspace is per-agent by
+        // definition and so cannot be a hand-off point (see artifacts.ts).
+        initArtifactRoot(ctx.stateDir);
       },
     });
 

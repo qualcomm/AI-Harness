@@ -14,6 +14,13 @@
  * 5m45s where ~3m of concurrent work was available.
  */
 
+import {
+  describeArtifactDirForWorker,
+  describeArtifactsForConsumer,
+  detectUnresolvedFileClaims,
+  ensureArtifactDir,
+  listArtifacts,
+} from "./artifacts.js";
 import { DelegationFailedError, runDelegatedTask } from "./delegate.js";
 import { clearDelegationMeta, setDelegationMeta } from "./delegation-meta.js";
 import { logInfo } from "./log.js";
@@ -23,7 +30,12 @@ import { resolveAgentForSubtask } from "./resolve-agent.js";
 import { childSessionKeyFor } from "./session-key.js";
 import { runVerification } from "./verify.js";
 import type { Logger, SubagentRuntime } from "./runtime-contract.js";
-import type { DragonTaskOrchestratorConfig, SubtaskPlan, SubtaskResult } from "./types.js";
+import type {
+  DragonTaskOrchestratorConfig,
+  SubtaskArtifact,
+  SubtaskPlan,
+  SubtaskResult,
+} from "./types.js";
 
 /** Plain error text for reporting. */
 function errorMessage(e: unknown): string {
@@ -76,6 +88,12 @@ export function layerByDependency(subtasks: SubtaskPlan[]): {
  * `tools.sessions.visibility: "all"` and `tools.agentToAgent.enabled`. When either is off
  * the tool call is refused with an explanatory error and the worker still has the
  * summarized text, so advertising the key is safe either way.
+ *
+ * Artifacts are listed ahead of the transcript pointer because they are the cheaper and
+ * more reliable route: an absolute path read with `read` needs no host capability at all,
+ * while `sessions_history` needs two and returns a whole transcript to be waded through.
+ * The list comes from scanning the dependency's directory, so every path offered here is
+ * known to exist at the moment it is offered.
  */
 function buildPriorContext(
   subtask: SubtaskPlan,
@@ -91,8 +109,13 @@ function buildPriorContext(
       // Only for results that actually ran: a failed subtask's transcript holds the
       // failure, not content worth fetching, and pointing at it invites a pointless read.
       if (r.status !== "ok") return body;
+      const artifactBlock = describeArtifactsForConsumer(r.id, r.artifacts ?? []);
       const depSessionKey = childSessionKeyFor(rootSessionKey, r.agentId, r.id);
-      return `${body}\n（如需子任务${r.id}的完整过程与工具结果，可用 sessions_history 读取 sessionKey=${depSessionKey}；若该工具被拒绝，就以上面的正文为准）`;
+      return [
+        body,
+        ...(artifactBlock ? [artifactBlock] : []),
+        `（如需子任务${r.id}的完整过程与工具结果，可用 sessions_history 读取 sessionKey=${depSessionKey}；若该工具被拒绝，就以上面的正文为准）`,
+      ].join("\n");
     })
     .join("\n\n");
 }
@@ -122,20 +145,28 @@ export function idsWithDownstreamConsumers(subtasks: SubtaskPlan[]): Set<number>
  * tool calls reached its consumer as nothing at all.
  *
  * The file escape hatch is what makes the budget survivable rather than just declared.
- * It is already proven to work across agents: subtask 2 wrote a 38KB HTML file and the
- * verifier — a different agent — read it back successfully. Passing a path costs tens of
- * characters and lets the consumer read on demand instead of paying for everything up
- * front.
+ * Passing a path costs tens of characters and lets the consumer read on demand instead of
+ * paying for everything up front.
  *
  * Phrased as guidance, not a hard requirement. A worker without filesystem tools, or one
  * whose output already fits, must not be pushed into failing.
  *
- * NOTE ON THE FILE ROUTE: it says "写入工作区文件" without naming a path, deliberately.
- * Relative paths resolve against each agent's OWN workspace subdirectory, so a bare
- * filename written by `research` lands in `workspace/research/` and a consumer looking for
- * it under `workspace/writing/` gets ENOENT — measured in the 2026-08-27 19:33 run. Naming
- * a shared path here would need a directory the plugin creates and guarantees, which it
- * does not; the transcript route below is the supported way to get at the full detail.
+ * NOTE ON THE FILE ROUTE: it used to say "写入工作区文件" without naming a path, on the
+ * theory that a bare filename was safer than a guessed one. It was not — it was
+ * unusable. Relative paths resolve against each agent's OWN workspace subdirectory, so a
+ * bare filename written by `research` lands in `workspace/research/` while a consumer
+ * resolves it under `workspace/writing/`. Measured in the 2026-08-31 00:48 run: ENOENT on
+ * `...\workspace\writing\writing\hexicorridor_tourism.md`, 13 exec calls spent hunting
+ * for the file, then a silent rewrite from the truncated summary — and the subtask still
+ * reported ok. An earlier note here claimed the route was "already proven to work across
+ * agents"; that observation was a VERIFIER reading a file, and a verifier is handed the
+ * worker's own session, not a sibling agent's workspace. It never held between peers.
+ *
+ * `artifactDir` fixes it by naming a real directory the plugin creates, addressed
+ * absolutely so it resolves from whatever cwd the agent happens to have (see
+ * artifacts.ts). Omitted when the artifact channel is unavailable, in which case the file
+ * route is not offered at all — better to have workers keep everything in the reply than
+ * to hand out a handle that cannot be dereferenced.
  *
  * `handoffContract` turns the general advice into a specific checklist. It is the only
  * part of this that survives a downstream summarize or truncation reliably, because the
@@ -143,13 +174,19 @@ export function idsWithDownstreamConsumers(subtasks: SubtaskPlan[]): Set<number>
  * goes to the verifier (see verify.ts), which is what makes it enforced rather than
  * merely requested — a worker is free to ignore prose guidance.
  */
-function buildHandoffNotice(maxContextChars: number, handoffContract?: string[]): string {
+function buildHandoffNotice(
+  maxContextChars: number,
+  handoffContract?: string[],
+  artifactDir?: string | null,
+): string {
   const lines = [
     "【关于你的输出如何被使用】",
     `后续子任务只能看到你这次回复的最终正文，看不到你的工具调用结果和中间步骤，且正文超过 ${maxContextChars} 字符的部分会被截断。`,
     "因此请把后续子任务需要的事实、数据、结论直接写在最终正文里，不要只描述你做了什么。",
-    "如果完整产出明显超出上述长度，请把最重要的部分写在正文里，其余写入工作区文件并在正文里注明文件名。",
   ];
+  if (artifactDir) {
+    lines.push(describeArtifactDirForWorker(artifactDir));
+  }
   if (handoffContract && handoffContract.length > 0) {
     lines.push(
       "",
@@ -192,11 +229,17 @@ export async function runSubtask(
 ): Promise<{ result: SubtaskResult; timedOut: boolean }> {
   const { subagent, cfg, rootSessionKey, logger } = deps;
   const priorContext = buildPriorContext(subtask, results, cfg.maxContextChars, rootSessionKey);
+  // Created only for subtasks something depends on: a leaf's output goes to the
+  // summarizer, which reads text and would never dereference a path, so an empty
+  // directory there would be pure litter.
+  const artifactDir = hasDownstreamConsumers
+    ? ensureArtifactDir(rootSessionKey, subtask.id, logger)
+    : null;
   // Hand-off guidance goes LAST, after the description. Two reasons: it is a constraint
   // on the output rather than part of the task, and the tail is the protected position
   // under `truncateKeepTail` (see sanitize.ts) if anything upstream ever caps this.
   const handoff = hasDownstreamConsumers
-    ? `\n\n---\n\n${buildHandoffNotice(cfg.maxContextChars, subtask.handoffContract)}`
+    ? `\n\n---\n\n${buildHandoffNotice(cfg.maxContextChars, subtask.handoffContract, artifactDir)}`
     : "";
   const initialMessage = priorContext
     ? `${priorContext}\n\n---\n\n${subtask.description}${handoff}`
@@ -225,6 +268,36 @@ export async function runSubtask(
     hasDownstreamConsumers && (subtask.handoffContract ?? []).some((i) => i.trim().length > 0);
   const verifierAgentId =
     subtask.acceptanceCriteria?.trim() || enforceContract ? cfg.defaultAgentId : undefined;
+
+  /**
+   * What the worker actually left behind, plus a notice when its reply names files that
+   * are not there.
+   *
+   * The notice is the point of step 2. A dead handle used to cost the consumer a hunt and
+   * then a silent rewrite while the subtask reported a clean ok; now it is stated in the
+   * result. It is a NOTICE rather than an error on purpose — the reply text may well be
+   * complete on its own, and failing a subtask over a stray filename in prose would be a
+   * worse trade than reporting it.
+   */
+  const collectArtifacts = (
+    text: string,
+  ): { artifacts: SubtaskArtifact[]; notices: string[] } => {
+    if (!artifactDir) return { artifacts: [], notices: [] };
+    const artifacts = listArtifacts(artifactDir);
+    const unresolved = detectUnresolvedFileClaims(text, artifacts);
+    if (unresolved.length === 0) return { artifacts, notices: [] };
+    logger?.warn(
+      `[dragon-task-orchestrator] subtask ${subtask.id} on ${agentId} names ` +
+        `${unresolved.length} file(s) with no matching artifact: ${unresolved.join(", ")}` +
+        `${artifacts.length === 0 ? " (artifact dir is empty)" : ""}`,
+    );
+    return {
+      artifacts,
+      notices: [
+        `子任务${subtask.id}的回复提到了 ${unresolved.join("、")}，但共享产物目录里没有对应文件，下游无法读取；请以正文内容为准`,
+      ],
+    };
+  };
 
   try {
     let message = initialMessage;
@@ -256,10 +329,19 @@ export async function runSubtask(
       // downstream prior-context as if it were task content.
       const { text, notices } = splitProcessingNotices(raw.text);
 
+      const collected = collectArtifacts(text);
+
       if (!verifierAgentId) {
         // No acceptance criteria declared for this subtask — unchanged pre-verify behavior.
         return {
-          result: { id: subtask.id, agentId, text, status: "ok", processingNotices: notices },
+          result: {
+            id: subtask.id,
+            agentId,
+            text,
+            status: "ok",
+            processingNotices: [...notices, ...collected.notices],
+            artifacts: collected.artifacts,
+          },
           timedOut: false,
         };
       }
@@ -272,6 +354,11 @@ export async function runSubtask(
         // Same flag that decided whether the worker was told about the contract, so the
         // two can never disagree about whether it applies.
         hasDownstreamConsumers,
+        // Ground truth about the file route, so the verifier judges claims against what
+        // exists rather than taking the worker's word (see verify.ts). Null — not an empty
+        // list — when no directory was offered, which means "not applicable" rather than
+        // "wrote nothing".
+        artifactDir ? collected.artifacts : null,
       );
       if (outcome.passed) {
         return {
@@ -280,8 +367,13 @@ export async function runSubtask(
             agentId,
             text,
             status: "ok",
-            processingNotices: [...notices, `经过 ${attempt + 1} 次校验通过`],
+            processingNotices: [
+              ...notices,
+              ...collected.notices,
+              `经过 ${attempt + 1} 次校验通过`,
+            ],
             verifyAttempts: attempt + 1,
+            artifacts: collected.artifacts,
           },
           timedOut: false,
         };
