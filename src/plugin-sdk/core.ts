@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { buildChatChannelMetaById } from "../channels/chat-meta-shared.js";
 import type { ChatChannelId } from "../channels/ids.js";
 import { emptyChannelConfigSchema } from "../channels/plugins/config-schema.js";

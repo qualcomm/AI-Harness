@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type TlonTarget =
   | { kind: "dm"; ship: string }
   | { kind: "group"; nest: string; hostShip: string; channelName: string };

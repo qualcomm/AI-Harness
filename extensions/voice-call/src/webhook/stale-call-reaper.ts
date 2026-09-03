@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CallManager } from "../manager.js";
 
 const CHECK_INTERVAL_MS = 30_000;

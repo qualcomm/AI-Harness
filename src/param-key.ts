@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { lowercasePreservingWhitespace } from "./shared/string-coerce.js";
 
 function toSnakeCaseKey(key: string): string {

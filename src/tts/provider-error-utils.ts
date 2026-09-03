@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { asFiniteNumber } from "../shared/number-coercion.js";
 export { normalizeOptionalString as trimToUndefined } from "../shared/string-coerce.js";
 

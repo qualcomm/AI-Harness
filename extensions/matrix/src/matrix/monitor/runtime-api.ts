@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow Matrix monitor helper seam.
 // Keep monitor internals off the broad package runtime-api barrel so monitor
 // tests and shared workers do not pull unrelated Matrix helper surfaces.

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Delegation metadata store — see design.md D1 and R2.
  *

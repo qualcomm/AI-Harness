@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Diagnostic flag/event helpers for plugins that want narrow runtime gating.
 
 export { isDiagnosticFlagEnabled } from "../infra/diagnostic-flags.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import { collectSlackSecurityAuditFindings } from "../../test/helpers/channels/security-audit-contract.js";
 import type { OpenClawConfig } from "../config/config.js";

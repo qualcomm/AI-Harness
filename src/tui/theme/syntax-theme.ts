@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import chalk from "chalk";
 
 type HighlightTheme = Record<string, (text: string) => string>;

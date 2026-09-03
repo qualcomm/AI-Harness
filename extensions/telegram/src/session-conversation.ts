@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseTelegramTopicConversation } from "./topic-conversation.js";
 
 export function resolveTelegramSessionConversation(params: {

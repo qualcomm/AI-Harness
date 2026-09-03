@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isDeepStrictEqual } from "node:util";
 import JSON5 from "json5";
 

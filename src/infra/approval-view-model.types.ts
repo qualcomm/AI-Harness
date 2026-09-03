@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { InteractiveReplyButton } from "../interactive/payload.js";
 import type { ChannelApprovalKind } from "./approval-types.js";
 import type {

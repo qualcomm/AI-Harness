@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Info-level logging gated by `cfg.logging` — see the "Enable Logging" uiHint
  * in openclaw.plugin.json ("Emit info logs for decomposition and delegation

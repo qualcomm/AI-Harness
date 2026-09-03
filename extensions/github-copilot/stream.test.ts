@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { buildCopilotDynamicHeaders } from "openclaw/plugin-sdk/provider-stream-shared";
 import { describe, expect, it, vi } from "vitest";
 import { wrapCopilotAnthropicStream, wrapCopilotProviderStream } from "./stream.js";

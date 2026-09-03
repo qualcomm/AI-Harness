@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Private helper surface for the bundled msteams plugin.
 // Keep this list additive and scoped to the bundled Teams surface.
 

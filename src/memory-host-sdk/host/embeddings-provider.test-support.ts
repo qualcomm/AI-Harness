@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { vi } from "vitest";
 import { type FetchMock, withFetchPreconnect } from "../../test-utils/fetch-mock.js";
 

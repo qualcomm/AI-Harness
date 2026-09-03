@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const TELEGRAM_MAX_CAPTION_LENGTH = 1024;
 
 export function splitTelegramCaption(text?: string): {

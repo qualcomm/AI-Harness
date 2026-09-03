@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 function parseIntegerId(value: string): number | undefined {
   if (!/^-?\d+$/.test(value)) {
     return undefined;

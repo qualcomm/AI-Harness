@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const MEMORY_BATCH_FAILURE_LIMIT = 2;
 
 export type MemoryBatchFailureState = {

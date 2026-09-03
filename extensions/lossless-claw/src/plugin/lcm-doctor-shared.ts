@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { DatabaseSync } from "node:sqlite";
 
 export const FALLBACK_SUMMARY_MARKER = "[LCM fallback summary; truncated for context management]";

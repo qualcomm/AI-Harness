@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const TELEPHONY_SAMPLE_RATE = 8000;
 const RESAMPLE_FILTER_TAPS = 31;
 const RESAMPLE_CUTOFF_GUARD = 0.94;

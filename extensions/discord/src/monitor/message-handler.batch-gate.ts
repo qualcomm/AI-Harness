@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ReplyToMode } from "openclaw/plugin-sdk/config-runtime";
 import type { ReplyThreadingPolicy } from "openclaw/plugin-sdk/reply-reference";
 import { resolveBatchedReplyThreadingPolicy } from "openclaw/plugin-sdk/reply-reference";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { TELEGRAM_COMMAND_NAME_PATTERN as sdkTelegramCommandNamePattern } from "openclaw/plugin-sdk/telegram-command-config";
 import { describe, expect, it } from "vitest";
 import { TELEGRAM_COMMAND_NAME_PATTERN } from "./channel-config-api.js";

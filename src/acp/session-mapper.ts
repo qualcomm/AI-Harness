@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { GatewayClient } from "../gateway/client.js";
 import { readBool, readString } from "./meta.js";
 import type { AcpServerOptions } from "./types.js";

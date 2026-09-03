@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import "./isolated-agent.mocks.js";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { clearAllBootstrapSnapshots } from "../agents/bootstrap-cache.js";

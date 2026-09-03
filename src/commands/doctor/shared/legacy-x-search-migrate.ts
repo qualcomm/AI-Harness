@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isRecord } from "./legacy-config-record-shared.js";
 
 type JsonRecord = Record<string, unknown>;

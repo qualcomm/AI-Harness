@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { githubCopilotLoginCommand } from "../plugin-sdk/provider-auth-login.js";
 export {
   modelsAliasesAddCommand,

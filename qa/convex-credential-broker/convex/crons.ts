@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { cronJobs } from "convex/server";
 import { internal } from "./_generated/api";
 

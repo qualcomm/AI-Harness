@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { QA_AGENTIC_PARITY_SCENARIO_IDS } from "./agentic-parity.js";
 import {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const ANNOUNCE_SKIP_TOKEN = "ANNOUNCE_SKIP";
 export const REPLY_SKIP_TOKEN = "REPLY_SKIP";
 

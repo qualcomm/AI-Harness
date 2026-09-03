@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import "fake-indexeddb/auto";
 import { EventEmitter } from "node:events";
 import fs from "node:fs";

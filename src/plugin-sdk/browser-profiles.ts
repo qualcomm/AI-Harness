@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import type { BrowserConfig, BrowserProfileConfig, OpenClawConfig } from "../config/config.js";
 import type { SsrFPolicy } from "../infra/net/ssrf.js";

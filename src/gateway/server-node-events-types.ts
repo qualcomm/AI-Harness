@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ModelCatalogEntry } from "../agents/model-catalog.js";
 import type { CliDeps } from "../cli/deps.types.js";
 import type { HealthSummary } from "../commands/health.js";

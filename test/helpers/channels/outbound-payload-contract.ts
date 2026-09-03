@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, expect, it, type Mock, vi } from "vitest";
 import type { ReplyPayload } from "../../../src/auto-reply/types.js";
 import { primeChannelOutboundSendMock } from "../../../src/channels/plugins/contracts/test-helpers.js";

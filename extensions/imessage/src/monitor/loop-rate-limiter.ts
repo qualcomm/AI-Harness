@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Per-conversation rate limiter that detects rapid-fire identical echo
  * patterns and suppresses them before they amplify into queue overflow.

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { listChannelPlugins } from "../channels/plugins/index.js";
 import type { OutboundSendDeps } from "../infra/outbound/send-deps.js";
 import { createLazyRuntimeSurface } from "../shared/lazy-runtime.js";

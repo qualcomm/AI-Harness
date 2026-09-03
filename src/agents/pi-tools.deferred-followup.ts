@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describeExecTool, describeProcessTool } from "./bash-tools.descriptions.js";
 import type { AnyAgentTool } from "./pi-tools.types.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import type { ProgressReporter } from "../../cli/progress.js";
 import { buildStatusAllReportLines } from "./report-lines.js";

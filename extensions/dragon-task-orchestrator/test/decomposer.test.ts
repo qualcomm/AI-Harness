@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Tests for plan validation and cleaning (tasks 3.6/3.7/3.8).
  *

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createHash } from "node:crypto";
 import { describe, expect, it } from "vitest";
 import { createWikiPageFilename, slugifyWikiSegment } from "./markdown.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import * as videoGenerationRuntime from "../../video-generation/runtime.js";
 import { VIDEO_GENERATION_TASK_KIND } from "../video-generation-task-status.js";

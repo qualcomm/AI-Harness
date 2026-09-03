@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type QaProviderMode = "mock-openai" | "live-frontier";
 export type QaProviderModeInput = QaProviderMode | "live-openai";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { wrapToolWorkspaceRootGuardWithOptions } from "./pi-tools.read.js";
 import type { ToolFsPolicy } from "./tool-fs-policy.js";
 import type { AnyAgentTool } from "./tools/common.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { chunkText } from "openclaw/plugin-sdk/reply-chunking";
 import { createWhatsAppOutboundBase } from "./outbound-base.js";
 import { resolveWhatsAppOutboundTarget } from "./resolve-outbound-target.js";

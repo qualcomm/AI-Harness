@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export * from "./internal-hooks.js";
 
 export type HookEventType = import("./internal-hooks.js").InternalHookEventType;

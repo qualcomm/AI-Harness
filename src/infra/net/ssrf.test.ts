@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { blockedIpv6MulticastLiterals } from "../../shared/net/ip-test-fixtures.js";
 import { isBlockedHostnameOrIp, isPrivateIpAddress } from "./ssrf.js";

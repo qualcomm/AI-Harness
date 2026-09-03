@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { PluginRuntime } from "../plugins/runtime/types.js";
 
 /** Create a tiny mutable runtime slot with strict access when the runtime has not been initialized. */

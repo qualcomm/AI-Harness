@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { qqbotPlugin } from "./src/channel.js";
 export { qqbotSetupPlugin } from "./src/channel.setup.js";
 export { getFrameworkCommands } from "./src/slash-commands.js";

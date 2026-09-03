@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelId } from "../../channels/plugins/channel-id.types.js";
 
 export type OutboundDeliveryResult = {

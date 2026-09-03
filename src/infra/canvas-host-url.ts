@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isLoopbackHost } from "../gateway/net.js";
 
 type HostSource = string | null | undefined;

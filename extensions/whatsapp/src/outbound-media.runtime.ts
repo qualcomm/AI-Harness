@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadWebMedia } from "openclaw/plugin-sdk/web-media";
 
 export async function loadOutboundMediaFromUrl(

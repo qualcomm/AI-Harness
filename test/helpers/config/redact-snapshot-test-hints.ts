@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ConfigUiHints } from "../../../src/config/schema.js";
 
 // Keep this fixture minimal so redaction tests exercise the hint-matching

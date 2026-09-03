@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseCustomId, type ComponentParserResult } from "@buape/carbon";
 
 export const DISCORD_COMPONENT_CUSTOM_ID_KEY = "occomp";

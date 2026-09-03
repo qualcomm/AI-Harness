@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import * as fences from "../markdown/fences.js";
 import { EmbeddedBlockChunker } from "./pi-embedded-block-chunker.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ReactiveController, ReactiveControllerHost } from "lit";
 import { i18n } from "./translate.ts";
 

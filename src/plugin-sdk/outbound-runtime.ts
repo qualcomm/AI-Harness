@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { createRuntimeOutboundDelegates } from "../channels/plugins/runtime-forwarders.js";
 export { resolveOutboundSendDep, type OutboundSendDeps } from "../infra/outbound/send-deps.js";
 export { resolveAgentOutboundIdentity, type OutboundIdentity } from "../infra/outbound/identity.js";

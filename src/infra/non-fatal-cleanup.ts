@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export async function runBestEffortCleanup<T>(params: {
   cleanup: () => Promise<T>;
   onError?: (error: unknown) => void;

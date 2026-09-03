@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function formatErrorMessage(err: unknown): string {
   if (err instanceof Error) {
     let formatted = err.message || err.name || "Error";

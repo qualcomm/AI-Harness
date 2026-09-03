@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { AnyAgentTool } from "../agents/tools/common.js";
 export { imageResultFromFile, jsonResult, readStringParam } from "../agents/tools/common.js";
 export type { NodeListNode } from "../agents/tools/nodes-utils.js";

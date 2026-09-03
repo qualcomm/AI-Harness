@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { expect, test } from "vitest";
 import { createProcessSessionFixture } from "./bash-process-registry.test-helpers.js";
 import { handleProcessSendKeys, type WritableStdin } from "./bash-tools.process-send-keys.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import { readConfigFileSnapshot, writeConfigFile } from "./doctor.e2e-harness.js";
 

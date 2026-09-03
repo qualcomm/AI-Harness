@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { wrapExternalContent } from "./external-content.js";
 
 const DEFAULT_MAX_CHARS = 800;

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { randomBytes } from "node:crypto";
 
 export const CANVAS_CAPABILITY_PATH_PREFIX = "/__openclaw__/cap";

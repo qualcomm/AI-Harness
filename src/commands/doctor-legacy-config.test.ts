@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { normalizeLegacyStreamingAliases } from "../config/channel-compat-normalization.js";
 import type { OpenClawConfig } from "../config/config.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MatrixClient } from "../sdk.js";
 import { isMatrixTerminalSyncState, type MatrixSyncState } from "../sync-state.js";
 import type { MatrixMonitorStatusController } from "./status.js";

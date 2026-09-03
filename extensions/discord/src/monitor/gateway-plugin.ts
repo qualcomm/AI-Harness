@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { randomUUID } from "node:crypto";
 import * as carbonGateway from "@buape/carbon/gateway";
 import type { APIGatewayBotInfo } from "discord-api-types/v10";

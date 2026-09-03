@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { CryptoEvent } from "matrix-js-sdk/lib/crypto-api/CryptoEvent.js";
 import { MatrixEventEvent, type MatrixEvent } from "matrix-js-sdk/lib/matrix.js";
 import { LogService, noop } from "./logger.js";

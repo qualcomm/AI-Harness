@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { _getTrustedDirs, _resetResolveSystemBin, resolveSystemBin } from "./resolve-system-bin.js";

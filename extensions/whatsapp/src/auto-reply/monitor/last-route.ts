@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MsgContext } from "openclaw/plugin-sdk/reply-runtime";
 import { formatError } from "../../session.js";
 import { resolveStorePath, updateLastRoute } from "../config.runtime.js";

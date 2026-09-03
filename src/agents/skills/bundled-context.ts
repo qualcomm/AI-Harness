@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createSubsystemLogger } from "../../logging/subsystem.js";
 import { resolveBundledSkillsDir, type BundledSkillsResolveOptions } from "./bundled-dir.js";
 import { loadSkillsFromDirSafe } from "./local-loader.js";

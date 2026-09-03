@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 function failOrUndefined(params: { onMissing: "throw" | "undefined"; message: string }): undefined {
   if (params.onMissing === "throw") {
     throw new Error(params.message);

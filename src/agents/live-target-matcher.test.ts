@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeAll, describe, expect, it, vi } from "vitest";
 
 type CreateLiveTargetMatcher = typeof import("./live-target-matcher.js").createLiveTargetMatcher;

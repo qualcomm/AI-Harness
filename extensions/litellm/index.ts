@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { defineSingleProviderPluginEntry } from "openclaw/plugin-sdk/provider-entry";
 import { applyLitellmConfig, LITELLM_DEFAULT_MODEL_REF } from "./onboard.js";
 import { buildLitellmProvider } from "./provider-catalog.js";

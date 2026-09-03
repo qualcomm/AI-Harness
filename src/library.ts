@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { getReplyFromConfig as getReplyFromConfigRuntime } from "./auto-reply/reply.runtime.js";
 import { applyTemplate } from "./auto-reply/templating.js";
 import { createDefaultDeps } from "./cli/deps.js";

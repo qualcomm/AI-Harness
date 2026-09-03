@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalString, resolvePrimaryStringValue } from "../shared/string-coerce.js";
 import type { AgentModelConfig } from "./types.agents-shared.js";
 

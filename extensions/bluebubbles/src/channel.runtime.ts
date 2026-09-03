@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { sendBlueBubblesMedia as sendBlueBubblesMediaImpl } from "./media-send.js";
 import { resolveBlueBubblesMessageId as resolveBlueBubblesMessageIdImpl } from "./monitor-reply-cache.js";
 import {

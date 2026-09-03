@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const DEFAULT_ELEVENLABS_BASE_URL = "https://api.elevenlabs.io";
 
 export function isValidElevenLabsVoiceId(voiceId: string): boolean {

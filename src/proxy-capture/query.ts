@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveDebugProxySettings } from "./env.js";
 import { getDebugProxyCaptureStore } from "./store.sqlite.js";
 import type { CaptureQueryPreset } from "./types.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const PROCESS_TEST_TIMEOUT_MS = {
   tiny: 25,
   short: 100,

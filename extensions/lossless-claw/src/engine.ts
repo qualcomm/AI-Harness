@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createHash, randomUUID } from "node:crypto";
 import { createReadStream, statSync } from "node:fs";
 import { mkdir, open, stat, writeFile } from "node:fs/promises";

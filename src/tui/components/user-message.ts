@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { theme } from "../theme/theme.js";
 import { MarkdownMessageComponent } from "./markdown-message.js";
 

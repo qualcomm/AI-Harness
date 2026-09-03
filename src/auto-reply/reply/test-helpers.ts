@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { vi } from "vitest";
 import type { FollowupRun } from "./queue.js";
 import type { TypingController } from "./typing.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AgentToolResult } from "@mariozechner/pi-agent-core";
 import { createDiscordActionGate } from "../accounts.js";
 import { readStringParam, type OpenClawConfig } from "../runtime-api.js";

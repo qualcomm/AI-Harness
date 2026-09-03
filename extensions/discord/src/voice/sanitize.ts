@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { stripInlineDirectiveTagsForDisplay } from "openclaw/plugin-sdk/text-runtime";
 
 const SPEECH_EMOJI_RE =

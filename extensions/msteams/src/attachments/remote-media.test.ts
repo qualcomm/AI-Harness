@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 // Mock the runtime so we can assert whether the strict-dispatcher path

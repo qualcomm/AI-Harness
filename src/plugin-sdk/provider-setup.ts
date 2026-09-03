@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Curated setup helpers for provider plugins that integrate local/self-hosted models.
 export type {
   OpenClawPluginApi,

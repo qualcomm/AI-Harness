@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeIMessageHandle, parseIMessageTarget } from "./targets.js";
 
 export function normalizeIMessageAcpConversationId(

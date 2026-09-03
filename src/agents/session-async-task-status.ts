@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalString } from "../shared/string-coerce.js";
 import { listTasksForOwnerKey } from "../tasks/runtime-internal.js";
 import type { TaskRecord, TaskRuntime, TaskStatus } from "../tasks/task-registry.types.js";

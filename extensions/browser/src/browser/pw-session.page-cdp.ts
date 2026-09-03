@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CDPSession, Page } from "playwright-core";
 
 type PageCdpSend = (method: string, params?: Record<string, unknown>) => Promise<unknown>;

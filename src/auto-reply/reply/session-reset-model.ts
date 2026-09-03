@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadModelCatalog, type ModelCatalogEntry } from "../../agents/model-catalog.js";
 import {
   buildAllowedModelSet,

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Chalk } from "chalk";
 import type { Logger as TsLogger } from "tslog";
 import { normalizeChatChannelId } from "../channels/ids.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { DEFAULT_ACCOUNT_ID } from "openclaw/plugin-sdk/account-id";
 export { normalizeE164 } from "openclaw/plugin-sdk/account-resolution";
 export { readChannelAllowFromStoreSync } from "openclaw/plugin-sdk/channel-pairing";

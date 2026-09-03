@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, it } from "vitest";
 import { expectOpenDmPolicyConfigIssue } from "../../../test/helpers/plugins/status-issues.js";
 import { collectZaloStatusIssues } from "./status-issues.js";

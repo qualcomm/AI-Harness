@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AssistantMessage, StopReason, Usage } from "@mariozechner/pi-ai";
 
 export type StreamModelDescriptor = {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalString } from "../shared/string-coerce.js";
 import { isNonSecretApiKeyMarker } from "./model-auth-markers.js";
 import type { ProviderConfig } from "./models-config.providers.secrets.js";

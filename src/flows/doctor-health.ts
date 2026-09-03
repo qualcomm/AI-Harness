@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { intro as clackIntro, outro as clackOutro } from "@clack/prompts";
 import { loadAndMaybeMigrateDoctorConfig } from "../commands/doctor-config-flow.js";
 import { noteSourceInstallIssues } from "../commands/doctor-install.js";

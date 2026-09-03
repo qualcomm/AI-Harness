@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public auth/onboarding helpers for provider plugins.
 
 import { listProfilesForProvider } from "../agents/auth-profiles/profiles.js";

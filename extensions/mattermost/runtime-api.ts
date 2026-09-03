@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Private runtime barrel for the bundled Mattermost extension.
 // Keep this barrel thin and generic-only.
 

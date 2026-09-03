@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Integration test proving that sessions_yield produces a clean end_turn exit
  * with no pending tool calls, so the parent session is idle when subagent

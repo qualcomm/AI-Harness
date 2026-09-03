@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { isVerbose, isYes, setVerbose, setYes } from "./global-state.js";
 import { isVerbose } from "./global-state.js";
 import { getLogger, isFileLogLevelEnabled } from "./logging/logger.js";

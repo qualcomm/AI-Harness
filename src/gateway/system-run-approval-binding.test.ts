@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, test } from "vitest";
 import { toSystemRunApprovalMismatchError } from "../infra/system-run-approval-binding.js";
 

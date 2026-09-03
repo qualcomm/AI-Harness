@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ProgressReporter } from "../../cli/progress.js";
 import { getTerminalTableWidth, renderTable } from "../../terminal/table.js";
 import { isRich, theme } from "../../terminal/theme.js";

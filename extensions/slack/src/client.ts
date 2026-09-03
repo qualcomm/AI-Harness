@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { type RetryOptions, type WebClientOptions, WebClient } from "@slack/web-api";
 import { HttpsProxyAgent } from "https-proxy-agent";
 import { resolveEnvHttpProxyUrl } from "openclaw/plugin-sdk/infra-runtime";

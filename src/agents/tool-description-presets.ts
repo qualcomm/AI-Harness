@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const EXEC_TOOL_DISPLAY_SUMMARY = "Run shell commands that start now.";
 export const PROCESS_TOOL_DISPLAY_SUMMARY = "Inspect and control running exec sessions.";
 export const CRON_TOOL_DISPLAY_SUMMARY = "Schedule cron jobs, reminders, and wake events.";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { NODE_SYSTEM_RUN_COMMANDS } from "./node-commands.js";
 
 export type NodeApprovalScope = "operator.pairing" | "operator.write" | "operator.admin";

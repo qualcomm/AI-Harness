@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { asRecord } from "./monitor-normalize.js";
 import { normalizeBlueBubblesHandle, parseBlueBubblesTarget } from "./targets.js";
 import type { BlueBubblesSendTarget } from "./types.js";

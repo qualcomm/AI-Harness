@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { reduceInteractiveReply } from "openclaw/plugin-sdk/interactive-runtime";
 import type {
   InteractiveButtonStyle,

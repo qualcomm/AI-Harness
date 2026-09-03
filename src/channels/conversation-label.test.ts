@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import type { MsgContext } from "../auto-reply/templating.js";
 import { resolveConversationLabel } from "./conversation-label.js";

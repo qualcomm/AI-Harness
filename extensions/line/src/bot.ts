@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { webhook } from "@line/bot-sdk";
 import type { NextFunction, Request, Response } from "express";
 import type { OpenClawConfig } from "openclaw/plugin-sdk/config-runtime";

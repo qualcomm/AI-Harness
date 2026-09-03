@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe } from "vitest";
 import { getActionContractRegistry } from "../../../../test/helpers/channels/registry-actions.js";
 import { installChannelActionsContractSuite } from "../../../../test/helpers/channels/registry-contract-suites.js";

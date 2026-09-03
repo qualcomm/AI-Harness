@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { registerDaemonCli } from "./daemon-cli/register.js";
 export { addGatewayServiceCommands } from "./daemon-cli/register-service-commands.js";
 export {

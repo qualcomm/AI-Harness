@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ActiveChannelPluginRuntimeShape } from "../../plugins/channel-registry-state.types.js";
 import {
   getActivePluginChannelRegistryFromState,

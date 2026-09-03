@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { runLiveCacheRegression } from "./live-cache-regression-runner.js";
 import { LIVE_CACHE_TEST_ENABLED } from "./live-cache-test-support.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeThinkLevel, type ThinkLevel } from "../../auto-reply/thinking.js";
 import { isReasoningConstraintErrorMessage } from "./errors.js";
 

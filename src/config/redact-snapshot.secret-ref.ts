@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function isSecretRefShape(
   value: Record<string, unknown>,
 ): value is Record<string, unknown> & { source: string; id: string } {

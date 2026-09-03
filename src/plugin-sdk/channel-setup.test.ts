@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { runSetupWizardFinalize } from "../../test/helpers/plugins/setup-wizard.js";
 import { createOptionalChannelSetupSurface } from "./channel-setup.js";

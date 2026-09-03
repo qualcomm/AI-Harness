@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { msTeamsExtensionTestRoots } from "./vitest.extension-msteams-paths.mjs";
 import { createScopedVitestConfig } from "./vitest.scoped-config.ts";
 

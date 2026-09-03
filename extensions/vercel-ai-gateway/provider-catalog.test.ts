@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { getStaticVercelAiGatewayModelCatalog, VERCEL_AI_GATEWAY_BASE_URL } from "./api.js";
 import { buildVercelAiGatewayProvider } from "./provider-catalog.js";

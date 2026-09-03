@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalString } from "openclaw/plugin-sdk/text-runtime";
 import { parseBooleanValue } from "../../utils/boolean.js";
 import type { BrowserRouteContext, ProfileContext } from "../server-context.js";

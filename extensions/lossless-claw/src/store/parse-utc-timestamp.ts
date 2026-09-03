@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Parse a SQLite UTC timestamp string into a Date object.
  * SQLite stores timestamps via datetime('now') without a Z suffix,

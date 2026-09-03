@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { InlineKeyboardButton, InlineKeyboardMarkup } from "@grammyjs/types";
 import type { TelegramInlineButtons } from "./button-types.js";
 

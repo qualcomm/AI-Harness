@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalString } from "../shared/string-coerce.js";
 
 const SSH_TOKEN = /^[A-Za-z0-9._-]+$/;

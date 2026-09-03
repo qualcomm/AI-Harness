@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 function normalizeLineConversationId(raw?: string | null): string | null {
   const trimmed = raw?.trim() ?? "";
   if (!trimmed) {

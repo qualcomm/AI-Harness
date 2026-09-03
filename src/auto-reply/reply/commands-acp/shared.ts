@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { randomUUID } from "node:crypto";
 import { toAcpRuntimeErrorText } from "../../../acp/runtime/error-text.js";
 import type { AcpRuntimeError } from "../../../acp/runtime/errors.js";

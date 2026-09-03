@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { RuntimeLogger } from "../../runtime-api.js";
 
 export function createMatrixMonitorTaskRunner(params: {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { colorize, isRich, theme } from "../terminal/theme.js";
 
 export const toPosixPath = (value: string) => value.replace(/\\/g, "/");

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Cloud Code Assist API rejects a subset of JSON Schema keywords.
 // This module scrubs/normalizes tool schemas to keep Gemini happy.
 

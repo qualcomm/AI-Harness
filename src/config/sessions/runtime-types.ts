@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MsgContext } from "../../auto-reply/templating.js";
 import type { DeliveryContext } from "../../utils/delivery-context.types.js";
 import type { SessionMaintenanceMode } from "../types.base.js";

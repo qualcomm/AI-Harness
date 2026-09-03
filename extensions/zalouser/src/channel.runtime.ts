@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { probeZalouser } from "./probe.js";
 export { collectZalouserSecurityAuditFindings } from "./security-audit.js";
 export { sendMessageZalouser, sendReactionZalouser } from "./send.js";

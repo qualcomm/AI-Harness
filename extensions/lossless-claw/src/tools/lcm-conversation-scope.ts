@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { LcmContextEngine } from "../engine.js";
 import type { LcmDependencies } from "../types.js";
 

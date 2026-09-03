@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow shared Matrix runtime exports for light runtime-api consumers.
 
 export type {

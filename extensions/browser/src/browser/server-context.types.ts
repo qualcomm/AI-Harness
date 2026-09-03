@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Server } from "node:http";
 import type { RunningChrome } from "./chrome.js";
 import type { BrowserTab, BrowserTransport } from "./client.types.js";

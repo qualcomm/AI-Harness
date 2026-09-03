@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { evaluateMatchedGroupAccessForPolicy } from "openclaw/plugin-sdk/group-access";
 import { mergeDmAllowFromSources, resolveGroupAllowFromSources } from "../channels/allow-from.js";
 import { resolveControlCommandGate } from "../channels/command-gating.js";

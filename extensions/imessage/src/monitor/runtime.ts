@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createNonExitingRuntime, type RuntimeEnv } from "openclaw/plugin-sdk/runtime-env";
 import { normalizeStringEntries } from "openclaw/plugin-sdk/text-runtime";
 import type { MonitorIMessageOpts } from "./types.js";

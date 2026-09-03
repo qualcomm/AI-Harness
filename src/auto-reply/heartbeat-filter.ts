@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { stripHeartbeatToken } from "./heartbeat.js";
 
 const HEARTBEAT_TASK_PROMPT_PREFIX =

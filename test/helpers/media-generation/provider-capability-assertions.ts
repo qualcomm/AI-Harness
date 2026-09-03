@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { expect } from "vitest";
 import { listSupportedMusicGenerationModes } from "../../../src/music-generation/capabilities.js";
 import type {

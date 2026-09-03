@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe } from "vitest";
 import { registerDefaultAuthTokenSuite } from "./server.auth.default-token.suite.js";
 import { installGatewayTestHooks } from "./server.auth.shared.js";

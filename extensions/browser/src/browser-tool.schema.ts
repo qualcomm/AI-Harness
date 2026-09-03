@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Type } from "@sinclair/typebox";
 import { optionalStringEnum, stringEnum } from "openclaw/plugin-sdk/channel-actions";
 

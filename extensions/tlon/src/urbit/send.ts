@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { scot, da } from "@urbit/aura";
 import { markdownToStory, createImageBlock, isImageUrl, type Story } from "./story.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CodexAppServerModelListResult } from "./app-server/models.js";
 import { isJsonObject, type JsonObject, type JsonValue } from "./app-server/protocol.js";
 import type { SafeValue } from "./command-rpc.js";

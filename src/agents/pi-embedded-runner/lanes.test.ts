@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { CommandLane } from "../../process/lanes.js";
 import { resolveGlobalLane, resolveSessionLane } from "./lanes.js";

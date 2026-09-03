@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { withFetchPreconnect } from "openclaw/plugin-sdk/testing";
 import { afterEach, describe, expect, it, vi, type Mock } from "vitest";
 import { probeTelegram, resetTelegramProbeFetcherCacheForTests } from "./probe.js";

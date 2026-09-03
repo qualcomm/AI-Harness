@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const SHELL_METACHARS = /[;&|`$<>]/;
 const CONTROL_CHARS = /[\r\n]/;
 const QUOTE_CHARS = /["']/;

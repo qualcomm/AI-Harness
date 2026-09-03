@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared helpers for parsing MEDIA tokens from command/stdout text.
 
 import { parseFenceSpans } from "../markdown/fences.js";

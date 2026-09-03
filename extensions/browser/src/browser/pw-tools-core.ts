@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export * from "./pw-tools-core.activity.js";
 export * from "./pw-tools-core.downloads.js";
 export * from "./pw-tools-core.interactions.js";

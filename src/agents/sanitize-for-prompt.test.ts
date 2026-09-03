@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { sanitizeForPromptLiteral, wrapUntrustedPromptDataBlock } from "./sanitize-for-prompt.js";
 import { buildAgentSystemPrompt } from "./system-prompt.js";

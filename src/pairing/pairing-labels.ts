@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getPairingAdapter } from "../channels/plugins/pairing.js";
 import type { PairingChannel } from "./pairing-store.types.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { logConfigUpdated } from "../../config/logging.js";
 import { resolveAgentModelPrimaryValue } from "../../config/model-input.js";
 import type { RuntimeEnv } from "../../runtime.js";

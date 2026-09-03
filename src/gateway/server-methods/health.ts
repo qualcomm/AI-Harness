@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getStatusSummary } from "../../commands/status.js";
 import { ErrorCodes, errorShape } from "../protocol/index.js";
 import { HEALTH_REFRESH_INTERVAL_MS } from "../server-constants.js";

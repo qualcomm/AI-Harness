@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import * as authModule from "../../../../src/agents/model-auth.js";
 import { mockPublicPinnedHostname } from "./test-helpers/ssrf.js";

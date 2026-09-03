@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { type Bot, GrammyError, InputFile } from "grammy";
 import type { ReplyToMode } from "openclaw/plugin-sdk/config-runtime";
 import type { MarkdownTableMode } from "openclaw/plugin-sdk/config-runtime";

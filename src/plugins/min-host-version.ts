@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isAtLeast, parseSemver } from "../infra/runtime-guard.js";
 
 export const MIN_HOST_VERSION_FORMAT =

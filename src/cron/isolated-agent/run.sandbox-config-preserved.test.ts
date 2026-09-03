@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { resolveSandboxConfigForAgent } from "../../agents/sandbox/config.js";
 import { buildCronAgentDefaultsConfig } from "./run-config.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { FeishuMessageEvent } from "./event-types.js";
 export type { MentionTarget } from "./mention-target.types.js";
 import type { MentionTarget } from "./mention-target.types.js";

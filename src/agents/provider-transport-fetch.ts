@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Api, Model } from "@mariozechner/pi-ai";
 import { fetchWithSsrFGuard } from "../infra/net/fetch-guard.js";
 import { resolveDebugProxySettings } from "../proxy-capture/env.js";

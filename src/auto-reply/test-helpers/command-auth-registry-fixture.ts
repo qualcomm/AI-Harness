@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeEach } from "vitest";
 import { normalizeE164 } from "../../plugin-sdk/account-resolution.js";
 import { setActivePluginRegistry } from "../../plugins/runtime.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const OPERATOR_ROLE = "operator";
 const OPERATOR_ADMIN_SCOPE = "operator.admin";
 const OPERATOR_READ_SCOPE = "operator.read";

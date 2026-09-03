@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { runEmbeddedAttempt } from "../pi-embedded-runner/run/attempt.js";
 import type { AgentHarness } from "./types.js";
 

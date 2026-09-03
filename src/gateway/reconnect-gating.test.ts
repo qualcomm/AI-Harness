@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { type GatewayErrorInfo, isNonRecoverableAuthError } from "../../ui/src/ui/gateway.ts";
 import { ConnectErrorDetailCodes } from "./protocol/connect-error-details.js";

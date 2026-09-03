@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseBuffer, type IFileInfo } from "music-metadata";
 import { getMatrixRuntime } from "../../runtime.js";
 import type {

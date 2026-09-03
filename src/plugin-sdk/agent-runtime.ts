@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public agent/model/runtime helpers for plugins that integrate with core agent flows.
 
 export * from "../agents/agent-scope.js";

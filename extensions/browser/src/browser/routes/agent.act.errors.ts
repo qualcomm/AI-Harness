@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { BrowserResponse } from "./types.js";
 
 export const ACT_ERROR_CODES = {

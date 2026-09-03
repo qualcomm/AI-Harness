@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared setup wizard/types/helpers for plugin and channel setup surfaces.
 
 export type { OpenClawConfig } from "../config/config.js";

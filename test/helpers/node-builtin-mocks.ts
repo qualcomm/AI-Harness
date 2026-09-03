@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type MockFactory<TModule extends object> =
   | Partial<TModule>
   | ((actual: TModule) => Partial<TModule>);

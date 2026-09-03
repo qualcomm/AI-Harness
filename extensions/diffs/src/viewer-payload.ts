@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { DIFF_INDICATORS, DIFF_LAYOUTS, DIFF_THEMES } from "./types.js";
 import type { DiffViewerPayload } from "./types.js";
 

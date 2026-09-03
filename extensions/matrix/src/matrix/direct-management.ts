@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { KeyedAsyncQueue } from "openclaw/plugin-sdk/keyed-async-queue";
 import { normalizeOptionalString } from "openclaw/plugin-sdk/text-runtime";
 import { inspectMatrixDirectRoomEvidence } from "./direct-room.js";

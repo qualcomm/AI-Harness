@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export {
   buildVllmProvider,
   VLLM_DEFAULT_API_KEY_ENV_VAR,

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { HookEntry } from "../hooks/types.js";
 import type { PluginHookRegistration as TypedPluginHookRegistration } from "./hook-types.js";
 

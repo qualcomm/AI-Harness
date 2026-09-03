@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Relay abort without forwarding the Event argument as the abort reason.
  * Using .bind() avoids closure scope capture (memory leak prevention).

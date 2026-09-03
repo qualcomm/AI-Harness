@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 
 import { execFileSync } from "node:child_process";
 import { bundledPluginFile } from "./lib/bundled-plugin-paths.mjs";

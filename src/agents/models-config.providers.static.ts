@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { listBundledPluginMetadata } from "../plugins/bundled-plugin-metadata.js";

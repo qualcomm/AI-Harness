@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { FileLockOptions } from "openclaw/plugin-sdk/infra-runtime";
 
 export const MATRIX_IDB_PERSIST_INTERVAL_MS = 60_000;

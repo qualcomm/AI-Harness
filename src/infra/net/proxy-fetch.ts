@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { EnvHttpProxyAgent, ProxyAgent, fetch as undiciFetch } from "undici";
 import { logWarn } from "../../logger.js";
 import { formatErrorMessage } from "../errors.js";

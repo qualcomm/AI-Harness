@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Regex patterns for ANSI escape sequences (constructed from strings to
 // satisfy the no-control-regex lint rule).
 const SGR_PATTERN = "\\x1b\\[[0-9;]*m";

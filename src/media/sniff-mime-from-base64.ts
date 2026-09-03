@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { detectMime } from "./mime.js";
 
 export async function sniffMimeFromBase64(base64: string): Promise<string | undefined> {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /** Normalize webhook paths into the canonical registry form used by route lookup. */
 export function normalizeWebhookPath(raw: string): string {
   const trimmed = raw.trim();

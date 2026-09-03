@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { DatabaseSync } from "node:sqlite";
 import { withDatabaseTransaction } from "../transaction-mutex.js";
 import { formatTimestamp } from "../compaction.js";

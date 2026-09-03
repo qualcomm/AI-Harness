@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { getLoadedChannelPluginForRead } from "../../channels/plugins/registry-loaded-read.js";
 export { readChannelAllowFromStoreEntriesSync } from "../../pairing/allow-from-store-read.js";
 export { mapAllowFromEntries } from "../../plugin-sdk/channel-config-helpers.js";

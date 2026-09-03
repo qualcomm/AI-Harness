@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { runExtraParamsPayloadCase } from "./pi-embedded-runner-extraparams.test-support.js";
 import { __testing as extraParamsTesting } from "./pi-embedded-runner/extra-params.js";

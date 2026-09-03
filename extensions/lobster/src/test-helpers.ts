@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type PathEnvKey = "PATH" | "Path" | "PATHEXT" | "Pathext";
 
 export { createWindowsCmdShimFixture } from "openclaw/plugin-sdk/testing";

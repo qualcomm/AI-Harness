@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ChannelType, MessageType } from "@buape/carbon";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { dispatchMock } from "./monitor.tool-result.test-harness.js";

@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 
 /**
  * Verifies that the root plugin-sdk runtime surface is present in the compiled

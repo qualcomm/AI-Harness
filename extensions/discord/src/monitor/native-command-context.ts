@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CommandArgs } from "openclaw/plugin-sdk/command-auth";
 import { finalizeInboundContext } from "openclaw/plugin-sdk/reply-dispatch-runtime";
 import { resolveDiscordConversationIdentity } from "../conversation-identity.js";

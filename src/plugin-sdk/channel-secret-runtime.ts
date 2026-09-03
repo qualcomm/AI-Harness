@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow shared secret-contract exports for channel/plugin secret surfaces.
 
 export {

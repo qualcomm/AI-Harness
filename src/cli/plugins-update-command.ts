@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadConfig, readConfigFileSnapshot, replaceConfigFile } from "../config/config.js";
 import { updateNpmInstalledHookPacks } from "../hooks/update.js";
 import { updateNpmInstalledPlugins } from "../plugins/update.js";

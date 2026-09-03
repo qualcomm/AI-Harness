@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function toStringEnv(env?: NodeJS.ProcessEnv): Record<string, string> {
   if (!env) {
     return {};

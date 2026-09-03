@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { MODEL_CONTEXT_TOKEN_CACHE } from "../../agents/context-cache.js";
 import { loadModelCatalog } from "../../agents/model-catalog.runtime.js";

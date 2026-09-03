@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function formatChannelDefaultAccountPath(channelKey: string): string {
   return `channels.${channelKey}.defaultAccount`;
 }

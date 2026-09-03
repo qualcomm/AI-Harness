@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { extractKeywords, isQueryStopWordToken } from "../../memory-host-sdk/query.js";
 import { localeLowercasePreservingWhitespace } from "../../shared/string-coerce.js";
 import type { CompactionSummarizationInstructions } from "../compaction.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { validateMinHostVersion } from "../../src/plugins/min-host-version.ts";
 import { isRecord } from "../../src/utils.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import "@mariozechner/pi-agent-core";
 
 declare module "@mariozechner/pi-agent-core" {

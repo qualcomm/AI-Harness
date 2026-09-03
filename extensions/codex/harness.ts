@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AgentHarness } from "openclaw/plugin-sdk/agent-harness";
 import { maybeCompactCodexAppServerSession } from "./src/app-server/compact.js";
 import { listCodexAppServerModels } from "./src/app-server/models.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeChatType } from "../channels/chat-type.js";
 import type { MediaUnderstandingScopeConfig } from "../config/types.tools.js";
 import { normalizeOptionalLowercaseString } from "../shared/string-coerce.js";

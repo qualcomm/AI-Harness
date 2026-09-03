@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { AcpRuntimeErrorCode } from "openclaw/plugin-sdk/acp-runtime";
 export {
   AcpRuntimeError,

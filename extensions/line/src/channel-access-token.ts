@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function resolveLineChannelAccessToken(
   explicit: string | undefined,
   params: { accountId: string; channelAccessToken: string },

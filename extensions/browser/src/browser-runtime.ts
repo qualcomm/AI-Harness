@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { startBrowserBridgeServer, stopBrowserBridgeServer } from "./browser/bridge-server.js";
 export type { BrowserBridge } from "./browser/bridge-server.js";
 export {

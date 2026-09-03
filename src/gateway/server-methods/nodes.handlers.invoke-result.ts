@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ErrorCodes, errorShape, validateNodeInvokeResultParams } from "../protocol/index.js";
 import { respondInvalidParams } from "./nodes.helpers.js";
 import type { GatewayRequestHandler } from "./types.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SearchConfigRecord } from "../agents/tools/web-search-provider-common.js";
 import {
   getScopedCredentialValue,

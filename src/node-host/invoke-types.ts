@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SkillBinTrustEntry, SystemRunApprovalPlan } from "../infra/exec-approvals.js";
 
 export type SystemRunParams = {

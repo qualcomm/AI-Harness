@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export async function waitForAbortSignal(signal?: AbortSignal): Promise<void> {
   if (!signal || signal.aborted) {
     return;

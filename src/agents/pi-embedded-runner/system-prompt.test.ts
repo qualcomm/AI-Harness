@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AgentSession } from "@mariozechner/pi-coding-agent";
 import { afterEach, describe, expect, it } from "vitest";
 import { clearMemoryPluginState, registerMemoryPromptSection } from "../../plugins/memory-state.js";

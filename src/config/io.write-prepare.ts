@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isDeepStrictEqual } from "node:util";
 import { isRecord } from "../utils.js";
 import { applyMergePatch } from "./merge-patch.js";

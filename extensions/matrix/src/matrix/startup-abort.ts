@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function createMatrixStartupAbortError(): Error {
   const error = new Error("Matrix startup aborted");
   error.name = "AbortError";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MockInstance } from "vitest";
 import { afterEach, beforeEach, vi } from "vitest";
 import * as ssrf from "../infra/net/ssrf.js";

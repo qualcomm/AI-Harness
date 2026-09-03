@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeStringEntries } from "../../../shared/string-normalization.js";
 import type { DoctorAllowFromList } from "../types.js";
 

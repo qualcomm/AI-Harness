@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { spinner } from "@clack/prompts";
 import { formatDurationPrecise } from "../../infra/format-time/format-duration.ts";
 import type {

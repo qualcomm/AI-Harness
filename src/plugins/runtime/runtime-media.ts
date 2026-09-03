@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isVoiceCompatibleAudio } from "../../media/audio.js";
 import { mediaKindFromMime } from "../../media/constants.js";
 import { getImageMetadata, resizeToJpeg } from "../../media/image-ops.js";

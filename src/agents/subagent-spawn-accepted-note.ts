@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isCronSessionKey } from "../routing/session-key.js";
 
 export const SUBAGENT_SPAWN_ACCEPTED_NOTE =

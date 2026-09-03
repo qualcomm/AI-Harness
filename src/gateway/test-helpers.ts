@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export * from "./test-helpers.runtime-state.js";
 export * from "./test-helpers.plugin-registry.js";
 export * from "./test-helpers.config-snapshots.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveZalouserAccountSync } from "./accounts.js";
 import type { ChannelDirectoryEntry, OpenClawConfig } from "./channel-api.js";
 import { parseZalouserDirectoryGroupId } from "./session-route.js";

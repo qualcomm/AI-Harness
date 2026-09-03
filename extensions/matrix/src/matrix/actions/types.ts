@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CoreConfig } from "../../types.js";
 import {
   MATRIX_ANNOTATION_RELATION_TYPE,

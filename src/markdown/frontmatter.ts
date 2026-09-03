@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import YAML from "yaml";
 
 export type ParsedFrontmatter = Record<string, string>;

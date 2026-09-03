@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function readStringValue(value: unknown): string | undefined {
   return typeof value === "string" ? value : undefined;
 }

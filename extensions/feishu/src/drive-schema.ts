@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Type, type Static } from "@sinclair/typebox";
 
 const FileType = Type.Union([

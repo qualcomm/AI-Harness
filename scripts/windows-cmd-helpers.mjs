@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const WINDOWS_UNSAFE_CMD_CHARS_RE = /[&|<>%\r\n]/;
 
 export function resolvePathEnvKey(env) {

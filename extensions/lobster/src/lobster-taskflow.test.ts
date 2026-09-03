@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import type { LobsterRunner } from "./lobster-runner.js";
 import { resumeManagedLobsterFlow, runManagedLobsterFlow } from "./lobster-taskflow.js";

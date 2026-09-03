@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OpenClawPluginApi } from "openclaw/plugin-sdk/channel-plugin-common";
 
 export function registerMatrixCliMetadata(api: OpenClawPluginApi) {

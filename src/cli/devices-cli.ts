@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Command } from "commander";
 import { buildGatewayConnectionDetails, callGateway } from "../gateway/call.js";
 import { isLoopbackHost } from "../gateway/net.js";

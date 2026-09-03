@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export {
   DEFAULT_AI_SNAPSHOT_MAX_CHARS,
   DEFAULT_UPLOAD_DIR,

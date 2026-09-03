@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { resolveProviderHttpRequestConfig } from "openclaw/plugin-sdk/provider-http";
 import { afterEach, vi } from "vitest";
 

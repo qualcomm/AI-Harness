@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { GatewayBrowserClient } from "../gateway.ts";
 import { isPluginEnabledInConfigSnapshot } from "../plugin-activation.ts";
 import type { ConfigSnapshot } from "../types.ts";

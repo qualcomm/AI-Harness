@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Strips OpenClaw-injected inbound metadata blocks from a user-role message
  * text before it is displayed in any UI surface (TUI, webchat, macOS app).

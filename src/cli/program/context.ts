@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { VERSION } from "../../version.js";
 import { resolveCliChannelOptions } from "../channel-options.js";
 

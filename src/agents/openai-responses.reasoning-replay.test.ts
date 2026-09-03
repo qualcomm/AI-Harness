@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AssistantMessage, Model, ToolResultMessage } from "@mariozechner/pi-ai";
 import { streamOpenAIResponses } from "@mariozechner/pi-ai";
 import { Type } from "@sinclair/typebox";

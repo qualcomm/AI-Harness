@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { colorize, isRich as isRichTerminal, theme } from "../../terminal/theme.js";
 export { maskApiKey } from "../../utils/mask-api-key.js";
 

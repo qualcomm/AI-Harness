@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { z } from "zod";
 import { DEFAULT_LLM_IDLE_TIMEOUT_SECONDS } from "./agent-timeout-defaults.js";
 import { isValidNonNegativeByteSizeString } from "./byte-size.js";

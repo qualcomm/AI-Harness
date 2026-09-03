@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Command } from "commander";
 export type { GatewayRpcOpts } from "./gateway-rpc.types.js";
 import type { GatewayRpcOpts } from "./gateway-rpc.types.js";

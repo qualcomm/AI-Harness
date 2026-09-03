@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveProviderRequestCapabilities } from "openclaw/plugin-sdk/provider-http";
 import { normalizeLowercaseStringOrEmpty, readStringValue } from "openclaw/plugin-sdk/text-runtime";
 import { MISTRAL_MODEL_TRANSPORT_PATCH } from "./api.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { writeViaSiblingTempPath } from "./output-atomic.js";
 import { DEFAULT_TRACE_DIR } from "./paths.js";
 import { ensureContextState, getPageForTargetId } from "./pw-session.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type * as NodeFs from "node:fs/promises";
 import type * as NodePath from "node:path";
 import type { QaTransportState } from "./qa-transport.js";

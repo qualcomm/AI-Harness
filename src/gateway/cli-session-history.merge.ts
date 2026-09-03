@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { stripInboundMetadata } from "../auto-reply/reply/strip-inbound-meta.js";
 import { normalizeOptionalString, readStringValue } from "../shared/string-coerce.js";
 

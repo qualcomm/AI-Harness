@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createDedupeCache } from "openclaw/plugin-sdk/core";
 import { createClaimableDedupe } from "openclaw/plugin-sdk/persistent-dedupe";
 

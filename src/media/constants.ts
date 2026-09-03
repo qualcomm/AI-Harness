@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const MAX_IMAGE_BYTES = 6 * 1024 * 1024; // 6MB
 export const MAX_AUDIO_BYTES = 16 * 1024 * 1024; // 16MB
 export const MAX_VIDEO_BYTES = 16 * 1024 * 1024; // 16MB

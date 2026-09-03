@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MediaUnderstandingDecision } from "../media-understanding/types.js";
 
 function createSuccessfulMediaDecision(

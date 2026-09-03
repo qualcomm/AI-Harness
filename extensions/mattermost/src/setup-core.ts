@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelSetupAdapter } from "openclaw/plugin-sdk/channel-setup";
 import { createSetupInputPresenceValidator } from "openclaw/plugin-sdk/setup-runtime";
 import {

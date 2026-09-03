@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatTrimmedAllowFromEntries } from "openclaw/plugin-sdk/channel-config-helpers";
 import type { ChannelStatusIssue } from "openclaw/plugin-sdk/channel-contract";
 import { PAIRING_APPROVED_MESSAGE } from "openclaw/plugin-sdk/channel-status";

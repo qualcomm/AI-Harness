@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { clearCredentialsCache, extractGeminiCliCredentials } from "./oauth.credentials.js";
 import {
   buildAuthUrl,

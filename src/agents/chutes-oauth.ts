@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createHash, randomBytes } from "node:crypto";
 import type { OAuthCredentials } from "@mariozechner/pi-ai";
 import { normalizeOptionalString } from "../shared/string-coerce.js";

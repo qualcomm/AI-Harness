@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeLowercaseStringOrEmpty } from "../shared/string-coerce.js";
 
 export function hasExpectedToolNonce(text: string, nonceA: string, nonceB: string): boolean {

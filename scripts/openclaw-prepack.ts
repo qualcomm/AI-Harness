@@ -1,4 +1,6 @@
 #!/usr/bin/env -S node --import tsx
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 
 import { spawnSync } from "node:child_process";
 import { existsSync, readdirSync } from "node:fs";

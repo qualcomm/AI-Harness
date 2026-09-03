@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { collectProviderDangerousNameMatchingScopes } from "../config/dangerous-name-matching.js";
 export {
   asObjectRecord,

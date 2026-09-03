@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type OpenAIReasoningEffort = "minimal" | "low" | "medium" | "high" | "xhigh";
 
 export type OpenAIApiReasoningEffort = "none" | "low" | "medium" | "high" | "xhigh";

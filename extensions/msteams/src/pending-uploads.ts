@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * In-memory storage for files awaiting user consent in the FileConsentCard flow.
  *

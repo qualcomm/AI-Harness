@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { DatabaseSync } from "node:sqlite";
 import { load, getLoadablePath } from "sqlite-vec";
 import { formatErrorMessage } from "./lib/error-format.mjs";

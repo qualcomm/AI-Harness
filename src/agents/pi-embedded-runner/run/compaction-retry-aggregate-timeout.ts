@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Wait for compaction retry completion with an aggregate timeout to avoid
  * holding a session lane indefinitely when retry resolution is lost.

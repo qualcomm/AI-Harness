@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MatrixClient } from "../sdk.js";
 import { summarizeMatrixMessageContextEvent, trimMatrixMaybeString } from "./context-summary.js";
 import type { MatrixRawEvent } from "./types.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { SANDBOX_AGENT_WORKSPACE_MOUNT } from "./constants.js";
 import type { SandboxWorkspaceAccess } from "./types.js";
 

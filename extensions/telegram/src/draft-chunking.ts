@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveChannelStreamingPreviewChunk } from "openclaw/plugin-sdk/channel-streaming";
 import { type OpenClawConfig } from "openclaw/plugin-sdk/config-runtime";
 import { resolveTextChunkLimit } from "openclaw/plugin-sdk/reply-chunking";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isTruthyEnvValue } from "../infra/env.js";
 import { resolveCliArgvInvocation } from "./argv-invocation.js";
 

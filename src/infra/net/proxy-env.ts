@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const PROXY_ENV_KEYS = [
   "HTTP_PROXY",
   "HTTPS_PROXY",

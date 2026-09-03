@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveStatusUpdateChannelInfo } from "./status-all/format.js";
 import {
   buildStatusGatewayJsonPayloadFromSurface,

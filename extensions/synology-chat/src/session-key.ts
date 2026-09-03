@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { buildAgentSessionKey } from "openclaw/plugin-sdk/core";
 
 const CHANNEL_ID = "synology-chat";

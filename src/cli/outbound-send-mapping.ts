@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeAnyChannelId } from "../channels/registry.js";
 import type { OutboundSendDeps } from "../infra/outbound/send-deps.js";
 import { normalizeLowercaseStringOrEmpty } from "../shared/string-coerce.js";

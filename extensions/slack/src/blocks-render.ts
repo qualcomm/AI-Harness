@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Block, KnownBlock } from "@slack/web-api";
 import { reduceInteractiveReply } from "openclaw/plugin-sdk/interactive-runtime";
 import type { InteractiveReply } from "openclaw/plugin-sdk/interactive-runtime";

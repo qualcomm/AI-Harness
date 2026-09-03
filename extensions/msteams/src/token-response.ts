@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function readAccessToken(value: unknown): string | null {
   if (typeof value === "string") {
     return value;

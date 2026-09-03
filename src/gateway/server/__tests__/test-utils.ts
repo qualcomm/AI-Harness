@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createEmptyPluginRegistry, type PluginRegistry } from "../../../plugins/registry.js";
 
 export const createTestRegistry = (overrides: Partial<PluginRegistry> = {}): PluginRegistry => {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { getMemorySearchManager, MemoryIndexManager } from "./src/memory/index.js";
 export { memoryRuntime } from "./src/runtime-provider.js";
 export {

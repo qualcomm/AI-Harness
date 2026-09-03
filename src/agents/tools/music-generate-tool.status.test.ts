@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import * as musicGenerationRuntime from "../../music-generation/runtime.js";
 import { MUSIC_GENERATION_TASK_KIND } from "../music-generation-task-status.js";

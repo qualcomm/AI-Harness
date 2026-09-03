@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import fs from "node:fs";
 import { describe, expect, it } from "vitest";
 import { buildTalkConfigResponse } from "../../config/talk.js";

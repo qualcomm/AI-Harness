@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { PluginChannelRegistration, PluginRegistry } from "../../plugins/registry-types.js";
 import { getActivePluginChannelRegistry } from "../../plugins/runtime.js";
 import type { ChannelId } from "./channel-id.types.js";

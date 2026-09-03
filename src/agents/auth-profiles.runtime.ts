@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ensureAuthProfileStore as ensureAuthProfileStoreImpl } from "./auth-profiles/store.js";
 
 type EnsureAuthProfileStore = typeof import("./auth-profiles/store.js").ensureAuthProfileStore;

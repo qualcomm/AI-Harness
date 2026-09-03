@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { registerPluginHttpRoute } from "../plugins/http-registry.js";
 import type { FixedWindowRateLimiter } from "./webhook-memory-guards.js";

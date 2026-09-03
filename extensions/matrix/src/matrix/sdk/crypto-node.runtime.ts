@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createRequire } from "node:module";
 
 // Load via createRequire so the CJS package gets __dirname (its index.js

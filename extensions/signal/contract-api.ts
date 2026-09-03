@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export * from "./src/install-signal-cli.js";
 export * from "./src/normalize.js";
 export { isSignalSenderAllowed, type SignalSender } from "./src/identity.js";

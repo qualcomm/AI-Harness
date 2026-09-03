@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const MODELS_JSON_STATE_KEY = Symbol.for("openclaw.modelsJsonState");
 
 type ModelsJsonState = {

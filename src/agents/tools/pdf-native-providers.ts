@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Direct SDK/HTTP calls for providers that support native PDF document input.
  * This bypasses pi-ai's content type system which does not have a "document" type.

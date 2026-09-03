@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { XaiWebSearchResponse } from "./web-search-response.types.js";
 
 export const XAI_RESPONSES_ENDPOINT = "https://api.x.ai/v1/responses";

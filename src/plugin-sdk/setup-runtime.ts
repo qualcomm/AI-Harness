@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { OpenClawConfig } from "../config/config.js";
 export type { WizardPrompter } from "../wizard/prompts.js";
 export { createClackPrompter } from "../wizard/clack-prompter.js";

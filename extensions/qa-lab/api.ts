@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export * from "./src/bus-queries.js";
 export * from "./src/bus-server.js";
 export * from "./src/bus-state.js";

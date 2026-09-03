@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isGatewayConfigBypassCommandPath } from "../gateway/explicit-connection-policy.js";
 import { cliCommandCatalog, type CliCommandPathPolicy } from "./command-catalog.js";
 import { matchesCommandPath } from "./command-path-matches.js";

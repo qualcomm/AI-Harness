@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Skill } from "./skill-contract.js";
 
 export type SkillInstallSpec = {

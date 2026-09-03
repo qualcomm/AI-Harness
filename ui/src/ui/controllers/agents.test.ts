@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import { loadAgents, loadToolsCatalog, loadToolsEffective, saveAgentsConfig } from "./agents.ts";
 import type { AgentsConfigSaveState, AgentsState } from "./agents.ts";

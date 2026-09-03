@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public media/payload helpers for plugins that fetch, transform, or send attachments.
 
 export * from "../media/audio.js";

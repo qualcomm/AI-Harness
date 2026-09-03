@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Activity, UpdatePresenceData } from "@buape/carbon/gateway";
 import type { AgentToolResult } from "@mariozechner/pi-agent-core";
 import { normalizeLowercaseStringOrEmpty } from "openclaw/plugin-sdk/text-runtime";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type EmbeddedAgentRuntime = "pi" | "auto" | (string & {});
 export type EmbeddedAgentHarnessFallback = "pi" | "none";
 

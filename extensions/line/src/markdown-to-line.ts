@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { messagingApi } from "@line/bot-sdk";
 import { stripMarkdown } from "openclaw/plugin-sdk/text-runtime";
 import { createReceiptCard, toFlexMessage, type FlexBubble } from "./flex-templates.js";

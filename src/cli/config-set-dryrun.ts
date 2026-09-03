@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type ConfigSetDryRunInputMode = "value" | "json" | "builder";
 
 export type ConfigSetDryRunError = {

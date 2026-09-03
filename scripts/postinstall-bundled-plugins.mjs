@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Runs after install to restore bundled extension runtime deps.
 // Installed builds can lazy-load bundled plugin code through root dist chunks,
 // so runtime dependencies declared in dist/extensions/*/package.json must also

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { HEARTBEAT_PROMPT, stripHeartbeatToken } from "openclaw/plugin-sdk/reply-runtime";
 export { HEARTBEAT_TOKEN, SILENT_REPLY_TOKEN } from "openclaw/plugin-sdk/reply-runtime";
 

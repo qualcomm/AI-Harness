@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type ModelDisplaySelectionParams = {
   runtimeProvider?: string | null;
   runtimeModel?: string | null;

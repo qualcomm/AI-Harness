@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const OPTION_TAKES_VALUE = new Set([
   "-t",
   "-c",

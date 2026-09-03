@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OpenClawConfig } from "openclaw/plugin-sdk/provider-onboard";
 
 export const FAL_DEFAULT_IMAGE_MODEL_REF = "fal/fal-ai/flux/dev";

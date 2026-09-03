@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function resolveWritableRenameTargets<T extends { containerPath: string }>(params: {
   from: string;
   to: string;

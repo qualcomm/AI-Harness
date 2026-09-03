@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { NormalizedUsage } from "../agents/usage.js";
 import type {
   SessionUsageTimePoint as SharedSessionUsageTimePoint,

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { FailoverError, resolveFailoverStatus } from "../../failover-error.js";
 import type { EmbeddedRunLivenessState } from "../types.js";
 import type { EmbeddedPiAgentMeta, EmbeddedPiRunResult } from "../types.js";

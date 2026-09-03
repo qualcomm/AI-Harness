@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { spawn, type ChildProcess } from "node:child_process";
 import fs from "node:fs/promises";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";

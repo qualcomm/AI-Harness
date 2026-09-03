@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadBundledPluginContractApiSync } from "../../../src/test-utils/bundled-plugin-public-surface.js";
 
 type MatrixContractSurface = typeof import("@openclaw/matrix/contract-api.js");

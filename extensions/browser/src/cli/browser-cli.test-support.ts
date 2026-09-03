@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Command } from "commander";
 import { createCliRuntimeCapture } from "../../test-support.js";
 import type { CliRuntimeCapture } from "../../test-support.js";

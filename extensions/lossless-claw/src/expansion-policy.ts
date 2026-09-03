@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type LcmExpansionRoutingIntent = "query_probe" | "explicit_expand";
 
 export type LcmExpansionRoutingAction = "answer_directly" | "expand_shallow" | "delegate_traversal";

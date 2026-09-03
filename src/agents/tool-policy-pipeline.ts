@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { filterToolsByPolicy } from "./pi-tools.policy.js";
 import type { AnyAgentTool } from "./pi-tools.types.js";
 import { isKnownCoreToolId } from "./tool-catalog.js";

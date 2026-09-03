@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { readStringOrNumberParam } from "../../../agents/tools/common.js";
 
 type ReactionToolContext = {

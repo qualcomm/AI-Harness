@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function registerHookHandlersForTest<TApi>(params: {
   config: Record<string, unknown>;
   register: (api: TApi) => void;

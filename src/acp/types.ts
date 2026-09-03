@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SessionId } from "@agentclientprotocol/sdk";
 import { normalizeOptionalLowercaseString } from "../shared/string-coerce.js";
 import { VERSION } from "../version.js";

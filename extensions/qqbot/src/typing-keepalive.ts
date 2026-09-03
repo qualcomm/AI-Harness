@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /** Periodically refresh C2C typing state while a response is still in progress. */
 
 import { sendC2CInputNotify } from "./api.js";

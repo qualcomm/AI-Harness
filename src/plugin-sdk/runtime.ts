@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OutputRuntimeEnv, RuntimeEnv } from "../runtime.js";
 export type { OutputRuntimeEnv, RuntimeEnv } from "../runtime.js";
 export { createNonExitingRuntime, defaultRuntime } from "../runtime.js";

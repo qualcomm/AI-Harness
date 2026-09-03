@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 
 // This file primarily tests lsof-based Unix port polling. On Windows,

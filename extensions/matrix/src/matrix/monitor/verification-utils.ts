@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalString } from "openclaw/plugin-sdk/text-runtime";
 
 const VERIFICATION_EVENT_PREFIX = "m.key.verification.";

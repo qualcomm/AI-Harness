@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Command } from "commander";
 import JSON5 from "json5";
 import { readConfigFileSnapshot, replaceConfigFile } from "../config/config.js";

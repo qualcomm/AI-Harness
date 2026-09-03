@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const FILE_BLOCK_RE = /<file\b([^>]*)>([\s\S]*?)<\/file>/gi;
 const FILE_ID_RE = /\bfile_[a-f0-9]{16}\b/gi;
 

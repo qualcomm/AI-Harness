@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import os from "node:os";
 import { expect, vi } from "vitest";
 import type { SubagentLifecycleHookRunner } from "../plugins/hooks.js";

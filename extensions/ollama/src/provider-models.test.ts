@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { jsonResponse, requestBodyText, requestUrl } from "../../../src/test-helpers/http.js";
 import {

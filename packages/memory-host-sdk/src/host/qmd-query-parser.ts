@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatErrorMessage } from "../../../../src/infra/errors.js";
 import { createSubsystemLogger } from "../../../../src/logging/subsystem.js";
 import { normalizeLowercaseStringOrEmpty } from "../../../../src/shared/string-coerce.js";

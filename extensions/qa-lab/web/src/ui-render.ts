@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /* ===== Shared types (unchanged from the bus protocol) ===== */
 
 export type Conversation = {

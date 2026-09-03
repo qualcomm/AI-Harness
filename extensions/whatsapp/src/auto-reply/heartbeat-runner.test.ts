@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { redactIdentifier } from "openclaw/plugin-sdk/logging-core";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import type { sendMessageWhatsApp } from "../send.js";

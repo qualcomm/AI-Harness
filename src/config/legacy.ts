@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { collectChannelLegacyConfigRules } from "../channels/plugins/legacy-config.js";
 import { LEGACY_CONFIG_RULES } from "./legacy.rules.js";
 import type { LegacyConfigRule } from "./legacy.shared.js";

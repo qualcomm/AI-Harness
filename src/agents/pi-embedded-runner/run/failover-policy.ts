@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { FailoverReason } from "../../pi-embedded-helpers.js";
 
 export type RunFailoverDecisionAction =

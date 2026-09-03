@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { html } from "lit";
 import { renderCopyButton } from "../chat/copy-as-markdown.ts";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelType, Client, User } from "@buape/carbon";
 import type { ReplyToMode } from "openclaw/plugin-sdk/config-runtime";
 import type { SessionBindingRecord } from "openclaw/plugin-sdk/conversation-runtime";

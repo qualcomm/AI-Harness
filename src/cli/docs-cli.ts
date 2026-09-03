@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Command } from "commander";
 import { docsSearchCommand } from "../commands/docs.js";
 import { defaultRuntime } from "../runtime.js";

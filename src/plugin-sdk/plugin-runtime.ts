@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public plugin-command/hook helpers for plugins that extend shared command or hook flows.
 
 export * from "../plugins/commands.js";

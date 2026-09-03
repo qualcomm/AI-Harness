@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const optionalBundledClusters: string[];
 export const optionalBundledClusterSet: Set<string>;
 export const OPTIONAL_BUNDLED_BUILD_ENV: "OPENCLAW_INCLUDE_OPTIONAL_BUNDLED";

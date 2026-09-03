@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { join, parse } from "node:path";
 import { describe, expect, it, vi, beforeAll, beforeEach, afterEach } from "vitest";
 

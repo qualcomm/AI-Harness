@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadBundledEntryExportSync } from "openclaw/plugin-sdk/channel-entry-contract";
 
 type SetupSurfaceModule = typeof import("./src/setup-surface.js");

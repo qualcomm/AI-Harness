@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { logVerbose } from "../../globals.js";
 import type { ReplyPayload } from "../types.js";
 import type { ActiveRunQueueAction } from "./queue-policy.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isProviderApiKeyConfigured } from "openclaw/plugin-sdk/provider-auth";
 import { assertOkOrThrowHttpError, postJsonRequest } from "openclaw/plugin-sdk/provider-http";
 import type { VideoGenerationProvider } from "openclaw/plugin-sdk/video-generation";

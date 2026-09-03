@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const MAX_SAFE_INTEGER_ABS_STR = String(Number.MAX_SAFE_INTEGER);
 
 function isAsciiDigit(ch: string | undefined): boolean {

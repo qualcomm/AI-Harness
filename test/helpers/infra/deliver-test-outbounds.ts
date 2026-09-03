@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { chunkMarkdownTextWithMode, chunkText } from "../../../src/auto-reply/chunk.js";
 import { resolveChannelMediaMaxBytes } from "../../../src/channels/plugins/media-limits.js";
 import type { ChannelOutboundAdapter } from "../../../src/channels/plugins/types.js";

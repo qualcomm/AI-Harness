@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { PATH_ALIAS_POLICIES } from "../../infra/path-alias-guards.js";
 import type {
   PathSafetyCheck,

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { getImageMetadata, MAX_IMAGE_INPUT_PIXELS, resizeToJpeg } from "./image-ops.js";
 import { createPngBufferWithDimensions } from "./test-helpers.js";

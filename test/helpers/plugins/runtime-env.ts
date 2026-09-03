@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OutputRuntimeEnv } from "openclaw/plugin-sdk/runtime";
 import { vi } from "vitest";
 

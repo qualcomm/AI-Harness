@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { extractErrorCode, formatErrorMessage } from "../infra/errors.js";
 
 export type PwAiModule = typeof import("./pw-ai.js");

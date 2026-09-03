@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 let activeStream: NodeJS.WriteStream | null = null;
 
 export function registerActiveProgressLine(stream: NodeJS.WriteStream): void {

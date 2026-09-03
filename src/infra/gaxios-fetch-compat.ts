@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createRequire } from "node:module";
 import type { ConnectionOptions } from "node:tls";
 import { pathToFileURL } from "node:url";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { onAgentEvent } from "../../infra/agent-events.js";
 import { onSessionTranscriptUpdate } from "../../sessions/transcript-events.js";
 import type { PluginRuntime } from "./types.js";

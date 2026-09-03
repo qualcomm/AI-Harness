@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelHeartbeatVisibilityConfig } from "../config/types.channels.js";
 import type { OpenClawConfig } from "../config/types.openclaw.js";
 import type { GatewayMessageChannel } from "../utils/message-channel.js";

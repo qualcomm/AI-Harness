@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 
 import { spawn } from "node:child_process";
 import path from "node:path";

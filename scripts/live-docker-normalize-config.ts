@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadAndMaybeMigrateDoctorConfig } from "../src/commands/doctor-config-flow.js";
 import { writeConfigFile } from "../src/config/config.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, beforeEach, vi } from "vitest";
 const { createMatrixQaClient } = vi.hoisted(() => ({
   createMatrixQaClient: vi.fn(),

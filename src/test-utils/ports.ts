@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createServer } from "node:net";
 import { isMainThread, threadId } from "node:worker_threads";
 

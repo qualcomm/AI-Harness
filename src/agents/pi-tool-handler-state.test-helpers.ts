@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createEmbeddedRunReplayState } from "./pi-embedded-runner/replay-state.js";
 
 export function createBaseToolHandlerState() {

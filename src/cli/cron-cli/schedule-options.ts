@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CronSchedule } from "../../cron/types.js";
 import { normalizeOptionalString } from "../../shared/string-coerce.js";
 import { parseAt, parseCronStaggerMs, parseDurationMs } from "./shared.js";

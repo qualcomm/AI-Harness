@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { OpenClawPluginApi } from "openclaw/plugin-sdk/plugin-entry";
 export type { ChannelMessageActionAdapter } from "openclaw/plugin-sdk/channel-contract";
 export type { TelegramApiOverride } from "./src/send.js";

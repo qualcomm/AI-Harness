@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import fs from "node:fs";
 import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";

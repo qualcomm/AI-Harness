@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import chalk, { Chalk } from "chalk";
 import { LOBSTER_PALETTE } from "./palette.js";
 

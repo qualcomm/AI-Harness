@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { PluginCommandContext } from "openclaw/plugin-sdk/plugin-entry";
 import { CODEX_CONTROL_METHODS } from "./app-server/capabilities.js";
 import { listCodexAppServerModels } from "./app-server/models.js";

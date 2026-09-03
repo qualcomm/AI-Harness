@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AgentToolResult } from "@mariozechner/pi-agent-core";
 import type { ChannelMessageActionContext } from "openclaw/plugin-sdk/channel-contract";
 import { normalizeInteractiveReply } from "openclaw/plugin-sdk/interactive-runtime";

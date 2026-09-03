@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function findDockerArgsCall(calls: unknown[][], command: string): string[] | undefined {
   return calls.find((call) => Array.isArray(call[0]) && call[0][0] === command)?.[0] as
     | string[]

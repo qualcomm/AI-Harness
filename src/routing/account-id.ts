@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isBlockedObjectKey } from "../infra/prototype-keys.js";
 import { normalizeLowercaseStringOrEmpty } from "../shared/string-coerce.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { TerminalStates, type CallRecord, type CallState, type TranscriptEntry } from "../types.js";
 
 const ConversationStates = new Set<CallState>(["speaking", "listening"]);

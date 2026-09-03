@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Returns an iteration hook for in-process restart loops.
  * The first call is considered initial startup and does nothing.

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import type { CoreConfig } from "../types.js";
 import { resolveMatrixConfigFieldPath, updateMatrixAccountConfig } from "./config-update.js";

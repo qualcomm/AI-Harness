@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveProviderMatch } from "../plugins/provider-auth-choice-helpers.js";
 import { resolvePluginProviders } from "../plugins/provider-auth-choice.runtime.js";
 import type { ProviderAuthKind } from "../plugins/types.js";

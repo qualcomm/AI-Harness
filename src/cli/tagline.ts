@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const DEFAULT_TAGLINE = "All your chats, one OpenClaw.";
 export type TaglineMode = "random" | "default" | "off";
 

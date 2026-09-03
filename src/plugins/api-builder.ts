@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OpenClawConfig } from "../config/types.openclaw.js";
 import { emitPluginEvent } from "./plugin-events.js";
 import type { PluginRuntime } from "./runtime/types.js";

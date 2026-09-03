@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type HookInstallSpec = {
   id?: string;
   kind: "bundled" | "npm" | "git";

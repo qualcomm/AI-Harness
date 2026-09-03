@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const SUBAGENT_TARGET_KIND_SUBAGENT = "subagent" as const;
 export const SUBAGENT_TARGET_KIND_ACP = "acp" as const;
 

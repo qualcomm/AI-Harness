@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import type { PluginHookReplyDispatchResult } from "../../plugins/hooks.js";
 import { createInternalHookEventPayload } from "../../test-utils/internal-hook-event-payload.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { listTasksForAgentId, listTasksForSessionKey } from "./task-registry.js";
 import type { TaskRecord } from "./task-registry.types.js";
 

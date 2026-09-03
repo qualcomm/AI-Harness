@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { startQaLabServer } from "./lab-server.js";
 
 export async function runQaLabSelfCheck(params?: { repoRoot?: string; outputPath?: string }) {

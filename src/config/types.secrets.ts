@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isRecord } from "../utils.js";
 
 export type SecretRefSource = "env" | "file" | "exec"; // pragma: allowlist secret

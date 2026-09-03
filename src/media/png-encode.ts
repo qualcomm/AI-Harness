@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Minimal PNG encoder for generating simple RGBA images without native dependencies.
  * Used for QR codes, live probes, and other programmatic image generation.

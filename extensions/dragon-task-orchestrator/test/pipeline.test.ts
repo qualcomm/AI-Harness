@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Tests for dependency layering and layered execution (tasks 4.10/4.11/4.12).
  */

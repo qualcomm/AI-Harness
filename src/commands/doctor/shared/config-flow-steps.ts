@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatConfigIssueLines } from "../../../config/issue-format.js";
 import { stripUnknownConfigKeys } from "../../doctor-config-analysis.js";
 import type { DoctorConfigPreflightResult } from "../../doctor-config-preflight.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { pathKey, schemaType, type JsonSchema } from "./config-form.shared.ts";
 
 export type ConfigSchemaAnalysis = {

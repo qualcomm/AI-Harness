@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { escapeRegExp } from "../utils.js";
 
 export const HEARTBEAT_TOKEN = "HEARTBEAT_OK";

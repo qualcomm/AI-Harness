@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Buffer } from "node:buffer";
 import { lookup } from "node:dns/promises";
 export { estimateBase64DecodedBytes } from "openclaw/plugin-sdk/media-runtime";

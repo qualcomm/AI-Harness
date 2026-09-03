@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Synology Chat HTTP client.
  * Sends messages TO Synology Chat via the incoming webhook URL.

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Focused runtime contract for memory file/backend access.
 
 export { listMemoryFiles, normalizeExtraMemoryPaths } from "./host/internal.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { imessagePlugin } from "./src/channel.js";
 export { imessageSetupPlugin } from "./src/channel.setup.js";
 export * from "./src/accounts.js";

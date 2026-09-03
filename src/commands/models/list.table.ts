@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { type RuntimeEnv, writeRuntimeJson } from "../../runtime.js";
 import { colorize, theme } from "../../terminal/theme.js";
 import { formatTag, isRich, pad, truncate } from "./list.format.js";

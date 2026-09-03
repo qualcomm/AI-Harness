@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import Anthropic from "@anthropic-ai/sdk";
 import type { StreamFn } from "@mariozechner/pi-agent-core";
 import {

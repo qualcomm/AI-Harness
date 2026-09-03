@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import {
   EXTERNAL_CODE_PLUGIN_REQUIRED_FIELD_PATHS,

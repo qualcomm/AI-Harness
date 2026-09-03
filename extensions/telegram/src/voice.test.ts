@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import { splitTelegramCaption, TELEGRAM_MAX_CAPTION_LENGTH } from "./caption.js";
 import { resolveTelegramVoiceSend } from "./voice.js";

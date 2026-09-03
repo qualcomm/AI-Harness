@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getLatestSubagentRunByChildSessionKey } from "../agents/subagent-registry-read.js";
 
 async function loadSessionSubagentReactivationRuntime() {

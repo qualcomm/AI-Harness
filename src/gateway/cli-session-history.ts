@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeProviderId } from "../agents/model-selection.js";
 import type { SessionEntry } from "../config/sessions.js";
 import {

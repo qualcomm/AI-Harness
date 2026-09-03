@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseStaticModelRef } from "../../agents/model-ref-shared.js";
 import type { SsrFPolicy } from "../../infra/net/ssrf.js";
 import { OPENAI_DEFAULT_EMBEDDING_MODEL } from "../../plugins/provider-model-defaults.js";

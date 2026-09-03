@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describeWebFetchProviderContracts } from "../../../test/helpers/plugins/web-fetch-provider-contract.js";
 import { pluginRegistrationContractRegistry } from "./registry.js";
 

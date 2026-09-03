@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Context } from "@mariozechner/pi-ai";
 
 export const COPILOT_EDITOR_VERSION = "vscode/1.96.2";

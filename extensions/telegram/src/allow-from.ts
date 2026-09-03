@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function normalizeTelegramAllowFromEntry(raw: unknown): string {
   const base = typeof raw === "string" ? raw : typeof raw === "number" ? String(raw) : "";
   return base

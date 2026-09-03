@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const baseUrl = process.env.OPENWEBUI_BASE_URL ?? "";
 const email = process.env.OPENWEBUI_ADMIN_EMAIL ?? "";
 const password = process.env.OPENWEBUI_ADMIN_PASSWORD ?? "";

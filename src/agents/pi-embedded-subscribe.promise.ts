@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function isPromiseLike<T>(value: unknown): value is PromiseLike<T> {
   return Boolean(
     value &&

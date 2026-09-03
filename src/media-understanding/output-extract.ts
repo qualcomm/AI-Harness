@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function extractLastJsonObject(raw: string): unknown {
   const trimmed = raw.trim();
   const start = trimmed.lastIndexOf("{");

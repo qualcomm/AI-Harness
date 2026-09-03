@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { type QueueDropPolicy, type QueueMode } from "../auto-reply/reply/queue.js";
 import { defaultRuntime } from "../runtime.js";
 import {

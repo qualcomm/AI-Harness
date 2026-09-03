@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Api } from "@mariozechner/pi-ai";
 import type { ModelDefinitionConfig } from "../config/types.js";
 import type {

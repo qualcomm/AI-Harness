@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { applyMediaUnderstanding } from "../../media-understanding/apply.js";
 export { MediaAttachmentCache } from "../../media-understanding/attachments.js";
 export { normalizeAttachments } from "../../media-understanding/attachments.normalize.js";

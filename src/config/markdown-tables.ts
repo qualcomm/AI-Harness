@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeChannelId } from "../channels/plugins/index.js";
 import { listChannelPlugins } from "../channels/plugins/registry.js";
 import { getActivePluginChannelRegistryVersion } from "../plugins/runtime.js";

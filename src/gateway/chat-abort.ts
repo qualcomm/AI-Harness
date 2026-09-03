@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isAbortRequestText } from "../auto-reply/reply/abort-primitives.js";
 
 export type ChatAbortControllerEntry = {

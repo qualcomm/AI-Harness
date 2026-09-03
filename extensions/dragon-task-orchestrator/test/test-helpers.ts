@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { DEFAULTS } from "../src/config-schema.js";
 import type { DragonTaskOrchestratorConfig } from "../src/types.js";
 

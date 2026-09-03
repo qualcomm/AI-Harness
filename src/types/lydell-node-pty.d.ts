@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 declare module "@lydell/node-pty" {
   export type PtyExitEvent = { exitCode: number; signal?: number };
   export type PtyListener<T> = (event: T) => void;

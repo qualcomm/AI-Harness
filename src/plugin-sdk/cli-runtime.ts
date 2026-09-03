@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public CLI/output helpers for plugins that share terminal-facing command behavior.
 
 export * from "../cli/command-format.js";

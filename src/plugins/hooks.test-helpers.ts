@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createHookRunner } from "./hooks.js";
 import type { PluginRegistry } from "./registry.js";
 import { createPluginRecord } from "./status.test-helpers.js";

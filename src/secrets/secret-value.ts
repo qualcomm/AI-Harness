@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isNonEmptyString, isRecord } from "./shared.js";
 
 export type SecretExpectedResolvedValue = "string" | "string-or-object"; // pragma: allowlist secret

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { reduceInteractiveReply } from "../channels/plugins/outbound/interactive.js";
 export type {
   InteractiveButtonStyle,

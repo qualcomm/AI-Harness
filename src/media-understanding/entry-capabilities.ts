@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MediaUnderstandingModelConfig } from "../config/types.tools.js";
 import { normalizeMediaProviderId } from "./provider-id.js";
 import type {

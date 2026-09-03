@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { DEFAULT_ACCOUNT_ID } from "../routing/session-key.js";
 import { channelsStatusCommand } from "./channels/status.js";

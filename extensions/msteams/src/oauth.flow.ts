@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createHash, randomBytes } from "node:crypto";
 import { createServer } from "node:http";
 import { isWSL2Sync } from "openclaw/plugin-sdk/runtime-env";

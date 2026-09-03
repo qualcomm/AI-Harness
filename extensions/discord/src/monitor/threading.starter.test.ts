@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ChannelType, type Client } from "@buape/carbon";
 import { StickerFormatType } from "discord-api-types/v10";
 import { beforeEach, describe, expect, it, vi } from "vitest";

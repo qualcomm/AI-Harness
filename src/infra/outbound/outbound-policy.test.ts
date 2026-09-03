@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Container, Separator, TextDisplay } from "@buape/carbon";
 import { beforeAll, beforeEach, describe, expect, it } from "vitest";
 import { vi } from "vitest";

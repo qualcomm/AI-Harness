@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { AsyncLocalStorage } from "node:async_hooks";
 import type {
   GatewayRequestContext,

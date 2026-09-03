@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Builds an Adaptive Card for welcoming users when the bot is added to a conversation.
  */

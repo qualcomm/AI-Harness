@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import fs from "node:fs/promises";
 import type { Command } from "commander";
 import type { OpenClawConfig } from "../api.js";

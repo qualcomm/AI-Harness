@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Type } from "@sinclair/typebox";
 import type { LcmConfig } from "./db/config.js";
 import type { RetrievalEngine, ExpandResult, GrepResult } from "./retrieval.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import {
   ACT_MAX_BATCH_ACTIONS,
   ACT_MAX_CLICK_DELAY_MS,

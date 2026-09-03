@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeAll, beforeEach, expect, test, vi } from "vitest";
 import { killProcessTree } from "../process/kill-tree.js";
 

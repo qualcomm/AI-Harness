@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { resolveStateDir } from "../config/paths.js";
 import { normalizeOptionalString } from "../shared/string-coerce.js";

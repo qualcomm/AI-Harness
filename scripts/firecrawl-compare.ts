@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { fetchFirecrawlContent } from "../extensions/firecrawl/api.ts";
 import { extractReadableContent } from "../src/agents/tools/web-tools.js";
 import { formatErrorMessage } from "../src/infra/errors.ts";

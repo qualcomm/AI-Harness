@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import {
   AGENT_INTERNAL_EVENT_TYPE_TASK_COMPLETION,
   type AgentInternalEventSource,

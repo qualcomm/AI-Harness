@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { requireApiKey, resolveApiKeyForProvider } from "../../agents/model-auth.js";
 import type { SsrFPolicy } from "../../infra/net/ssrf.js";
 import { normalizeOptionalString } from "../../shared/string-coerce.js";

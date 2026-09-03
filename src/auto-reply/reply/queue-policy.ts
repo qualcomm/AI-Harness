@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { QueueSettings } from "./queue.js";
 
 export type ActiveRunQueueAction = "run-now" | "enqueue-followup" | "drop";

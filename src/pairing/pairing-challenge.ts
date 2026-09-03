@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { buildPairingReply } from "./pairing-messages.js";
 
 type PairingMeta = Record<string, string | undefined>;

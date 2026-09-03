@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { callBrowserResize, type BrowserParentOpts } from "./browser-cli-shared.js";
 import { danger, defaultRuntime } from "./core-api.js";
 

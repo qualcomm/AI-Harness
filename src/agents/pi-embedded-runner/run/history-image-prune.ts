@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AgentMessage } from "@mariozechner/pi-agent-core";
 
 export const PRUNED_HISTORY_IMAGE_MARKER = "[image data removed - already processed by model]";

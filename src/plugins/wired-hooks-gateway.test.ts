@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Test: gateway_start & gateway_stop hook wiring (server.impl.ts)
  *

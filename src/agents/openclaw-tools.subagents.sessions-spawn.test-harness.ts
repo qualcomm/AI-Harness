@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { vi, type Mock } from "vitest";
 import type { SubagentLifecycleHookRunner } from "../plugins/hooks.js";
 import { resolveRequesterStoreKey } from "./subagent-requester-store-key.js";

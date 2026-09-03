@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const BLUEBUBBLES_ACTIONS = {
   react: { gate: "reactions" },
   edit: { gate: "edit", unsupportedOnMacOS26: true },

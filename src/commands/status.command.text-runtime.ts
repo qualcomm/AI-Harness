@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { formatCliCommand } from "../cli/command-format.js";
 export { info } from "../globals.js";
 export { formatTimeAgo } from "../infra/format-time/format-relative.ts";

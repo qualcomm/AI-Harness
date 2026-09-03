@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type AgentStreamParams = {
   /** Provider stream params override (best-effort). */
   temperature?: number;

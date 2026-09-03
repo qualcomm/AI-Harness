@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const NPM_UPDATE_COMPAT_SIDECARS = [
   {
     path: "dist/extensions/qa-channel/runtime-api.js",

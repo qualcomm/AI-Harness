@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { sanitizeGoogleTurnOrdering } from "./bootstrap.js";
 
 export function isGoogleModelApi(api?: string | null): boolean {

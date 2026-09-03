@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalLowercaseString, normalizeOptionalString } from "./string-coerce.js";
 
 export function normalizeStringEntries(list?: ReadonlyArray<unknown>) {

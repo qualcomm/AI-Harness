@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { readJsonFile, runVitestJsonReport } from "../test-report-utils.mjs";
 import { intFlag, parseFlagArgs, stringFlag } from "./arg-utils.mjs";
 

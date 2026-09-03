@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 
 import ts from "typescript";
 import { createPairingGuardContext } from "./lib/pairing-guard-context.mjs";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { z } from "zod";
 import { hasEnvHttpProxyConfigured } from "../infra/net/proxy-env.js";
 import { runPassiveAccountLifecycle } from "./channel-lifecycle.core.js";

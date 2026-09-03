@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { getAcpSessionManager, isAcpRuntimeError } from "openclaw/plugin-sdk/acp-runtime";
 export {
   resolveThreadBindingIdleTimeoutMs,

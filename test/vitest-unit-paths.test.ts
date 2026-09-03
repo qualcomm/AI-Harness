@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { bundledPluginFile } from "./helpers/bundled-plugin-paths.js";
 import { isUnitConfigTestFile } from "./vitest/vitest.unit-paths.mjs";

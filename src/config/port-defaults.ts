@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type PortRange = { start: number; end: number };
 
 function isValidPort(port: number): boolean {

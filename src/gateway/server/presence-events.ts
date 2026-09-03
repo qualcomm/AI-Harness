@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { listSystemPresence } from "../../infra/system-presence.js";
 import type { GatewayBroadcastFn } from "../server-broadcast-types.js";
 

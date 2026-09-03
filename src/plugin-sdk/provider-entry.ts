@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createProviderApiKeyAuthMethod } from "../plugins/provider-api-key-auth.js";
 import type {
   ProviderPlugin,

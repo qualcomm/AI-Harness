@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { PluginPackageChannel } from "../plugins/manifest.js";
 import { normalizeOptionalString } from "../shared/string-coerce.js";
 import { listBundledChannelCatalogEntries } from "./bundled-channel-catalog-read.js";

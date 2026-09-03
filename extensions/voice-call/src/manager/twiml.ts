@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { escapeXml } from "../voice-mapping.js";
 
 export function generateNotifyTwiml(message: string, voice: string): string {

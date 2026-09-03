@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { getApiKeyForModel, requireApiKey } from "../model-auth.js";
 export { runWithImageModelFallback } from "../model-fallback.js";
 export { ensureOpenClawModelsJson } from "../models-config.js";

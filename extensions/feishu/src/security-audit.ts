@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OpenClawConfig } from "openclaw/plugin-sdk/config-runtime";
 import { hasConfiguredSecretInput } from "openclaw/plugin-sdk/setup";
 import { asRecord, hasNonEmptyString } from "./comment-shared.js";

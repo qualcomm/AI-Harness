@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /** Shared config-schema primitives for channel plugins with DM/group policy knobs. */
 export {
   AllowFromListSchema,

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const MEDIA_FFMPEG_MAX_BUFFER_BYTES = 10 * 1024 * 1024;
 export const MEDIA_FFPROBE_TIMEOUT_MS = 10_000;
 export const MEDIA_FFMPEG_TIMEOUT_MS = 45_000;

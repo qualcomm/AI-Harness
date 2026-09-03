@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type TypingStartGuard = {
   run: (start: () => Promise<void> | void) => Promise<"started" | "skipped" | "failed" | "tripped">;
   reset: () => void;

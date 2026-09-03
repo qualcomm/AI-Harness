@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const FEISHU_COMMENT_FILE_TYPES = ["doc", "docx", "file", "sheet", "slides"] as const;
 
 export type CommentFileType = (typeof FEISHU_COMMENT_FILE_TYPES)[number];

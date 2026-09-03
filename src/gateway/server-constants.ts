@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Keep server maxPayload aligned with gateway client maxPayload so high-res canvas snapshots
 // don't get disconnected mid-invoke with "Max payload size exceeded".
 export const MAX_PAYLOAD_BYTES = 25 * 1024 * 1024;

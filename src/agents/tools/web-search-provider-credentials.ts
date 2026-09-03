@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeSecretInputString, resolveSecretInputRef } from "../../config/types.secrets.js";
 import { normalizeSecretInput } from "../../utils/normalize-secret-input.js";
 

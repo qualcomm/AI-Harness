@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared process/runtime utilities for plugins. This is the public boundary for
 // logger wiring, runtime env shims, and global verbose console helpers.
 

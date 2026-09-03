@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Integration test: after_tool_call fires exactly once when both the adapter
  * (toToolDefinitions) and the subscription handler (handleToolExecutionEnd)

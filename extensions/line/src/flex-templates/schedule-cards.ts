@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { attachFooterText } from "./common.js";
 import type { Action, FlexBox, FlexBubble, FlexComponent, FlexText } from "./types.js";
 

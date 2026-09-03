@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MatrixClient } from "./sdk.js";
 
 function trimMaybeString(value: unknown): string | null {

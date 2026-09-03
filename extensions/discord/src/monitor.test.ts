@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ChannelType, type Guild } from "@buape/carbon";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { typedCases } from "../../../test/helpers/plugins/typed-cases.js";

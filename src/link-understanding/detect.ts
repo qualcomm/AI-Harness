@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isBlockedHostnameOrIp } from "../infra/net/ssrf.js";
 import { DEFAULT_MAX_LINKS } from "./defaults.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { logVerbose, shouldLogVerbose } from "../globals.js";
 import { runTasksWithConcurrency } from "../utils/run-with-concurrency.js";
 

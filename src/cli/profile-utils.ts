@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeLowercaseStringOrEmpty } from "../shared/string-coerce.js";
 
 const PROFILE_NAME_RE = /^[a-z0-9][a-z0-9_-]{0,63}$/i;

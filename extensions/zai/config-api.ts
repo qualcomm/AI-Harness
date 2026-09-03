@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow config barrel for core/test consumers.
 // Keep this separate from provider registration/runtime imports.
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Server } from "node:http";
 import type { AddressInfo } from "node:net";
 import express from "express";

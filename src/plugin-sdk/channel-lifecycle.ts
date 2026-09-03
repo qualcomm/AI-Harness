@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export * from "./channel-lifecycle.core.js";
 export * from "../channels/draft-stream-controls.js";
 export * from "../channels/draft-stream-loop.js";

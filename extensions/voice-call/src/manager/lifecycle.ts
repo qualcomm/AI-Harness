@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CallRecord, EndReason } from "../types.js";
 import type { CallManagerContext } from "./context.js";
 import { transitionState } from "./state.js";

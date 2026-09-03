@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { aliasedThing as renamedThing, sharedThing, singleOwnerHelper } from "fixture-sdk";
 import type { SharedType } from "fixture-sdk";
 import * as extra from "fixture-sdk/extra";

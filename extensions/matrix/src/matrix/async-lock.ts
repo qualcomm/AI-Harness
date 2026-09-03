@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type AsyncLock = <T>(fn: () => Promise<T>) => Promise<T>;
 
 export function createAsyncLock(): AsyncLock {

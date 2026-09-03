@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ChannelType } from "discord-api-types/v10";
 import * as commandRegistryModule from "openclaw/plugin-sdk/command-auth";
 import type { ChatCommandDefinition, CommandArgsParsing } from "openclaw/plugin-sdk/command-auth";

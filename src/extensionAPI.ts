@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Legacy compat surface for plugins that still import openclaw/extension-api.
 // Keep this file intentionally narrow and forward-only.
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveGlobalDedupeCache } from "../../../infra/dedupe.js";
 import { normalizeOptionalString } from "../../../shared/string-coerce.js";
 import { applyQueueDropPolicy, shouldSkipQueueItem } from "../../../utils/queue-helpers.js";

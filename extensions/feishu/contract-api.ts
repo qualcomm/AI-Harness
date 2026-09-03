@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { createFeishuThreadBindingManager } from "./src/thread-bindings.js";
 export { __testing as feishuThreadBindingTesting } from "./src/thread-bindings.js";
 export {

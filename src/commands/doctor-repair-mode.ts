@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isTruthyEnvValue } from "../infra/env.js";
 import type { DoctorOptions } from "./doctor.types.js";
 

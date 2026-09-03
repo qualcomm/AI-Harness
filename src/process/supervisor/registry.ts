@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { RunRecord, RunState, TerminationReason } from "./types.js";
 
 function nowMs() {

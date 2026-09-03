@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { emitDiagnosticEvent } from "../infra/diagnostic-events.js";
 import { createSubsystemLogger } from "./subsystem.js";
 

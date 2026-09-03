@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Tests for the best-effort out-of-band notifier and the PRD / progress text it
  * carries. The delivery guarantee lives in the final summarized reply, so every

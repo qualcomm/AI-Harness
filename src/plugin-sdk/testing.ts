@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow public testing surface for plugin authors.
 // Keep this list additive and limited to helpers we are willing to support.
 

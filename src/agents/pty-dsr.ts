@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const ESC = String.fromCharCode(0x1b);
 const DSR_PATTERN = new RegExp(`${ESC}\\[\\??6n`, "g");
 

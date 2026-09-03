@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { expect, test } from "vitest";
 import { buildCursorPositionResponse, stripDsrRequests } from "./pty-dsr.js";
 import {

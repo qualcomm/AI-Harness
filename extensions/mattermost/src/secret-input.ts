@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { SecretInput } from "openclaw/plugin-sdk/secret-input";
 export {
   buildSecretInputSchema,

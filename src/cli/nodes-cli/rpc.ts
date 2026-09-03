@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { randomUUID } from "node:crypto";
 import type { Command } from "commander";
 import { resolveNodeFromNodeList } from "../../shared/node-resolve.js";

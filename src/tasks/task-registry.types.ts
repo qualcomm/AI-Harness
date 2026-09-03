@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { DeliveryContext } from "../utils/delivery-context.types.js";
 
 export type TaskRuntime = "subagent" | "acp" | "cli" | "cron";

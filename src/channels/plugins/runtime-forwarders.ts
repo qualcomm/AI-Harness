@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelDirectoryAdapter, ChannelOutboundAdapter } from "./types.adapters.js";
 
 type MaybePromise<T> = T | Promise<T>;

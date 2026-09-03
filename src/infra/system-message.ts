@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const SYSTEM_MARK = "⚙️";
 
 function normalizeSystemText(value: string): string {

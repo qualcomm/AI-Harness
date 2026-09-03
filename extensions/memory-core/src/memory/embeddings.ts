@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import {
   DEFAULT_GEMINI_EMBEDDING_MODEL,
   DEFAULT_LOCAL_MODEL,

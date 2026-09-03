@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OpenClawPluginApi } from "openclaw/plugin-sdk";
 import { initArtifactRoot } from "./src/artifacts.js";
 import { dragonTaskOrchestratorConfigSchema, resolveConfig } from "./src/config-schema.js";

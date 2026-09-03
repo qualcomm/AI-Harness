@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveEmbeddedSessionLane } from "../../../agents/pi-embedded-runner/lanes.js";
 import { clearCommandLane } from "../../../process/command-queue.js";
 import { normalizeOptionalString } from "../../../shared/string-coerce.js";

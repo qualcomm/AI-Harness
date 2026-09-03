@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SessionState } from "../logging/diagnostic-session-state.js";
 
 // Exponential backoff schedule for command polling

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatCliCommand } from "../cli/command-format.js";
 import { normalizeLowercaseStringOrEmpty } from "../shared/string-coerce.js";
 import type { PortListener, PortListenerKind, PortUsage } from "./ports-types.js";

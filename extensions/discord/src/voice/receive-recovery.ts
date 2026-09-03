@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatErrorMessage } from "openclaw/plugin-sdk/ssrf-runtime";
 
 const DECRYPT_FAILURE_WINDOW_MS = 30_000;

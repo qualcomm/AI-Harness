@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalString } from "../shared/string-coerce.js";
 import { discoverOpenClawPlugins } from "./discovery.js";
 import { loadPluginManifest } from "./manifest.js";

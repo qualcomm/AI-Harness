@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 function toMessageSidPart(value?: string | number | null): string {
   if (typeof value === "string") {
     return value.trim();

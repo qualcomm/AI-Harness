@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 
 let modelsListCommand: typeof import("./models/list.list-command.js").modelsListCommand;

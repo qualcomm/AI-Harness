@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type JsonSchemaObject = {
   type?: string | string[];
   properties?: Record<string, JsonSchemaObject>;

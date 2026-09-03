@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { GatewayBonjourBeacon } from "../../infra/bonjour-discovery.js";
 import { buildGatewayDiscoveryTarget } from "../../infra/gateway-discovery-targets.js";
 import { colorize, theme } from "../../terminal/theme.js";

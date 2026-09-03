@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { applyJobPatch, createJob, recomputeNextRuns } from "./service/jobs.js";
 import type { CronServiceState } from "./service/state.js";

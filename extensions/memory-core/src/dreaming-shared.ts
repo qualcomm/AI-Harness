@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { asNullableRecord as asRecord } from "openclaw/plugin-sdk/text-runtime";
 export { formatErrorMessage } from "openclaw/plugin-sdk/error-runtime";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createAcpxRuntimeService } from "./register.runtime.js";
 import { tryDispatchAcpReplyHook, type OpenClawPluginApi } from "./runtime-api.js";
 import { createAcpxPluginConfigSchema } from "./src/config-schema.js";

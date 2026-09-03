@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { X509Certificate } from "node:crypto";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";

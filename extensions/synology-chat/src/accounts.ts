@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Account resolution: reads config from channels.synology-chat,
  * merges per-account overrides, falls back to environment variables.

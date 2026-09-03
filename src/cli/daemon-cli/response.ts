@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Writable } from "node:stream";
 import type { GatewayService } from "../../daemon/service.js";
 import { defaultRuntime } from "../../runtime.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ExecApprovalDecision } from "./exec-approvals.js";
 
 export type PluginApprovalRequestPayload = {

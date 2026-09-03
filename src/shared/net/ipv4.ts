@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isCanonicalDottedDecimalIPv4 } from "./ip.js";
 
 export function validateDottedDecimalIPv4Input(value: string | undefined): string | undefined {

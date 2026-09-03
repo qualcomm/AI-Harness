@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Secret scanning alert handler for OpenClaw maintainers.
 // Usage: node secret-scanning.mjs <command> [options]
 

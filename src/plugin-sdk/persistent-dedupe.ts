@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createDedupeCache } from "../infra/dedupe.js";
 import type { FileLockOptions } from "./file-lock.js";
 import { withFileLock } from "./file-lock.js";

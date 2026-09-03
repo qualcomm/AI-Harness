@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { ensureAuthProfileStore } from "../../agents/auth-profiles.runtime.js";
 export { ensureOpenClawModelsJson } from "../../agents/models-config.js";
 export { resolveOpenClawAgentDir } from "../../agents/agent-paths.js";

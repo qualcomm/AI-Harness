@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const SESSION_LABEL_MAX_LENGTH = 512;
 
 export type ParsedSessionLabel = { ok: true; label: string } | { ok: false; error: string };

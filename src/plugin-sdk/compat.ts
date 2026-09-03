@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Legacy compat surface for external plugins that still depend on older
 // broad plugin-sdk imports. Keep this file intentionally small.
 

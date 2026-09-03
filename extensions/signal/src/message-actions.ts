@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveReactionMessageId } from "openclaw/plugin-sdk/channel-actions";
 import { createActionGate, jsonResult, readStringParam } from "openclaw/plugin-sdk/channel-actions";
 import type {

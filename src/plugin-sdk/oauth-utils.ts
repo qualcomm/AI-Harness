@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createHash, randomBytes } from "node:crypto";
 
 /** Encode a flat object as application/x-www-form-urlencoded form data. */

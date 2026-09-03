@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelOutboundAdapter } from "../channels/plugins/outbound.types.js";
 import { readStringValue } from "../shared/string-coerce.js";
 

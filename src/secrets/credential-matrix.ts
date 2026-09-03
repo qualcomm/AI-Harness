@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { listSecretTargetRegistryEntries } from "./target-registry.js";
 import { getUnsupportedSecretRefSurfacePatterns } from "./unsupported-surface-policy.js";
 

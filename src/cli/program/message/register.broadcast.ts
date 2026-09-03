@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Command } from "commander";
 import { CHANNEL_TARGETS_DESCRIPTION } from "../../../infra/outbound/channel-target.js";
 import type { MessageCliHelpers } from "./helpers.js";

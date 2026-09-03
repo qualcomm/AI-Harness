@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { signalPlugin } from "./src/channel.js";
 export { signalSetupPlugin } from "./src/channel.setup.js";
 export * from "./src/accounts.js";

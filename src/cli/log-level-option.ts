@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { InvalidArgumentError } from "commander";
 import { ALLOWED_LOG_LEVELS, type LogLevel, tryParseLogLevel } from "../logging/levels.js";
 

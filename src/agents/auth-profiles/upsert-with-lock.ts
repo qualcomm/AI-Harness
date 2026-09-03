@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ensureAuthStoreFile, resolveAuthStorePath } from "./paths.js";
 import { updateAuthProfileStoreWithLock } from "./store.js";
 import type { AuthProfileCredential, AuthProfileStore } from "./types.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Shared ARIA role classification sets used by both the Playwright and Chrome MCP
  * snapshot paths. Keep these in sync — divergence causes the two drivers to produce

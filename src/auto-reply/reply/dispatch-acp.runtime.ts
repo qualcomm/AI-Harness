@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type ShouldBypassAcpDispatchForCommand =
   (typeof import("./dispatch-acp-command-bypass.js"))["shouldBypassAcpDispatchForCommand"];
 type TryDispatchAcpReply = (typeof import("./dispatch-acp.js"))["tryDispatchAcpReply"];

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Strip lightweight markdown formatting from text while preserving readable
  * plain-text structure for TTS and channel fallbacks.

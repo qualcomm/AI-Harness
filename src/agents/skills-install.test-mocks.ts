@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Mock, vi } from "vitest";
 
 export const runCommandWithTimeoutMock: Mock<(...args: unknown[]) => unknown> = vi.fn();

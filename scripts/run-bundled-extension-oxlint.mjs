@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { runExtensionOxlint } from "./lib/run-extension-oxlint.mjs";
 
 runExtensionOxlint({

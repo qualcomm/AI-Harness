@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseAgentSessionKey } from "../../../../src/sessions/session-key-utils.js";
 import {
   normalizeLowercaseStringOrEmpty,

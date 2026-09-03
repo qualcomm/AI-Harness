@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow plugin-sdk surface for the bundled diagnostics-otel plugin.
 // Keep this list additive and scoped to the bundled diagnostics-otel surface.
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveApiKeyForProvider } from "openclaw/plugin-sdk/agent-runtime";
 import type { ModelCatalogEntry } from "openclaw/plugin-sdk/agent-runtime";
 import {

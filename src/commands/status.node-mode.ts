@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { DEFAULT_GATEWAY_PORT } from "../config/paths.js";
 import { loadNodeHostConfig } from "../node-host/config.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public API-key onboarding helpers for provider plugins.
 
 export type { OpenClawConfig } from "../config/config.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getChannelSetupWizardAdapter } from "./channel-setup/registry.js";
 import type { ChannelSetupWizardAdapter } from "./channel-setup/types.js";
 import type { ChannelChoice } from "./onboard-types.js";

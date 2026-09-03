@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChatType } from "../channels/chat-type.js";
 import type { SessionCompactionCheckpoint, SessionEntry } from "../config/sessions/types.js";
 import type {

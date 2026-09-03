@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MatrixRoomConfig } from "../../types.js";
 import type { MatrixRoomInfo } from "./room-info.js";
 import { resolveMatrixRoomConfig } from "./rooms.js";

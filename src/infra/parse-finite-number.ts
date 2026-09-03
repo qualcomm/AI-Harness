@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 function normalizeNumericString(value: string): string | undefined {
   const trimmed = value.trim();
   return trimmed ? trimmed : undefined;

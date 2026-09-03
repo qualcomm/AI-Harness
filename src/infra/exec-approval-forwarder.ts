@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ReplyPayload } from "../auto-reply/types.js";
 import { getChannelPlugin, resolveChannelApprovalAdapter } from "../channels/plugins/index.js";
 import { loadConfig } from "../config/config.js";

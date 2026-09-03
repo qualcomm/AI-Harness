@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { buildSubagentList } from "../../../agents/subagent-list.js";
 import type { CommandHandlerResult } from "../commands-types.js";
 import { type SubagentsCommandContext, RECENT_WINDOW_MINUTES, stopWithText } from "./shared.js";

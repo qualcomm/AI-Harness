@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { escapeOData, fetchGraphJson, type GraphResponse, type GraphUser } from "./graph.js";
 
 export async function searchGraphUsers(params: {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { matchesExactOrPrefix } from "openclaw/plugin-sdk/provider-model-shared";
 
 export const MINIMAX_DEFAULT_MODEL_ID = "MiniMax-M2.7";

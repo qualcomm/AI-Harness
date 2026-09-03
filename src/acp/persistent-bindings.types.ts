@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createHash } from "node:crypto";
 import type { ChannelId } from "../channels/plugins/types.public.js";
 import type { SessionBindingRecord } from "../infra/outbound/session-binding-service.js";

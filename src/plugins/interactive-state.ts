@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createDedupeCache, resolveGlobalDedupeCache } from "../infra/dedupe.js";
 import { resolveGlobalSingleton } from "../shared/global-singleton.js";
 import type { PluginInteractiveHandlerRegistration } from "./types.js";

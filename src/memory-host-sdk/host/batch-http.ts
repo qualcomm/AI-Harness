@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SsrFPolicy } from "../../infra/net/ssrf.js";
 import { retryAsync } from "../../infra/retry.js";
 import { postJson } from "./post-json.js";

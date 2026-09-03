@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import {
   NODE_SERVICE_KIND,
   NODE_SERVICE_MARKER,

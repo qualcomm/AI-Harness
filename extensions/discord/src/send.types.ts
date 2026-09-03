@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { RequestClient } from "@buape/carbon";
 import type { OpenClawConfig } from "openclaw/plugin-sdk/config-runtime";
 import type { RetryConfig } from "openclaw/plugin-sdk/retry-runtime";

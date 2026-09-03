@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { bluebubblesPlugin } from "./src/channel.js";
 export { bluebubblesSetupPlugin } from "./src/channel.setup.js";
 export * from "./src/conversation-id.js";

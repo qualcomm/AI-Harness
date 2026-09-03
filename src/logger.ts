@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isVerbose } from "./global-state.js";
 import { getLogger } from "./logging/logger.js";
 import { createSubsystemLogger } from "./logging/subsystem.js";

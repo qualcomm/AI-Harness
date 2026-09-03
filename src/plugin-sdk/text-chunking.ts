@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { chunkTextByBreakResolver } from "../shared/text-chunking.js";
 
 /** Chunk outbound text while preferring newline boundaries over spaces. */

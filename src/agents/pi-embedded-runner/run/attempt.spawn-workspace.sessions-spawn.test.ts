@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { createPiToolsSandboxContext } from "../../test-helpers/pi-tools-sandbox-context.js";
 import { resolveAttemptSpawnWorkspaceDir } from "./attempt.thread-helpers.js";

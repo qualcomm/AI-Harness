@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalLowercaseString } from "../shared/string-coerce.js";
 import { COMMAND_ARG_FORMATTERS } from "./commands-args.js";
 import type {

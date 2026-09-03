@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeLowercaseStringOrEmpty } from "../../shared/string-coerce.js";
 
 const MIN_DUPLICATE_TEXT_LENGTH = 10;

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const CONTROL_CHARS_RE = /\p{Cc}/u;
 const MAX_EXTERNAL_KEY_LENGTH = 512;
 

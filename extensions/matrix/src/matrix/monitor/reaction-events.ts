@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getSessionBindingService } from "openclaw/plugin-sdk/conversation-runtime";
 import { matrixApprovalCapability } from "../../approval-native.js";
 import {

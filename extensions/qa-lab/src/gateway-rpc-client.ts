@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatErrorMessage } from "openclaw/plugin-sdk/error-runtime";
 import { formatQaGatewayLogsForError } from "./gateway-log-redaction.js";
 import { callGatewayFromCli } from "./runtime-api.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { z } from "zod";
 import { normalizeOptionalString as toText } from "../shared/string-coerce.js";
 import { normalizeMessageChannel } from "../utils/message-channel.js";

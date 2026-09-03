@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { stripAnsi } from "../../src/terminal/ansi.js";
 
 export function normalizeTestText(input: string): string {

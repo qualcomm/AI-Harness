@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { theme } from "../terminal/theme.js";
 
 export type HelpExample = readonly [command: string, description: string];

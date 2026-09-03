@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Cache `file_info` values returned by the QQ Bot API so identical uploads can be reused
  * before the server-side TTL expires.

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function hasIrcConfiguredState(params: { env?: NodeJS.ProcessEnv }): boolean {
   return (
     typeof params.env?.IRC_HOST === "string" &&

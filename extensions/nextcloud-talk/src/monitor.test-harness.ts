@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { type AddressInfo } from "node:net";
 import { afterEach } from "vitest";
 import { createNextcloudTalkWebhookServer } from "./monitor.js";

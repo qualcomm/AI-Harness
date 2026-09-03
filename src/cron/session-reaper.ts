@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Cron session reaper — prunes completed isolated cron run sessions
  * from the session store after a configurable retention period.

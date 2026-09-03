@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { listChannelPlugins } from "../channels/plugins/index.js";
 import { GATEWAY_EVENT_UPDATE_AVAILABLE } from "./events.js";
 

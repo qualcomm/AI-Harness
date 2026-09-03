@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { verifyEvent, getPublicKey } from "nostr-tools";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 import type { NostrProfile } from "./config-schema.js";

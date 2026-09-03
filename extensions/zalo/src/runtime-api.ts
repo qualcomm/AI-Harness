@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Internal runtime barrel. Keep this independent from the public top-level
 // runtime barrel so local imports do not loop back through the plugin export
 // surface during entry loading.

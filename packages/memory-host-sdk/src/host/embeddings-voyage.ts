@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SsrFPolicy } from "../../../../src/infra/net/ssrf.js";
 import { normalizeEmbeddingModelWithPrefixes } from "./embeddings-model-normalize.js";
 import { resolveRemoteEmbeddingBearerClient } from "./embeddings-remote-client.js";

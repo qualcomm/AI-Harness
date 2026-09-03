@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import ts from "typescript";

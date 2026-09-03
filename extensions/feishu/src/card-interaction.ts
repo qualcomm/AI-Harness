@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isRecord } from "./comment-shared.js";
 
 export const FEISHU_CARD_INTERACTION_VERSION = "ocf1";

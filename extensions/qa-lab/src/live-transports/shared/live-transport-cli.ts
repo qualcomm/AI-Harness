@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Command } from "commander";
 import { collectString } from "../../cli-options.js";
 import type { QaProviderModeInput } from "../../run-config.js";

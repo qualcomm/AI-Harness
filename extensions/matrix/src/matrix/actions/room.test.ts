@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import type { MatrixClient } from "../sdk.js";
 import { getMatrixMemberInfo, getMatrixRoomInfo } from "./room.js";

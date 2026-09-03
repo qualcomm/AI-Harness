@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import type { AcpRuntime } from "../runtime/types.js";
 import type { AcpRuntimeHandle } from "../runtime/types.js";

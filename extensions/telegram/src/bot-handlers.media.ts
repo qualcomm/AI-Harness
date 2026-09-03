@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Message } from "@grammyjs/types";
 import { MediaFetchError } from "openclaw/plugin-sdk/media-runtime";
 

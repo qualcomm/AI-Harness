@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { TaskRecord } from "./task-registry.types.js";
 
 export type TaskAuditSeverity = "warn" | "error";

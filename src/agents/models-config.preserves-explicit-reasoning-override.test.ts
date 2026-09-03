@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { mergeProviderModels, mergeProviders } from "./models-config.merge.js";
 import type { ProviderConfig } from "./models-config.providers.secrets.js";

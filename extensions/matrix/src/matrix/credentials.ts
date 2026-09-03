@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { writeJsonFileAtomically } from "../runtime-api.js";
 import { createAsyncLock, type AsyncLock } from "./async-lock.js";
 import { loadMatrixCredentials, resolveMatrixCredentialsPath } from "./credentials-read.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Command } from "commander";
 import { normalizeOptionalString } from "openclaw/plugin-sdk/text-runtime";
 import { runCommandWithRuntime } from "../core-api.js";

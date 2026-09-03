@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type ApproverInput = string | number;
 
 function dedupeDefined(values: Array<string | undefined>): string[] {

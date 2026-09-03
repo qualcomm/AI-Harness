@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { RuntimeWebToolsMetadata } from "./runtime-web-tools.types.js";
 
 let activeRuntimeWebToolsMetadata: RuntimeWebToolsMetadata | null = null;

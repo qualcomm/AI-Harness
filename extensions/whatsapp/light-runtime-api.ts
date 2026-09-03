@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { getActiveWebListener } from "./src/active-listener.js";
 export {
   getWebAuthAgeMs,

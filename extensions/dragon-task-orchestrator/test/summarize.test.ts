@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Tests for summarization and notice visibility (tasks 6.8/6.9/6.10).
  */

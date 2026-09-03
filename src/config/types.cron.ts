@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SecretInput } from "./types.secrets.js";
 
 /** Error types that can trigger retries for one-shot jobs. */

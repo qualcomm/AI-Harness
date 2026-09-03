@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Command } from "commander";
 import { registerBrowserActionInputCommands } from "./browser-cli-actions-input.js";
 import { registerBrowserActionObserveCommands } from "./browser-cli-actions-observe.js";

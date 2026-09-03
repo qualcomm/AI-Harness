@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { updateSessionStore } from "../../config/sessions/store.js";
 import { mergeSessionEntry, type SessionEntry } from "../../config/sessions/types.js";
 import { formatAgentInternalEventsForPrompt } from "../internal-events.js";

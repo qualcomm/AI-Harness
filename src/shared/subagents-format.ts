@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { formatDurationCompact } from "../infra/format-time/format-duration.ts";
 
 export function formatTokenShort(value?: number) {

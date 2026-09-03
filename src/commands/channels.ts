@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { ChannelsAddOptions } from "./channels/add.js";
 export { channelsAddCommand } from "./channels/add.js";
 export type { ChannelsCapabilitiesOptions } from "./channels/capabilities.js";

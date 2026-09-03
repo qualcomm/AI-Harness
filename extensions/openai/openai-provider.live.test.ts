@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import OpenAI from "openai";
 import { describe, expect, it } from "vitest";
 import { buildOpenAIProvider } from "./openai-provider.js";

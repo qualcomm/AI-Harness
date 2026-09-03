@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public runtime auth helpers for provider plugins.
 
 import fs from "node:fs";

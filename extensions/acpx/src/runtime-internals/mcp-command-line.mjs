@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const WINDOWS_DIRECT_EXECUTABLE_PATH_RE =
   /^(?<command>(?:[A-Za-z]:[\\/]|\\\\[^\\/]+[\\/][^\\/]+[\\/]).*?\.(?:exe|com))(?=\s|$)(?:\s+(?<rest>.*))?$/i;
 

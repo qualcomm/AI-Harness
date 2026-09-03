@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getBootstrapChannelSecrets } from "../channels/plugins/bootstrap-registry.js";
 import type { OpenClawConfig } from "../config/types.openclaw.js";
 import { loadBundledChannelSecretContractApi } from "./channel-contract-api.js";

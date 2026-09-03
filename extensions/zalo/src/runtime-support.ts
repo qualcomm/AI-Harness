@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { ReplyPayload } from "openclaw/plugin-sdk/reply-runtime";
 export type { OpenClawConfig, GroupPolicy } from "openclaw/plugin-sdk/config-runtime";
 export type { MarkdownTableMode } from "openclaw/plugin-sdk/config-runtime";

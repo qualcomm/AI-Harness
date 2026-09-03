@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isIP } from "node:net";
 import { type OpenClawConfig } from "openclaw/plugin-sdk/config-runtime";
 import { makeProxyFetch } from "openclaw/plugin-sdk/infra-runtime";

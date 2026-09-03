@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Tests for resolveConfig's agentDescriptions handling — a hand-written map, so
  * malformed entries must be filtered rather than reaching formatKnownDomains.

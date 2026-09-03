@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createCapturedPluginRegistration } from "../plugins/captured-registration.js";
 import type { OpenClawPluginApi, ProviderPlugin } from "../plugins/types.js";
 

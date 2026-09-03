@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { readSessionUpdatedAt, resolveStorePath } from "openclaw/plugin-sdk/config-runtime";
 export { recordInboundSession } from "openclaw/plugin-sdk/conversation-runtime";
 export { finalizeInboundContext } from "openclaw/plugin-sdk/reply-dispatch-runtime";

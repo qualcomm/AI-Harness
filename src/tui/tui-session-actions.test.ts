@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import type { GatewayChatClient } from "./gateway-chat.js";
 import { createSessionActions } from "./tui-session-actions.js";

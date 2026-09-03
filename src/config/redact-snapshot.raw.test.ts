@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { REDACTED_SENTINEL } from "./redact-snapshot.js";
 import { replaceSensitiveValuesInRaw } from "./redact-snapshot.raw.js";

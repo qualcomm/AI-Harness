@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import type { OpenClawConfig } from "../config/types.js";

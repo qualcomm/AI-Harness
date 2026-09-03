@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { withResolvedRoomAction } from "./client.js";
 import { fetchEventSummary, readPinnedEvents } from "./summary.js";
 import {

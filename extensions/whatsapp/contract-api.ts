@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { whatsappCommandPolicy as whatsappCommandPolicyImpl } from "./src/command-policy.js";
 import { resolveLegacyGroupSessionKey as resolveLegacyGroupSessionKeyImpl } from "./src/group-session-contract.js";
 import { __testing as whatsappAccessControlTestingImpl } from "./src/inbound/access-control.js";

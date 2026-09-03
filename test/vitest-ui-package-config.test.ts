@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import uiConfig from "../ui/vitest.config.ts";
 import uiNodeConfig from "../ui/vitest.node.config.ts";

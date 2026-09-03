@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Chat, Message, MessageOrigin, User } from "@grammyjs/types";
 import type { NormalizedLocation } from "openclaw/plugin-sdk/channel-inbound";
 import {

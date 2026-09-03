@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function estimateBase64DecodedBytes(base64: string): number {
   // Avoid `trim()`/`replace()` here: they allocate a second (potentially huge) string.
   // We only need a conservative decoded-size estimate to enforce budgets before Buffer.from(..., "base64").

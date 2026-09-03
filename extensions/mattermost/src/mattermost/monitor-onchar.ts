@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const DEFAULT_ONCHAR_PREFIXES = [">", "!"];
 
 export function resolveOncharPrefixes(prefixes: string[] | undefined): string[] {

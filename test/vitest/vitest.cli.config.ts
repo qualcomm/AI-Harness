@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createScopedVitestConfig } from "./vitest.scoped-config.ts";
 
 export function createCliVitestConfig(env?: Record<string, string | undefined>) {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { generateSecureToken } from "openclaw/plugin-sdk/infra-runtime";
 
 const SLACK_EXTERNAL_ARG_MENU_TOKEN_BYTES = 18;

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export * from "./sessions/group.js";
 export * from "./sessions/artifacts.js";
 export * from "./sessions/metadata.js";

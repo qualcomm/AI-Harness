@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it } from "vitest";
 import { importFreshModule } from "../../../test/helpers/import-fresh.js";
 import type { FollowupRun, QueueSettings } from "./queue.js";

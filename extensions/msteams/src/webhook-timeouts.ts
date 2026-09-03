@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Server } from "node:http";
 
 const MSTEAMS_WEBHOOK_INACTIVITY_TIMEOUT_MS = 30_000;

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import * as ssrf from "openclaw/plugin-sdk/infra-runtime";
 import * as mediaFetch from "openclaw/plugin-sdk/media-runtime";
 import type { SavedMedia } from "openclaw/plugin-sdk/media-runtime";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isSensitiveUrlConfigPath } from "../shared/net/redact-sensitive-url.js";
 import { VERSION } from "../version.js";
 import { FIELD_HELP } from "./schema.help.js";

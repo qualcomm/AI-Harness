@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { expect, vi, type Mock } from "vitest";
 import type { MatrixClient } from "./sdk.js";
 

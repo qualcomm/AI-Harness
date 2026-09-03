@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { fetchGraphJson, type GraphResponse } from "./graph.js";
 
 export type GraphThreadMessage = {

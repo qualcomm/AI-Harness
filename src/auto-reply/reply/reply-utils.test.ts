@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { SILENT_REPLY_TOKEN } from "../tokens.js";
 import { parseAudioTag } from "./audio-tags.js";

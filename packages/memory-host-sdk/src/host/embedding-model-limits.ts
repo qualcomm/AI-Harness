@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeLowercaseStringOrEmpty } from "../../../../src/shared/string-coerce.js";
 import type { EmbeddingProvider } from "./embeddings.js";
 

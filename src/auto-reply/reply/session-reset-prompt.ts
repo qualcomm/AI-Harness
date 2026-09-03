@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { appendCronStyleCurrentTimeLine } from "../../agents/current-time.js";
 import type { OpenClawConfig } from "../../config/types.openclaw.js";
 

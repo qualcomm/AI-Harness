@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelPlugin } from "openclaw/plugin-sdk/core";
 import { type ResolvedWhatsAppAccount } from "./accounts.js";
 import { webAuthExists } from "./auth-store.js";

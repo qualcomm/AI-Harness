@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { monitorWebInbox } from "../inbound.js";
 import type { ReconnectPolicy } from "../reconnect.js";
 

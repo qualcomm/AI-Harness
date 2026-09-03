@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import fs from "node:fs/promises";
 import path from "node:path";
 import { MEDIA_MAX_BYTES } from "openclaw/plugin-sdk/media-runtime";

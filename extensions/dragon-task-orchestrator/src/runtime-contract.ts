@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Narrow structural contract for the slice of the host subagent runtime this
  * plugin uses. Mirrors `SubagentRunParams`/`SubagentWaitResult` etc. from the

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function withTimeout<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
   if (!timeoutMs || timeoutMs <= 0) {
     return promise;

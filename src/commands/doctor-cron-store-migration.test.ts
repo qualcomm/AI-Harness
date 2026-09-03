@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { DEFAULT_TOP_OF_HOUR_STAGGER_MS } from "../cron/stagger.js";
 import { normalizeStoredCronJobs } from "./doctor-cron-store-migration.js";

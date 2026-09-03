@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Split into focused modules to keep files small and improve edit locality.
 
 export * from "./types.agent-defaults.js";

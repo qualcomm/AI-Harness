@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { type NodeMatchCandidate, resolveNodeIdFromCandidates } from "./node-match.js";
 import { normalizeOptionalString } from "./string-coerce.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { hasFlag } from "../argv.js";
 import { cliCommandCatalog, type CliCommandCatalogEntry } from "../command-catalog.js";
 import { matchesCommandPath } from "../command-path-matches.js";

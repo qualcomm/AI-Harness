@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { randomUUID } from "node:crypto";
 import { resolveMissingRequestedScope } from "../shared/operator-scope-compat.js";
 import { normalizeArrayBackedTrimmedStringList } from "../shared/string-normalization.js";

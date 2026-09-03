@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const MEDIA_AUDIO_FIELD_KEYS = [
   "tools.media.audio.enabled",
   "tools.media.audio.maxBytes",

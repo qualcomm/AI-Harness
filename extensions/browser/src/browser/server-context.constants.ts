@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const MANAGED_BROWSER_PAGE_TAB_LIMIT = 8;
 
 export const OPEN_TAB_DISCOVERY_WINDOW_MS = 2000;

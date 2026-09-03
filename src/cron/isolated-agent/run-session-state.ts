@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { LiveSessionModelSelection } from "../../agents/live-model-switch.js";
 import type { SkillSnapshot } from "../../agents/skills.js";
 import type { SessionEntry } from "../../config/sessions.js";

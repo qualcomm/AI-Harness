@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ExecElevatedDefaults } from "../bash-tools.js";
 import type { resolveSandboxContext } from "../sandbox.js";
 import type { EmbeddedFullAccessBlockedReason, EmbeddedSandboxInfo } from "./types.js";

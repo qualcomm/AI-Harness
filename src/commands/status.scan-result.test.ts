@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { buildStatusScanResult } from "./status.scan-result.ts";
 import { buildColdStartStatusSummary } from "./status.scan.bootstrap-shared.ts";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveGlobalSingleton } from "openclaw/plugin-sdk/memory-core-host-engine-foundation";
 
 type Closable = {

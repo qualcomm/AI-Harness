@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import sharp from "sharp";
 import { describe, expect, it } from "vitest";
 import { sanitizeContentBlocksImages, sanitizeImageBlocks } from "./tool-images.js";

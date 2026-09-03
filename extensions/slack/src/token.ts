@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeResolvedSecretInputString } from "openclaw/plugin-sdk/secret-input";
 
 export function normalizeSlackToken(raw?: unknown): string | undefined {

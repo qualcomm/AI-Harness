@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { splitSdkTools } from "./pi-embedded-runner.js";
 import { createStubTool } from "./test-helpers/pi-tool-stubs.js";

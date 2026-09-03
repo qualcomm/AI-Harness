@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Private runtime-bearing plugin export for the bundled Mattermost entry.
 // Keep the actual channel plugin value off the lighter channel-plugin-api seam
 // so bootstrap can lazy-load it without tripping bundle init cycles.

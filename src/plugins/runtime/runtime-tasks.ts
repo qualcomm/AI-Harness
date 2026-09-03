@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { cancelTaskById, listTasksForFlowId } from "../../tasks/runtime-internal.js";
 import {
   mapTaskFlowDetail,

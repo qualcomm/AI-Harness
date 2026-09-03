@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { logVerbose } from "../../globals.js";
 import { buildContextReply } from "./commands-context-report.js";
 import type { CommandHandler } from "./commands-types.js";

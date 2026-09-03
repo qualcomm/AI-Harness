@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeAll, describe, expect, it } from "vitest";
 import { resolveOpenClawAgentDir } from "../../src/agents/agent-paths.js";
 import { isLiveTestEnabled } from "../../src/agents/live-test-helpers.js";

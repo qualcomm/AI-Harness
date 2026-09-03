@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Server as HttpServer } from "node:http";
 import type { WebSocketServer } from "ws";
 import { disposeRegisteredAgentHarnesses } from "../agents/harness/registry.js";

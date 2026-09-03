@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { definePluginEntry } from "./runtime-api.js";
 import { registerQaLabCli } from "./src/cli.js";
 

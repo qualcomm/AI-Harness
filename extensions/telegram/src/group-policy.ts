@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelGroupContext } from "openclaw/plugin-sdk/channel-contract";
 import {
   resolveChannelGroupRequireMention,

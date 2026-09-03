@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { EventEmitter } from "node:events";
 import type { Server as HttpServer } from "node:http";
 import { describe, expect, it, vi } from "vitest";

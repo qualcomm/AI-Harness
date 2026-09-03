@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function missingTargetMessage(provider: string, hint?: string): string {
   return `Delivering to ${provider} requires target${formatTargetHint(hint)}`;
 }

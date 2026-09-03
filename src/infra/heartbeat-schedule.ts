@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createHash } from "node:crypto";
 
 function normalizeModulo(value: number, divisor: number) {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SecretRefSource } from "../config/types.secrets.js";
 import { listKnownProviderEnvApiKeyNames } from "./model-auth-env-vars.js";
 

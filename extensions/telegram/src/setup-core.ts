@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { TelegramNetworkConfig } from "openclaw/plugin-sdk/config-runtime";
 import type { ChannelSetupAdapter } from "openclaw/plugin-sdk/setup-runtime";
 import {

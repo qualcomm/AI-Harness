@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const MAX_SAFE_TIMEOUT_MS = 2_147_483_647;
 
 export function clampRuntimeAuthRefreshDelayMs(params: {

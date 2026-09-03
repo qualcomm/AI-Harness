@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadAuthProfileStore } from "../../agents/auth-profiles.js";
 import { isChannelVisibleInConfiguredLists } from "../../channels/plugins/exposure.js";
 import { listChannelPlugins } from "../../channels/plugins/index.js";

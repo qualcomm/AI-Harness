@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeLowercaseStringOrEmpty } from "../string-coerce.ts";
 import { extractQueryTerms } from "../usage-helpers.ts";
 import { CostDailyEntry, UsageAggregates, UsageSessionEntry } from "./usageTypes.ts";

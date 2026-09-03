@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import type { ChannelAccountSnapshot } from "../api.js";
 import { lineStatusAdapter } from "./status.js";

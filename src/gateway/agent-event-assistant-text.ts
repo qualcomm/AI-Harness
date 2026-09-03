@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AgentEventPayload } from "../infra/agent-events.js";
 
 export function resolveAssistantStreamDeltaText(evt: AgentEventPayload): string {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { vi } from "vitest";
 import { createGatewayConfigModuleMock } from "./test-helpers.config-runtime.js";

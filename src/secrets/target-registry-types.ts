@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type SecretTargetConfigFile = "openclaw.json" | "auth-profiles.json"; // pragma: allowlist secret
 export type SecretTargetShape = "secret_input" | "sibling_ref"; // pragma: allowlist secret
 export type SecretTargetExpected = "string" | "string-or-object"; // pragma: allowlist secret

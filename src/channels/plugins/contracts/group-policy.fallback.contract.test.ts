@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { installChannelRuntimeGroupPolicyFallbackSuite } from "../../../../test/helpers/channels/group-policy-contract-suites.js";
 import {

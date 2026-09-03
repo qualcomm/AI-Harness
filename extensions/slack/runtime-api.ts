@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export * from "./src/action-runtime.js";
 export * from "./src/directory-live.js";
 export * from "./src/index.js";

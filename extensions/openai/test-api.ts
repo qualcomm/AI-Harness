@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { buildOpenAICodexCliBackend } from "./cli-backend.js";
 export { buildOpenAIImageGenerationProvider } from "./image-generation-provider.js";
 export {

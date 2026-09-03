@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Model } from "@mariozechner/pi-ai";
 import { expect } from "vitest";
 

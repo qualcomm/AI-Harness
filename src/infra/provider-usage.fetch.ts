@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { fetchClaudeUsage } from "./provider-usage.fetch.claude.js";
 export { fetchCodexUsage } from "./provider-usage.fetch.codex.js";
 export { fetchGeminiUsage } from "./provider-usage.fetch.gemini.js";

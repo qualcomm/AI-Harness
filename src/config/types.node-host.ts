@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type NodeHostBrowserProxyConfig = {
   /** Enable the browser proxy on the node host (default: true). */
   enabled?: boolean;

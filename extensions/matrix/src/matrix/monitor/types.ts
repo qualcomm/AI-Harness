@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { MATRIX_REACTION_EVENT_TYPE } from "../reaction-common.js";
 import type { EncryptedFile, MessageEventContent } from "../sdk.js";
 export type { MatrixRawEvent } from "../sdk.js";

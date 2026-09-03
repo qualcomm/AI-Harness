@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 declare module "cli-highlight" {
   export type HighlightOptions = {
     language?: string;

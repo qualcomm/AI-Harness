@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ApplyAuthChoiceParams } from "./auth-choice.apply.types.js";
 import { applyDefaultModelChoice } from "./auth-choice.default-model.js";
 

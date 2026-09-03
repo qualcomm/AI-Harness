@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type ToolContentBlock = Record<string, unknown>;
 
 export function normalizeToolContentType(value: unknown): string {

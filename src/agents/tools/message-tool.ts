@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Type, type TSchema } from "@sinclair/typebox";
 import { listChannelPlugins } from "../../channels/plugins/index.js";
 import {

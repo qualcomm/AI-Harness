@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { MessagingToolSend } from "./pi-embedded-messaging.types.js";
 export {
   compactEmbeddedPiSession,

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { defineConfig } from "vitest/config";
 import { BUNDLED_PLUGIN_LIVE_TEST_GLOB } from "./vitest.bundled-plugin-paths.ts";
 import baseConfig from "./vitest.config.ts";

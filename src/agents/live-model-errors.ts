@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function isModelNotFoundErrorMessage(raw: string): boolean {
   const msg = raw.trim();
   if (!msg) {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { normalizeWindowsPathForComparison } from "../infra/path-guards.js";
 import { resolveSandboxInputPath } from "./sandbox-paths.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const CDP_HTTP_REQUEST_TIMEOUT_MS = 1500;
 export const CDP_WS_HANDSHAKE_TIMEOUT_MS = 5000;
 export const CDP_JSON_NEW_TIMEOUT_MS = 1500;

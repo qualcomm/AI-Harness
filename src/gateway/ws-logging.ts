@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type GatewayWsLogStyle = "auto" | "full" | "compact";
 
 let gatewayWsLogStyle: GatewayWsLogStyle = "auto";

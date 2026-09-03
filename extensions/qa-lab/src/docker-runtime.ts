@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { execFile } from "node:child_process";
 import { createServer } from "node:net";
 import { fetchWithSsrFGuard } from "openclaw/plugin-sdk/ssrf-runtime";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ReportModule, TopologyEnvelope, TopologyRecord } from "./types.js";
 
 function canonicalExportName(record: TopologyRecord): string {

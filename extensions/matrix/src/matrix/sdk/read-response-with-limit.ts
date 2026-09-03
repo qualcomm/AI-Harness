@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { readResponseWithLimit as readSharedResponseWithLimit } from "openclaw/plugin-sdk/media-runtime";
 
 export async function readResponseWithLimit(

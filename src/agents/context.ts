@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Lazy-load pi-coding-agent model metadata so we can infer context windows when
 // the agent reports a model id. This includes custom models.json entries.
 

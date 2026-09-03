@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { defineBundledChannelEntry } from "openclaw/plugin-sdk/channel-entry-contract";
 
 type DiscordSubagentHooksModule = typeof import("./subagent-hooks-api.js");

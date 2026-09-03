@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow shared exports for web-fetch contract surfaces.
 
 import type { WebFetchProviderPlugin } from "../plugins/types.js";

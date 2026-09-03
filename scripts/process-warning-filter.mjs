@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const warningFilterKey = Symbol.for("openclaw.warning-filter");
 
 export function installProcessWarningFilter() {

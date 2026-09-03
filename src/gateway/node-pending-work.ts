@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { randomUUID } from "node:crypto";
 
 export const NODE_PENDING_WORK_TYPES = ["status.request", "location.request"] as const;

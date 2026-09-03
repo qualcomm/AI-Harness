@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { createChannelPairingChallengeIssuer } from "openclaw/plugin-sdk/channel-pairing";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 

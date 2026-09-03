@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { ChannelMessageActionName } from "openclaw/plugin-sdk/channel-contract";
 export type { ChannelPlugin } from "openclaw/plugin-sdk/channel-core";
 export { PAIRING_APPROVED_MESSAGE } from "openclaw/plugin-sdk/channel-status";

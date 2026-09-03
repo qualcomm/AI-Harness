@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SubagentRunRecord } from "../../agents/subagent-registry.types.js";
 import type { HandleCommandsParams } from "./commands-types.js";
 

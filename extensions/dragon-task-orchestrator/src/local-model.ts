@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Local model invocation for the `runLocally` fallback (answering in place
  * with a target agent's approximated voice — see index.ts/hooks.ts).

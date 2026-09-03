@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { fileTypeFromBuffer } from "file-type";
 import { type MediaKind, mediaKindFromMime } from "./constants.js";

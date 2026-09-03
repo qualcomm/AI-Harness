@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function createSessionManagerRuntimeRegistry<TValue>() {
   // Session-scoped runtime registry keyed by object identity.
   // The SessionManager instance must stay stable across set/get calls.

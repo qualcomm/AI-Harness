@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function pruneMapToMaxSize<K, V>(map: Map<K, V>, maxSize: number): void {
   const limit = Math.max(0, Math.floor(maxSize));
   if (limit <= 0) {

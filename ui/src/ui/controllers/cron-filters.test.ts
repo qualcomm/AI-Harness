@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import type { CronJob } from "../types.ts";
 import { getVisibleCronJobs } from "./cron.ts";

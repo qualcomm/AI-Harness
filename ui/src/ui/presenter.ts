@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { t } from "../i18n/index.ts";
 import {
   formatRelativeTimestamp,

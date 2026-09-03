@@ -1,4 +1,6 @@
 #!/usr/bin/env bun
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 
 import { $ } from "bun";
 import { dirname, join } from "node:path";

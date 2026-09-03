@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type OptionalDefaultGate<TKey extends string> = (key: TKey, defaultValue?: boolean) => boolean;
 
 type TokenSourcedAccount = {

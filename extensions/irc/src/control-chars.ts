@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function isIrcControlChar(charCode: number): boolean {
   return charCode <= 0x1f || charCode === 0x7f;
 }

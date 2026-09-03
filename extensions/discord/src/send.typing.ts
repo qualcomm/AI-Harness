@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Routes } from "discord-api-types/v10";
 import { resolveDiscordRest } from "./client.js";
 import type { DiscordReactOpts } from "./send.types.js";

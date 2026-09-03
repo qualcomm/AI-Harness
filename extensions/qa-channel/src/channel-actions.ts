@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Type } from "@sinclair/typebox";
 import { jsonResult, readStringParam } from "openclaw/plugin-sdk/channel-actions";
 import { extractToolSend } from "openclaw/plugin-sdk/tool-send";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Private ACPX runtime backend helpers for bundled extensions.
 // Keep this surface narrow and limited to the ACP runtime/backend contract.
 

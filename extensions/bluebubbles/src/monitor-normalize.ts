@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseFiniteNumber } from "openclaw/plugin-sdk/infra-runtime";
 import {
   asNullableRecord,

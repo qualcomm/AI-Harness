@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import type { ResponseObject } from "./openai-ws-connection.js";
 import { buildAssistantMessageFromResponse } from "./openai-ws-message-conversion.js";

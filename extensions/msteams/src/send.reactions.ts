@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OpenClawConfig } from "../runtime-api.js";
 import { fetchGraphJson, postGraphJson, resolveGraphToken } from "./graph.js";
 import { normalizeMSTeamsConversationId } from "./inbound.js";

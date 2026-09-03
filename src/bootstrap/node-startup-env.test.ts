@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { LINUX_CA_BUNDLE_PATHS } from "./node-extra-ca-certs.js";
 import { resolveNodeStartupTlsEnvironment } from "./node-startup-env.js";

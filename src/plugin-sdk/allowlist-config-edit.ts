@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ConfigWriteTarget } from "../channels/plugins/config-writes.js";
 import type { ChannelAllowlistAdapter } from "../channels/plugins/types.adapters.js";
 import type { ChannelId } from "../channels/plugins/types.public.js";

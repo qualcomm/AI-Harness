@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { fetchWithSsrFGuard } from "../../../../src/infra/net/fetch-guard.js";
 import type { SsrFPolicy } from "../../../../src/infra/net/ssrf.js";
 

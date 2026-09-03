@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { applyInlineDirectivesFastLane } from "./directive-handling.fast-lane.js";
 export * from "./directive-handling.impl.js";
 export type { InlineDirectives } from "./directive-handling.parse.js";

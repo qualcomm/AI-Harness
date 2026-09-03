@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { User } from "@buape/carbon";
 import { normalizeOptionalString } from "openclaw/plugin-sdk/text-runtime";
 import type { PluralKitMessageInfo } from "../pluralkit.js";

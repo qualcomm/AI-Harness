@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { execFile } from "node:child_process";
 import * as fs from "node:fs";
 import * as path from "node:path";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { getAgentScopedMediaLocalRoots } from "../media/local-roots.js";
 
 export type AgentMediaPayload = {

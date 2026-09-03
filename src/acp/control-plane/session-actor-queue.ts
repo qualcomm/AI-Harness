@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { KeyedAsyncQueue } from "openclaw/plugin-sdk/keyed-async-queue";
 
 export class SessionActorQueue {

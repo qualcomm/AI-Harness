@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { DeliveryContext } from "../utils/delivery-context.types.js";
 import type { TaskNotifyPolicy } from "./task-registry.types.js";
 

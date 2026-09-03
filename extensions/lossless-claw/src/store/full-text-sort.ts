@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type SearchSort = "recency" | "relevance" | "hybrid";
 
 export const AGE_DECAY_RATE = 0.001;

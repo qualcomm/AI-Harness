@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type FacadeModule = typeof import("@openclaw/anthropic-vertex/api.js");
 import { loadBundledPluginPublicSurfaceModuleSync } from "./facade-loader.js";
 

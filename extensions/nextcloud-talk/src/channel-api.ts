@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { ChannelPlugin } from "openclaw/plugin-sdk/channel-core";
 export type { OpenClawConfig } from "openclaw/plugin-sdk/config-runtime";
 export { clearAccountEntryFields } from "openclaw/plugin-sdk/channel-core";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public fetch/proxy helpers for plugins that need wrapped fetch behavior.
 
 export { resolveFetch, wrapFetchWithAbortSignal } from "../infra/fetch.js";

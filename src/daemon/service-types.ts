@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { GatewayServiceRuntime } from "./service-runtime.js";
 
 export type GatewayServiceEnv = Record<string, string | undefined>;

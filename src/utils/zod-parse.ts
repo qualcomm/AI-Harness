@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ZodType } from "zod";
 
 export function safeParseWithSchema<T>(schema: ZodType<T>, value: unknown): T | null {

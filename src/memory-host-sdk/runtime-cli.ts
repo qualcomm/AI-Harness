@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Focused runtime contract for memory CLI/UI helpers.
 
 export { formatErrorMessage, withManager } from "../cli/cli-utils.js";

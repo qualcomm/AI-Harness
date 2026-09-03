@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { listChannelSetupPlugins } from "../../channels/plugins/setup-registry.js";
 import { buildChannelSetupWizardAdapterFromSetupWizard } from "../../channels/plugins/setup-wizard.js";
 import type { ChannelSetupWizard } from "../../channels/plugins/setup-wizard.js";

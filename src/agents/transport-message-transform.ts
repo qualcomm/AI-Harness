@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Api, Context, Model } from "@mariozechner/pi-ai";
 
 type PendingToolCall = { id: string; name: string };

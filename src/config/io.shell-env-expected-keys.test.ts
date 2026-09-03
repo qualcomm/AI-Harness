@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 
 const listKnownChannelEnvVarNames = vi.hoisted(() => vi.fn(() => ["DISCORD_BOT_TOKEN"]));

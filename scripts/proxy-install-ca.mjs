@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { spawnSync } from "node:child_process";
 import process from "node:process";
 import { resolveSystemBin } from "../src/infra/resolve-system-bin.js";

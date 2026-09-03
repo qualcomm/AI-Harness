@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const FLAG_TERMINATOR = "--";
 
 const ROOT_BOOLEAN_FLAGS = new Set(["--dev", "--no-color"]);

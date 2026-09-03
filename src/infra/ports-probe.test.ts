@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import net from "node:net";
 import { describe, expect, it } from "vitest";
 import { tryListenOnPort } from "./ports-probe.js";

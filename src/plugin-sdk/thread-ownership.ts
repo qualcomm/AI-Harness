@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow plugin-sdk surface for the bundled thread-ownership plugin.
 // Keep this list additive and scoped to the bundled thread-ownership surface.
 

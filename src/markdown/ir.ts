@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import MarkdownIt from "markdown-it";
 import { chunkText } from "../auto-reply/chunk.js";
 import type { MarkdownTableMode } from "../config/types.base.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createScopedChannelConfigAdapter } from "openclaw/plugin-sdk/channel-config-helpers";
 import {
   listLineAccountIds,

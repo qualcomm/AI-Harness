@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { WebClient as SlackWebClient } from "@slack/web-api";
 import { normalizeHostname } from "openclaw/plugin-sdk/host-runtime";
 import { fetchWithRuntimeDispatcher } from "openclaw/plugin-sdk/infra-runtime";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AvailableCommand } from "@agentclientprotocol/sdk";
 import { getChatCommands } from "../auto-reply/commands-registry.data.js";
 

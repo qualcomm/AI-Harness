@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * LRU-based seen event tracker with TTL support.
  * Prevents unbounded memory growth under high load or abuse.

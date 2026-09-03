@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { NON_ENV_SECRETREF_MARKER } from "./model-auth-markers.js";
 import { resolveApiKeyFromCredential } from "./models-config.providers.secret-helpers.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 declare module "@microsoft/teams.apps" {
   export class App {
     constructor(options: { clientId: string; clientSecret: string; tenantId?: string });

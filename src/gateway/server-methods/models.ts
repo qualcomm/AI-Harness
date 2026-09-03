@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { DEFAULT_PROVIDER } from "../../agents/defaults.js";
 import { buildAllowedModelSet } from "../../agents/model-selection.js";
 import { loadConfig } from "../../config/config.js";

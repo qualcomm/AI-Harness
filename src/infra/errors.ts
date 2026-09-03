@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { redactSensitiveText } from "../logging/redact.js";
 
 export function extractErrorCode(err: unknown): string | undefined {

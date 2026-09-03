@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { createOutboundSendDeps } from "../../cli/outbound-send-deps.js";
 export {
   deliverOutboundPayloads,

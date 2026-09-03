@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { z, type ZodTypeAny } from "zod";
 import type { PluginConfigUiHint } from "./manifest-types.js";
 import type { OpenClawPluginConfigSchema } from "./types.js";

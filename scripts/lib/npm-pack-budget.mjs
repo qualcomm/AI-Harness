@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // 2026.3.12 ballooned to ~213.6 MiB unpacked and correlated with low-memory
 // startup/doctor OOM reports. 2026.4.12 intentionally stages Matrix runtime
 // dependencies, including crypto wasm, so packaged installs do not miss Docker

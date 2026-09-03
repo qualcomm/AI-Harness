@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { missingTargetError } from "openclaw/plugin-sdk/channel-feedback";
 import { isWhatsAppGroupJid, normalizeWhatsAppTarget } from "./normalize-target.js";
 

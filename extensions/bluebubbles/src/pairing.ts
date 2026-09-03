@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createPairingPrefixStripper } from "openclaw/plugin-sdk/channel-pairing";
 import { PAIRING_APPROVED_MESSAGE } from "openclaw/plugin-sdk/channel-status";
 import type { OpenClawConfig } from "./runtime-api.js";

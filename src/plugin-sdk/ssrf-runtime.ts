@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow SSRF helpers for extensions that need pinned-dispatcher and policy
 // utilities without loading the full infra-runtime surface.
 

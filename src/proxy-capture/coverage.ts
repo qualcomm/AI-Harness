@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import process from "node:process";
 import { resolveDebugProxySettings, type DebugProxySettings } from "./env.js";
 import type { CaptureProtocol } from "./types.js";

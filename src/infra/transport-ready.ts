@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { danger } from "../globals.js";
 import type { RuntimeEnv } from "../runtime.js";
 import { sleepWithAbort } from "./backoff.js";

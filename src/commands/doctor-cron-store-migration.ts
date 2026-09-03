@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeCronJobIdentityFields } from "../cron/normalize-job-identity.js";
 import { parseAbsoluteTimeMs } from "../cron/parse.js";
 import { coerceFiniteScheduleNumber } from "../cron/schedule.js";

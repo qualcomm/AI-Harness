@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type QueueSummaryState = {
   dropPolicy: "summarize" | "old" | "new";
   droppedCount: number;

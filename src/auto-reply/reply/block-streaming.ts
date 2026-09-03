@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getChannelPlugin, normalizeChannelId } from "../../channels/plugins/index.js";
 import type { BlockStreamingCoalesceConfig } from "../../config/types.js";
 import type { OpenClawConfig } from "../../config/types.openclaw.js";

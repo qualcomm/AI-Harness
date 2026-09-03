@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { __testing, validateConfigObjectRaw } from "./validation.js";
 import { SignalConfigSchema } from "./zod-schema.providers-core.js";

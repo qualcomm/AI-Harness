@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveAgentSessionDirs } from "../agents/session-dirs.js";
 import { cleanStaleLockFiles, type SessionLockInspection } from "../agents/session-write-lock.js";
 import { resolveStateDir } from "../config/paths.js";

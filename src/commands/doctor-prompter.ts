@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { confirm, select } from "@clack/prompts";
 import type { RuntimeEnv } from "../runtime.js";
 import { stylePromptHint, stylePromptMessage } from "../terminal/prompt-style.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { buildDockerExecArgs } from "../bash-tools.shared.js";
 import type { SandboxBackendCommandParams } from "./backend-handle.types.js";
 import type {

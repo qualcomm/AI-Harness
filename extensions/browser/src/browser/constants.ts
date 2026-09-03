@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const DEFAULT_OPENCLAW_BROWSER_ENABLED = true;
 export const DEFAULT_BROWSER_EVALUATE_ENABLED = true;
 export const DEFAULT_OPENCLAW_BROWSER_COLOR = "#FF4500";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { confirm, isCancel } from "@clack/prompts";
 import { readConfigFileSnapshot } from "../../config/config.js";
 import {

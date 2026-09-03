@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MarkdownTableMode } from "../config/types.base.js";
 import { markdownToIRWithMeta } from "./ir.js";
 import { renderMarkdownWithMarkers } from "./render.js";

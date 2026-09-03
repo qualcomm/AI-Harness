@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import { createWhatsAppOutboundBase } from "./outbound-base.js";
 import { createWhatsAppPollFixture } from "./outbound-test-support.js";

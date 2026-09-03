@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import type { OpenClawConfig, PluginRuntime } from "../runtime-api.js";
 import { setMSTeamsRuntime } from "./runtime.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseThreadSessionSuffix } from "../sessions/session-key-utils.js";
 import { createTestRegistry } from "./channel-plugins.js";
 

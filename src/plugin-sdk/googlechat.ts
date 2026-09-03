@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Private helper surface for the bundled googlechat plugin.
 // Keep this list additive and scoped to the bundled Google Chat surface.
 

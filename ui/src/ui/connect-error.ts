@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ConnectErrorDetailCodes } from "../../../src/gateway/protocol/connect-error-details.js";
 import { resolveGatewayErrorDetailCode } from "./gateway.ts";
 import { normalizeLowercaseStringOrEmpty } from "./string-coerce.ts";

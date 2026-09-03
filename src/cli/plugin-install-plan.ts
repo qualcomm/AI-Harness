@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { BundledPluginSource } from "../plugins/bundled-sources.js";
 import { PLUGIN_INSTALL_ERROR_CODE } from "../plugins/install.js";
 import { shortenHomePath } from "../utils.js";

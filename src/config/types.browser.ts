@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type BrowserProfileConfig = {
   /** CDP port for this profile. Allocated once at creation, persisted permanently. */
   cdpPort?: number;

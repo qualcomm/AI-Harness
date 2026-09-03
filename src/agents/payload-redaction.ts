@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import crypto from "node:crypto";
 import { estimateBase64DecodedBytes } from "../media/base64.js";
 import { normalizeLowercaseStringOrEmpty } from "../shared/string-coerce.js";

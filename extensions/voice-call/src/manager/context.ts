@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { VoiceCallConfig } from "../config.js";
 import type { VoiceCallProvider } from "../providers/base.js";
 import type { CallId, CallRecord } from "../types.js";

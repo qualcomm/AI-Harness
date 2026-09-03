@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function matchBrowserUrlPattern(pattern: string, url: string): boolean {
   const trimmedPattern = pattern.trim();
   if (!trimmedPattern) {

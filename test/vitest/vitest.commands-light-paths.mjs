@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const normalizeRepoPath = (value) => value.replaceAll("\\", "/");
 
 const commandsLightEntries = [

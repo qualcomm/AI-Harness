@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { spawnSync } from "node:child_process";
 import { parseCmdScriptCommandLine } from "../daemon/cmd-argv.js";
 import { normalizeLowercaseStringOrEmpty } from "../shared/string-coerce.js";

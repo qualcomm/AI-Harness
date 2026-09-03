@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type ts from "typescript";
 
 export type UsageBucket = "internal" | "production" | "test";

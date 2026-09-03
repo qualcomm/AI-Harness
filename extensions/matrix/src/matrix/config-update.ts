@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { DEFAULT_ACCOUNT_ID, normalizeAccountId } from "openclaw/plugin-sdk/account-id";
 import { coerceSecretRef } from "openclaw/plugin-sdk/config-runtime";
 import { normalizeSecretInputString } from "openclaw/plugin-sdk/setup";

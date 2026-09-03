@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveMatrixRoomId } from "../send.js";
 import { withResolvedActionClient, withResolvedRoomAction } from "./client.js";
 import { EventType, type MatrixActionClientOpts } from "./types.js";

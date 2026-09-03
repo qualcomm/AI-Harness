@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Browser-native speech services: STT via SpeechRecognition, TTS via SpeechSynthesis.
  * Falls back gracefully when APIs are unavailable.

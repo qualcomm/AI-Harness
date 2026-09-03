@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public binding helpers for both runtime plugin-owned bindings and
 // config-driven channel bindings.
 

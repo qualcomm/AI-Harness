@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { render } from "lit";
 import { describe, expect, it } from "vitest";
 import { renderAgents, type AgentsProps } from "./agents.ts";

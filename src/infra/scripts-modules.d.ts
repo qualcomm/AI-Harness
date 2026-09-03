@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 declare module "../../scripts/watch-node.mjs" {
   export function resolveWatchLockPath(cwd: string, args?: string[]): string;
   export function runWatchMain(params?: {

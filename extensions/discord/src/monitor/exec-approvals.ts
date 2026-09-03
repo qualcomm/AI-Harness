@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Button, type ButtonInteraction, type ComponentData } from "@buape/carbon";
 import { ButtonStyle } from "discord-api-types/v10";
 import { resolveApprovalOverGateway } from "openclaw/plugin-sdk/approval-gateway-runtime";

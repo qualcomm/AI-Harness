@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { collectArchitectureSmells, main } from "../scripts/check-architecture-smells.mjs";
 import { createCapturedIo } from "./helpers/captured-io.js";

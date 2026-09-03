@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { generateNextcloudTalkSignature } from "./signature.js";
 
 export function createSignedCreateMessageRequest(params?: { backend?: string }) {

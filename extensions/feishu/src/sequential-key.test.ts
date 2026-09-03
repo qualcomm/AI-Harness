@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import type { FeishuMessageEvent } from "./bot.js";
 import { getFeishuSequentialKey } from "./sequential-key.js";

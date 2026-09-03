@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { readBooleanParam } from "openclaw/plugin-sdk/boolean-param";
 import {
   createActionGate,

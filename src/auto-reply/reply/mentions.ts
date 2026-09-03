@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveAgentConfig } from "../../agents/agent-scope.js";
 import type { ChannelId } from "../../channels/plugins/channel-id.types.js";
 import { getLoadedChannelPluginById } from "../../channels/plugins/registry-loaded.js";

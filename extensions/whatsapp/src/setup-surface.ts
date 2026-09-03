@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelSetupWizard } from "openclaw/plugin-sdk/setup";
 import { DEFAULT_ACCOUNT_ID, setSetupChannelEnabled } from "openclaw/plugin-sdk/setup";
 import { listWhatsAppAccountIds } from "./accounts.js";

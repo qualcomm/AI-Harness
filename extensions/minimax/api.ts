@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { buildMinimaxPortalProvider, buildMinimaxProvider } from "./provider-catalog.js";
 export {
   buildMinimaxApiModelDefinition,

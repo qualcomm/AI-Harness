@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AuthProfileStore } from "../agents/auth-profiles/types.js";
 import { normalizeOptionalLowercaseString } from "../shared/string-coerce.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isRecord } from "openclaw/plugin-sdk/text-runtime";
 import { stripImessageLengthPrefixedUtf8Text } from "./strip-imsg-length-prefixed-text.js";
 import type { IMessagePayload } from "./types.js";

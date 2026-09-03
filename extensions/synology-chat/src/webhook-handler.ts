@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Inbound webhook handler for Synology Chat outgoing webhooks.
  * Parses form-urlencoded/JSON body, validates security, delivers to agent.

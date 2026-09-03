@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, describe, expect, it } from "vitest";
 import { loadChannelOutboundAdapter } from "../channels/plugins/outbound/load.js";
 import { getChannelPlugin } from "../channels/plugins/registry.js";

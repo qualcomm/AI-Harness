@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 (() => {
   const NAV_TABS_SELECTOR = ".nav-tabs";
   const ACTIVE_UNDERLINE_SELECTOR = ".nav-tabs-item > div.bg-primary";

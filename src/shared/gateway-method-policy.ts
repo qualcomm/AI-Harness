@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const RESERVED_ADMIN_GATEWAY_METHOD_PREFIXES = [
   "exec.approvals.",
   "config.",

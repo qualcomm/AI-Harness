@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { extractQueueDirective } from "./queue/directive.js";
 export { clearSessionQueues } from "./queue/cleanup.js";
 export type { ClearSessionQueueResult } from "./queue/cleanup.js";

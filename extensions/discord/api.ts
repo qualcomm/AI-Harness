@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { discordPlugin } from "./src/channel.js";
 export { discordSetupPlugin } from "./src/channel.setup.js";
 export {

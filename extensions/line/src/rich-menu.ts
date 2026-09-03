@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { readFile } from "node:fs/promises";
 import { messagingApi } from "@line/bot-sdk";
 import { loadConfig } from "openclaw/plugin-sdk/config-runtime";

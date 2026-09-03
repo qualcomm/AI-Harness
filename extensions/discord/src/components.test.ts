@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { MessageFlags } from "discord-api-types/v10";
 import { beforeAll, beforeEach, describe, expect, it } from "vitest";
 

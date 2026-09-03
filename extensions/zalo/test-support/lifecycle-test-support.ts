@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { request as httpRequest } from "node:http";
 import { expect, vi } from "vitest";
 import type { OpenClawConfig, PluginRuntime } from "../runtime-api.js";

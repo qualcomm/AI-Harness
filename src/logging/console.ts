@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import util from "node:util";
 import type { OpenClawConfig } from "../config/types.js";
 import { isVerbose } from "../global-state.js";

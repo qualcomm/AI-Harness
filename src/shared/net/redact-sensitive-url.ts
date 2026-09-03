@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ConfigUiHint } from "../config-ui-hints-types.js";
 import { normalizeLowercaseStringOrEmpty } from "../string-coerce.js";
 

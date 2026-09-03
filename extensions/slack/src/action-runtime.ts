@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AgentToolResult } from "@mariozechner/pi-agent-core";
 import { isSingleUseReplyToMode } from "openclaw/plugin-sdk/reply-reference";
 import { parseSlackBlocksInput } from "./blocks-input.js";

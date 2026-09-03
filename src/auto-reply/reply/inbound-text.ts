@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function normalizeInboundTextNewlines(input: string): string {
   // Normalize actual newline characters (CR+LF and CR to LF).
   // Do NOT replace literal backslash-n sequences (\\n) as they may be part of

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type FacadeModule = typeof import("@openclaw/ollama/api.js");
 import { loadBundledPluginPublicSurfaceModuleSync } from "./facade-loader.js";
 

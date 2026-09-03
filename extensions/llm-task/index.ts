@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { definePluginEntry, type AnyAgentTool, type OpenClawPluginApi } from "./api.js";
 import { createLlmTaskTool } from "./src/llm-task-tool.js";
 

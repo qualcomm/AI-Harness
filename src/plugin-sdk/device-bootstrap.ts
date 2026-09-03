@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared bootstrap/pairing helpers for plugins that provision remote devices.
 
 export { approveDevicePairing, listDevicePairing } from "../infra/device-pairing.js";

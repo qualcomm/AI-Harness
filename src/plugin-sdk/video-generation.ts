@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public video-generation helpers and types for provider plugins.
 //
 // Keep these public type declarations local to the plugin-sdk entrypoint so the

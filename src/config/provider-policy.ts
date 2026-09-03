@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveBundledProviderPolicySurface } from "../plugins/provider-public-artifacts.js";
 import type { ModelProviderConfig, OpenClawConfig } from "./types.js";
 

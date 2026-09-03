@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type ScopedExpiringIdCache<TScope extends string | number, TId extends string | number> = {
   record: (scope: TScope, id: TId, now?: number) => void;
   has: (scope: TScope, id: TId, now?: number) => boolean;

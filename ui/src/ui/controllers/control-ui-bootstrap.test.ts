@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /* @vitest-environment jsdom */
 
 import { describe, expect, it, vi } from "vitest";

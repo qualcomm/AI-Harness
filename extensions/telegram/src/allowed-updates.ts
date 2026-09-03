@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import * as grammy from "grammy";
 
 const FALLBACK_ALL_UPDATE_TYPES = [

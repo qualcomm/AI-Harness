@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, it, expect } from "vitest";
 import { markdownToIR } from "./ir.js";
 

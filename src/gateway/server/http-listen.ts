@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Server as HttpServer } from "node:http";
 import { GatewayLockError } from "../../infra/gateway-lock.js";
 import { sleep } from "../../utils.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { executeStatusScanFromOverview } from "./status.scan-execute.ts";
 import type { StatusScanOverviewResult } from "./status.scan-overview.ts";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Command } from "commander";
 import { parseConfigValue } from "../auto-reply/reply/config-value.js";
 import {

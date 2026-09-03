@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * @deprecated Compatibility shim only. Keep old plugins working, but do not
  * add new imports here and do not use this subpath from repo code.

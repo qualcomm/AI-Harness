@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { fullSuiteVitestShards } from "../../test/vitest/vitest.test-shards.mjs";
 
 const EXCLUDED_FULL_SUITE_SHARDS = new Set([

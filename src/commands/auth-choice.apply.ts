@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { applyAuthChoiceLoadedPluginProvider } from "../plugins/provider-auth-choice.js";
 import { normalizeLegacyOnboardAuthChoice } from "./auth-choice-legacy.js";
 import { applyAuthChoiceApiProviders } from "./auth-choice.apply.api-providers.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { posix } from "node:path";
 import { resolvePathViaExistingAncestorSync } from "../../infra/boundary-path.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { APIChannel, APIMessage } from "discord-api-types/v10";
 import { ChannelType, Routes } from "discord-api-types/v10";
 import { resolveDiscordRest } from "./send.shared.js";

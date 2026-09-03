@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Type } from "@sinclair/typebox";
 import { loadConfig } from "../../config/config.js";
 import { optionalStringEnum } from "../schema/typebox.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { select } from "@clack/prompts";
 import { stylePromptHint, stylePromptMessage } from "./prompt-style.js";
 

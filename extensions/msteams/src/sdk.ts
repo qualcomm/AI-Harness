@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import * as fs from "node:fs";
 // IHttpServerAdapter is re-exported via the public barrel (`export * from './http'`)
 // but tsgo cannot resolve the chain. Use the dist subpath directly (type-only import).

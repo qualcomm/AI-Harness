@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { createThreadBindingManager } from "./src/monitor/thread-bindings.manager.js";
 export {
   listDiscordDirectoryGroupsFromConfig,

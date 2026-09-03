@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { EventEmitter } from "node:events";
 import type { GatewayPlugin } from "@buape/carbon/gateway";
 

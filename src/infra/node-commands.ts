@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const NODE_SYSTEM_RUN_COMMANDS = [
   "system.run.prepare",
   "system.run",

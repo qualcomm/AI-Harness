@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, test, vi } from "vitest";
 import type { OpenClawConfig } from "../config/config.js";
 import * as routingBindings from "./bindings.js";

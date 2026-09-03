@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { PluginRecord } from "../plugins/registry.js";
 import { sanitizeTerminalText } from "../terminal/safe-text.js";
 import { theme } from "../terminal/theme.js";

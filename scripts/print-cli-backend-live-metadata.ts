@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveCliBackendConfig, resolveCliBackendLiveTest } from "../src/agents/cli-backends.js";
 
 const provider = process.argv[2]?.trim().toLowerCase();

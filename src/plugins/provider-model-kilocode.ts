@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const KILOCODE_BASE_URL = "https://api.kilo.ai/api/gateway/";
 export const KILOCODE_DEFAULT_MODEL_ID = "kilo/auto";
 export const KILOCODE_DEFAULT_MODEL_REF = `kilocode/${KILOCODE_DEFAULT_MODEL_ID}`;

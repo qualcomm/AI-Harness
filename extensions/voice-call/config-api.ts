@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow barrel for config compatibility helpers consumed outside the plugin.
 // Keep this separate from api.ts so config migration code does not pull in the
 // full runtime-oriented voice-call surface.

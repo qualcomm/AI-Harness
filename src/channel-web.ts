@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Barrel exports for the web channel pieces. Splitting the original 900+ line
 // module keeps responsibilities small and testable.
 import { resolveWebChannelAuthDir } from "./plugins/runtime/runtime-web-channel-plugin.js";

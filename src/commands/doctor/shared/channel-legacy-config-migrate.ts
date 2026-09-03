@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OpenClawConfig } from "../../../config/types.js";
 import { applyPluginDoctorCompatibilityMigrations } from "../../../plugins/doctor-contract-registry.js";
 import { isRecord } from "./legacy-config-record-shared.js";

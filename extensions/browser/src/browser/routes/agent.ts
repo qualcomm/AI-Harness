@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { BrowserRouteContext } from "../server-context.js";
 import { registerBrowserAgentActRoutes } from "./agent.act.js";
 import { registerBrowserAgentDebugRoutes } from "./agent.debug.js";

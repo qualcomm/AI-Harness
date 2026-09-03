@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type ConfiguredBindingConversationRuntimeModule = {
   ensureConfiguredBindingRouteReady: (...args: never[]) => unknown;
   resolveConfiguredBindingRoute: (...args: never[]) => unknown;

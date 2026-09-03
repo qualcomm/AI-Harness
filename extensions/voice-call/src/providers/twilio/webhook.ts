@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { WebhookContext, WebhookVerificationResult } from "../../types.js";
 import { verifyTwilioWebhook } from "../../webhook-security.js";
 import type { TwilioProviderOptions } from "../twilio.types.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { vi } from "vitest";
 import type { Mock } from "vitest";
 import type { GatewayRequestHandler, RespondFn } from "./types.js";

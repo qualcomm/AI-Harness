@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const TELEGRAM_REQUEST_TIMEOUTS_MS = {
   // Bound startup/control-plane calls so the gateway cannot report Telegram as
   // healthy while provider startup is still hung on Bot API setup.

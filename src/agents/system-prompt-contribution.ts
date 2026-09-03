@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type ProviderSystemPromptSectionId =
   | "interaction_style"
   | "tool_call_style"

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ResolvedNostrAccount } from "./types.js";
 
 export const TEST_HEX_PRIVATE_KEY =

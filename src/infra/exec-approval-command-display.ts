@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ExecApprovalRequestPayload } from "./exec-approvals.js";
 
 // Escape invisible characters that can spoof approval prompts in common UIs.

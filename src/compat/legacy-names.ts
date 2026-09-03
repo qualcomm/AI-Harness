@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const PROJECT_NAME = "openclaw" as const;
 
 export const LEGACY_PROJECT_NAMES = [] as const;

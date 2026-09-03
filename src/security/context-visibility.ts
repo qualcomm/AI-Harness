@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ContextVisibilityMode } from "../config/types.base.js";
 
 export type ContextVisibilityKind = "history" | "thread" | "quote" | "forwarded";

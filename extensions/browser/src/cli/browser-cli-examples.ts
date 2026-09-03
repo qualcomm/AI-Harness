@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const browserCoreExamples = [
   "openclaw browser status",
   "openclaw browser start",

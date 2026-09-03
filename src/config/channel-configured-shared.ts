@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { hasNonEmptyString } from "../infra/outbound/channel-target.js";
 import { isRecord } from "../utils.js";
 import type { OpenClawConfig } from "./config.js";

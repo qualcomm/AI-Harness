@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { coerceIdentityValue } from "../../../src/shared/assistant-identity-values.js";
 
 const MAX_ASSISTANT_NAME = 50;

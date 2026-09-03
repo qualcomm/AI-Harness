@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type PairingCommandAuthParams = {
   channel: string;
   gatewayClientScopes?: readonly string[] | null;

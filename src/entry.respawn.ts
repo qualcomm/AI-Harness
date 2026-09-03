@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveNodeStartupTlsEnvironment } from "./bootstrap/node-startup-env.js";
 import { shouldSkipRespawnForArgv } from "./cli/respawn-policy.js";
 import { isTruthyEnvValue } from "./infra/env.js";

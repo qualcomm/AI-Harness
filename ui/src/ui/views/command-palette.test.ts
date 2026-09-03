@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, describe, expect, it } from "vitest";
 import { refreshSlashCommands, resetSlashCommandsForTest } from "../chat/slash-commands.ts";
 import { getPaletteItems } from "./command-palette.ts";

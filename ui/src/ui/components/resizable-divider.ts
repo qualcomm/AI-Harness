@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { LitElement, css, nothing } from "lit";
 import { property } from "lit/decorators.js";
 

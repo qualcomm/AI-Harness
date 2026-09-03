@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { clearActiveProgressLine } from "./progress-line.js";
 
 const RESET_SEQUENCE =

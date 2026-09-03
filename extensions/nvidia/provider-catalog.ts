@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ModelProviderConfig } from "openclaw/plugin-sdk/provider-model-shared";
 
 const NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1";

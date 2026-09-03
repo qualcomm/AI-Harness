@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SystemRunApprovalPlan } from "./exec-approvals.js";
 import { normalizeSystemRunApprovalPlan } from "./system-run-approval-binding.js";
 import { formatExecCommand, resolveSystemRunCommandRequest } from "./system-run-command.js";

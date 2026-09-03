@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { DEFAULT_VIDEO_MAX_BASE64_BYTES } from "./defaults.js";
 
 export function estimateBase64Size(bytes: number): number {

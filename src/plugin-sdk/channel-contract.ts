@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Pure channel contract types used by plugin implementations and tests.
 export type {
   BaseProbeResult,

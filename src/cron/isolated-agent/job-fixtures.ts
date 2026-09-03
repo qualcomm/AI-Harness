@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type LooseRecord = Record<string, unknown>;
 
 export function makeIsolatedAgentJobFixture(overrides?: LooseRecord) {

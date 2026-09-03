@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { WizardPrompter } from "../../wizard/prompts.js";
 
 export type ChannelAccessPolicy = "allowlist" | "open" | "disabled";

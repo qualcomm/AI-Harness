@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { resolveSkillsPromptForRun } from "./skills.js";
 import { createCanonicalFixtureSkill } from "./skills.test-helpers.js";

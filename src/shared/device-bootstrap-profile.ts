@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeDeviceAuthRole, normalizeDeviceAuthScopes } from "./device-auth.js";
 
 export type DeviceBootstrapProfile = {

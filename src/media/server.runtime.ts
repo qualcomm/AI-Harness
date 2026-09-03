@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { readFileWithinRoot as readFileWithinRootImpl, SafeOpenError } from "../infra/fs-safe.js";
 import {
   cleanOldMedia as cleanOldMediaImpl,

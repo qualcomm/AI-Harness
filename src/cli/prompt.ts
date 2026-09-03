@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { stdin as input, stdout as output } from "node:process";
 import readline from "node:readline/promises";
 import { isVerbose, isYes } from "../globals.js";

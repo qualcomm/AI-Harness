@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { pruneMapToMaxSize } from "../infra/map-size.js";
 
 type FixedWindowState = {

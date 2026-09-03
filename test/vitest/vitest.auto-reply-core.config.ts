@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createScopedVitestConfig } from "./vitest.scoped-config.ts";
 import { autoReplyCoreTestExclude, autoReplyCoreTestInclude } from "./vitest.test-shards.mjs";
 

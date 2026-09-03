@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AuthProfileCredential, OAuthCredential } from "../agents/auth-profiles/types.js";
 import {
   applyPluginTextReplacements,

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Global registry for tracking active reply dispatchers.
  * Used to ensure gateway restart waits for all replies to complete.

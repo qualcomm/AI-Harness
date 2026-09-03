@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function unwrapDefaultModuleExport(moduleExport: unknown): unknown {
   let resolved = moduleExport;
   const seen = new Set<unknown>();

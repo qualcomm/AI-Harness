@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { verifyDeviceSignature } from "../../../infra/device-identity.js";
 import { normalizeLowercaseStringOrEmpty } from "../../../shared/string-coerce.js";
 import type { AuthRateLimiter } from "../../auth-rate-limit.js";

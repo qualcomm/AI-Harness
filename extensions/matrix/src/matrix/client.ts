@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { MatrixAuth } from "./client/types.js";
 export { isBunRuntime } from "./client/runtime.js";
 export { getMatrixScopedEnvVarNames } from "../env-vars.js";

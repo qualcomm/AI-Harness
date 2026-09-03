@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { vi } from "vitest";
 import { withFetchPreconnect } from "../../test-support.js";
 import type { BrowserServerState } from "./server-context.js";

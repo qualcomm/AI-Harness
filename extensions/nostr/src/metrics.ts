@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Comprehensive metrics system for Nostr bus observability.
  * Provides clear insight into what's happening with events, relays, and operations.

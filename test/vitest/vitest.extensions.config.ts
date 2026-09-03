@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { BUNDLED_PLUGIN_TEST_GLOB } from "./vitest.bundled-plugin-paths.ts";
 import { extensionExcludedChannelTestGlobs } from "./vitest.channel-paths.mjs";
 import { acpxExtensionTestRoots } from "./vitest.extension-acpx-paths.mjs";

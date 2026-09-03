@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const AGENT_INTERNAL_EVENT_TYPE_TASK_COMPLETION = "task_completion" as const;
 
 export const AGENT_INTERNAL_EVENT_SOURCES = [

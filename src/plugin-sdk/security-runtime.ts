@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public security/policy helpers for plugins that need shared trust and DM gating logic.
 
 export * from "../secrets/channel-secret-collector-runtime.js";

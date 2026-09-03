@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { it } from "vitest";
 import { expectChannelInboundContextContract } from "../../../src/channels/plugins/contracts/test-helpers.js";
 import type { OpenClawConfig } from "../../../src/config/config.js";

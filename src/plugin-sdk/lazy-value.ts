@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type LazyValue<T> = T | (() => T);
 
 export function createCachedLazyValueGetter<T>(value: LazyValue<T>): () => T;

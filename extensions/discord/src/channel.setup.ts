@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { type ResolvedDiscordAccount } from "./accounts.js";
 import { type ChannelPlugin } from "./channel-api.js";
 import { discordSetupWizard } from "./channel.runtime.js";

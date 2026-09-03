@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AnchoredSandboxEntry, PathSafetyCheck } from "./fs-bridge-path-safety.js";
 import type { SandboxResolvedFsPath } from "./fs-paths.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { enablePluginInConfig as enableFetchPluginInConfig } from "./provider-web-fetch-contract.js";
 import { enablePluginInConfig as enableSearchPluginInConfig } from "./provider-web-search-contract.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Component, DefaultTextStyle, MarkdownTheme } from "@mariozechner/pi-tui";
 import { Markdown } from "@mariozechner/pi-tui";
 import { addOsc8Hyperlinks, extractUrls } from "../osc8-hyperlinks.js";

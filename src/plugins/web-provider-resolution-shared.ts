@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveBundledPluginCompatibleActivationInputs } from "./activation-context.js";
 import type { NormalizedPluginsConfig } from "./config-state.js";
 import type { PluginLoadOptions } from "./loader.js";

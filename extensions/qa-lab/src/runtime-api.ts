@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { Command } from "commander";
 export type { OpenClawConfig } from "openclaw/plugin-sdk/config-runtime";
 export { definePluginEntry } from "openclaw/plugin-sdk/plugin-entry";

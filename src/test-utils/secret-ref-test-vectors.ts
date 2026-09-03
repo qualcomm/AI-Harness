@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const VALID_EXEC_SECRET_REF_IDS = [
   "vault/openai/api-key",
   "vault:secret/mykey",

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { vi } from "vitest";
 import * as ssrf from "../infra/net/ssrf.js";
 import type { LookupFn } from "../infra/net/ssrf.js";

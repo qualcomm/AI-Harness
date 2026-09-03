@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { truncateCloseReason } from "./server/close-reason.js";
 export type { GatewayServer, GatewayServerOptions } from "./server.impl.js";
 async function loadServerImpl() {

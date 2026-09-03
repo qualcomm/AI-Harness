@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Bot Framework OAuth SSO invoke handlers for Microsoft Teams.
  *

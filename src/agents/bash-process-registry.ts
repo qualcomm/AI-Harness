@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChildProcessWithoutNullStreams } from "node:child_process";
 import type { DeliveryContext } from "../utils/delivery-context.js";
 import { createSessionSlug as createSessionSlugId } from "./session-slug.js";

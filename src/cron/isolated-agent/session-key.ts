@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { canonicalizeMainSessionAlias } from "../../config/sessions/main-session.js";
 import type { SessionScope } from "../../config/sessions/types.js";
 import { toAgentStoreSessionKey } from "../../routing/session-key.js";

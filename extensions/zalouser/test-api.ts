@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { sendMessageZalouser } from "./src/send.js";
 export { parseZalouserOutboundTarget } from "./src/session-route.js";
 export {

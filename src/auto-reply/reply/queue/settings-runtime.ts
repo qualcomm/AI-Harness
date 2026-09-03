@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getChannelPlugin } from "../../../channels/plugins/index.js";
 import { normalizeOptionalLowercaseString } from "../../../shared/string-coerce.js";
 import { resolveQueueSettings as resolveQueueSettingsCore } from "./settings.js";

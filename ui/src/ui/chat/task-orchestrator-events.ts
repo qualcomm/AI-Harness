@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Parse `plugin_event` payloads from dragon-task-orchestrator into the
  * accumulating per-session progress state the card renders.

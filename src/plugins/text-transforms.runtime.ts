@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createRequire } from "node:module";
 import { mergePluginTextTransforms } from "../agents/plugin-text-transforms.js";
 import type { PluginTextTransforms } from "./types.js";

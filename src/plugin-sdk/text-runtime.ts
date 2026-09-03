@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public shared text/formatting helpers for plugins that parse or rewrite message text.
 
 export * from "../logger.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Keep bundled channel entry imports narrow so bootstrap/discovery paths do
 // not pull the broad Matrix API barrel into lightweight plugin loads.
 export { matrixPlugin } from "./src/channel.js";

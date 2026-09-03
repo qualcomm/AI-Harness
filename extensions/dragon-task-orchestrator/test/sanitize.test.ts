@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Tests for sanitization, length bounding, and result formatting
  * (tasks 5.7/5.8/5.9/5.10).

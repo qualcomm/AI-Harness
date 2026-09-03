@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { summarizeMatrixDeviceHealth } from "../device-health.js";
 import { withStartedActionClient } from "./client.js";
 import type { MatrixActionClientOpts } from "./types.js";

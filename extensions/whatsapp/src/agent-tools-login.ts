@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Type } from "@sinclair/typebox";
 import type { ChannelAgentTool } from "openclaw/plugin-sdk/channel-contract";
 import { startWebLoginWithQr, waitForWebLogin } from "../login-qr-api.js";

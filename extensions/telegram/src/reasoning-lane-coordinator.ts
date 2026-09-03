@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatReasoningMessage } from "openclaw/plugin-sdk/agent-runtime";
 import type { ReplyPayload } from "openclaw/plugin-sdk/reply-runtime";
 import { findCodeRegions, isInsideCode } from "openclaw/plugin-sdk/text-runtime";

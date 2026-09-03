@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { requireOpenAllowFrom } from "openclaw/plugin-sdk/channel-config-primitives";
 import type { z } from "openclaw/plugin-sdk/zod";
 

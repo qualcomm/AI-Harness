@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalString } from "openclaw/plugin-sdk/text-runtime";
 import type { PluginRuntime, RuntimeLogger } from "../../runtime-api.js";
 import type { CoreConfig } from "../../types.js";

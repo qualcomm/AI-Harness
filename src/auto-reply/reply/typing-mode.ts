@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { TypingMode } from "../../config/types.js";
 import { normalizeOptionalString } from "../../shared/string-coerce.js";
 import { isSilentReplyText, SILENT_REPLY_TOKEN } from "../tokens.js";

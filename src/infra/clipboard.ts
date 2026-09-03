@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { runCommandWithTimeout } from "../process/exec.js";
 
 export async function copyToClipboard(value: string): Promise<boolean> {

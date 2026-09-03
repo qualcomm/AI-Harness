@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export async function clearAllIndexedDbState(): Promise<void> {
   const databases = await indexedDB.databases();
   await Promise.all(

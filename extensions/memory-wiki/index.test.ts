@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import plugin from "./index.js";
 import { createMemoryWikiTestHarness } from "./src/test-helpers.js";

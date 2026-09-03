@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import {
   DEFAULT_CHAT_HISTORY_TEXT_MAX_CHARS,
   sanitizeChatHistoryMessages,

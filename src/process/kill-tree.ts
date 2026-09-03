@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { spawn } from "node:child_process";
 
 const DEFAULT_GRACE_MS = 3000;

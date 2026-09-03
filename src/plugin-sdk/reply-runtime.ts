@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared agent/reply runtime helpers for channel plugins. Keep channel plugins
 // off direct src/auto-reply imports by routing common reply primitives here.
 

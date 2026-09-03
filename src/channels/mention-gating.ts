@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /** @deprecated Prefer `resolveInboundMentionDecision({ facts, policy })`. */
 export type MentionGateParams = {
   requireMention: boolean;

@@ -1,2 +1,4 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type { AllowlistMatch, AllowlistMatchSource } from "../allowlist-match.js";
 export { formatAllowlistMatchMeta, resolveAllowlistMatchSimple } from "../allowlist-match.js";

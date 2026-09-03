@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { __testing as subagentAnnounceDeliveryTesting } from "./subagent-announce-delivery.js";
 import { __testing as subagentAnnounceOutputTesting } from "./subagent-announce-output.js";

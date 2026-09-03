@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CompactEmbeddedPiSessionDirect } from "./compact.runtime.types.js";
 
 let compactRuntimePromise: Promise<typeof import("./compact.js")> | null = null;

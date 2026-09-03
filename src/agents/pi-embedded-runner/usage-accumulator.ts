@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeUsage, type NormalizedUsage, type UsageLike } from "../usage.js";
 
 export type UsageAccumulator = {

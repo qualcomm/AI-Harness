@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dragon-task-orchestrator 测试指南</title>
+<style>
+  :root {
+    --ink:#16181d; --dim:#5b6270; --line:#dfe3e8; --band:#f6f7f9;
+    --off:#6b7280; --dyn:#1d7a4c; --fix:#c2410c; --int:#b45309; --danger:#c0392b; --ok:#1d7a4c;
+  }
+  *{box-sizing:border-box}
+  body{background:#ffffff;color:var(--ink);margin:0;padding:36px 24px 80px;
+       font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",system-ui,sans-serif}
+  main{max-width:1080px;margin:0 auto}
+  h1{font-size:26px;margin:0 0 4px}
+  h2{font-size:19px;margin:44px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+  h3{font-size:15px;margin:26px 0 10px;color:var(--ink)}
+  h4{font-size:13px;margin:18px 0 8px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px}
+  p.sub{color:var(--dim);font-size:13.5px;margin:0 0 3px}
+  p.lead{font-size:14px;color:var(--dim);margin:0 0 16px;max-width:760px}
+  code{background:var(--band);padding:1px 6px;border-radius:3px;font-size:12.5px;
+       font-family:ui-monospace,Consolas,monospace}
+  pre{background:var(--band);border:1px solid var(--line);border-radius:4px;padding:12px 14px;
+      font-size:12.5px;overflow-x:auto;line-height:1.55}
+  pre code{background:none;padding:0}
+  a{color:#2b6cb0;text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .toc{border:1px solid var(--line);background:var(--band);border-radius:6px;padding:14px 20px;margin:18px 0 8px}
+  .toc h4{margin-top:0}
+  .toc ol{margin:6px 0 0;padding-left:20px;columns:2;column-gap:28px}
+  .toc li{margin:3px 0;font-size:13.5px}
+
+  .badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;
+         letter-spacing:.3px;vertical-align:1px}
+  .badge.off{background:#eceef1;color:var(--off)}
+  .badge.dyn{background:#e6f4ea;color:var(--dyn)}
+  .badge.fix{background:#fdece1;color:var(--fix)}
+  .badge.fixed{background:#e6f4ea;color:var(--ok)}
+  .badge.gap{background:#fff4e5;color:var(--int)}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13.5px}
+  th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:var(--band);font-weight:600}
+  td.m,th.m{font-family:ui-monospace,Consolas,monospace;font-size:12px;white-space:nowrap}
+
+  .note{border:1px solid var(--line);border-left:3px solid var(--int);background:#fffdf8;
+        padding:12px 15px;margin:14px 0;font-size:13.5px}
+  .note.stop{border-left-color:var(--danger);background:#fffafa}
+  .note.ok{border-left-color:var(--ok);background:#f6fbf7}
+  .note b{display:block;margin-bottom:4px}
+
+  .card{border:1px solid var(--line);border-radius:6px;padding:14px 18px;margin:10px 0}
+  .card.stage{border-left:3px solid var(--dyn)}
+  .row{display:flex;gap:12px;flex-wrap:wrap}
+  .row > .card{flex:1 1 0;min-width:220px}
+
+  .step{display:grid;grid-template-columns:26px 1fr;gap:10px;margin:8px 0;align-items:baseline}
+  .step .n{width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;
+           font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+  ul{padding-left:20px;margin:6px 0} li{margin:4px 0}
+  ol{padding-left:22px;margin:6px 0} ol li{margin:6px 0}
+
+  .checklist{list-style:none;padding-left:0}
+  .checklist li{margin:7px 0;padding-left:26px;position:relative;font-size:13.5px}
+  .checklist li::before{content:"☐";position:absolute;left:0;color:var(--dim);font-size:15px}
+
+  footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);
+         color:var(--dim);font-size:12.5px}
+</style>
+</head>
+<body>
+<main>
+
+<h1>dragon-task-orchestrator 测试指南</h1>
+<p class="sub"><code>@openclaw/dragon-task-orchestrator</code> · OpenClaw 插件 · 面向测试团队</p>
+<p class="lead">本文档面向<b>测试团队</b>，说明这个插件做什么、怎么开启、要重点验证什么，以及已知的限制和缺口。实现细节请参考 <code>README.md</code> / <code>README.zh.md</code>；本文只保留测试需要知道的部分。</p>
+
+<div class="toc">
+  <h4>目录</h4>
+  <ol>
+    <li>插件是什么</li>
+    <li>三种会话模式</li>
+    <li>Dynamic 模式的执行流程</li>
+    <li>如何开启和配置</li>
+    <li>如何观察一次运行</li>
+    <li>常见的"看起来像 bug 但不是"的现象</li>
+  </ol>
+</div>
+
+<h2>1. 插件是什么</h2>
+
+<p>这是一个 OpenClaw 插件：当用户的一句话请求实际上包含<b>多个子任务</b>（例如"帮我搜集资料、算路线、再写成一篇攻略"），插件会把它拆成若干子任务，分别派给合适的 agent 执行，处理依赖关系，最后把结果汇总成一条回复。</p>
+
+<p><b>默认关闭</b>。插件注册的一切（钩子、网关方法）只在 <code>enabled: true</code> 时生效；即使插件开着，每个会话仍需要显式选择模式才会触发任何行为——不选就是纯粹的旁路（passthrough）。</p>
+
+<h2>2. 三种会话模式</h2>
+
+<p>模式是<b>按会话</b>设置的，只存在内存里，重启网关会清空（这是有意为之，不是 bug——见第 7 节）。</p>
+
+<table>
+<tr><th style="width:110px">模式</th><th>行为</th></tr>
+<tr><td><span class="badge off">off</span>（默认）</td><td>原样放行这一轮，插件完全不介入。</td></tr>
+<tr><td><span class="badge dyn">dynamic</span></td><td>拆解 → 路由 → 分层执行 → 校验 → 汇总。测试重点。</td></tr>
+<tr><td><span class="badge fix">pipeline</span></td><td>运行用户预先配置好的固定 agent 顺序，没有拆解器、没有分类器。</td></tr>
+</table>
+
+<h2>3. Dynamic 模式的执行流程</h2>
+
+<div class="row">
+  <div class="card stage"><b>① 拆解</b><br><span style="color:var(--dim);font-size:13px">decomposer 把请求拆成带 <code>description</code> / <code>acceptanceCriteria</code> / <code>handoffContract</code> / <code>needsPriorResults</code> 的子任务。少于 2 个存活子任务 → 直接放行不拆。</span></div>
+  <div class="card stage"><b>② 路由</b><br><span style="color:var(--dim);font-size:13px">classifier 给每个子任务单独选一个目标 agent。</span></div>
+  <div class="card stage"><b>③ 确认（可选）</b><br><span style="color:var(--dim);font-size:13px">开启 PRD 确认门后，2+ 子任务的拆解方案会先在 Control UI 展示，等待"确认/取消/调整"。</span></div>
+</div>
+<div class="row">
+  <div class="card stage"><b>④ 分层执行</b><br><span style="color:var(--dim);font-size:13px">按 <code>needsPriorResults</code> 做拓扑排序。同一层内的子任务<b>并发</b>执行，层与层之间是屏障（barrier）。</span></div>
+  <div class="card stage"><b>⑤ 校验</b><br><span style="color:var(--dim);font-size:13px">带 <code>acceptanceCriteria</code> 或 <code>handoffContract</code> 的子任务由独立的 verifier 判定，不通过则重新委派，上限 <code>maxVerifyRetries</code> 次。</span></div>
+  <div class="card stage"><b>⑥ 汇总</b><br><span style="color:var(--dim);font-size:13px">summarizer 把所有子任务结果整合成一条最终回复。</span></div>
+</div>
+
+<h3>子任务之间怎么传数据（这是最容易出问题的地方）</h3>
+
+<p>下游子任务能看到的，只是它依赖的上游<b>最终一条回复正文</b>——看不到工具调用过程，看不到中间步骤，正文超过 <code>maxContextChars</code>（默认 16000 字符）的部分会被截断。为了让这条窄通道够用，有三条并行的机制：</p>
+
+<table>
+<tr><th style="width:190px">机制</th><th>作用</th></tr>
+<tr>
+  <td><code>handoffContract</code></td>
+  <td>一份清单，列出上游正文<b>必须</b>包含的具体条目（某个数字、某个来源）。漏项会被校验判不通过，而不是悄悄放过。</td>
+</tr>
+<tr>
+  <td>共享产物目录 <span class="badge fixed">近期修复</span></td>
+  <td>有下游依赖的子任务会拿到一个<b>绝对路径</b>目录（<code>&lt;stateDir&gt;/artifacts/&lt;hash&gt;/subtask-N/</code>），可以把完整产出写进去；下游拿到的是扫描出来的真实文件绝对路径。</td>
+</tr>
+<tr>
+  <td>会话指针</td>
+  <td>每个依赖的正文后面附带它的子会话 key，需要完整细节可以用 <code>sessions_history</code> 读取。需要宿主开 <code>tools.sessions.visibility: "all"</code> 和 <code>tools.agentToAgent.enabled</code>，任一没开就会被拒绝。</td>
+</tr>
+</table>
+
+<h2>4. 如何开启和配置</h2>
+
+<h4>4.1 最小配置</h4>
+<pre><code>{
+  "plugins": {
+    "allow": ["dragon-task-orchestrator"],
+    "entries": {
+      "dragon-task-orchestrator": {
+        "enabled": true,
+        "config": {
+          "enabled": true,
+          "defaultAgentId": "coding",
+          "logging": true,
+          "agentDescriptions": {
+            "coding": "代码相关，以及任何涉及本地文件系统的任务",
+            "research": "网络搜索与外部资料核查，需带引用",
+            "writing": "面向读者的成文：文档、指南、报告"
+          }
+        }
+      }
+    }
+  }
+}</code></pre>
+<p style="font-size:13px;color:var(--dim)">完整参考配置（含三个内部 agent 的 <code>systemPromptOverride</code> 全文）见 <code>docs/openclaw.json</code>。</p>
+
+<h4>4.2 三个必须存在的内部 agent</h4>
+<p>宿主的 <code>agents.list</code> 里必须有以下三个身份，每个都要用 <code>systemPromptOverride</code> 承载完整指令、并 <code>deny: ["*"]</code> 禁掉全部工具：</p>
+<table>
+<tr><th class="m">dt-decomposer</th><td>把请求拆成子任务</td></tr>
+<tr><th class="m">dt-classifier</th><td>把一条子任务描述分类到一个 agent id</td></tr>
+<tr><th class="m">dt-summarizer</th><td>汇总出最终回复</td></tr>
+</table>
+
+<h4>4.3 打开某个会话的 dynamic 模式</h4>
+<p>模式是运行时通过网关方法设置的，不是写死在配置文件里：</p>
+<pre><code>dragonTaskOrchestrator.session.mode.set  { sessionKey, mode: "dynamic" }</code></pre>
+<p>或在 Control UI 里为该会话选择 dynamic 模式。切换会话 / 重启网关都会回到 <code>off</code>，需要重新设置。</p>
+
+<h4>4.4 启动网关并抓日志</h4>
+<pre><code>cmd /c "node openclaw.mjs gateway run --verbose > gateway.log 2>&1"</code></pre>
+
+<h4>4.5 一个可以直接用的测试 prompt</h4>
+<pre><code>将我的任务拆分为多个子任务。我计划国庆去河西走廊，你帮我搜索河西走廊的资料，
+我需要自驾从成都出发，输出一个合理的旅游攻略文档。</code></pre>
+<p style="font-size:13px;color:var(--dim)">这个 prompt 天然会拆成 research + writing 两类子任务、带依赖关系，能覆盖第 3 节的全部机制。</p>
+
+<h2>5. 如何观察一次运行</h2>
+
+<h4>5.1 关键日志行（<code>logging: true</code> 时）</h4>
+<pre><code>[dragon-task-orchestrator] decomposition validated on &lt;session&gt;: N surviving subtask(s)
+[dragon-task-orchestrator] pipeline on &lt;session&gt;: N subtask(s) resolved to [0:research, 1:writing], M layer(s)
+[dragon-task-orchestrator] layer 1/2 on &lt;session&gt;: N subtask(s) in parallel
+[dragon-task-orchestrator] subtask 0 on research: ok
+[dragon-task-orchestrator] summarizing N subtask result(s) on &lt;session&gt;: N ok, 0 failed</code></pre>
+<p>出现 <code>subtask N on &lt;agent&gt;: verify failed</code> 或 <code>经 Verifier 校验 N 次未通过</code> 说明校验环节在起作用，不是异常。</p>
+
+<h4>5.2 Control UI 的进度事件</h4>
+<p>以 <code>plugin_event</code> 广播，<code>type: "dragon_task_progress"</code>，按 <code>kind</code> 区分：</p>
+<table>
+<tr><th class="m">prd</th><td>拆解方案（先发结构，路由结果出来后再发一次）</td></tr>
+<tr><th class="m">subtask_status</th><td>某个子任务开始/结束</td></tr>
+<tr><th class="m">subtask_tool</th><td>子任务内部的一次工具调用（含压缩后的摘要）</td></tr>
+<tr><th class="m">layer_progress</th><td>一层执行完毕及其结果</td></tr>
+<tr><th class="m">summarizing</th><td>全部子任务结束，正在汇总</td></tr>
+</table>
+
+<h4>5.3 判断产物通道是否生效</h4>
+<p>在日志里搜 <code>artifacts</code> 或 <code>共享产物目录</code>，正常情况下应该能看到类似：</p>
+<pre><code>write: path=C:\Users\...\.openclaw\artifacts\&lt;hash&gt;\subtask-0\xxx.md
+read:  path=C:\Users\...\.openclaw\artifacts\&lt;hash&gt;\subtask-0\xxx.md</code></pre>
+<p>关键判据：<b>写入的路径和下游读取的路径必须是完全同一个绝对路径</b>，且不应出现 <code>ENOENT</code>。</p>
+
+<h2>6. 常见的"看起来像 bug 但不是"的现象</h2>
+
+<div class="note">
+  <b>正文里出现内容被截断的提示</b>
+  形如"内容过长，已截断 N 字符"。这是插件为控制上下文预算主动做的处理，<b>不是</b>模型输出不完整或程序出错。校验器也被明确告知不能因为这个提示判定失败。
+</div>
+
+<div class="note">
+  <b>web_fetch 报 <code>499</code> 且带一段"SECURITY NOTICE"文字</b>
+  这不是网络故障，是宿主的抓取安全防护判定目标页面内容可能构成提示词注入而主动拒绝返回。agent 通常会自行换一个信息源继续。如果这类拒绝频繁出现且阻塞了任务，值得记录下具体 URL，但单次出现且被绕过不算异常。
+</div>
+
+<div class="note ok">
+  <b>校验失败后子任务被重新委派、正文里出现"经过 N 次校验通过"</b>
+  这是校验环节按设计工作的证据，说明 <code>handoffContract</code> / <code>acceptanceCriteria</code> 真的在被强制执行，不是流程卡住或重复执行的 bug。
+</div>
+
+<div class="note">
+  <b>同一层里两个子任务的日志时间线交织在一起</b>
+  同层子任务是并发执行的，日志会交叉打印，这是预期行为。判断是否真正并发，看时间戳是否有重叠，而不是看日志顺序是否"整齐"。
+</div>
+
+<footer>
+  面向对象：测试团队 · 数据来源：<code>README.md</code> / <code>README.zh.md</code> / 源码 / 近期修复记录 · 实现细节以源码和 README 为准，本文档内容可能滞后于代码。
+</footer>
+
+</main>
+</body>
+</html>

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { CodexAppServerRpcError } from "./client.js";
 
 export const CODEX_CONTROL_METHODS = {

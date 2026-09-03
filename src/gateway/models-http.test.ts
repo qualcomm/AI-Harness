@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { getFreePort, installGatewayTestHooks } from "./test-helpers.js";
 

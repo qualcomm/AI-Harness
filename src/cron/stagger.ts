@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CronSchedule } from "./types.js";
 
 export const DEFAULT_TOP_OF_HOUR_STAGGER_MS = 5 * 60 * 1000;

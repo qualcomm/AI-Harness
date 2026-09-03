@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 
 import { resolveExtensionBatchPlan } from "./lib/extension-test-plan.mjs";
 import { isDirectScriptRun, runVitestBatch } from "./lib/vitest-batch-runner.mjs";

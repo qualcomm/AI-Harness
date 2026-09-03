@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Shared artifact directory — the side channel for hand-off payloads too large
  * for the prior-context budget.

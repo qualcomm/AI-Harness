@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { URL } from "node:url";
 import type { GatewayConfig } from "../config/types.gateway.js";
 import {

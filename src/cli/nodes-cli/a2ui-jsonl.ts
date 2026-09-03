@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const A2UI_ACTION_KEYS = [
   "beginRendering",
   "surfaceUpdate",

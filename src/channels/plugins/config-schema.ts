@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { z, type ZodRawShape, type ZodTypeAny } from "zod";
 import { DmPolicySchema } from "../../config/zod-schema.core.js";
 import type {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isAbortRequestText, isBtwRequestText } from "openclaw/plugin-sdk/reply-runtime";
 import { parseFeishuMessageEvent, type FeishuMessageEvent } from "./bot.js";
 

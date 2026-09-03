@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { pruneStaleCommandPolls as pruneStaleCommandPollsImpl } from "./command-poll-backoff.js";
 
 type PruneStaleCommandPolls = typeof import("./command-poll-backoff.js").pruneStaleCommandPolls;

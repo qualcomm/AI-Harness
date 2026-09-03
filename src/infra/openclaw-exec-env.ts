@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const OPENCLAW_CLI_ENV_VAR = "OPENCLAW_CLI";
 export const OPENCLAW_CLI_ENV_VALUE = "1";
 

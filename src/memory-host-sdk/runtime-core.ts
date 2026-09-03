@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Focused runtime contract for memory plugin config/state/helpers.
 
 export type { AnyAgentTool } from "../agents/tools/common.js";

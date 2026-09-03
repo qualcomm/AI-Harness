@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ErrorObject } from "ajv";
 import { normalizeOptionalString } from "../../shared/string-coerce.js";
 import { ErrorCodes, errorShape, formatValidationErrors } from "../protocol/index.js";

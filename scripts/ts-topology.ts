@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { formatErrorMessage } from "../src/infra/errors.ts";
 import { analyzeTopology } from "./lib/ts-topology/analyze.js";

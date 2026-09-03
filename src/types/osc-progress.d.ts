@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 declare module "osc-progress" {
   export type OscProgressController = {
     setIndeterminate: (label: string) => void;

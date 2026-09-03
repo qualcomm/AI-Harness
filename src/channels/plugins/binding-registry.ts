@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ensureConfiguredBindingBuiltinsRegistered } from "./configured-binding-builtins.js";
 import {
   primeConfiguredBindingRegistry as primeConfiguredBindingRegistryRaw,

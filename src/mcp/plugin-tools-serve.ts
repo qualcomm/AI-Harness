@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Standalone MCP server that exposes OpenClaw plugin-registered tools
  * (e.g. memory-lancedb's memory_recall, memory_store, memory_forget)

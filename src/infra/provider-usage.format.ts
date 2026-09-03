@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { clampPercent } from "./provider-usage.shared.js";
 import type { ProviderUsageSnapshot, UsageSummary, UsageWindow } from "./provider-usage.types.js";
 

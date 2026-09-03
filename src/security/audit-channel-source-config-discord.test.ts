@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import { collectDiscordSecurityAuditFindings } from "../../test/helpers/channels/security-audit-contract.js";
 import type { ChannelPlugin } from "../channels/plugins/types.js";

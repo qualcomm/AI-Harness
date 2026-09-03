@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ServerResponse, type IncomingMessage } from "node:http";
 import { PassThrough } from "node:stream";
 import type { OpenClawConfig, RuntimeEnv } from "openclaw/plugin-sdk/mattermost";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Test: subagent_spawning, subagent_delivery_target, subagent_spawned & subagent_ended hook wiring
  */

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { buildFeishuConversationId, parseFeishuConversationId } from "./conversation-id.js";
 
 export function resolveFeishuParentConversationCandidates(rawId: string): string[] {

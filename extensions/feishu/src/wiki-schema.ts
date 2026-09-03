@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Type, type Static } from "@sinclair/typebox";
 
 export const FeishuWikiSchema = Type.Union([

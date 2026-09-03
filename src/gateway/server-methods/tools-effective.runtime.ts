@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { listAgentIds, resolveSessionAgentId } from "../../agents/agent-scope.js";
 export { resolveEffectiveToolInventory } from "../../agents/tools-effective-inventory.js";
 export { resolveReplyToMode } from "../../auto-reply/reply/reply-threading.js";

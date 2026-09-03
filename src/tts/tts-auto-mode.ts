@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { TtsAutoMode } from "../config/types.tts.js";
 import { normalizeOptionalLowercaseString } from "../shared/string-coerce.js";
 

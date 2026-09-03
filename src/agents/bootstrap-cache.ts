@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadWorkspaceBootstrapFiles, type WorkspaceBootstrapFile } from "./workspace.js";
 
 const cache = new Map<string, WorkspaceBootstrapFile[]>();

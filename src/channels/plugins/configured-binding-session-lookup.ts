@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ConfiguredBindingRecordResolution } from "./binding-types.js";
 import type { CompiledConfiguredBindingRegistry } from "./configured-binding-compiler.js";
 import { listConfiguredBindingConsumers } from "./configured-binding-consumers.js";

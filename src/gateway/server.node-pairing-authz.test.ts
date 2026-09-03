@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, test } from "vitest";
 import { WebSocket } from "ws";
 import { approveNodePairing, listNodePairing, requestNodePairing } from "../infra/node-pairing.js";

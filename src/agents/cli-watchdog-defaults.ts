@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const CLI_WATCHDOG_MIN_TIMEOUT_MS = 1_000;
 
 export const CLI_FRESH_WATCHDOG_DEFAULTS = {

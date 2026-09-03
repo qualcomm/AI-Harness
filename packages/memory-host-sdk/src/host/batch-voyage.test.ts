@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ReadableStream } from "node:stream/web";
 import { setTimeout as nativeSleep } from "node:timers/promises";
 import { describe, expect, it, vi } from "vitest";

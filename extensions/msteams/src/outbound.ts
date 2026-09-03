@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createAttachedChannelResultAdapter } from "openclaw/plugin-sdk/channel-send-result";
 import { resolveOutboundSendDep } from "openclaw/plugin-sdk/outbound-runtime";
 import { chunkTextForOutbound, type ChannelOutboundAdapter } from "../runtime-api.js";

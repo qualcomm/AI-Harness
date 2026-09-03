@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { existsSync, readFileSync, readdirSync, realpathSync } from "node:fs";
 import type { Dirent } from "node:fs";
 import { delimiter, dirname, join } from "node:path";

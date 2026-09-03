@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { AnthropicVertex } from "@anthropic-ai/vertex-sdk";
 import type { StreamFn } from "@mariozechner/pi-agent-core";
 import { streamAnthropic, type AnthropicOptions, type Model } from "@mariozechner/pi-ai";

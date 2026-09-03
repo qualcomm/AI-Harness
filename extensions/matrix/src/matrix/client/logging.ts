@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { logger as matrixJsSdkRootLogger } from "matrix-js-sdk/lib/logger.js";
 import { ConsoleLogger, LogService, setMatrixConsoleLogging } from "../sdk/logger.js";
 

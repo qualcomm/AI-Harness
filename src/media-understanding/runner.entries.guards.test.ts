@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { formatDecisionSummary } from "./runner.entries.js";
 import type { MediaUnderstandingDecision } from "./types.js";

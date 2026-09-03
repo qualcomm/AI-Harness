@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { resolveChunkMode } from "../auto-reply/chunk.js";
 export { finalizeInboundContext } from "../auto-reply/reply/inbound-context.js";
 export {

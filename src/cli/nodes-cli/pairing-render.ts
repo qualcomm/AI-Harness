@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatTimeAgo } from "../../infra/format-time/format-relative.ts";
 import { renderTable } from "../../terminal/table.js";
 import type { PendingRequest } from "./types.js";

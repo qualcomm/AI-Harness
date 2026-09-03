@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { fetchWithTimeout } from "./oauth.http.js";
 import {
   CODE_ASSIST_ENDPOINT_PROD,

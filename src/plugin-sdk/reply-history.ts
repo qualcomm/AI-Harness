@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /** Shared reply-history helpers for plugins that keep short per-thread context windows. */
 export type { HistoryEntry } from "../auto-reply/reply/history.js";
 export {

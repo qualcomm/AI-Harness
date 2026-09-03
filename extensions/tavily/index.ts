@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { definePluginEntry, type AnyAgentTool } from "openclaw/plugin-sdk/plugin-entry";
 import { createTavilyExtractTool } from "./src/tavily-extract-tool.js";
 import { createTavilyWebSearchProvider } from "./src/tavily-search-provider.js";

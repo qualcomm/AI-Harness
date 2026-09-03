@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ResolvedProviderAuth } from "../../agents/model-auth-runtime-shared.js";
 import type { ModelProviderRequestTransportOverrides } from "../../agents/provider-request-config.js";
 

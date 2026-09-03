@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { mapAllowFromEntries } from "openclaw/plugin-sdk/channel-config-helpers";
 import { createInspectedDirectoryEntriesLister } from "openclaw/plugin-sdk/directory-runtime";
 import { inspectTelegramAccount, type InspectedTelegramAccount } from "./account-inspect.js";

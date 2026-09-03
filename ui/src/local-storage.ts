@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 function isStorage(value: unknown): value is Storage {
   return (
     Boolean(value) &&

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const TELEGRAM_CALLBACK_DATA_MAX_BYTES = 64;
 
 const TELEGRAM_APPROVE_ALLOW_ALWAYS_PATTERN =

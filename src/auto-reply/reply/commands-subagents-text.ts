@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { sanitizeTextContent } from "../../agents/tools/chat-history-text.js";
 import { extractTextFromChatContent } from "../../shared/chat-content.js";
 

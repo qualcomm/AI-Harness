@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalLowercaseString } from "./string-coerce.ts";
 
 const REQUIRED_EXTERNAL_REL_TOKENS = ["noopener", "noreferrer"] as const;

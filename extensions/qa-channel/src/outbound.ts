@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveQaChannelAccount } from "./accounts.js";
 import { buildQaTarget, parseQaTarget, sendQaBusMessage } from "./bus-client.js";
 import type { CoreConfig } from "./types.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Regression tests for GHSA-2qrv-rc5x-2g2h incomplete-fix bypass.
  *

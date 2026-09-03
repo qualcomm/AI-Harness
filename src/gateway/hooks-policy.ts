@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeAgentId } from "../routing/session-key.js";
 
 export function resolveAllowedAgentIds(raw: string[] | undefined): Set<string> | undefined {

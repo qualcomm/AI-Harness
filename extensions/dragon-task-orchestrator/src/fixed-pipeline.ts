@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Fixed-pipeline execution: run a user-defined sequence of agents in order, feeding
  * each step the previous step's output.

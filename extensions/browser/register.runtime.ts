@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { createBrowserTool } from "./src/browser-tool.js";
 export { registerBrowserCli } from "./src/cli/browser-cli.js";
 export { handleBrowserGatewayRequest } from "./src/gateway/browser-request.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /** @typedef {{ cpuCount?: number, loadAverage1m?: number, totalMemoryBytes?: number }} VitestHostInfo */
 /** @typedef {{ maxWorkers: number, fileParallelism: boolean, throttledBySystem: boolean }} LocalVitestScheduling */
 

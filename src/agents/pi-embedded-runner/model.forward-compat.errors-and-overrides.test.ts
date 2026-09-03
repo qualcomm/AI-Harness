@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { ModelProviderConfig } from "../../config/config.js";
 import { discoverModels } from "../pi-model-discovery.js";

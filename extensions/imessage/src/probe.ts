@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { BaseProbeResult } from "openclaw/plugin-sdk/channel-contract";
 import { loadConfig } from "openclaw/plugin-sdk/config-runtime";
 import { runCommandWithTimeout } from "openclaw/plugin-sdk/process-runtime";

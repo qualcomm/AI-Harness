@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveLanguage } from "@pierre/diffs";
 import type { FileContents, FileDiffMetadata, SupportedLanguages } from "@pierre/diffs";
 import type { DiffViewerPayload } from "./types.js";

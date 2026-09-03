@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Focused self-hosted provider setup helpers for OpenAI-compatible backends.
 export type {
   OpenClawPluginApi,

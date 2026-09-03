@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveInboundMentionDecision } from "openclaw/plugin-sdk/channel-inbound";
 import {
   normalizeLowercaseStringOrEmpty,

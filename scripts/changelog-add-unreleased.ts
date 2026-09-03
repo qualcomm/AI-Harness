@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { appendUnreleasedChangelogEntry } from "../src/infra/changelog-unreleased.js";

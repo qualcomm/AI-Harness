@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { execFile, type ExecFileOptions } from "node:child_process";
 import { promisify } from "node:util";
 import { resolveSystemBin } from "../infra/resolve-system-bin.js";

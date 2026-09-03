@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SessionEntry } from "./types.js";
 
 export function applySessionStoreMigrations(store: Record<string, SessionEntry>): void {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { EventEmitter } from "node:events";
 import { RateLimitError } from "@buape/carbon";
 import { AcpRuntimeError } from "openclaw/plugin-sdk/acp-runtime";

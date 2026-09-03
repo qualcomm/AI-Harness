@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Skill as CanonicalSkill, SourceInfo } from "@mariozechner/pi-coding-agent";
 
 export type SourceScope = "user" | "project" | "temporary";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isTruthyEnvValue } from "../../../../src/infra/env.js";
 import { createSubsystemLogger } from "../../../../src/logging/subsystem.js";
 

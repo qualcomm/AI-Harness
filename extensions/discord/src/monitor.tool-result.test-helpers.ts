@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Client } from "@buape/carbon";
 import { ChannelType, MessageType } from "@buape/carbon";
 import type { loadConfig } from "openclaw/plugin-sdk/config-runtime";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseStrictPositiveInteger } from "../../infra/parse-finite-number.js";
 
 export function parsePort(raw: unknown): number | null {

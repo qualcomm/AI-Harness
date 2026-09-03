@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { feishuPlugin } from "./src/channel.js";
 export { registerFeishuDocTools } from "./src/docx.js";
 export { registerFeishuChatTools } from "./src/chat.js";

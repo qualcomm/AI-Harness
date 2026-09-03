@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Client-side execution engine for slash commands.
  * Calls gateway RPC methods and returns formatted results.

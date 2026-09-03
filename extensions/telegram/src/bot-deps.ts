@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createChannelReplyPipeline } from "openclaw/plugin-sdk/channel-reply-pipeline";
 import { loadConfig, resolveStorePath } from "openclaw/plugin-sdk/config-runtime";
 import { loadSessionStore } from "openclaw/plugin-sdk/config-runtime";

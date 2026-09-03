@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Parent-message context injection for Teams channel thread replies.
 //
 // When an inbound message arrives as a reply inside a Teams channel thread,

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveAgentIdentity, resolveEffectiveMessagesConfig } from "../agents/identity.js";
 import type { GetReplyOptions } from "../auto-reply/get-reply-options.types.js";
 import {

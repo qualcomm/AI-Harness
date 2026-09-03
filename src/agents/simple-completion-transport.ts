@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getApiProvider, type Api, type Model } from "@mariozechner/pi-ai";
 import type { OpenClawConfig } from "../config/types.openclaw.js";
 import { createAnthropicVertexStreamFnForModel } from "./anthropic-vertex-stream.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Dispatcher } from "undici";
 import { logWarn } from "../../logger.js";
 import { captureHttpExchange } from "../../proxy-capture/runtime.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadPluginManifestRegistry as loadPluginManifestRegistryImpl } from "../plugins/manifest-registry.js";
 import {
   collectChannelSchemaMetadata as collectChannelSchemaMetadataImpl,

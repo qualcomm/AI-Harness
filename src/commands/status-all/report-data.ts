@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { canExecRequestNode } from "../../agents/exec-defaults.js";
 import { buildWorkspaceSkillStatus } from "../../agents/skills-status.js";
 import { readConfigFileSnapshot, resolveGatewayPort } from "../../config/config.js";

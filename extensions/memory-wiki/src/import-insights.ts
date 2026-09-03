@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ResolvedMemoryWikiConfig } from "./config.js";
 import { parseWikiMarkdown } from "./markdown.js";
 import { readQueryableWikiPages } from "./query.js";

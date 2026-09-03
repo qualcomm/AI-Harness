@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createServer as createHttpsServer } from "node:https";
 import { createServer } from "node:net";
 import { afterEach, describe, expect, test, vi } from "vitest";

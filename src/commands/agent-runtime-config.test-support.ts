@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { vi } from "vitest";
 import { __testing as acpManagerTesting } from "../acp/control-plane/manager.js";
 import { loadModelCatalog } from "../agents/model-catalog.js";

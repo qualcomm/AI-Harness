@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Centralized Vitest mock type for harness modules under `src/`.
 // Using an explicit named type avoids exporting inferred `vi.fn()` types that can trip TS2742.
 // Keep the callable bound permissive so explicit callback signatures remain assignable.

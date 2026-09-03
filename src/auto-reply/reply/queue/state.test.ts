@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, describe, expect, it } from "vitest";
 import { clearFollowupQueue, getFollowupQueue, refreshQueuedFollowupSession } from "./state.js";
 import type { FollowupRun } from "./types.js";

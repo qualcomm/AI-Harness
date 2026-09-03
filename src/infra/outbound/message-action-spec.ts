@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getBootstrapChannelPlugin } from "../../channels/plugins/bootstrap-registry.js";
 import type { ChannelMessageActionName } from "../../channels/plugins/types.public.js";
 import {

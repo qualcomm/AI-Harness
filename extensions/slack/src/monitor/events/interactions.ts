@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { truncateSlackText } from "../../truncate.js";
 import type { SlackMonitorContext } from "../context.js";
 import { registerSlackBlockActionHandler, summarizeAction } from "./interactions.block-actions.js";

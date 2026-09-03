@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { OpenClawConfig } from "openclaw/plugin-sdk/config-runtime";
 import { resolveEnvApiKey } from "openclaw/plugin-sdk/provider-auth-runtime";
 import { resolveAgentModelPrimaryValue } from "openclaw/plugin-sdk/provider-onboard";

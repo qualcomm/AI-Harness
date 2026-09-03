@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const ACP_ERROR_CODES = [
   "ACP_BACKEND_MISSING",
   "ACP_BACKEND_UNAVAILABLE",

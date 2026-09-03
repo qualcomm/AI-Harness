@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type PluginIdScope = readonly string[] | undefined;
 
 export function normalizePluginIdScope(ids?: readonly unknown[]): string[] | undefined {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AuthChoice, OnboardOptions } from "./onboard-types.js";
 
 type OnboardCoreAuthOptionKey = Extract<keyof OnboardOptions, string>;

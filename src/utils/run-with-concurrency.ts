@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type ConcurrencyErrorMode = "continue" | "stop";
 
 export async function runTasksWithConcurrency<T>(params: {

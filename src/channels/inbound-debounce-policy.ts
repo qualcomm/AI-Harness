@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { hasControlCommand } from "../auto-reply/command-detection.js";
 import type { CommandNormalizeOptions } from "../auto-reply/commands-registry.js";
 import {

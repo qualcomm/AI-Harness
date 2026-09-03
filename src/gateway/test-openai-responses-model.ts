@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const MOCK_OPENAI_RESPONSES_PROVIDER_ID = "mock-openai";
 
 export function buildOpenAiResponsesTestModel(id = "gpt-5.4") {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import crypto from "node:crypto";
 import { createServer as createHttpServer } from "node:http";
 import { loadConfig } from "../config/config.js";

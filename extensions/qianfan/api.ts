@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export {
   QIANFAN_BASE_URL,
   QIANFAN_DEFAULT_MODEL_ID,

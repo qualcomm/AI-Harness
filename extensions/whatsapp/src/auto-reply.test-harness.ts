@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import "./test-helpers.js";
 import fs from "node:fs/promises";
 import os from "node:os";

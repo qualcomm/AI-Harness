@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeLowercaseStringOrEmpty } from "../string-coerce.js";
 
 const FILE_REF_EXTENSIONS = ["md", "go", "py", "pl", "sh", "am", "at", "be", "cc"] as const;

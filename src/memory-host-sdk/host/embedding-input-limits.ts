@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { EmbeddingInput } from "./embedding-inputs.js";
 
 // Helpers for enforcing embedding model input size limits.

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public ACP runtime helpers for plugins that integrate with ACP control/session state.
 
 import { __testing as managerTesting, getAcpSessionManager } from "../acp/control-plane/manager.js";

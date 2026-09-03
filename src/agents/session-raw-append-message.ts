@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SessionManager } from "@mariozechner/pi-coding-agent";
 
 const RAW_APPEND_MESSAGE = Symbol("openclaw.session.rawAppendMessage");

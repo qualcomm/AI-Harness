@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Tests for hook wiring order and delegation handling (tasks 7.8/7.9),
  * plus end-to-end pipeline scenarios (7.10/7.11) and the disabled-plugin

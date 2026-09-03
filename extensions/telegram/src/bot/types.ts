@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChatFullInfo, Message, UserFromGetMe } from "@grammyjs/types";
 
 /** App-specific stream mode for Telegram stream previews. */

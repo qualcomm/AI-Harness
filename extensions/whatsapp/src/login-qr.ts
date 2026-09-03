@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { randomUUID } from "node:crypto";
 import { loadConfig } from "openclaw/plugin-sdk/config-runtime";
 import { danger, info, success } from "openclaw/plugin-sdk/runtime-env";

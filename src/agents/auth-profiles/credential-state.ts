@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { coerceSecretRef, normalizeSecretInputString } from "../../config/types.secrets.js";
 import type { AuthProfileCredential } from "./types.js";
 

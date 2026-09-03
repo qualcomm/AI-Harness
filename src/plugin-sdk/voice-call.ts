@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Private helper surface for the bundled voice-call plugin.
 // Keep this surface narrow and limited to the voice-call feature contract.
 

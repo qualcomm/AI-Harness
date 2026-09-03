@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveGlobalSingleton } from "../shared/global-singleton.js";
 
 const warningFilterKey = Symbol.for("openclaw.warning-filter");

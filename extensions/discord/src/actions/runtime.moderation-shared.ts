@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { PermissionFlagsBits } from "discord-api-types/v10";
 import { readNumberParam, readStringParam } from "../runtime-api.js";
 

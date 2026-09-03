@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { createMetrics, type MetricName } from "./metrics.js";
 import { validatePrivateKey, isValidPubkey, normalizePubkey } from "./nostr-bus.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatErrorMessage } from "openclaw/plugin-sdk/error-runtime";
 
 export function appendLiveLaneIssue(issues: string[], label: string, error: unknown) {

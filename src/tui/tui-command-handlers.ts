@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { randomUUID } from "node:crypto";
 import type { Component, SelectItem, TUI } from "@mariozechner/pi-tui";
 import { normalizeGroupActivation } from "../auto-reply/group-activation.js";

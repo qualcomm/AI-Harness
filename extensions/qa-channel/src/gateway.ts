@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { pollQaBus } from "./bus-client.js";
 import { handleQaInbound } from "./inbound.js";
 import type { ChannelGatewayContext } from "./runtime-api.js";

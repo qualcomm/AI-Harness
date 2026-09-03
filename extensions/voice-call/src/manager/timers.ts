@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { TerminalStates, type CallId } from "../types.js";
 import type { CallManagerContext } from "./context.js";
 import { persistCallRecord } from "./store.js";

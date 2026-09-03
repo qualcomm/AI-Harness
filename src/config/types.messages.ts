@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { QueueDropPolicy, QueueMode, QueueModeByProvider } from "./types.queue.js";
 import type { TtsConfig } from "./types.tts.js";
 

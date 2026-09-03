@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { resolveAckReaction } from "openclaw/plugin-sdk/channel-feedback";
 export { logAckFailure, logTypingFailure } from "openclaw/plugin-sdk/channel-feedback";
 export { logInboundDrop } from "openclaw/plugin-sdk/channel-inbound";

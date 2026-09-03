@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveOutboundSendDep } from "openclaw/plugin-sdk/outbound-runtime";
 import type { ResolvedIMessageAccount } from "./accounts.js";
 import { PAIRING_APPROVED_MESSAGE, resolveChannelMediaMaxBytes } from "./channel-api.js";

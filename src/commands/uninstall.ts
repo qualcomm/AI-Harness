@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { cancel, confirm, isCancel, multiselect } from "@clack/prompts";
 import { formatCliCommand } from "../cli/command-format.js";

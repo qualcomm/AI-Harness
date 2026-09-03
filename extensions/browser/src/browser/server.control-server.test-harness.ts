@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, beforeEach, vi } from "vitest";
 import { deriveDefaultBrowserCdpPortRange } from "../config/port-defaults.js";
 import type { MockFn } from "../test-utils/vitest-mock-fn.js";

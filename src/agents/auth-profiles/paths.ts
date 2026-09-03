@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import fs from "node:fs";
 import { saveJsonFile } from "../../infra/json-file.js";
 import { AUTH_STORE_VERSION } from "./constants.js";

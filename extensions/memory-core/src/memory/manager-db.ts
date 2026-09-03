@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import type { DatabaseSync } from "node:sqlite";
 import { ensureDir, requireNodeSqlite } from "openclaw/plugin-sdk/memory-core-host-engine-storage";

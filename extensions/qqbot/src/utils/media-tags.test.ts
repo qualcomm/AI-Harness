@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, it, expect } from "vitest";
 import { FUZZY_MEDIA_TAG_REGEX, SELF_CLOSING_TAG_REGEX } from "./media-tags.js";
 

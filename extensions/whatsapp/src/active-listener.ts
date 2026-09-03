@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { loadConfig } from "openclaw/plugin-sdk/config-runtime";
 import { resolveDefaultWhatsAppAccountId } from "./accounts.js";
 import { getRegisteredWhatsAppConnectionController } from "./connection-controller-registry.js";

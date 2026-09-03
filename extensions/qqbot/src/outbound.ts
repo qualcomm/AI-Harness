@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import * as fs from "node:fs";
 import * as path from "path";
 import { formatErrorMessage } from "openclaw/plugin-sdk/error-runtime";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Thin ESM wrapper so native dynamic import() resolves in source-checkout mode
 // while packaged dist builds resolve a distinct runtime entry that cannot loop
 // back into this wrapper through the stable root runtime alias.

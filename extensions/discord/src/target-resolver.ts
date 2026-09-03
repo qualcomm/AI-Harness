@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { DirectoryConfigParams } from "openclaw/plugin-sdk/directory-runtime";
 import { buildMessagingTarget, type MessagingTarget } from "openclaw/plugin-sdk/messaging-targets";
 import { resolveDiscordAccount } from "./accounts.js";

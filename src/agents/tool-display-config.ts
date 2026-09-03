@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ToolDisplaySpec as ToolDisplaySpecBase } from "./tool-display-common.js";
 
 export type ToolDisplaySpec = ToolDisplaySpecBase & {

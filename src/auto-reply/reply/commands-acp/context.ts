@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeConversationText } from "../../../acp/conversation-id.js";
 import { normalizeConversationTargetRef } from "../../../infra/outbound/session-binding-normalization.js";
 import { normalizeLowercaseStringOrEmpty } from "../../../shared/string-coerce.js";

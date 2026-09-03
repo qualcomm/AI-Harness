@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createTempHomeEnv } from "../test-utils/temp-home.js";
 
 export async function withTempHome<T>(

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterAll, beforeAll, beforeEach } from "vitest";
 import { connectOk, startServerWithClient, testState } from "./test-helpers.js";
 

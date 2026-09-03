@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { runBestEffortCleanup } from "./infra/non-fatal-cleanup.js";
 import { closeTrackedBrowserTabsForSessions } from "./plugin-sdk/browser-maintenance.js";
 

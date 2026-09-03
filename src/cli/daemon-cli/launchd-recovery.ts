@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { launchAgentPlistExists, repairLaunchAgentBootstrap } from "../../daemon/launchd.js";
 
 const LAUNCH_AGENT_RECOVERY_MESSAGE =

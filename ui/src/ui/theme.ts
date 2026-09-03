@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type ThemeName = "claw" | "knot" | "dash";
 export type ThemeMode = "system" | "light" | "dark";
 export type ResolvedTheme =

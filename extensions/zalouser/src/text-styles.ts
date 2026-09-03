@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { TextStyle, type Style } from "./zca-constants.js";
 
 const ESCAPE_SENTINEL_START = "\u0001";

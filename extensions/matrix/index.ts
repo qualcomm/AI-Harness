@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { defineBundledChannelEntry } from "openclaw/plugin-sdk/channel-entry-contract";
 import { formatErrorMessage } from "openclaw/plugin-sdk/error-runtime";
 import { registerMatrixCliMetadata } from "./cli-metadata.js";

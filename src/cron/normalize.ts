@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { sanitizeAgentId } from "../routing/session-key.js";
 import {
   normalizeLowercaseStringOrEmpty,

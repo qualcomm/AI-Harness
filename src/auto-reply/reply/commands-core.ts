@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { shouldHandleTextCommands } from "../commands-registry.js";
 import { emitResetCommandHooks } from "./commands-reset-hooks.js";
 import { maybeHandleResetCommand } from "./commands-reset.js";

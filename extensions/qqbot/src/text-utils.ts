@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getQQBotRuntime } from "./runtime.js";
 
 /** Maximum text length for a single QQ Bot message. */

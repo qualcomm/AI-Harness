@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 type EnvMap = Record<string, string | undefined>;
 
 const isEnabled = (value: string | undefined): boolean => {

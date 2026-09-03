@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { canonicalizePathVariant } from "../gateway/security-path.js";
 import type { OpenClawPluginHttpRouteMatch } from "./types.js";
 

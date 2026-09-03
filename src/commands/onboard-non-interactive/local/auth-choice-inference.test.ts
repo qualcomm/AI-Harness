@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { OnboardOptions } from "../../onboard-types.js";
 import { inferAuthChoiceFromFlags } from "./auth-choice-inference.js";

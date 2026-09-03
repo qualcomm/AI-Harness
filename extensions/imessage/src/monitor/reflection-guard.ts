@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Detects inbound messages that are reflections of assistant-originated content.
  * These patterns indicate internal metadata leaked into a channel and then

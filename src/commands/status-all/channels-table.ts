@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { groupChannelIssuesByChannel } from "./channel-issues.js";
 
 type ChannelTableRowInput = {

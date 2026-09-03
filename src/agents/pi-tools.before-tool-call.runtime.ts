@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getDiagnosticSessionState } from "../logging/diagnostic-session-state.js";
 import { logToolLoopAction } from "../logging/diagnostic.js";
 import {

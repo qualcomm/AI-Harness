@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { slackPlugin } from "./src/channel.js";
 export { slackSetupPlugin } from "./src/channel.setup.js";
 export * from "./src/account-inspect.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getMatrixRuntime } from "../../runtime.js";
 import { syncMatrixOwnProfile, type MatrixProfileSyncResult } from "../profile.js";
 import { withResolvedActionClient } from "./client.js";

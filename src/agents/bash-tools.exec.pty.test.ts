@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, expect, test } from "vitest";
 import { resetProcessRegistryForTests } from "./bash-process-registry.js";
 import { runExecProcess } from "./bash-tools.exec-runtime.js";

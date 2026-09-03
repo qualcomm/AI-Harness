@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { ChannelsStatusSnapshot } from "../types.ts";
 import type { ChannelsState } from "./channels.types.ts";
 import {

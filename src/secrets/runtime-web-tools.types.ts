@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type RuntimeWebDiagnosticCode =
   | "WEB_SEARCH_PROVIDER_INVALID_AUTODETECT"
   | "WEB_SEARCH_AUTODETECT_SELECTED"

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import syncFs from "node:fs";
 import type { Dirent } from "node:fs";
 import fs from "node:fs/promises";

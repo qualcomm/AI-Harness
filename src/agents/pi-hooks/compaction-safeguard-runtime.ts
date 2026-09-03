@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Api, Model } from "@mariozechner/pi-ai";
 import type { AgentCompactionIdentifierPolicy } from "../../config/types.agent-defaults.js";
 import { createSessionManagerRuntimeRegistry } from "./session-manager-runtime-registry.js";

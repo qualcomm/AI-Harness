@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared root plugin-sdk surface.
 // Keep this entry intentionally tiny. Channel/provider helpers belong on
 // dedicated subpaths or, for legacy consumers, the compat surface.

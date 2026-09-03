@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type ConfigSetMode = "value" | "json" | "ref_builder" | "provider_builder" | "batch";
 
 export type ConfigSetModeResolution =

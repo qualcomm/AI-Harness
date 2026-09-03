@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * FileConsentCard utilities for MS Teams large file uploads (>4MB) in personal chats.
  *

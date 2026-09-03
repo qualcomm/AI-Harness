@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Dynamic bag of per-channel send functions, keyed by channel ID.
  * Each outbound adapter resolves its own function from this record and

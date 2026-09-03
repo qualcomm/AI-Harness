@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { CHANNEL_IDS } from "../../channels/ids.js";
 import { STATE_DIR } from "../../config/paths.js";

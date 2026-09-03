@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Message } from "@grammyjs/types";
 import { createDedupeCache } from "openclaw/plugin-sdk/infra-runtime";
 import type { TelegramContext } from "./bot/types.js";

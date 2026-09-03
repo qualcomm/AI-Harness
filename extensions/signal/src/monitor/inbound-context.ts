@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveChannelContextVisibilityMode } from "openclaw/plugin-sdk/config-runtime";
 import {
   evaluateSupplementalContextVisibility,

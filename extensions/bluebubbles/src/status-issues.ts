@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChannelAccountSnapshot } from "openclaw/plugin-sdk/channel-contract";
 import { collectIssuesForEnabledAccounts } from "openclaw/plugin-sdk/status-helpers";
 import { asRecord } from "./monitor-normalize.js";

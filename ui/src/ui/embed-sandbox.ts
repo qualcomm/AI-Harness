@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ControlUiEmbedSandboxMode } from "../../../src/gateway/control-ui-contract.js";
 
 export type EmbedSandboxMode = ControlUiEmbedSandboxMode;

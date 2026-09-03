@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatErrorMessage, type PinnedDispatcherPolicy } from "openclaw/plugin-sdk/infra-runtime";
 import { coerceSecretRef } from "openclaw/plugin-sdk/provider-auth";
 import { retryAsync } from "openclaw/plugin-sdk/retry-runtime";

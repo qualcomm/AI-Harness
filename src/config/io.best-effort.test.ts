@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { readBestEffortConfig, readConfigFileSnapshot } from "./config.js";
 import { withTempHome, writeOpenClawConfig } from "./test-helpers.js";

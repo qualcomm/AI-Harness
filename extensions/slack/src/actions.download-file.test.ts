@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { WebClient } from "@slack/web-api";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 

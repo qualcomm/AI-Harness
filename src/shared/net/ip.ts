@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import ipaddr from "ipaddr.js";
 import { normalizeLowercaseStringOrEmpty, normalizeOptionalString } from "../string-coerce.js";
 

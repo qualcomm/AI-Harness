@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const autoReplyCoreTestInclude = ["src/auto-reply/*.test.ts"];
 
 export const autoReplyCoreTestExclude = ["src/auto-reply/reply*.test.ts"];

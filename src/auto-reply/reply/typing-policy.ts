@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { INTERNAL_MESSAGE_CHANNEL } from "../../utils/message-channel.js";
 import type { TypingPolicy } from "../types.js";
 

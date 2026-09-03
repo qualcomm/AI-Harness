@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export * from "./agents.bindings.js";
 export * from "./agents.commands.bind.js";
 export * from "./agents.commands.add.js";

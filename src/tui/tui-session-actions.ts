@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { TUI } from "@mariozechner/pi-tui";
 import { resolveSessionInfoModelSelection } from "../agents/model-selection-display.js";
 import type { SessionsPatchResult } from "../gateway/protocol/index.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveStorePath, updateSessionStoreEntry } from "../config/sessions.js";
 
 export async function reconcileSessionStoreCompactionCountAfterSuccess(params: {

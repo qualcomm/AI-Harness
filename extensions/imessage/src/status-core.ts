@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ResolvedIMessageAccount } from "./accounts.js";
 import type { IMessageProbe } from "./probe.js";
 

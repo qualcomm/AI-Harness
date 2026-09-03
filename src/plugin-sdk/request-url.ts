@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /** Extract a string URL from the common request-like inputs accepted by fetch helpers. */
 export function resolveRequestUrl(input: RequestInfo | URL): string {
   if (typeof input === "string") {

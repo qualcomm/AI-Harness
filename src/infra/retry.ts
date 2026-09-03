@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { asFiniteNumber } from "../shared/number-coercion.js";
 import { sleep } from "../utils.js";
 import { generateSecureFraction } from "./secure-random.js";

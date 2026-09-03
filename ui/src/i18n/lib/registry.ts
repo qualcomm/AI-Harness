@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Locale, TranslationMap } from "./types.ts";
 
 type LazyLocale = Exclude<Locale, "en">;

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { addGatewayClientOptions, callGatewayFromCli } from "../cli/gateway-rpc.js";
 export type { GatewayRpcOpts } from "../cli/gateway-rpc.js";
 export { runCommandWithRuntime } from "../cli/cli-utils.js";

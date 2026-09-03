@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared provider-facing HTTP helpers. Keep generic transport utilities here so
 // capability SDKs do not depend on each other.
 

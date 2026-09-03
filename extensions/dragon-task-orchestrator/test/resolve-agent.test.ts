@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Tests for the orchestrator's own one-shot model calls: domain classification
  * (including the message shape that now carries the domain list) and decomposition.

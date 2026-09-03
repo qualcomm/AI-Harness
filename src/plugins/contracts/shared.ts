@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function uniqueStrings(
   values: readonly string[] | undefined,
   normalize: (value: string) => string = (value) => value,

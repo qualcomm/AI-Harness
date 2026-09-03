@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { SlackEventMiddlewareArgs } from "@slack/bolt";
 import { enqueueSystemEvent } from "openclaw/plugin-sdk/infra-runtime";
 import { danger } from "openclaw/plugin-sdk/runtime-env";

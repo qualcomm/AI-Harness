@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { deliveryContextFromSession } from "../../utils/delivery-context.shared.js";
 import { loadConfig } from "../io.js";
 import { resolveStorePath } from "./paths.js";

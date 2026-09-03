@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const TALK_SILENCE_TIMEOUT_MS_BY_PLATFORM = {
   macos: 700,
   android: 700,

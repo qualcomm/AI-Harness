@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared provider catalog helpers for provider plugins.
 //
 // Keep provider-owned exports out of this subpath so plugin loaders can import it

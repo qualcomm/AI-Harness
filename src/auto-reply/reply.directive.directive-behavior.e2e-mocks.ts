@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { vi, type Mock } from "vitest";
 
 export const runEmbeddedPiAgentMock: Mock = vi.fn();

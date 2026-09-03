@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalLowercaseString } from "openclaw/plugin-sdk/text-runtime";
 
 /** Max chars of the thumbed-down response to include in the reflection prompt. */

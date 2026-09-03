@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it } from "vitest";
 import { pluginRegistrationContractRegistry } from "../../../src/plugins/contracts/registry.js";
 import { loadPluginManifestRegistry } from "../../../src/plugins/manifest-registry.js";

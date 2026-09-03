@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseArgs } from "node:util";
 import { runQaDockerUpCommand } from "../extensions/qa-lab/src/cli.runtime.ts";
 

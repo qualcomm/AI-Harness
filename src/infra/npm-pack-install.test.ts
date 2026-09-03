@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { packNpmSpecToArchive, withTempDir } from "./install-source-utils.js";
 import type { NpmIntegrityDriftPayload } from "./npm-integrity.js";

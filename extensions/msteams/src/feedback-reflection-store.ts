@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /** Default cooldown between reflections per session (5 minutes). */
 export const DEFAULT_COOLDOWN_MS = 300_000;
 

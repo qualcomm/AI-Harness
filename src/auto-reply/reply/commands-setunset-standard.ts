@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { parseSlashCommandWithSetUnset } from "./commands-setunset.js";
 
 export function parseStandardSetUnsetSlashCommand<T>(params: {

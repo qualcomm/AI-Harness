@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { consumeRootOptionToken } from "../infra/cli-root-options.js";
 
 export function forwardConsumedCliRootOption(

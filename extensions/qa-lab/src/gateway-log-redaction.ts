@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const QA_GATEWAY_DEBUG_SECRET_ENV_VARS = Object.freeze([
   "ANTHROPIC_API_KEY",
   "ANTHROPIC_OAUTH_TOKEN",

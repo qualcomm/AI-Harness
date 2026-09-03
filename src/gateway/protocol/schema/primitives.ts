@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Type } from "@sinclair/typebox";
 import { ENV_SECRET_REF_ID_RE } from "../../../config/types.secrets.js";
 import {

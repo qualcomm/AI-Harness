@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { WebSocket } from "ws";
 import { captureEnv } from "../test-utils/env.js";
 import {

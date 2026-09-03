@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ChatModelOverride } from "./chat-model-ref.types.ts";
 import type { ModelCatalogEntry } from "./types.ts";
 export type { ChatModelOverride } from "./chat-model-ref.types.ts";

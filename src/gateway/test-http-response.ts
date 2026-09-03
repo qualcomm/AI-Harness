@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ServerResponse } from "node:http";
 import { PassThrough } from "node:stream";
 import { vi } from "vitest";

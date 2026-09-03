@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { extractQaToolPayload } from "./extract-tool-payload.js";
 import type { QaScenarioDefinition } from "./scenario.js";
 

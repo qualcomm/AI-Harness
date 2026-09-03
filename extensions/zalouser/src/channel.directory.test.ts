@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it } from "vitest";
 import "./accounts.test-mocks.js";
 import { listZalouserDirectoryGroupMembers } from "./directory.js";

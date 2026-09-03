@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { format } from "node:util";
 import type { OutputRuntimeEnv, RuntimeEnv } from "../runtime.js";
 

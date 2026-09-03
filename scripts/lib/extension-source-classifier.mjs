@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const CODE_FILE_RE = /\.(?:[cm]?ts|[cm]?js|tsx|jsx)$/u;
 const DECLARATION_FILE_RE = /\.d\.ts$/u;
 const RUNTIME_API_BARREL_RE = /(^|\/)runtime-api\.(?:[cm]?ts|[cm]?js|tsx|jsx)$/u;

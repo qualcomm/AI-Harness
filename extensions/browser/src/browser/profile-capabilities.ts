@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ResolvedBrowserProfile } from "./config.js";
 
 export type BrowserProfileMode = "local-managed" | "local-existing-session" | "remote-cdp";

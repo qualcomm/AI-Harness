@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { PluginRegistry } from "./registry-types.js";
 
 export const PLUGIN_REGISTRY_STATE = Symbol.for("openclaw.pluginRegistryState");

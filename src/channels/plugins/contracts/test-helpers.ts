@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { expect, type Mock } from "vitest";
 import type { MsgContext } from "../../../auto-reply/templating.js";
 import { normalizeChatType } from "../../chat-type.js";

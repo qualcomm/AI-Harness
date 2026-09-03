@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Public gateway/client helpers for plugins that talk to the host gateway surface.
 
 export * from "../gateway/channel-status-patches.js";

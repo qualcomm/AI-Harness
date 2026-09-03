@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type Tone = "ok" | "warn" | "muted";
 
 export function resolveMemoryVectorState(vector: { enabled: boolean; available?: boolean }): {

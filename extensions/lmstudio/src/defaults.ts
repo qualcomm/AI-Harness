@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /** Shared LM Studio defaults used by setup, runtime discovery, and embeddings paths. */
 export const LMSTUDIO_DEFAULT_BASE_URL = "http://localhost:1234";
 export const LMSTUDIO_DEFAULT_INFERENCE_BASE_URL = `${LMSTUDIO_DEFAULT_BASE_URL}/v1`;

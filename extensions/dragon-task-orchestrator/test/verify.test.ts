@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Tests for Verifier delegation: PASS/FAIL/unparsable handling, conservative
  * defaults on failure, and the cross-group serialization queue.

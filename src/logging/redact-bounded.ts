@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const REDACT_REGEX_CHUNK_THRESHOLD = 32_768;
 export const REDACT_REGEX_CHUNK_SIZE = 16_384;
 

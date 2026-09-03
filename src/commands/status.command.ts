@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { withProgress } from "../cli/progress.js";
 import { type RuntimeEnv } from "../runtime.js";
 import { runStatusJsonCommand } from "./status-json-command.ts";

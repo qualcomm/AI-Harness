@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { runCommandWithTimeout } from "../process/exec.js";
 
 const SCHTASKS_TIMEOUT_MS = 15_000;

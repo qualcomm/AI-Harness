@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { z } from "zod";
 
 const AllowDenyActionSchema = z.union([z.literal("allow"), z.literal("deny")]);

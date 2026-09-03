@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { hasBinary } from "../agents/skills.js";
 import { formatCliCommand } from "../cli/command-format.js";
 import { runCommandWithTimeout } from "../process/exec.js";

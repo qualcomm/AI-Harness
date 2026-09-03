@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { AgentToolResult } from "@mariozechner/pi-agent-core";
 import { resolveDefaultDiscordAccountId } from "../accounts.js";
 import { getPresence } from "../monitor/presence-cache.js";

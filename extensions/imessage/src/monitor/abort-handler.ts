@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type IMessageMonitorClient = {
   request: (method: string, params?: Record<string, unknown>) => Promise<unknown>;
   stop: () => Promise<void>;

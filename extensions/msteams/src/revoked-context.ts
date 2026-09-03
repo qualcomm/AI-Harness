@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isRevokedProxyError } from "./errors.js";
 
 export async function withRevokedProxyFallback<T>(params: {

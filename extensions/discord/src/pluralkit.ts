@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveFetch } from "openclaw/plugin-sdk/fetch-runtime";
 
 const PLURALKIT_API_BASE = "https://api.pluralkit.me/v2";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { PluginServicesHandle } from "../plugins/services.js";
 import type { HooksConfigResolved } from "./hooks.js";
 import type { GatewayCronState } from "./server-cron.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { jidToE164, normalizeE164 } from "./text-runtime.js";
 
 const WHATSAPP_LID_RE = /@(lid|hosted\.lid)$/i;

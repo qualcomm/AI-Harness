@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function cloneConfigObject<T>(value: T): T {
   if (typeof structuredClone === "function") {
     return structuredClone(value);

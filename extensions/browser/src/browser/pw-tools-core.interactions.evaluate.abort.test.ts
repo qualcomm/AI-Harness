@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 let page: { evaluate: ReturnType<typeof vi.fn>; url: ReturnType<typeof vi.fn> } | null = null;

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type CaptureProtocol = "http" | "https" | "sse" | "ws" | "wss" | "connect";
 
 export type CaptureDirection = "outbound" | "inbound" | "local";

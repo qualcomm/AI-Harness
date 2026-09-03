@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import * as parentCoreApiModule from "../core-api.js";
 import * as browserCliResizeModule from "./browser-cli-resize.js";

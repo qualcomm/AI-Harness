@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getMatrixRuntime } from "../runtime.js";
 import type { CoreConfig } from "../types.js";
 import { getActiveMatrixClient } from "./active-client.js";

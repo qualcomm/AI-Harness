@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const TERMINAL_FAILURE_STATES = new Set(["failed", "expired", "cancelled", "canceled"]);
 
 type BatchStatusLike = {

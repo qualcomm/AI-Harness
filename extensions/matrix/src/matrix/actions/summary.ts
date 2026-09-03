@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isMatrixNotFoundError } from "../errors.js";
 import { resolveMatrixMessageAttachment, resolveMatrixMessageBody } from "../media-text.js";
 import { fetchMatrixPollMessageSummary } from "../poll-summary.js";

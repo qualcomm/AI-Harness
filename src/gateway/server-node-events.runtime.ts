@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { resolveSessionAgentId } from "../agents/agent-scope.js";
 export { sanitizeInboundSystemTags } from "../auto-reply/reply/inbound-text.js";
 export { normalizeChannelId } from "../channels/plugins/index.js";

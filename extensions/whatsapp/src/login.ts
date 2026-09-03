@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatCliCommand } from "openclaw/plugin-sdk/cli-runtime";
 import { loadConfig } from "openclaw/plugin-sdk/config-runtime";
 import { danger, success } from "openclaw/plugin-sdk/runtime-env";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { randomBytes } from "node:crypto";
 import { createServer } from "node:http";
 import type { OAuthCredentials } from "@mariozechner/pi-ai";

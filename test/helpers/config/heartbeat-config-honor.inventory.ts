@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ConfigHonorInventoryRow } from "./config-honor-audit.js";
 
 export const HEARTBEAT_CONFIG_PREFIXES = [

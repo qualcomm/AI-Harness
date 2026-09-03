@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { TUI } from "@mariozechner/pi-tui";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { editorTheme } from "../theme/theme.js";

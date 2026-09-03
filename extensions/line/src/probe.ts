@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { messagingApi } from "@line/bot-sdk";
 import { formatErrorMessage } from "openclaw/plugin-sdk/error-runtime";
 import { withTimeout } from "openclaw/plugin-sdk/text-runtime";

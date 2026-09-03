@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 var __defProp$1 = Object.defineProperty;
 var __exportAll = (all, no_symbols) => {
 	let target = {};

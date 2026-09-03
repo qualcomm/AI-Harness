@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import * as bundledChannelModule from "../../../src/channels/plugins/bundled.js";
 import type {
   ChannelConfigRuntimeSchema,

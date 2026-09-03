@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { pluginSdkLightTestFiles } from "./vitest.plugin-sdk-paths.mjs";
 import { createScopedVitestConfig } from "./vitest.scoped-config.ts";
 

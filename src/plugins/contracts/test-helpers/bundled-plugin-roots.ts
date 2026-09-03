@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { relative, resolve } from "node:path";
 import { loadPluginManifestRegistry } from "../../manifest-registry.js";
 

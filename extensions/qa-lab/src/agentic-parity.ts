@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const QA_AGENTIC_PARITY_PACK = "agentic";
 
 export const QA_AGENTIC_PARITY_SCENARIOS = [

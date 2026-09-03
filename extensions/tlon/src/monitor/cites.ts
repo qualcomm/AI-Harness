@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { RuntimeEnv } from "openclaw/plugin-sdk/runtime";
 import { asRecord, extractCites, extractMessageText, type ParsedCite } from "./utils.js";
 

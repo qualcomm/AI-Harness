@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type ConsoleSnapshot = {
   log: typeof console.log;
   info: typeof console.info;

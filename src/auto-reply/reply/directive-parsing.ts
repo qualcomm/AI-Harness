@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function skipDirectiveArgPrefix(raw: string): number {
   let i = 0;
   const len = raw.length;

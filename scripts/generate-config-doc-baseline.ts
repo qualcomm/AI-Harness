@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { writeConfigDocBaselineArtifacts } from "../src/config/doc-baseline.js";

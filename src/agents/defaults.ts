@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Defaults for agent metadata when upstream does not supply them.
 // Keep this aligned with the product-level latest-model baseline.
 export const DEFAULT_PROVIDER = "openai";

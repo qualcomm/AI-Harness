@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ModelDefinitionConfig } from "openclaw/plugin-sdk/provider-model-shared";
 import { MINIMAX_DEFAULT_MODEL_ID, MINIMAX_TEXT_MODEL_CATALOG } from "./provider-models.js";
 

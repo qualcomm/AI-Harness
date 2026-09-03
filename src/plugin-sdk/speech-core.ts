@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared speech-provider implementation helpers for bundled and third-party plugins.
 
 export type { SpeechProviderPlugin } from "../plugins/types.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { fetchDiscord } from "./api.js";
 import { normalizeDiscordSlug } from "./monitor/allow-list.js";
 

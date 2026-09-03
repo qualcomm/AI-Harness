@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import process from "node:process";
 import type { TelegramNetworkConfig } from "openclaw/plugin-sdk/config-runtime";
 import { isTruthyEnvValue, isWSL2Sync } from "openclaw/plugin-sdk/runtime-env";

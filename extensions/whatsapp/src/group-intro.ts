@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const WHATSAPP_GROUP_INTRO_HINT =
   "WhatsApp IDs: SenderId is the participant JID (group participant id).";
 

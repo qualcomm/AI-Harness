@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function groupChannelIssuesByChannel<T extends { channel: string }>(
   issues: readonly T[],
 ): Map<string, T[]> {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Runtime-only IRC helpers for lazy chat plugin hooks.
 // Keeping this boundary separate keeps bundled entry loads off monitor/send.
 export { monitorIrcProvider } from "./monitor.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { MessageType } from "@buape/carbon";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { expectPairingReplyText } from "../../../test/helpers/pairing-reply.js";

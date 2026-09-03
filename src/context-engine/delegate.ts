@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { CompactEmbeddedPiSessionDirect } from "../agents/pi-embedded-runner/compact.runtime.types.js";
 import { normalizeStructuredPromptSection } from "../agents/prompt-cache-stability.js";
 import type { MemoryCitationsMode } from "../config/types.memory.js";

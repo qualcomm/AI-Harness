@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeChatChannelId } from "../channels/ids.js";
 import { normalizeAnyChannelId } from "../channels/registry-normalize.js";
 import { normalizeOptionalLowercaseString } from "../shared/string-coerce.js";

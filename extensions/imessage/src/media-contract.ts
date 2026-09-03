@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { mergeInboundPathRoots } from "openclaw/plugin-sdk/channel-inbound-roots";
 import type { OpenClawConfig } from "openclaw/plugin-sdk/config-runtime";
 import { resolveIMessageAccount } from "./accounts.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type fs from "node:fs";
 import type os from "node:os";
 import type path from "node:path";

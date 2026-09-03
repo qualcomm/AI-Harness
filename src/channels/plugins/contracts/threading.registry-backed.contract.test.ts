@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe } from "vitest";
 import { getThreadingContractRegistry } from "../../../../test/helpers/channels/surface-contract-registry.js";
 import { installChannelThreadingContractSuite } from "../../../../test/helpers/channels/threading-directory-contract-suites.js";

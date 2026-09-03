@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Buffer } from "node:buffer";
 import { describe, expect, it } from "vitest";
 import { rawDataToString } from "./ws.js";

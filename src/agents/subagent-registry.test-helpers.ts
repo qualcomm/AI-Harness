@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resetAnnounceQueuesForTests } from "./subagent-announce-queue.js";
 import { subagentRuns } from "./subagent-registry-memory.js";
 import { listRunsForRequesterFromRuns } from "./subagent-registry-queries.js";

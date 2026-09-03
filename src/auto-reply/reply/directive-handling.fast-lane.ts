@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ReplyPayload } from "../types.js";
 import { isDirectiveOnly } from "./directive-handling.directive-only.js";
 import { handleDirectiveOnly } from "./directive-handling.impl.js";

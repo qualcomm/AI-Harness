@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Static } from "@sinclair/typebox";
 import { ProtocolSchemas } from "./protocol-schemas.js";
 

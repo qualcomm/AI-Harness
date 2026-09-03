@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const SKILLS_SYNC_QUEUE = new Map<string, Promise<unknown>>();
 
 export async function serializeByKey<T>(key: string, task: () => Promise<T>) {

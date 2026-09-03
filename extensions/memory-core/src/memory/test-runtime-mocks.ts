@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { vi } from "vitest";
 
 // Unit tests: avoid importing the real chokidar implementation (native fsevents, etc.).

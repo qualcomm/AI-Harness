@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function createToolSummaryPreviewTranscriptLines(sessionId: string): string[] {
   return [
     JSON.stringify({ type: "session", version: 1, id: sessionId }),

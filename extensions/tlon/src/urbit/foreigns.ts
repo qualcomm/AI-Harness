@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 /**
  * Types for Urbit groups foreigns (group invites)
  * Based on packages/shared/src/urbit/groups.ts from homestead

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { bindAbortRelay } from "../utils/fetch-timeout.js";
 
 type FetchWithPreconnect = typeof fetch & {

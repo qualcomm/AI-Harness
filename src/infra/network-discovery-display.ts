@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { GatewayBindMode } from "../config/types.js";
 import { pickPrimaryLanIPv4, resolveGatewayBindHost } from "../gateway/net.js";
 import { pickPrimaryTailnetIPv4 } from "./tailnet.js";

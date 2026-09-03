@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { compileGlobPatterns, matchesAnyGlobPattern } from "./glob-pattern.js";
 import type { SandboxToolPolicy } from "./sandbox/types.js";
 import { expandToolGroups, normalizeToolName } from "./tool-policy.js";

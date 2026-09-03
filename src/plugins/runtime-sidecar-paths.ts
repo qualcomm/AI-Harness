@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import bundledRuntimeSidecarPaths from "../../scripts/lib/bundled-runtime-sidecar-paths.json" with { type: "json" };
 
 function assertUniqueValues<T extends string>(values: readonly T[], label: string): readonly T[] {

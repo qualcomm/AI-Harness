@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { onAgentEvent } from "../../infra/agent-events.js";
 
 const AGENT_RUN_CACHE_TTL_MS = 10 * 60_000;

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createSessionManagerRuntimeRegistry } from "../session-manager-runtime-registry.js";
 import type { EffectiveContextPruningSettings } from "./settings.js";
 

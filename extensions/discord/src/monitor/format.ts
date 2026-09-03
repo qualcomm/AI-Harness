@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Guild, User } from "@buape/carbon";
 
 export function resolveDiscordSystemLocation(params: {

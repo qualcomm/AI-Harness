@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { hasEffectivePairedDeviceRole, type PairedDevice } from "../infra/device-pairing.js";
 import type { NodePairingPairedNode } from "../infra/node-pairing.js";
 import type { NodeListNode } from "../shared/node-list-types.js";

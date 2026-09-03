@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow shared secret-ref helpers for plugin config and secret-contract paths.
 
 export { coerceSecretRef } from "../config/types.secrets.js";

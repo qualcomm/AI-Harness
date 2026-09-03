@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Usage } from "@mariozechner/pi-ai";
 
 export const ZERO_USAGE_FIXTURE: Usage = {

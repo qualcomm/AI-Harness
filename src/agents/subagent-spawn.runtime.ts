@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export { formatThinkingLevels, normalizeThinkLevel } from "../auto-reply/thinking.js";
 export { DEFAULT_SUBAGENT_MAX_SPAWN_DEPTH } from "../config/agent-limits.js";
 export { loadConfig } from "../config/config.js";

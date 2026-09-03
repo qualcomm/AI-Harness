@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeOptionalString } from "../shared/string-coerce.js";
 import { normalizeAccountId } from "./account-id.js";
 import type { DeliveryContext, DeliveryContextSessionSource } from "./delivery-context.types.js";

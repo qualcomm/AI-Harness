@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describePackageManifestContract } from "../../../test/helpers/plugins/package-manifest-contract.js";
 
 type PackageManifestContractParams = Parameters<typeof describePackageManifestContract>[0];

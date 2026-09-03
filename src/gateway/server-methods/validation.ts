@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { ErrorObject } from "ajv";
 import { ErrorCodes, errorShape, formatValidationErrors } from "../protocol/index.js";
 import type { RespondFn } from "./types.js";

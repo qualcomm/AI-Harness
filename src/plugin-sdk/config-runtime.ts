@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared config/runtime boundary for plugins that need config loading,
 // config writes, or session-store helpers without importing src internals.
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { Command } from "commander";
 import { formatZonedTimestamp } from "openclaw/plugin-sdk/matrix-runtime-shared";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";

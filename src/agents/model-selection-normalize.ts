@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { modelKey as sharedModelKey, normalizeStaticProviderModelId } from "./model-ref-shared.js";
 import {
   findNormalizedProviderKey,

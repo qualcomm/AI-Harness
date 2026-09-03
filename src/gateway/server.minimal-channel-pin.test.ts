@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, expect, test } from "vitest";
 import { getChannelPlugin } from "../channels/plugins/index.js";
 import {

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function safeJsonStringify(value: unknown): string | null {
   try {
     return JSON.stringify(value, (_key, val) => {

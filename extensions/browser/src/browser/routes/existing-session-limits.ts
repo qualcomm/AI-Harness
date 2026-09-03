@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export const EXISTING_SESSION_LIMITS = {
   act: {
     clickSelector: "existing-session click does not support selector targeting yet; use ref.",

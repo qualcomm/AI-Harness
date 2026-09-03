@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { telegramBotDepsForTest } from "./bot.media.e2e-harness.js";
 import { setNextSavedMediaPath } from "./bot.media.e2e-harness.js";

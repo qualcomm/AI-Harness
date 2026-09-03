@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 function safeStringify(value: unknown, limit = 800): string {
   try {
     const seen = new WeakSet();

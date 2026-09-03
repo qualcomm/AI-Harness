@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { listKnownChannelEnvVarNames } from "../secrets/channel-env-vars.js";
 import { listKnownProviderAuthEnvVarNames } from "../secrets/provider-env-vars.js";
 

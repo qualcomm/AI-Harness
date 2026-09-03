@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type NativeExecApprovalEnableMode = boolean | "auto";
 
 export type ExecApprovalForwardingMode = "session" | "targets" | "both";

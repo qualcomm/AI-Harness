@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function createLazyRuntimeSurface<TModule, TSurface>(
   importer: () => Promise<TModule>,
   select: (module: TModule) => TSurface,

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { RequestInit as UndiciRequestInit } from "undici";
 import { ProxyAgent, fetch as undiciFetch } from "undici";
 import type { ZaloFetch } from "./api.js";

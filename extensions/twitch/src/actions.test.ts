@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi, beforeEach } from "vitest";
 import { twitchMessageActions } from "./actions.js";
 import { resolveTwitchAccountContext } from "./config.js";

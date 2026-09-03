@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { LegacyConfigRule } from "../../config/legacy.shared.js";
 import { listPluginDoctorLegacyConfigRules } from "../../plugins/doctor-contract-registry.js";
 import { getBootstrapChannelPlugin } from "./bootstrap-registry.js";

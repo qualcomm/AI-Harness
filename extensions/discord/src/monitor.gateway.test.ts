@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { describe, expect, it, vi } from "vitest";
 import { waitForDiscordGatewayStop } from "./monitor.gateway.js";
 import type { DiscordGatewayEvent } from "./monitor/gateway-supervisor.js";

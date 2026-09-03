@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { setCliSessionBinding, setCliSessionId } from "../../agents/cli-session.js";
 import {
   deriveSessionTotalTokens,

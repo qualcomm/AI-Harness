@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getChannelPlugin, normalizeChannelId } from "../../channels/plugins/index.js";
 import type { CallGatewayOptions } from "../../gateway/call.js";
 import { parseThreadSessionSuffix } from "../../sessions/session-key-utils.js";

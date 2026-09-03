@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { estimateUsageCost, formatTokenCount, formatUsd } from "../../utils/usage-format.js";
 import type { ReplyPayload } from "../types.js";
 

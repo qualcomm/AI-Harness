@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Narrow thread-binding lifecycle helpers for extensions that need binding
 // expiry and session-binding record types without loading the full
 // conversation-runtime surface.

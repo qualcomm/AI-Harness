@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Canonical shared prelude for channel-oriented plugin SDK surfaces.
 // Keep `core` and channel-specific SDK entrypoints derived from this module
 // so bundled channel entrypoints do not drift across overlapping exports.

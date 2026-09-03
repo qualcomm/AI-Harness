@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { normalizeDeviceMetadataForAuth } from "./device-metadata-normalization.js";
 export { normalizeDeviceMetadataForAuth };
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { QaBusState } from "./bus-state.js";
 import type { QaSelfCheckResult } from "./self-check.js";
 

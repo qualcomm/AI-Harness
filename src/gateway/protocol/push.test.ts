@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import AjvPkg from "ajv";
 import { describe, expect, it } from "vitest";
 import { PushTestResultSchema } from "./schema/push.js";

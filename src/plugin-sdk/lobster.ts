@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Private Lobster plugin helpers for bundled extensions.
 // Keep this surface narrow and limited to the Lobster workflow/tool contract.
 

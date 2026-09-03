@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { bumpSkillsSnapshotVersion } from "../agents/skills/refresh-state.js";
 import type { SkillEligibilityContext, SkillEntry } from "../agents/skills/types.js";
 import { loadWorkspaceSkillEntries } from "../agents/skills/workspace.js";

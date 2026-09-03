@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { afterAll, afterEach, beforeAll } from "vitest";
 import { resetContextWindowCacheForTest } from "../src/agents/context-runtime-state.js";
 import { resetModelsJsonReadyCacheForTest } from "../src/agents/models-config-state.js";

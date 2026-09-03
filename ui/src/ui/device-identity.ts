@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getPublicKeyAsync, signAsync, utils } from "@noble/ed25519";
 import { getSafeLocalStorage } from "../local-storage.ts";
 

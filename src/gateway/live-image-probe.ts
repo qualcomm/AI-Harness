@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { encodePngRgba, fillPixel } from "../media/png-encode.js";
 
 const GLYPH_ROWS_5X7: Record<string, number[]> = {

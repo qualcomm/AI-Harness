@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { resolveLegacyAuthChoiceAliasesForCli } from "./auth-choice-legacy.js";
 import type { AuthChoice, AuthChoiceGroupId } from "./onboard-types.js";
 

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Shared image-generation implementation helpers for bundled and third-party plugins.
 
 export type { AuthProfileStore } from "../agents/auth-profiles/types.js";

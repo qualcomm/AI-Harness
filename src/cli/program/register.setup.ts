@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Command } from "commander";
 import { setupWizardCommand } from "../../commands/onboard.js";
 import { setupCommand } from "../../commands/setup.js";

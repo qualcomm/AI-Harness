@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isSingleUseReplyToMode } from "openclaw/plugin-sdk/reply-reference";
 import { vi, type Mock } from "vitest";
 import { parsePluginBindingApprovalCustomId } from "../../../../src/plugins/conversation-binding.js";

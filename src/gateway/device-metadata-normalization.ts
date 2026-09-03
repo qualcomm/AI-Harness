@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 function normalizeTrimmedMetadata(value?: string | null): string {
   if (typeof value !== "string") {
     return "";

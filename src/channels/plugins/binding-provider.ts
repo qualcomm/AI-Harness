@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { getChannelPlugin, normalizeChannelId } from "./registry.js";
 import type { ChannelConfiguredBindingProvider } from "./types.adapters.js";
 import type { ChannelPlugin } from "./types.plugin.js";

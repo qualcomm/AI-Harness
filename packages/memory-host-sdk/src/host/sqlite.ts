@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createRequire } from "node:module";
 import { formatErrorMessage } from "../../../../src/infra/errors.js";
 import { installProcessWarningFilter } from "../../../../src/infra/warning-filter.js";

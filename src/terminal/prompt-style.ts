@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { isRich, theme } from "./theme.js";
 
 export const stylePromptMessage = (message: string): string =>

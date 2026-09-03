@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { drainSessionWriteLockStateForTest } from "../agents/session-write-lock.js";
 import { clearSessionStoreCaches } from "../config/sessions/store-cache.js";
 import { drainSessionStoreLockQueuesForTest } from "../config/sessions/store-lock-state.js";

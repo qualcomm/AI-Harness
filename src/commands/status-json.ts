@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { type RuntimeEnv } from "../runtime.js";
 import { runStatusJsonCommand } from "./status-json-command.ts";
 import { scanStatusJsonFast } from "./status.scan.fast-json.js";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 // Manual facade. Keep loader boundary explicit.
 type FacadeModule = typeof import("@openclaw/memory-core/runtime-api.js");
 import {

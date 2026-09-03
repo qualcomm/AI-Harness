@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 const BLOCKED_MERGE_KEYS = new Set(["__proto__", "prototype", "constructor"]);
 
 export function deepMergeDefined(base: unknown, override: unknown): unknown {

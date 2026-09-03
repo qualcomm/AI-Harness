@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { PluginManifestRegistry } from "../plugins/manifest-registry.js";
 import { detectPluginAutoEnableCandidates } from "./plugin-auto-enable.detect.js";
 import {

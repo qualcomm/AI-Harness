@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { readStringValue } from "../shared/string-coerce.js";
 import { normalizeToolParameterSchema } from "./pi-tools.schema.js";
 import { resolveProviderRequestCapabilities } from "./provider-attribution.js";

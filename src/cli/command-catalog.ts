@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export type CliCommandPluginLoadPolicy = "never" | "always" | "text-only";
 export type CliRouteConfigGuardPolicy = "never" | "always" | "when-suppressed";
 export type CliRoutedCommandId =

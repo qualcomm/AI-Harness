@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { CHANNEL_IDS, listChatChannelAliases } from "../channels/ids.js";
 import {
   listRegisteredChannelPluginAliases,

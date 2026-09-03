@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { formatRawAssistantErrorForUi } from "../agents/pi-embedded-helpers.js";
 import { normalizeOptionalString } from "../shared/string-coerce.js";
 import type { FallbackNoticeState } from "../status/fallback-notice-state.js";

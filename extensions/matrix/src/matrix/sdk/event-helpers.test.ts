@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { MatrixEvent } from "matrix-js-sdk";
 import { describe, expect, it } from "vitest";
 import { buildHttpError, matrixEventToRaw, parseMxc } from "./event-helpers.js";

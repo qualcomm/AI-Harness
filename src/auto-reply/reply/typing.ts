@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import { createTypingKeepaliveLoop } from "../../channels/typing-lifecycle.js";
 import { createTypingStartGuard } from "../../channels/typing-start-guard.js";
 import { normalizeOptionalString } from "../../shared/string-coerce.js";

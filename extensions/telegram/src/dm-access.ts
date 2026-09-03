@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 import type { Message } from "@grammyjs/types";
 import type { Bot } from "grammy";
 import { createChannelPairingChallengeIssuer } from "openclaw/plugin-sdk/channel-pairing";

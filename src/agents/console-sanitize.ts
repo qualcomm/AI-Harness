@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+// SPDX-License-Identifier: MIT
 export function sanitizeForConsole(text: string | undefined, maxChars = 200): string | undefined {
   const trimmed = text?.trim();
   if (!trimmed) {
