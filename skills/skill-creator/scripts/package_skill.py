@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 """
 Skill Packager - Creates a distributable .skill file of a skill folder
 

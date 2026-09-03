@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 from __future__ import annotations
 
 import pathlib

@@ -1,0 +1,111 @@
+Target directory: /github/workspace
+  Lint:
+  ✔ license-file-exists: Found file (LICENSE)
+  ✔ readme-file-exists: Found file (README.md)
+  ✔ contributing-file-exists: Found file (CONTRIBUTING copy.md)
+  ✔ code-of-conduct-file-exists: Found file (CODE-OF-CONDUCT.md)
+  ✔ changelog-file-exists: Found file (CHANGELOG.md)
+  ✖ readme-references-license: Doesn't contain license|notice (README.md)
+  ✔ binaries-not-present: Excluded file type doesn't exist (**/*.exe,**/*.dll,**/*.o,**/*.so,!node_modules/**)
+  ✔ test-directory-exists: Found file (test)
+  ✔ integrates-with-ci: Found file (.github/workflows/qcom-preflight-checks.yml)
+  ✖ source-license-headers-exist:
+  	✖ fix2.py: The first 200 lines do not contain the pattern(s): Copyright(\s)*(\(c\)|©)?, SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	✖ scripts/check-composite-action-input-interpolation.py: The first 200 lines do not contain the pattern(s): Copyright(\s)*(\(c\)|©)?, SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	✖ skills/model-usage/scripts/model_usage.py: The first 200 lines do not contain the pattern(s): Copyright(\s)*(\(c\)|©)?, SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	✖ skills/model-usage/scripts/test_model_usage.py: The first 200 lines do not contain the pattern(s): Copyright(\s)*(\(c\)|©)?, SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	✖ skills/skill-creator/scripts/init_skill.py: The first 200 lines do not contain the pattern(s): Copyright(\s)*(\(c\)|©)?, SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	✖ skills/skill-creator/scripts/package_skill.py: The first 200 lines do not contain the pattern(s): Copyright(\s)*(\(c\)|©)?, SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	✖ skills/skill-creator/scripts/quick_validate.py: The first 200 lines do not contain the pattern(s): Copyright(\s)*(\(c\)|©)?, SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	✖ skills/skill-creator/scripts/test_package_skill.py: The first 200 lines do not contain the pattern(s): Copyright(\s)*(\(c\)|©)?, SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	✖ skills/skill-creator/scripts/test_quick_validate.py: The first 200 lines do not contain the pattern(s): Copyright(\s)*(\(c\)|©)?, SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	✔ docs/nav-tabs-underline.js: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-list.js: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/ui.js: The first 200 lines contain all of the requested patterns.
+  	✔ src/infra/host-env-security-policy.js: The first 200 lines contain all of the requested patterns.
+  	✔ extensions/diffs/assets/viewer-runtime.js: The first 200 lines contain all of the requested patterns.
+  	✔ extensions/matrix/src/plugin-entry.runtime.js: The first 200 lines contain all of the requested patterns.
+  	✔ src/canvas-host/a2ui/a2ui.bundle.js: The first 200 lines contain all of the requested patterns.
+  	✔ test/fixtures/child-process-bridge/child.js: The first 200 lines contain all of the requested patterns.
+  	✔ src/auto-reply/reply/export-html/template.js: The first 200 lines contain all of the requested patterns.
+  	✔ apps/shared/OpenClawKit/Tools/CanvasA2UI/bootstrap.js: The first 200 lines contain all of the requested patterns.
+  	✔ src/auto-reply/reply/export-html/vendor/marked.min.js: The first 200 lines contain all of the requested patterns.
+  	✔ src/auto-reply/reply/export-html/vendor/highlight.min.js: The first 200 lines contain all of the requested patterns.
+  	✖ vendor/a2ui/specification/0.9/eval/genkit.conf.js: The first 200 lines do not contain the pattern(s): SPDX-License-Identifier|Redistribution and use in source and binary forms, with or without
+  	⚠ scripts/e2e/parallels-linux-smoke.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/e2e/parallels-macos-smoke.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/e2e/parallels-npm-update-smoke.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/e2e/parallels-windows-smoke.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/e2e/qr-import-docker.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/e2e/plugins-docker.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/k8s/create-kind.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/k8s/deploy.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/lib/docker-e2e-logs.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/lib/live-docker-auth.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/lib/live-docker-stage.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/podman/setup.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/pr-lib/changelog.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/pr-lib/gates.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/pr-lib/merge.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/pr-lib/prepare-core.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/pr-lib/push.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/pr-lib/review.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/pr-lib/worktree.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/pr-lib/common.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/pre-commit/run-node-tool.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ apps/android/scripts/perf-online-benchmark.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ apps/android/scripts/perf-startup-benchmark.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ apps/android/scripts/perf-startup-hotspots.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ skills/openai-whisper-api/scripts/transcribe.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ skills/tmux/scripts/find-sessions.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ skills/tmux/scripts/wait-for-text.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ skills/video-frames/scripts/frame.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/docker/install-sh-e2e/run.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/docker/install-sh-nonroot/run.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/docker/install-sh-smoke/run.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/docker/cleanup-smoke/run.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/docker/install-sh-common/cli-verify.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/docker/install-sh-common/version-parse.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ scripts/e2e/lib/parallels-macos-common.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	⚠ vendor/a2ui/specification/0.9/validate.sh: The first 200 lines do not contain the pattern(s): (Copyright|©).*Qualcomm Innovation Center, Inc|Qualcomm Technologies, Inc|Copyright (\(c\)|©) (20(1[2-9]|2[0-2])(-|,|\s)*)+ The Linux Foundation
+  	✔ scripts/docs-i18n/doc_chunked_raw.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/doc_mode.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/doc_mode_test.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/glossary.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/localized_links.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/html_translate.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/localized_links_test.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/main.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/main_test.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/markdown_segments.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/masking.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/order.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/pi_command.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/pi_rpc_client.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/pi_rpc_client_test.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/placeholders.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/process.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/prompt.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/relocalize.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/relocalize_test.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/segment.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/tm.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/translator.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/translator_test.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/util.go: The first 200 lines contain all of the requested patterns.
+  	✔ scripts/docs-i18n/util_test.go: The first 200 lines contain all of the requested patterns.
+  ✔ github-issue-template-exists: Found file (.github/ISSUE_TEMPLATE/bug_report.md)
+  ✔ github-pull-request-template-exists: Found file (.github/PULL_REQUEST_TEMPLATE/pr_template.md)
+  ✔ javascript-package-metadata-exists: Found file (package.json)
+  ⚠ ruby-package-metadata-exists: Did not find a file matching the specified patterns (Gemfile)
+  ℹ java-package-metadata-exists: ignored due to unsatisfied condition(s): "language=java"
+  ⚠ python-package-metadata-exists: Did not find a file matching the specified patterns
+  	⚠ setup.py
+  	⚠ requirements.txt
+  ℹ rust-package-metadata-exists: ignored due to unsatisfied condition(s): "language=rust"
+  ℹ objective-c-package-metadata-exists: ignored due to unsatisfied condition(s): "language=objective-c"
+  ⚠ swift-package-metadata-exists: Did not find a file matching the specified patterns (Package.swift)
+  ℹ erlang-package-metadata-exists: ignored due to unsatisfied condition(s): "language=erlang"
+  ℹ elixir-package-metadata-exists: ignored due to unsatisfied condition(s): "language=elixir"
+  ℹ license-detectable-by-licensee: ignored because level is "off"
+Error: Repolinter ruleset did not pass.
