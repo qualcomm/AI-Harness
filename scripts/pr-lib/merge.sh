@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 is_mainline_drift_critical_path_for_merge() {
   local path="$1"
   case "$path" in

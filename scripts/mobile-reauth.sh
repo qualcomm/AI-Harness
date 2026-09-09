@@ -1,4 +1,6 @@
 #!/bin/bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 # Mobile-friendly Claude Code re-authentication
 # Designed for use via SSH from Termux
 #

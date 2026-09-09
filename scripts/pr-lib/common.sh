@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 require_artifact() {
   local path="$1"
   if [ ! -s "$path" ]; then

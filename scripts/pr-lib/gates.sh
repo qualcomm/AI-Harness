@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 run_prepare_push_retry_gates() {
   local docs_only="${1:-false}"
 

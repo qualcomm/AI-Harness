@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 checkout_prep_branch() {
   local pr="$1"
   require_artifact .local/prep-context.env

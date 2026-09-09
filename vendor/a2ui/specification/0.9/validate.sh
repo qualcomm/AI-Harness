@@ -2,6 +2,10 @@
 
 # Copyright 2025 Google LLC
 #
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc. All rights reserved.
+# Not a Contribution.
+# Apache license notifications and license are retained for attribution purposes only.
+#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at

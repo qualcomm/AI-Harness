@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 # Scan for orphaned coding agent processes after a gateway restart.
 #
 # Background coding agents (Claude Code, Codex CLI) spawned by the gateway

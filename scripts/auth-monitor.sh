@@ -1,4 +1,6 @@
 #!/bin/bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 # Auth Expiry Monitor
 # Run via cron or systemd timer to get proactive notifications
 # before Claude Code auth expires.

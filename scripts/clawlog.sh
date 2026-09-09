@@ -1,4 +1,6 @@
 #!/bin/bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 
 # VibeTunnel Logging Utility
 # Simplifies access to VibeTunnel logs using macOS unified logging system

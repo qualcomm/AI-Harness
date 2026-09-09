@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 set_review_mode() {
   local mode="$1"
   # Security: shell-escape values to prevent command injection when sourced.

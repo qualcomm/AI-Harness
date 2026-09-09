@@ -1,4 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 # Quick Auth Check - Minimal widget for Termux
 # Place in ~/.shortcuts/ for Termux:Widget
 #

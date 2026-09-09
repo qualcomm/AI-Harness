@@ -1,4 +1,6 @@
 #!/bin/bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 # Setup OpenClaw Auth Management System
 # Run this once to set up:
 # 1. Long-lived Claude Code token

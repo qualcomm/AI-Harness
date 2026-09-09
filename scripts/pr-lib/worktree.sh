@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 repo_root() {
   # Resolve canonical repository root from git common-dir so wrappers work
   # the same from main checkout or any linked worktree.

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 
 OPENCLAW_DOCKER_LIVE_AUTH_ALL=(.gemini .minimax)
 OPENCLAW_DOCKER_LIVE_AUTH_FILES_ALL=(

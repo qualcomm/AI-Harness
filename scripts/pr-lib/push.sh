@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 resolve_head_push_url() {
   # shellcheck disable=SC1091
   source .local/pr-meta.env

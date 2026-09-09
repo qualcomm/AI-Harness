@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 # Deploy OpenClaw to Kubernetes.
 #
 # Secrets are generated in a temp directory and applied server-side.

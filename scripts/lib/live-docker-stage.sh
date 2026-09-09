@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 
 openclaw_live_stage_source_tree() {
   local dest_dir="${1:?destination directory required}"

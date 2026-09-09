@@ -1,4 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 # OpenClaw OAuth Sync Widget
 # Syncs Claude Code tokens to OpenClaw on l36 server
 # Place in ~/.shortcuts/ on phone for Termux:Widget

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Copyright (c) 2026 Qualcomm Innovation Center, Inc.
+# SPDX-License-Identifier: MIT
 # ClawDock - Docker helpers for OpenClaw
 # Inspired by Simon Willison's "Running OpenClaw in Docker"
 # https://til.simonwillison.net/llms/openclaw-docker
