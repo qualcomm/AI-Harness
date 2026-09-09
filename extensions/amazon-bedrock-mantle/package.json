@@ -5,7 +5,7 @@
   "description": "OpenClaw Amazon Bedrock Mantle (OpenAI-compatible) provider plugin",
   "type": "module",
   "dependencies": {
-    "@aws/bedrock-token-generator": "^1.1.0"
+    "@aws/bedrock-token-generator": "1.1.0"
   },
   "devDependencies": {
     "@openclaw/plugin-sdk": "workspace:*"
