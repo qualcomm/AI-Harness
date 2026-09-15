@@ -123,7 +123,12 @@ export type HookContext = {
   /** Host's run classification (`EmbeddedRunTrigger`); see isNonRequestTrigger. */
   trigger?: string;
 };
-export type HookResult = { handled: boolean; reply?: { text: string }; reason?: string } | void;
+export type HookResult =
+  | { handled: boolean; reply?: { text: string; mediaUrl?: string; mediaUrls?: string[] }; reason?: string }
+  | void;
+
+/** What `runBeforeAgentReply` hands back to the caller for one turn. */
+export type BeforeAgentReplyOutcome = { text: string; mediaUrls?: string[] };
 
 /**
  * Handle a request that arrived as a subtask delegation.
@@ -136,7 +141,7 @@ export type HookResult = { handled: boolean; reply?: { text: string }; reason?: 
 async function handleSubtaskDelegation(
   deps: HookDeps,
   params: { sessionKey: string; currentAgentId: string; rawPrompt: string },
-): Promise<string> {
+): Promise<BeforeAgentReplyOutcome> {
   const { cfg, logger } = deps;
   const { sessionKey, currentAgentId, rawPrompt } = params;
 
@@ -153,7 +158,9 @@ async function handleSubtaskDelegation(
     logger?.warn(
       "[dragon-task-orchestrator] delegation metadata unavailable; executing in place without forwarding",
     );
-    return appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), contextNotice);
+    return {
+      text: appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), contextNotice),
+    };
   }
 
   // The orchestrator already resolved the correct target using the CLEAN
@@ -162,7 +169,9 @@ async function handleSubtaskDelegation(
   // that buys nothing when the answer is already known.
   if (meta.hintedAgentId === currentAgentId) {
     logInfo(cfg.logging, logger, `subtask executed in place on ${currentAgentId} (hop ${meta.hopCount})`);
-    return appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), contextNotice);
+    return {
+      text: appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), contextNotice),
+    };
   }
 
   if (meta.hopCount >= cfg.maxDelegationHops) {
@@ -173,10 +182,12 @@ async function handleSubtaskDelegation(
       logger,
       `hop limit reached on ${currentAgentId} (hop ${meta.hopCount} >= ${cfg.maxDelegationHops}); answering in place`,
     );
-    return appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), [
-      HOP_LIMIT_NOTICE,
-      ...contextNotice,
-    ]);
+    return {
+      text: appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), [
+        HOP_LIMIT_NOTICE,
+        ...contextNotice,
+      ]),
+    };
   }
 
   const knownAgentIds = deps.getKnownAgentIds();
@@ -197,7 +208,9 @@ async function handleSubtaskDelegation(
 
   // Target is this agent: execute directly. Not a hand-off, so no hop is spent.
   if (targetAgentId === currentAgentId) {
-    return appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), contextNotice);
+    return {
+      text: appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), contextNotice),
+    };
   }
 
   // Forward one hop, derived from the CHAIN ROOT rather than this session, so the
@@ -219,18 +232,20 @@ async function handleSubtaskDelegation(
     ...(meta.role && { role: meta.role }),
   });
   try {
-    const { text } = await runDelegatedTask({
+    const { text, mediaUrls } = await runDelegatedTask({
       subagent: deps.getSubagent(),
       childSessionKey: nextSessionKey,
       message: prompt,
       timeoutMs: cfg.subtaskTimeoutMs,
     });
-    return appendProcessingNotices(text, contextNotice);
+    return { text: appendProcessingNotices(text, contextNotice), mediaUrls };
   } catch (e) {
     // A failed forward degrades to answering here rather than propagating and
     // breaking the whole chain.
     logger?.warn(`[dragon-task-orchestrator] forward failed: ${errorMessage(e)}`);
-    return appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), contextNotice);
+    return {
+      text: appendProcessingNotices(await deps.runLocally(prompt, currentAgentId), contextNotice),
+    };
   } finally {
     clearDelegationMeta(nextSessionKey);
   }
@@ -241,7 +256,7 @@ export async function runBeforeAgentReply(
   deps: HookDeps,
   event: HookEvent,
   ctx: HookContext,
-): Promise<string | null> {
+): Promise<BeforeAgentReplyOutcome | null> {
   const { cfg, logger } = deps;
   const sessionKey = ctx.sessionKey ?? "";
   const rawPrompt = typeof event.cleanedBody === "string" ? event.cleanedBody : "";
@@ -317,7 +332,11 @@ export async function runBeforeAgentReply(
   }
 
   // STEP 4 — orchestrate.
-  return await handleDecomposedRequest(
+  // The dynamic decomposition/summarizer path does not (yet) forward tool media the way the
+  // fixed-pipeline path above does — its final reply is a text-only synthesis of every
+  // subtask, not one subtask's direct output, so there is no single "last step" to pull
+  // mediaUrls from the way runFixedPipeline does.
+  const text = await handleDecomposedRequest(
     {
       subagent: deps.getSubagent(),
       cfg,
@@ -336,6 +355,7 @@ export async function runBeforeAgentReply(
     },
     { originalPrompt, rawPlan, promptTruncated },
   );
+  return text === null ? null : { text };
 }
 
 /**
@@ -360,10 +380,20 @@ export function registerHooks(
 ): void {
   api.on("before_agent_reply", async (event: HookEvent, ctx: HookContext): Promise<HookResult> => {
     try {
-      const text = await runBeforeAgentReply(deps, event, ctx);
+      const outcome = await runBeforeAgentReply(deps, event, ctx);
       // If the hook returns null, the main agent pipeline continues as normal.
-      if (text === null) return;
-      return { handled: true, reply: { text }, reason: "dragon-task-orchestrator" };
+      if (outcome === null) return;
+      return {
+        handled: true,
+        reply: {
+          text: outcome.text,
+          ...(outcome.mediaUrls?.length && {
+            mediaUrl: outcome.mediaUrls[0],
+            mediaUrls: outcome.mediaUrls,
+          }),
+        },
+        reason: "dragon-task-orchestrator",
+      };
     } catch (e) {
       // Never let this plugin break the ordinary reply path.
       deps.logger?.warn(`[dragon-task-orchestrator] hook error: ${errorMessage(e)}`);

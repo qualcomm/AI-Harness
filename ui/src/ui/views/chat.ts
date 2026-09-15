@@ -12,6 +12,7 @@ import {
 import { DeletedMessages } from "../chat/deleted-messages.ts";
 import { exportChatMarkdown } from "../chat/export.ts";
 import {
+  extractImages,
   renderMessageGroup,
   renderReadingIndicatorGroup,
   renderStreamingGroup,
@@ -482,7 +483,11 @@ function syncToolCardExpansionState(
       if (initialized.has(disclosureId)) {
         continue;
       }
-      expanded.set(disclosureId, autoExpandToolCalls);
+      // The render-time `?? hasImages` fallback in grouped-render.ts only ever fires for a
+      // message this function has never seeded — after this one `set` call the map holds a
+      // concrete `false` forever, so a message carrying images has to be seeded open HERE or
+      // it never opens without a manual click.
+      expanded.set(disclosureId, autoExpandToolCalls || extractImages(entry.message).length > 0);
       initialized.add(disclosureId);
     }
   }
@@ -1452,10 +1457,12 @@ export function renderChat(props: ChatProps) {
                 showReasoning,
                 showToolCalls: props.showToolCalls,
                 autoExpandToolCalls: Boolean(props.autoExpandToolCalls),
-                isToolMessageExpanded: (messageId: string) =>
-                  expandedToolCards.get(messageId) ?? false,
-                onToggleToolMessageExpanded: (messageId: string) => {
-                  expandedToolCards.set(messageId, !expandedToolCards.get(messageId));
+                // Deliberately NOT defaulted to `false` here: the renderer needs to see
+                // `undefined` ("never toggled") so it can open a tool message that carries
+                // images while still honouring an explicit collapse.
+                isToolMessageExpanded: (messageId: string) => expandedToolCards.get(messageId),
+                onToggleToolMessageExpanded: (messageId: string, nextExpanded: boolean) => {
+                  expandedToolCards.set(messageId, nextExpanded);
                   requestUpdate();
                 },
                 isToolExpanded: (toolCardId: string) => expandedToolCards.get(toolCardId) ?? false,

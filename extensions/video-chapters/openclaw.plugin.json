@@ -1,0 +1,68 @@
+{
+  "id": "video-chapters",
+  "contracts": {
+    "tools": ["video_chapters_summarize", "video_chapters_search"]
+  },
+  "uiHints": {
+    "toolDir": {
+      "label": "video_chapters Tool Directory",
+      "help": "Absolute path to the folder containing video_chapters.exe (and its bundled ffmpeg/whisper subfolders). Windows ARM64 only."
+    },
+    "watchDirs": {
+      "label": "Startup Batch-Index Directories",
+      "help": "Absolute directory paths to scan for .mp4 files on gateway startup and keep summarized + indexed. Leave empty to disable startup batch indexing entirely."
+    },
+    "embeddings.baseUrl": {
+      "label": "Embeddings Base URL",
+      "help": "OpenAI-compatible embeddings endpoint (e.g. a local llama-server --embedding instance).",
+      "placeholder": "http://127.0.0.1:8899/v1"
+    },
+    "embeddings.apiKey": {
+      "label": "Embeddings API Key",
+      "help": "Any non-empty string for a local server that does not check it.",
+      "sensitive": true
+    },
+    "embeddings.model": {
+      "label": "Embeddings Model",
+      "placeholder": "bge-m3"
+    },
+    "embeddings.dimensions": {
+      "label": "Embeddings Dimensions",
+      "help": "Vector size returned by the embeddings model (BGE-M3 is 1024).",
+      "advanced": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "toolDir": {
+        "type": "string"
+      },
+      "watchDirs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "embeddings": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "baseUrl": {
+            "type": "string"
+          },
+          "apiKey": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "dimensions": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

@@ -85,7 +85,10 @@ import { injectTimestamp, timestampOptsFromConfig } from "./agent-timestamp.js";
 import { setGatewayDedupeEntry } from "./agent-wait-dedupe.js";
 import { normalizeRpcAttachmentsToChatAttachments } from "./attachment-normalize.js";
 import { appendInjectedAssistantMessageToTranscript } from "./chat-transcript-inject.js";
-import { buildWebchatAudioContentBlocksFromReplyPayloads } from "./chat-webchat-media.js";
+import {
+  buildWebchatAudioContentBlocksFromReplyPayloads,
+  buildWebchatImageContentBlocksFromReplyPayloads,
+} from "./chat-webchat-media.js";
 import type {
   GatewayRequestContext,
   GatewayRequestHandlerOptions,
@@ -1258,6 +1261,8 @@ function appendAssistantTranscriptMessage(params: {
   message: string;
   label?: string;
   content?: Array<Record<string, unknown>>;
+  /** Set only for hook-handled turns; see the field docs on the inject helper. */
+  userMessage?: string;
   sessionId: string;
   storePath: string | undefined;
   sessionFile?: string;
@@ -1302,6 +1307,7 @@ function appendAssistantTranscriptMessage(params: {
     message: params.message,
     label: params.label,
     content: params.content,
+    userMessage: params.userMessage,
     idempotencyKey: params.idempotencyKey,
     abortMeta: params.abortMeta,
   });
@@ -2432,18 +2438,32 @@ export const chatHandlers: GatewayRequestHandlers = {
                 sessionKey,
               });
             } else {
-              const combinedReply = buildTranscriptReplyText(
-                deliveredReplies
-                  .filter((entry) => entry.kind === "final")
-                  .map((entry) => entry.payload),
-              );
+              const finalHookPayloads = deliveredReplies
+                .filter((entry) => entry.kind === "final")
+                .map((entry) => entry.payload);
+              const combinedReply = buildTranscriptReplyText(finalHookPayloads);
+              // Hook-handled turns (e.g. dragon-task-orchestrator forwarding a tool's
+              // mediaUrl(s)) never go through the normal agent-run media path below, so a
+              // hook reply's images would otherwise be silently dropped from the transcript.
+              const hookImageBlocks = buildWebchatImageContentBlocksFromReplyPayloads(finalHookPayloads);
               let message: Record<string, unknown> | undefined;
-              if (combinedReply) {
+              if (combinedReply || hookImageBlocks.length > 0) {
                 const { storePath: latestStorePath, entry: latestEntry } =
                   loadSessionEntry(sessionKey);
                 const sessionId = latestEntry?.sessionId ?? entry?.sessionId ?? clientRunId;
+                const content =
+                  hookImageBlocks.length > 0
+                    ? [{ type: "text", text: combinedReply }, ...hookImageBlocks]
+                    : undefined;
                 const appended = appendAssistantTranscriptMessage({
                   message: combinedReply,
+                  content,
+                  // No agent ran (a `before_agent_reply` hook claimed the turn), so nothing else
+                  // records the user's message — only this synthetic reply would be persisted,
+                  // leaving a transcript of consecutive assistant messages that the chat UI
+                  // merges into one group. Passed through here rather than appended separately
+                  // so both land on the same SessionManager instance (see the field docs).
+                  userMessage: parsedMessage,
                   sessionId,
                   storePath: latestStorePath,
                   sessionFile: latestEntry?.sessionFile,
@@ -2459,7 +2479,7 @@ export const chatHandlers: GatewayRequestHandlers = {
                   const now = Date.now();
                   message = {
                     role: "assistant",
-                    content: [{ type: "text", text: combinedReply }],
+                    content: content ?? [{ type: "text", text: combinedReply }],
                     timestamp: now,
                     // Keep this compatible with Pi stopReason enums even though this message isn't
                     // persisted to the transcript due to the append failure.

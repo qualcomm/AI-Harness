@@ -1,0 +1,21 @@
+{
+  "id": "feishu-calendar",
+  "contracts": {
+    "tools": ["feishu_calendar_agenda"]
+  },
+  "uiHints": {
+    "cliPath": {
+      "label": "lark-cli Path",
+      "help": "Path to the lark-cli binary. Leave unset to resolve it from PATH (the default after `npm install -g @larksuite/cli`)."
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "cliPath": {
+        "type": "string"
+      }
+    }
+  }
+}

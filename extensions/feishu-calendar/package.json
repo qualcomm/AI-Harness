@@ -1,0 +1,15 @@
+{
+  "name": "@openclaw/feishu-calendar-plugin",
+  "version": "2026.9.10",
+  "private": true,
+  "description": "OpenClaw lark-cli calendar plugin",
+  "type": "module",
+  "devDependencies": {
+    "@openclaw/plugin-sdk": "workspace:*"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

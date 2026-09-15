@@ -16,6 +16,16 @@ pnpm --dir ui test
 pnpm --dir ui test -- task-orchestrator
 ```
 
+### i18n同步
+node --import tsx scripts/control-ui-i18n.ts sync --write
+
+### 本地部署
+```powershell
+llama-server.exe -m "C:\Users\HCKTest\.cache\geniex\models\ggml-org\bge-m3-Q8_0-GGUF\bge-m3-q8_0.gguf" --embedding --pooling mean --port 8899 --alias bge-m3 -c 8192
+
+llama-server.exe -m "C:\Users\HCKTest\.cache\geniex\models\unsloth\gpt-oss-20b-GGUF\gpt-oss-20b-F16.gguf" --jinja --port 18190 -c 16384 --alias unsloth/gpt-oss-20b-GGUF:F16
+
+```
 ### 开始构建
 ```powershell
 pnpm ui:build

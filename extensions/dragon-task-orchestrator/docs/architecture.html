@@ -117,7 +117,7 @@
   <tr><td><b>谁决定结构</b></td><td>用户，在 Control UI 里拖拽</td><td>模型（<code>dt-decomposer</code>）</td></tr>
   <tr><td><b>模型调用</b></td><td><b>仅每步 1 次</b></td><td>拆解 1 + 分类 N + 每子任务 1 + 校验 N + 整合 1</td></tr>
   <tr><td><b>执行形态</b></td><td>严格串行</td><td>按依赖分层，同层并发</td></tr>
-  <tr><td><b>传递内容</b></td><td>原始请求 + <b>仅上一步输出</b></td><td>原始请求 + <b>按 id 声明的那些依赖</b></td></tr>
+  <tr><td><b>传递内容</b></td><td>原始请求 + <b>之前每一步的输出</b>（共享一份预算，按份数平分）</td><td>原始请求 + <b>按 id 声明的那些依赖</b></td></tr>
   <tr><td><b>失败处理</b></td><td><b>立即中断</b>，后续步骤标记 skipped</td><td>失败作为占位符传下去，其余子任务继续</td></tr>
   <tr><td><b>最终回复</b></td><td><b>末步输出原样返回</b>，不整合</td><td><code>dt-summarizer</code> 合成</td></tr>
   <tr><td><b>校验</b></td><td>无</td><td>有 <code>acceptanceCriteria</code> / <code>handoffContract</code> 即校验</td></tr>
@@ -179,10 +179,10 @@
   <div class="box b-fix"><b>逐步循环　for (index, step) of steps</b>
     <span>每步四件事：<br>
     1　<b>重新校验 agent 仍存在</b> —— <code>agents.list</code> 可能在保存流水线之后变过<br>
-    2　<code>buildStepMessage</code>：原始请求 + 上一步输出 + <b>本步指令放最后</b><br>
+    2　<code>buildStepMessage</code>：原始请求 + 之前每一步的输出（各自标注步骤号与 agent）+ <b>本步指令放最后</b><br>
     3　<code>setDelegationMeta</code> → <code>runDelegatedTask</code> → <code>subagent.run()</code><br>
     4　<code>emitStepStatusEvent</code>（start / end，end 携带结果）</span></div>
-  <div class="arrow">↓<small>carry = 本步输出，喂给下一步</small></div>
+  <div class="arrow">↓<small>本步输出记入 results，之后每一步都能看到</small></div>
   <div class="box b-stop"><b>某步失败 → aborted = true</b>
     <span>后续步骤<b>不执行</b>，但仍逐个发出 <code>status: "skipped"</code> 事件 ——
     卡片靠「听到全部步骤的 end」判断运行结束，静默跳过会让它永远停在「等待中」</span></div>

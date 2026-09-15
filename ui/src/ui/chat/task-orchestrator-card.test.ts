@@ -671,7 +671,7 @@ describe("pipeline mode", () => {
     );
     const text = host.textContent!;
     expect(text).toContain("Step 1/2 finished");
-    expect(text).toContain("Pipeline steps (in order)");
+    expect(text).toContain("Workflow steps (in order)");
     expect(text).toContain("Progress by step");
     // The dynamic path's noun must not leak through anywhere.
     expect(text.toLowerCase()).not.toContain("layer");

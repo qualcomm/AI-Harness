@@ -55,7 +55,7 @@ A failed dependency is passed on as an explicit `[subtask N not completed: reaso
 
 ## Fixed Pipeline Mode
 
-A pipeline is an ordered list of `{ agentId, instruction }` steps. Each step receives the original request plus **the previous step's output only**.
+A pipeline is an ordered list of `{ agentId, instruction }` steps. Each step receives the original request plus **the output of every step that ran before it**, each labelled with its step number and agent. Those prior outputs share one context budget, divided by how many there are, so a long pipeline cannot grow its own prompt without bound.
 
 Two deliberate differences from dynamic mode:
 

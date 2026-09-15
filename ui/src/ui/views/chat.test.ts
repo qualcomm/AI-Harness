@@ -841,7 +841,7 @@ describe("chat view", () => {
       expect(text).toContain("Dynamic breakdown");
       expect(text).toContain("文档生成");
       expect(text).toContain("代码评审");
-      expect(text).toContain("Manage pipelines");
+      expect(text).toContain("Manage workflows");
     });
 
     it("reports the chosen mode", () => {
@@ -869,7 +869,7 @@ describe("chat view", () => {
         sessionModeMenuOpen: true,
         sessionModePipelines: [],
       });
-      expect(container.querySelector(".chat-mode__empty")!.textContent).toContain("No pipelines yet");
+      expect(container.querySelector(".chat-mode__empty")!.textContent).toContain("No workflows yet");
     });
 
     // Connects the use surface to the edit surface.
@@ -2842,6 +2842,106 @@ describe("chat view", () => {
 
     expect(container.textContent).not.toContain("Tool input");
     expect(container.textContent).toContain('"status": "error"');
+  });
+
+  /**
+   * Images a tool returns.
+   *
+   * `imageResult()` (src/agents/tools/common.ts) emits a FLAT block —
+   * `{ type: "image", data, mimeType }` — not the nested `source` form nor a `url`. Reading
+   * only those two shapes silently dropped every tool-produced image: a video-frame search
+   * fed its frames to the model and then rendered as JSON text only, which looks
+   * indistinguishable from the extraction having failed.
+   */
+  describe("tool-result images", () => {
+    /**
+     * A distinct id per test on purpose: expansion state lives in a module-level map keyed
+     * by session, so tests sharing a message id would inherit each other's toggles and the
+     * suite would depend on declaration order.
+     */
+    function toolResultWithImage(id: string, overrides: Record<string, unknown> = {}) {
+      return {
+        id,
+        role: "toolResult",
+        toolCallId: `call-${id}`,
+        toolName: "video_chapters_search",
+        content: [
+          { type: "text", text: "12s–20s: a dunk" },
+          { type: "image", data: "ZmFrZS1qcGVn", mimeType: "image/jpeg" },
+        ],
+        timestamp: Date.now(),
+        ...overrides,
+      };
+    }
+
+    it("renders a flat { type, data, mimeType } image block", () => {
+      const container = document.createElement("div");
+      render(
+        renderChat(
+          createProps({ showToolCalls: true, messages: [toolResultWithImage("tool-img-render")] }),
+        ),
+        container,
+      );
+
+      const img = container.querySelector<HTMLImageElement>("img.chat-message-image");
+      expect(img).not.toBeNull();
+      expect(img!.getAttribute("src")).toBe("data:image/jpeg;base64,ZmFrZS1qcGVn");
+    });
+
+    // Hidden behind a disclosure, a returned frame is indistinguishable from no frame.
+    it("opens a tool message carrying images without waiting for a click", () => {
+      const container = document.createElement("div");
+      render(
+        renderChat(
+          createProps({ showToolCalls: true, messages: [toolResultWithImage("tool-img-open")] }),
+        ),
+        container,
+      );
+
+      expect(container.querySelector(".chat-tool-msg-body")).not.toBeNull();
+    });
+
+    it("leaves a text-only tool message collapsed", () => {
+      const container = document.createElement("div");
+      render(
+        renderChat(
+          createProps({
+            showToolCalls: true,
+            messages: [
+              toolResultWithImage("tool-img-textonly", {
+                content: [{ type: "text", text: "no frames" }],
+              }),
+            ],
+          }),
+        ),
+        container,
+      );
+
+      expect(container.querySelector(".chat-tool-msg-body")).toBeNull();
+    });
+
+    // The toggle must move to the OPPOSITE of what is displayed. Flipping a stored flag
+    // instead would compute `!undefined === true` on a default-open message, so the first
+    // click would re-open it and read as dead.
+    it("collapses a default-open image message on the first click", async () => {
+      const container = document.createElement("div");
+      const props = createProps({
+        showToolCalls: true,
+        messages: [toolResultWithImage("tool-img-collapse")],
+      });
+      const rerender = () => {
+        render(renderChat({ ...props, onRequestUpdate: rerender }), container);
+      };
+      rerender();
+
+      expect(container.querySelector(".chat-tool-msg-body")).not.toBeNull();
+      container
+        .querySelector<HTMLElement>(".chat-tool-msg-summary")
+        ?.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      await flushTasks();
+
+      expect(container.querySelector(".chat-tool-msg-body")).toBeNull();
+    });
   });
 });
 

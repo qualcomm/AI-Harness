@@ -8,11 +8,13 @@
  * than silently return empty text, so callers can apply one failure path.
  */
 
+import fs from "node:fs";
 import { describe, expect, test, vi } from "vitest";
 import {
   DelegationEmptyResultError,
   DelegationFailedError,
   extractAssistantText,
+  extractToolResultImageFiles,
   runDelegatedTask,
   SubagentRuntimeUnavailableError,
 } from "../src/delegate.js";
@@ -99,6 +101,65 @@ describe("runDelegatedTask", () => {
     await expect(
       runDelegatedTask({ subagent: undefined, ...baseParams }),
     ).rejects.toBeInstanceOf(SubagentRuntimeUnavailableError);
+  });
+
+  test("carries a tool's returned image through as mediaUrls", async () => {
+    const subagent = makeRuntime({
+      getSessionMessages: vi.fn(async () => ({
+        messages: [
+          {
+            role: "toolResult",
+            content: [{ type: "image", data: "ZmFrZQ==", mimeType: "image/jpeg" }],
+          },
+          { role: "assistant", content: "delegated answer" },
+        ],
+      })),
+    });
+    const result = await runDelegatedTask({ subagent, ...baseParams });
+    expect(result.mediaUrls).toHaveLength(1);
+    expect(fs.existsSync(result.mediaUrls![0]!)).toBe(true);
+  });
+
+  test("omits mediaUrls when no tool returned an image", async () => {
+    const subagent = makeRuntime();
+    const result = await runDelegatedTask({ subagent, ...baseParams });
+    expect(result.mediaUrls).toBeUndefined();
+  });
+});
+
+describe("extractToolResultImageFiles", () => {
+  test("writes each image block from a toolResult message to a local file", () => {
+    const messages = [
+      {
+        role: "toolResult",
+        content: [{ type: "image", data: "ZmFrZQ==", mimeType: "image/png" }],
+      },
+    ];
+    const files = extractToolResultImageFiles(messages);
+    expect(files).toHaveLength(1);
+    expect(files[0]).toMatch(/\.png$/);
+    expect(fs.readFileSync(files[0]!, "utf-8")).toBe("fake");
+  });
+
+  test("ignores non-toolResult messages and non-image blocks", () => {
+    const messages = [
+      { role: "assistant", content: [{ type: "text", text: "hi" }] },
+      { role: "toolResult", content: [{ type: "text", text: "no image here" }] },
+    ];
+    expect(extractToolResultImageFiles(messages)).toEqual([]);
+  });
+
+  test("caps the number of images across the whole scan window", () => {
+    const imageBlock = (n: number) => ({
+      type: "image",
+      data: Buffer.from(`img-${n}`).toString("base64"),
+      mimeType: "image/jpeg",
+    });
+    const messages = [
+      { role: "toolResult", content: [imageBlock(1), imageBlock(2)] },
+      { role: "toolResult", content: [imageBlock(3), imageBlock(4)] },
+    ];
+    expect(extractToolResultImageFiles(messages)).toHaveLength(3);
   });
 });
 

@@ -1,0 +1,19 @@
+{
+  "name": "@openclaw/video-chapters-plugin",
+  "version": "2026.4.12",
+  "private": true,
+  "description": "OpenClaw video_chapters.exe plugin",
+  "type": "module",
+  "dependencies": {
+    "@lancedb/lancedb": "^0.27.2",
+    "openai": "^6.34.0"
+  },
+  "devDependencies": {
+    "@openclaw/plugin-sdk": "workspace:*"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

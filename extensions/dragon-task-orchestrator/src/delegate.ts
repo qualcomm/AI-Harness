@@ -15,6 +15,10 @@
  * residual risk, which is why callers skip the rest of a group after a timeout.
  */
 
+import { createHash } from "node:crypto";
+import fs from "node:fs";
+import path from "node:path";
+import { resolvePreferredOpenClawTmpDir } from "openclaw/plugin-sdk/temp-path";
 import type { DelegationOutcome, SubagentRuntime } from "./runtime-contract.js";
 
 /** Thrown when the subagent runtime is unavailable (not in a gateway request scope). */
@@ -82,6 +86,82 @@ export function extractAssistantText(messages: unknown[]): string | null {
     }
   }
   return null;
+}
+
+/**
+ * How many images (across the whole scanned window) a single delegated task's outcome may
+ * carry. A subtask can call an image-returning tool many times; forwarding all of them into
+ * the final reply would balloon the transcript, so only the strongest few survive.
+ */
+const MAX_DELEGATED_IMAGES = 3;
+const IMAGE_CACHE_SUBDIR = "dragon-task-orchestrator-media";
+const MIME_TO_EXT: Record<string, string> = {
+  "image/jpeg": ".jpg",
+  "image/png": ".png",
+  "image/webp": ".webp",
+  "image/gif": ".gif",
+};
+
+/**
+ * Images go under the host's preferred temp dir, NOT a bare `os.tmpdir()` subdirectory: the
+ * Control UI only previews assistant media whose path falls inside the host's media local
+ * roots (which include this dir), and rejects anything else with "Outside allowed folders".
+ *
+ * Resolved lazily and cached — the resolver touches the filesystem, so doing it at module load
+ * would run on every plugin import, including runs that never forward an image.
+ */
+let cachedImageCacheDir: string | undefined;
+
+function imageCacheDir(): string {
+  if (!cachedImageCacheDir) {
+    cachedImageCacheDir = path.join(resolvePreferredOpenClawTmpDir(), IMAGE_CACHE_SUBDIR);
+  }
+  return cachedImageCacheDir;
+}
+
+/**
+ * Pulls image content blocks out of `toolResult` messages (e.g. a tool like
+ * `video_chapters_search` that returns a still frame) and writes them to local files, so they
+ * can travel as `mediaUrl`(s) on a `ReplyPayload` — the only media channel a
+ * `before_agent_reply` hook reply actually supports.
+ *
+ * Deliberately reads the raw session messages (already available via `getSessionMessages`)
+ * instead of a richer host API: a delegated run's own reply is suppressed (`deliver: false`),
+ * so nothing else exposes what its tools returned.
+ */
+export function extractToolResultImageFiles(messages: unknown[]): string[] {
+  const files: string[] = [];
+  for (const msg of messages) {
+    if (files.length >= MAX_DELEGATED_IMAGES) break;
+    if (!msg || typeof msg !== "object" || Array.isArray(msg)) continue;
+    const record = msg as Record<string, unknown>;
+    if (record.role !== "toolResult") continue;
+    const content = record.content;
+    if (!Array.isArray(content)) continue;
+
+    for (const block of content) {
+      if (files.length >= MAX_DELEGATED_IMAGES) break;
+      if (!block || typeof block !== "object") continue;
+      const rec = block as Record<string, unknown>;
+      if (rec.type !== "image" || typeof rec.data !== "string" || typeof rec.mimeType !== "string") {
+        continue;
+      }
+      const ext = MIME_TO_EXT[rec.mimeType] ?? ".jpg";
+      const key = createHash("sha256").update(rec.data).digest("hex").slice(0, 16);
+      const cacheDir = imageCacheDir();
+      const filePath = path.join(cacheDir, `${key}${ext}`);
+      try {
+        if (!fs.existsSync(filePath)) {
+          fs.mkdirSync(cacheDir, { recursive: true });
+          fs.writeFileSync(filePath, Buffer.from(rec.data, "base64"));
+        }
+        files.push(filePath);
+      } catch {
+        // Best-effort: a single unwritable image just doesn't make it into the reply.
+      }
+    }
+  }
+  return files;
 }
 
 /**
@@ -183,5 +263,6 @@ export async function runDelegatedTask(params: {
   if (text === null) {
     throw new DelegationEmptyResultError();
   }
-  return { text };
+  const mediaUrls = extractToolResultImageFiles(messages);
+  return { text, ...(mediaUrls.length > 0 && { mediaUrls }) };
 }

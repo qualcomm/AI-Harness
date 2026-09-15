@@ -33,8 +33,11 @@ export type SubagentRuntime = {
   }) => Promise<{ messages: unknown[] }>;
 };
 
-/** Text produced by a delegated run. */
-export type DelegationOutcome = { text: string };
+/**
+ * Text produced by a delegated run, plus any local image files a tool it called wrote to
+ * disk (e.g. a video-frame screenshot) — see `extractToolResultImageFiles` in delegate.ts.
+ */
+export type DelegationOutcome = { text: string; mediaUrls?: string[] };
 
 /** Minimal logger surface (matches the host plugin logger). */
 export type Logger = {

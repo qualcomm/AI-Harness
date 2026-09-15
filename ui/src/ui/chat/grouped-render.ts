@@ -54,7 +54,10 @@ type ImageBlock = {
   alt?: string;
 };
 
-function extractImages(message: unknown): ImageBlock[] {
+/** Exported so `syncToolCardExpansionState` (chat.ts) can seed a tool message's default
+ * disclosure state without duplicating this parsing — see the comment there for why the
+ * seed, not just the render-time fallback, has to know about images. */
+export function extractImages(message: unknown): ImageBlock[] {
   const m = message as Record<string, unknown>;
   const content = m.content;
   const images: ImageBlock[] = [];
@@ -77,6 +80,16 @@ function extractImages(message: unknown): ImageBlock[] {
           images.push({ url });
         } else if (typeof b.url === "string") {
           images.push({ url: b.url });
+        } else if (typeof b.data === "string") {
+          // Flat `{ type, data, mimeType }` — what a tool result carries, since
+          // `imageResult()` in src/agents/tools/common.ts emits exactly this shape. Without
+          // this branch a tool's images reach the model but never render for the user: the
+          // block matches neither the nested `source` form nor the `url` form above, so it
+          // was silently skipped and the message appeared to hold only JSON text.
+          const mediaType = typeof b.mimeType === "string" ? b.mimeType : "image/png";
+          images.push({
+            url: b.data.startsWith("data:") ? b.data : `data:${mediaType};base64,${b.data}`,
+          });
         }
       } else if (b.type === "image_url") {
         // OpenAI format
@@ -149,8 +162,17 @@ export function renderMessageGroup(
     showReasoning: boolean;
     showToolCalls?: boolean;
     autoExpandToolCalls?: boolean;
-    isToolMessageExpanded?: (messageId: string) => boolean;
-    onToggleToolMessageExpanded?: (messageId: string) => void;
+    /**
+     * `undefined` means "never toggled", which is what lets a tool message carrying images
+     * default to open without overriding an explicit collapse by the user.
+     */
+    isToolMessageExpanded?: (messageId: string) => boolean | undefined;
+    /**
+     * Receives the state to move TO rather than flipping a stored flag: a message that
+     * defaults to open has nothing stored yet, so `!stored` would resolve to "open" again
+     * and the first click would appear to do nothing.
+     */
+    onToggleToolMessageExpanded?: (messageId: string, nextExpanded: boolean) => void;
     isToolExpanded?: (toolCardId: string) => boolean;
     onToggleToolExpanded?: (toolCardId: string) => void;
     onRequestUpdate?: () => void;
@@ -1038,8 +1060,17 @@ function renderGroupedMessage(
     showReasoning: boolean;
     showToolCalls?: boolean;
     autoExpandToolCalls?: boolean;
-    isToolMessageExpanded?: (messageId: string) => boolean;
-    onToggleToolMessageExpanded?: (messageId: string) => void;
+    /**
+     * `undefined` means "never toggled", which is what lets a tool message carrying images
+     * default to open without overriding an explicit collapse by the user.
+     */
+    isToolMessageExpanded?: (messageId: string) => boolean | undefined;
+    /**
+     * Receives the state to move TO rather than flipping a stored flag: a message that
+     * defaults to open has nothing stored yet, so `!stored` would resolve to "open" again
+     * and the first click would appear to do nothing.
+     */
+    onToggleToolMessageExpanded?: (messageId: string, nextExpanded: boolean) => void;
     isToolExpanded?: (toolCardId: string) => boolean;
     onToggleToolExpanded?: (toolCardId: string) => void;
     onRequestUpdate?: () => void;
@@ -1114,7 +1145,11 @@ function renderGroupedMessage(
 
   const isToolMessage = normalizedRole === "tool" || isToolResult;
   const toolMessageDisclosureId = `toolmsg:${messageKey}`;
-  const toolMessageExpanded = opts.isToolMessageExpanded?.(toolMessageDisclosureId) ?? false;
+  // Images default to open: they are the result a person actually wants to look at, and
+  // hiding them behind a disclosure made a successful frame extraction look like it had
+  // returned nothing. Text-only tool output stays collapsed, and an explicit toggle by the
+  // user wins either way (see `isToolMessageExpanded`).
+  const toolMessageExpanded = opts.isToolMessageExpanded?.(toolMessageDisclosureId) ?? hasImages;
   const toolNames = [...new Set(toolCards.map((c) => c.name))];
   const toolSummaryLabel =
     toolNames.length <= 3
@@ -1152,7 +1187,11 @@ function renderGroupedMessage(
                 class="chat-tool-msg-summary"
                 type="button"
                 aria-expanded=${String(toolMessageExpanded)}
-                @click=${() => opts.onToggleToolMessageExpanded?.(toolMessageDisclosureId)}
+                @click=${() =>
+                  opts.onToggleToolMessageExpanded?.(
+                    toolMessageDisclosureId,
+                    !toolMessageExpanded,
+                  )}
               >
                 <span class="chat-tool-msg-summary__icon">${icons.zap}</span>
                 <span class="chat-tool-msg-summary__label">${toolMessageLabel}</span>

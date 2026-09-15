@@ -65,6 +65,16 @@ const AUDIO_FILE_EXTENSIONS = new Set([
   ".wav",
 ]);
 
+const IMAGE_FILE_EXTENSIONS = new Set([
+  ".gif",
+  ".heic",
+  ".heif",
+  ".jpeg",
+  ".jpg",
+  ".png",
+  ".webp",
+]);
+
 export function normalizeMimeType(mime?: string | null): string | undefined {
   if (!mime) {
     return undefined;
@@ -115,6 +125,14 @@ export function isAudioFileName(fileName?: string | null): boolean {
     return false;
   }
   return AUDIO_FILE_EXTENSIONS.has(ext);
+}
+
+export function isImageFileName(fileName?: string | null): boolean {
+  const ext = getFileExtension(fileName);
+  if (!ext) {
+    return false;
+  }
+  return IMAGE_FILE_EXTENSIONS.has(ext);
 }
 
 export function detectMime(opts: {

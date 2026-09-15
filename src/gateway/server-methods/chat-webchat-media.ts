@@ -4,12 +4,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { ReplyPayload } from "../../auto-reply/reply-payload.js";
-import { isAudioFileName } from "../../media/mime.js";
+import { isAudioFileName, isImageFileName } from "../../media/mime.js";
 import { resolveSendableOutboundReplyParts } from "../../plugin-sdk/reply-payload.js";
 import { normalizeLowercaseStringOrEmpty } from "../../shared/string-coerce.js";
 
 /** Cap embedded audio size to avoid multi‑MB payloads on the chat WebSocket. */
 const MAX_WEBCHAT_AUDIO_BYTES = 15 * 1024 * 1024;
+/** Cap embedded image size for the same reason. */
+const MAX_WEBCHAT_IMAGE_BYTES = 15 * 1024 * 1024;
 
 const MIME_BY_EXT: Record<string, string> = {
   ".aac": "audio/aac",
@@ -20,6 +22,16 @@ const MIME_BY_EXT: Record<string, string> = {
   ".opus": "audio/opus",
   ".wav": "audio/wav",
   ".webm": "audio/webm",
+};
+
+const IMAGE_MIME_BY_EXT: Record<string, string> = {
+  ".gif": "image/gif",
+  ".heic": "image/heic",
+  ".heif": "image/heif",
+  ".jpeg": "image/jpeg",
+  ".jpg": "image/jpeg",
+  ".png": "image/png",
+  ".webp": "image/webp",
 };
 
 /** Map `mediaUrl` strings to an absolute filesystem path for local embedding (plain paths or `file:` URLs). */
@@ -76,6 +88,31 @@ function mimeTypeForPath(filePath: string): string {
   return MIME_BY_EXT[ext] ?? "audio/mpeg";
 }
 
+/** Returns a readable local file path when it is a regular file and within the size cap (single stat before read). */
+function resolveLocalImageFileForEmbedding(raw: string): string | null {
+  const resolved = resolveLocalMediaPathForEmbedding(raw);
+  if (!resolved) {
+    return null;
+  }
+  if (!isImageFileName(resolved)) {
+    return null;
+  }
+  try {
+    const st = fs.statSync(resolved);
+    if (!st.isFile() || st.size > MAX_WEBCHAT_IMAGE_BYTES) {
+      return null;
+    }
+    return resolved;
+  } catch {
+    return null;
+  }
+}
+
+function imageMimeTypeForPath(filePath: string): string {
+  const ext = normalizeLowercaseStringOrEmpty(path.extname(filePath));
+  return IMAGE_MIME_BY_EXT[ext] ?? "image/jpeg";
+}
+
 /**
  * Build Control UI / transcript `content` blocks for local TTS (or other) audio files
  * referenced by slash-command / agent replies when the webchat path only had text aggregation.
@@ -117,6 +154,52 @@ function tryReadLocalAudioContentBlock(filePath: string): Record<string, unknown
     return {
       type: "audio",
       source: { type: "base64", media_type: mediaType, data: base64Data },
+    };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Build Control UI / transcript `content` blocks for local image files (e.g. a video-frame
+ * screenshot a tool wrote to disk) referenced by a hook/agent reply's `mediaUrl(s)`.
+ */
+export function buildWebchatImageContentBlocksFromReplyPayloads(
+  payloads: ReplyPayload[],
+): Array<Record<string, unknown>> {
+  const seen = new Set<string>();
+  const blocks: Array<Record<string, unknown>> = [];
+  for (const payload of payloads) {
+    const parts = resolveSendableOutboundReplyParts(payload);
+    for (const raw of parts.mediaUrls) {
+      const url = raw.trim();
+      if (!url) {
+        continue;
+      }
+      const resolved = resolveLocalImageFileForEmbedding(url);
+      if (!resolved || seen.has(resolved)) {
+        continue;
+      }
+      seen.add(resolved);
+      const block = tryReadLocalImageContentBlock(resolved);
+      if (block) {
+        blocks.push(block);
+      }
+    }
+  }
+  return blocks;
+}
+
+function tryReadLocalImageContentBlock(filePath: string): Record<string, unknown> | null {
+  try {
+    const buf = fs.readFileSync(filePath);
+    if (buf.length > MAX_WEBCHAT_IMAGE_BYTES) {
+      return null;
+    }
+    return {
+      type: "image",
+      data: buf.toString("base64"),
+      mimeType: imageMimeTypeForPath(filePath),
     };
   } catch {
     return null;

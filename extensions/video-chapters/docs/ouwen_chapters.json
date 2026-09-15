@@ -1,0 +1,2126 @@
+{
+  "video": "C:\\Users\\HCKTest\\ouwen.mp4",
+  "duration": 521.7,
+  "mode": "movie",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.01,
+      "desc": "A basketball player dribbles near the three-point line during a game, as players from opposing teams defend.",
+      "title": "Basketball Action"
+    },
+    {
+      "start": 7.01,
+      "end": 8.01,
+      "desc": "A basketball game is being played on a court with players wearing red and white uniforms, surrounded by an audience.",
+      "title": "Basketball Match"
+    },
+    {
+      "start": 11.01,
+      "end": 12.01,
+      "desc": "A basketball player is jumping to dunk the ball over another player during a game.",
+      "title": "Dunking Moment"
+    },
+    {
+      "start": 13.01,
+      "end": 24.01,
+      "desc": "A basketball game is being played, with players from two teams on the court and a crowd watching.",
+      "title": "Dribbling and Defense"
+    },
+    {
+      "start": 25.01,
+      "end": 36.0,
+      "desc": "A basketball player attempts a shot while being defended by another player during an NBA game.",
+      "title": "Boston vs. Cleveland"
+    },
+    {
+      "start": 37.0,
+      "end": 45.01,
+      "desc": "A basketball game is being played, with players from two teams on a court and spectators watching.",
+      "title": "A is Guarded by Two"
+    },
+    {
+      "start": 46.01,
+      "end": 56.01,
+      "desc": "A basketball game is being played, with players from the Pistons and Celtics competing on a court.",
+      "title": "Boston Celtics vs. Pistons"
+    },
+    {
+      "start": 57.01,
+      "end": 66.02,
+      "desc": "A basketball player is running on the court, with another player and a referee nearby.",
+      "title": "Dunk Attempt"
+    },
+    {
+      "start": 67.0,
+      "end": 78.01,
+      "desc": "A basketball player is jumping to dunk the ball during a game.",
+      "title": "Cleveland vs. Philadelphia"
+    },
+    {
+      "start": 79.01,
+      "end": 89.01,
+      "desc": "Basketball players are actively competing on the court, with one player wearing number 9 preparing to make a move.",
+      "title": "Guarding the Ball"
+    },
+    {
+      "start": 90.01,
+      "end": 100.02,
+      "desc": "A basketball player is preparing to shoot while being guarded by opponents during a game.",
+      "title": "A Guarded by Two"
+    },
+    {
+      "start": 101.0,
+      "end": 111.01,
+      "desc": "A basketball game is being played, with players on the court and a score showing Indiana leading 23 to Boston's 16.",
+      "title": "Indiana vs. Boston"
+    },
+    {
+      "start": 112.01,
+      "end": 124.01,
+      "desc": "A basketball player is jumping to rebound the ball during a game between Boston and Houston.",
+      "title": "Boston vs. Houston"
+    },
+    {
+      "start": 125.01,
+      "end": 135.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team during a game.",
+      "title": "Brooklyn vs. Cleveland"
+    },
+    {
+      "start": 136.0,
+      "end": 139.01,
+      "desc": "A basketball player dribbles while being guarded by another during a game, with \"REBOUND 98\" displayed on the screen.",
+      "title": "Dribbling and Guarding"
+    },
+    {
+      "start": 140.01,
+      "end": 151.0,
+      "desc": "A basketball player in a white jersey dribbles the ball while being guarded by an opponent, with other players and referees nearby on the court.",
+      "title": "Guarded Dribbling Action"
+    },
+    {
+      "start": 152.0,
+      "end": 163.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team member during a game.",
+      "title": "Guarding the Rebound"
+    },
+    {
+      "start": 164.01,
+      "end": 178.01,
+      "desc": "A basketball game is being played, with players from Houston and Cleveland on the court near a basket.",
+      "title": "Houston vs. Cleveland"
+    },
+    {
+      "start": 179.01,
+      "end": 191.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game.",
+      "title": "Dribbling and Guarding"
+    },
+    {
+      "start": 192.01,
+      "end": 210.01,
+      "desc": "A basketball game is being played, with players on the court and a score displayed showing Golden State Warriors leading Brooklyn Nets by 74-69.",
+      "title": "Pelicans vs. Cavaliers"
+    },
+    {
+      "start": 211.01,
+      "end": 223.01,
+      "desc": "A basketball game is being played, with players from two teams competing near the basket.",
+      "title": "NBA Guarding Action"
+    },
+    {
+      "start": 224.01,
+      "end": 235.0,
+      "desc": "A basketball player is jumping to dunk the ball during a game.",
+      "title": "Boston vs. Atlanta"
+    },
+    {
+      "start": 236.0,
+      "end": 244.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands.",
+      "title": "Guarding the Rebound"
+    },
+    {
+      "start": 245.01,
+      "end": 253.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game.",
+      "title": "Defensive Action"
+    },
+    {
+      "start": 254.0,
+      "end": 266.02,
+      "desc": "A basketball game is being played, with players from both teams on the court and a crowd watching.",
+      "title": "Atlanta Guarding Action"
+    },
+    {
+      "start": 267.0,
+      "end": 277.01,
+      "desc": "A basketball game is being played, with players from two teams on the court and a scoreboard showing Atlanta leading Boston.",
+      "title": "Atlanta vs. Boston"
+    },
+    {
+      "start": 278.01,
+      "end": 278.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game.",
+      "title": "Dribbling and Guarding Action"
+    },
+    {
+      "start": 279.01,
+      "end": 283.02,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team member during a game.",
+      "title": "Rebounding Action"
+    },
+    {
+      "start": 284.0,
+      "end": 293.01,
+      "desc": "A basketball player is dribbling near the basket during a game between Brooklyn and Cleveland, with players from both teams positioned around the court.",
+      "title": "Brooklyn vs. Cleveland: Game Action"
+    },
+    {
+      "start": 294.01,
+      "end": 304.0,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing scores for Cleveland (CLE) 97 and Boston (BOS) 98.",
+      "title": "Boston vs. Cleveland: Game Action"
+    },
+    {
+      "start": 305.0,
+      "end": 315.01,
+      "desc": "A basketball player is mid-air, attempting a dunk during an intense game.",
+      "title": "Dunk Attempt in Progress"
+    },
+    {
+      "start": 316.02,
+      "end": 326.01,
+      "desc": "A basketball game is being played on a court with players and spectators visible.",
+      "title": "Guarding the Rebound in Progress"
+    },
+    {
+      "start": 327.01,
+      "end": 338.0,
+      "desc": "A basketball player dribbles the ball while an official walks nearby during a game.",
+      "title": "Cleveland vs. Chicago"
+    },
+    {
+      "start": 339.01,
+      "end": 351.0,
+      "desc": "A basketball player is jumping to shoot the ball during a game, with players from both teams positioned around him.",
+      "title": "Cleveland vs. Washington"
+    },
+    {
+      "start": 352.0,
+      "end": 365.01,
+      "desc": "A basketball game is being played with players on the court and a crowd watching.",
+      "title": "Cleveland vs. Toronto"
+    },
+    {
+      "start": 366.02,
+      "end": 373.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands.",
+      "title": "Guarding the Rebound"
+    },
+    {
+      "start": 374.01,
+      "end": 381.01,
+      "desc": "A basketball player dribbles the ball while being defended by two other players on a court.",
+      "title": "TD Garden Action"
+    },
+    {
+      "start": 382.01,
+      "end": 388.0,
+      "desc": "A basketball player is dribbling the ball while being guarded by opponents during a game.",
+      "title": "Guarding the Rebound in Progress"
+    },
+    {
+      "start": 389.01,
+      "end": 398.01,
+      "desc": "A basketball game is being played between Philadelphia and Cleveland, with a score of 9-14 in the first quarter.",
+      "title": "Cleveland Cavaliers Action"
+    },
+    {
+      "start": 399.02,
+      "end": 411.01,
+      "desc": "A basketball player dribbles the ball while being guarded by another player on a court with \"GoBucks\" and \"#Rebound98\" visible.",
+      "title": "Boston vs. Cleveland: Game Action"
+    },
+    {
+      "start": 412.01,
+      "end": 423.01,
+      "desc": "A basketball is about to go through a hoop during a game, with spectators watching.",
+      "title": "Guarding the Rebound"
+    },
+    {
+      "start": 424.01,
+      "end": 433.02,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching.",
+      "title": "Guarding the Rebound in Progress"
+    },
+    {
+      "start": 434.0,
+      "end": 442.01,
+      "desc": "A basketball player is jumping to rebound a ball during an intense game, surrounded by other players and spectators.",
+      "title": "Guarding the Rebound in Progress 2"
+    },
+    {
+      "start": 443.01,
+      "end": 452.0,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing scores.",
+      "title": "Guarding the Rebound in Progress 4"
+    },
+    {
+      "start": 453.0,
+      "end": 462.01,
+      "desc": "A basketball player in a yellow jersey dribbles the ball while being guarded by two players wearing blue jerseys on an indoor court.",
+      "title": "Guarding the Rebound in Progress 7"
+    },
+    {
+      "start": 463.01,
+      "end": 472.0,
+      "desc": "A basketball game is being played on a court with players and spectators, featuring the text \"REBOUND 98\" at the top.",
+      "title": "Guarding the Rebound in Progress 9"
+    },
+    {
+      "start": 473.01,
+      "end": 483.02,
+      "desc": "A basketball game is being played, with players from both teams on the court and a crowd watching.",
+      "title": "Guarding the Rebound 12"
+    },
+    {
+      "start": 484.0,
+      "end": 497.01,
+      "desc": "A basketball player wearing a yellow jersey with the number 2 is walking on a court, surrounded by other players and spectators.",
+      "title": "Guarding the Rebound in Progress 14"
+    },
+    {
+      "start": 502.0,
+      "end": 510.01,
+      "desc": "A basketball player is jumping to rebound a ball during an NBA game, with players and spectators visible on the court and stands.",
+      "title": "Rebound Focus"
+    },
+    {
+      "start": 511.01,
+      "end": 511.01,
+      "desc": "The frame displays a black background with white text that reads \"REBOUND 98\" and below it, \"THANKS FOR WATCHING.\"",
+      "title": "Rebounding Focus 98"
+    }
+  ],
+  "shots": [
+    {
+      "start": 0.0,
+      "desc": "A basketball player dribbles near the three-point line during a game, as players from opposing teams defend."
+    },
+    {
+      "start": 1.0,
+      "desc": "A basketball player dribbles the ball while being defended by another during a game at Texas Airlines Center."
+    },
+    {
+      "start": 2.0,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 3.0,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 4.0,
+      "desc": "A basketball player is falling to the ground as another player attempts a shot during an NBA game."
+    },
+    {
+      "start": 5.0,
+      "desc": "A basketball player is dribbling the ball during a game, with players from both teams positioned around him."
+    },
+    {
+      "start": 6.01,
+      "desc": "A basketball player is jumping to dunk the ball during a game, with players and spectators watching intently."
+    },
+    {
+      "start": 7.01,
+      "desc": "A basketball game is being played on a court with players wearing red and white uniforms, surrounded by an audience."
+    },
+    {
+      "start": 8.01,
+      "desc": "A basketball game is being played on a court with players from two teams, one wearing red and white uniforms."
+    },
+    {
+      "start": 11.01,
+      "desc": "A basketball player is jumping to dunk the ball over another player during a game."
+    },
+    {
+      "start": 12.01,
+      "desc": "A basketball player successfully dunks the ball through a hoop during an indoor game."
+    },
+    {
+      "start": 13.01,
+      "desc": "A basketball game is being played, with players from two teams on the court and a crowd watching."
+    },
+    {
+      "start": 16.02,
+      "desc": "A basketball game is being played, with players from two teams competing for a rebound near the basket."
+    },
+    {
+      "start": 17.0,
+      "desc": "A basketball game is being played, with players from two teams positioned on a court and spectators watching."
+    },
+    {
+      "start": 18.0,
+      "desc": "Two basketball players are competing on a court, with one player dribbling and another defending."
+    },
+    {
+      "start": 19.0,
+      "desc": "A basketball player dribbles while being guarded by two opponents during a game."
+    },
+    {
+      "start": 20.0,
+      "desc": "A basketball player dribbles the ball while being guarded by another player during a game."
+    },
+    {
+      "start": 21.0,
+      "desc": "A basketball player is preparing to shoot while being guarded by another player during a game."
+    },
+    {
+      "start": 22.01,
+      "desc": "A basketball game is being played, with players from two teams on the court and a crowd watching."
+    },
+    {
+      "start": 23.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 24.01,
+      "desc": "A basketball player dribbles the ball while being guarded by another player during a game."
+    },
+    {
+      "start": 25.01,
+      "desc": "A basketball player attempts a shot while being defended by another player during an NBA game."
+    },
+    {
+      "start": 26.01,
+      "desc": "A basketball player is jumping to rebound a ball during a game."
+    },
+    {
+      "start": 27.01,
+      "desc": "Boston is playing against Cleveland in a basketball game, with Boston trailing 6-15 and having 98 rebounds."
+    },
+    {
+      "start": 29.01,
+      "desc": "A basketball game is being played, with Cleveland leading Boston 15-6 in the first quarter."
+    },
+    {
+      "start": 30.01,
+      "desc": "A basketball game is being played, with Cleveland leading Boston 15 to 6 in the first quarter."
+    },
+    {
+      "start": 31.01,
+      "desc": "A basketball player dribbles while being defended during a game."
+    },
+    {
+      "start": 32.02,
+      "desc": "Two basketball players are competing for a rebound on the court."
+    },
+    {
+      "start": 34.0,
+      "desc": "A basketball game is being played, with players on the court and a score displayed at 73-56."
+    },
+    {
+      "start": 35.0,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands."
+    },
+    {
+      "start": 36.0,
+      "desc": "A basketball game is being played, with players from two teams competing on the court."
+    },
+    {
+      "start": 37.0,
+      "desc": "A basketball game is being played, with players from two teams on a court and spectators watching."
+    },
+    {
+      "start": 38.0,
+      "desc": "A basketball player dribbles the ball while being guarded by two opponents during a game."
+    },
+    {
+      "start": 39.01,
+      "desc": "A basketball player dribbles the ball while being guarded by another during a game."
+    },
+    {
+      "start": 40.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by two opposing players during a game."
+    },
+    {
+      "start": 41.01,
+      "desc": "A basketball player is jumping to dunk the ball during a game."
+    },
+    {
+      "start": 42.01,
+      "desc": "Basketball players are running on a court, with one player wearing jersey number 2 and another in yellow near the basket."
+    },
+    {
+      "start": 43.01,
+      "desc": "A basketball player is being guarded by two opponents during a game, with \"REBOUND 98\" displayed on screen."
+    },
+    {
+      "start": 44.01,
+      "desc": "A basketball player is jumping to rebound a ball during a game."
+    },
+    {
+      "start": 45.01,
+      "desc": "A basketball player is about to shoot the ball during a game, with players and spectators in view."
+    },
+    {
+      "start": 46.01,
+      "desc": "A basketball game is being played, with players from the Pistons and Celtics competing on a court."
+    },
+    {
+      "start": 47.01,
+      "desc": "A basketball player is jumping to rebound the ball during a game between Pistons and Celtics."
+    },
+    {
+      "start": 49.02,
+      "desc": "A basketball player is jumping to shoot the ball during a game between Pistons and Celtics."
+    },
+    {
+      "start": 50.02,
+      "desc": "A basketball game is being played, with players from both teams actively competing on the court."
+    },
+    {
+      "start": 51.0,
+      "desc": "A basketball player is dribbling the ball during a game, with \"Detroit Pistons\" and \"Boston Celtics\" scores displayed on screen."
+    },
+    {
+      "start": 52.0,
+      "desc": "A basketball player from the Celtics dribbles while being guarded by a Pistons defender during an NBA game."
+    },
+    {
+      "start": 53.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 54.0,
+      "desc": "A basketball player is dunking the ball during a game, with \"REBOUND 98\" displayed on screen."
+    },
+    {
+      "start": 55.0,
+      "desc": "A basketball player is jumping to rebound a ball during a game, with another player nearby and spectators watching."
+    },
+    {
+      "start": 56.01,
+      "desc": "A basketball player dribbles the ball while being guarded by another during a game."
+    },
+    {
+      "start": 57.01,
+      "desc": "A basketball player is running on the court, with another player and a referee nearby."
+    },
+    {
+      "start": 58.01,
+      "desc": "A basketball player is attempting a shot during an NBA game, with the ball mid-air near the basket."
+    },
+    {
+      "start": 59.01,
+      "desc": "A basketball game is being played, with players from both teams actively moving on the court."
+    },
+    {
+      "start": 60.01,
+      "desc": "A basketball game is being played, with players from both teams actively moving around the court."
+    },
+    {
+      "start": 61.01,
+      "desc": "A basketball game is being played, with Cleveland leading Detroit by 9 points and only a minute remaining in the fourth quarter."
+    },
+    {
+      "start": 62.01,
+      "desc": "A basketball game is being played, with players from both teams actively engaged near the basket."
+    },
+    {
+      "start": 63.01,
+      "desc": "A basketball game is being played, with players from both teams actively engaged near the basket."
+    },
+    {
+      "start": 64.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 65.01,
+      "desc": "Two basketball players are competing for a rebound during a game."
+    },
+    {
+      "start": 66.02,
+      "desc": "A basketball player dribbles while being guarded by opponents during a game."
+    },
+    {
+      "start": 67.0,
+      "desc": "A basketball player is jumping to dunk the ball during a game."
+    },
+    {
+      "start": 68.0,
+      "desc": "A basketball player is about to dunk the ball during a game."
+    },
+    {
+      "start": 69.0,
+      "desc": "A basketball game is being played, with players from two teams competing on a court filled with spectators."
+    },
+    {
+      "start": 70.0,
+      "desc": "A basketball game is being played, with players from two teams competing on a court filled with spectators."
+    },
+    {
+      "start": 71.0,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing Cleveland leading 110-97."
+    },
+    {
+      "start": 72.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 73.01,
+      "desc": "A basketball player is dunking the ball into a hoop during a game."
+    },
+    {
+      "start": 74.01,
+      "desc": "A basketball game is being played, with players from both teams actively competing on the court."
+    },
+    {
+      "start": 77.01,
+      "desc": "A basketball game is being played, with players from Philadelphia and Cleveland competing on a crowded court."
+    },
+    {
+      "start": 78.01,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing Cleveland leading Philadelphia 84-80."
+    },
+    {
+      "start": 79.01,
+      "desc": "Basketball players are actively competing on the court, with one player wearing number 9 preparing to make a move."
+    },
+    {
+      "start": 80.01,
+      "desc": "A basketball player wearing jersey number 4 is defending against another player during a game."
+    },
+    {
+      "start": 81.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 82.02,
+      "desc": "A basketball player is jumping to dunk the ball during a game."
+    },
+    {
+      "start": 83.02,
+      "desc": "A basketball game is being played, with players from two teams running on the court and a crowd watching."
+    },
+    {
+      "start": 84.0,
+      "desc": "A basketball game is being played, with players from two teams on the court and a crowd watching."
+    },
+    {
+      "start": 85.0,
+      "desc": "A basketball game is being played, with players from two teams competing on a court."
+    },
+    {
+      "start": 87.0,
+      "desc": "A basketball player is dribbling the ball while being pursued by opponents during a game."
+    },
+    {
+      "start": 88.0,
+      "desc": "Two basketball players are competing on a court, with one dribbling and the other defending."
+    },
+    {
+      "start": 89.01,
+      "desc": "A basketball player is mid-air, seemingly about to dunk the ball during a game."
+    },
+    {
+      "start": 90.01,
+      "desc": "A basketball player is preparing to shoot while being guarded by opponents during a game."
+    },
+    {
+      "start": 91.01,
+      "desc": "A basketball game is being played, with players from two teams competing on a court in front of an audience."
+    },
+    {
+      "start": 92.01,
+      "desc": "A basketball game is being played, with players from two teams competing on the court."
+    },
+    {
+      "start": 93.01,
+      "desc": "A basketball game is being played, with players on the court and a score displayed showing Cleveland leading Toronto 55-43."
+    },
+    {
+      "start": 95.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game, with spectators watching intently."
+    },
+    {
+      "start": 96.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent, with a crowd watching from the stands."
+    },
+    {
+      "start": 97.01,
+      "desc": "A basketball player is jumping to dunk the ball while being defended by another player during a game."
+    },
+    {
+      "start": 98.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 99.02,
+      "desc": "A basketball player is jumping to shoot the ball during a game."
+    },
+    {
+      "start": 100.02,
+      "desc": "A basketball player is shooting the ball during a game, with players and spectators visible around him."
+    },
+    {
+      "start": 101.0,
+      "desc": "A basketball game is being played, with players on the court and a score showing Indiana leading 23 to Boston's 16."
+    },
+    {
+      "start": 102.0,
+      "desc": "A basketball player is lying on the court after a play during an Indiana Pacers game."
+    },
+    {
+      "start": 103.0,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing Boston leading Indiana by 7 points."
+    },
+    {
+      "start": 104.0,
+      "desc": "A basketball game is being played with players on the court and a scoreboard showing scores for both teams."
+    },
+    {
+      "start": 105.0,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands."
+    },
+    {
+      "start": 106.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 107.01,
+      "desc": "A basketball player dribbles the ball while another falls to the court during a game."
+    },
+    {
+      "start": 108.01,
+      "desc": "A basketball player falls to the ground as another attempts a shot during an intense game."
+    },
+    {
+      "start": 109.01,
+      "desc": "A basketball player is falling to the ground as another player attempts a shot during an intense game."
+    },
+    {
+      "start": 110.01,
+      "desc": "A basketball player is preparing to shoot during a game, with players from both teams positioned around the basket."
+    },
+    {
+      "start": 111.01,
+      "desc": "A basketball player is jumping to shoot the ball during a game, with another player defending near the basket."
+    },
+    {
+      "start": 112.01,
+      "desc": "A basketball player is jumping to rebound the ball during a game between Boston and Houston."
+    },
+    {
+      "start": 113.01,
+      "desc": "A basketball game is being played, with players from two teams competing for a rebound near the basket."
+    },
+    {
+      "start": 114.01,
+      "desc": "A basketball game is being played, with players from two teams competing on a court labeled \"Houston Rockets.\""
+    },
+    {
+      "start": 115.01,
+      "desc": "A basketball game is being played, with players from two teams competing for a rebound near the basket."
+    },
+    {
+      "start": 116.02,
+      "desc": "A basketball player is dribbling near the basket during a game between Boston and Houston, with 4:21 remaining in the third quarter."
+    },
+    {
+      "start": 117.0,
+      "desc": "A basketball player dribbles while being guarded by two opponents on a court during an NBA game."
+    },
+    {
+      "start": 118.0,
+      "desc": "A basketball player in a green jersey dribbles as players from the opposing team chase on a court."
+    },
+    {
+      "start": 119.0,
+      "desc": "A basketball player in a red jersey dribbles the ball while being guarded by players on an indoor court with \"Houston\" written on it."
+    },
+    {
+      "start": 120.0,
+      "desc": "A basketball player is dribbling near the basket during a game, with other players and spectators visible on the court."
+    },
+    {
+      "start": 121.0,
+      "desc": "A basketball game is being played, with players from two teams on a court and spectators watching."
+    },
+    {
+      "start": 124.01,
+      "desc": "A basketball game is being played, with players from both teams actively competing for a rebound on the court."
+    },
+    {
+      "start": 125.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team during a game."
+    },
+    {
+      "start": 126.01,
+      "desc": "A basketball player is being defended by two opposing players during a game."
+    },
+    {
+      "start": 127.01,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 128.01,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 129.01,
+      "desc": "A basketball game is being played, with players from Brooklyn and Cleveland competing on a court filled with spectators."
+    },
+    {
+      "start": 130.01,
+      "desc": "A basketball player is jumping to shoot the ball during a game between Brooklyn and Cleveland, with 8:18 remaining in the second quarter."
+    },
+    {
+      "start": 131.01,
+      "desc": "A basketball game is being played, with Cleveland leading Brooklyn 43 to 24."
+    },
+    {
+      "start": 132.02,
+      "desc": "A basketball player is jumping to shoot the ball during a game between Brooklyn and Cleveland, with 8:16 remaining in the second quarter."
+    },
+    {
+      "start": 133.02,
+      "desc": "A basketball player is dribbling the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 134.0,
+      "desc": "A basketball player is dribbling while being guarded by two opponents during a game."
+    },
+    {
+      "start": 135.0,
+      "desc": "A basketball player is jumping to dunk the ball during a game."
+    },
+    {
+      "start": 136.0,
+      "desc": "A basketball player dribbles while being guarded by another during a game, with \"REBOUND 98\" displayed on the screen."
+    },
+    {
+      "start": 137.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 138.0,
+      "desc": "A basketball player is jumping to dunk the ball during a game, with fans watching intently."
+    },
+    {
+      "start": 139.01,
+      "desc": "A basketball player is about to shoot the ball during a game, with players and spectators visible around him."
+    },
+    {
+      "start": 140.01,
+      "desc": "A basketball player in a white jersey dribbles the ball while being guarded by an opponent, with other players and referees nearby on the court."
+    },
+    {
+      "start": 141.01,
+      "desc": "A basketball game is being played, with players on the court and a score showing New York Knicks leading Cleveland Cavaliers."
+    },
+    {
+      "start": 142.01,
+      "desc": "A basketball game is being played, with players on the court and a score showing New York leading Cleveland by 4 points."
+    },
+    {
+      "start": 143.01,
+      "desc": "A basketball game is being played, with players from two teams competing on a court marked \"NY Knicks\" and \"MSG Garden.\""
+    },
+    {
+      "start": 144.01,
+      "desc": "A basketball game is being played, with players from two teams on a court and spectators watching."
+    },
+    {
+      "start": 145.01,
+      "desc": "A basketball game is being played, with players from two teams competing on the court."
+    },
+    {
+      "start": 146.01,
+      "desc": "A basketball game is being played, with players from two teams on the court and a scoreboard showing \"CLE 96 NYK 101\"."
+    },
+    {
+      "start": 147.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 148.01,
+      "desc": "A basketball player dribbles the ball while being guarded by two opponents during a game."
+    },
+    {
+      "start": 149.02,
+      "desc": "A basketball player dribbles the ball while being guarded by another player during a game."
+    },
+    {
+      "start": 150.02,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team during a game."
+    },
+    {
+      "start": 151.0,
+      "desc": "A basketball is about to go through the hoop during a game, with spectators watching intently."
+    },
+    {
+      "start": 152.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team member during a game."
+    },
+    {
+      "start": 153.0,
+      "desc": "A basketball player is jumping to rebound the ball during a game."
+    },
+    {
+      "start": 154.0,
+      "desc": "A basketball player jumps to rebound a ball during an intense game, with fans cheering and players from both teams actively involved."
+    },
+    {
+      "start": 155.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team member during a game."
+    },
+    {
+      "start": 156.01,
+      "desc": "A basketball player dribbles the ball while being guarded by two opposing players during a game."
+    },
+    {
+      "start": 157.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 158.01,
+      "desc": "A basketball player is jumping to rebound the ball during a game."
+    },
+    {
+      "start": 159.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team member during a game."
+    },
+    {
+      "start": 160.01,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 161.01,
+      "desc": "A basketball player is jumping to rebound the ball during a game, with players and spectators in view."
+    },
+    {
+      "start": 162.01,
+      "desc": "A basketball player is jumping to dunk the ball during a game, with spectators cheering and players on both teams reacting."
+    },
+    {
+      "start": 163.01,
+      "desc": "A basketball game is being played, with players from Houston and Cleveland competing for a rebound near the basket."
+    },
+    {
+      "start": 164.01,
+      "desc": "A basketball game is being played, with players from Houston and Cleveland on the court near a basket."
+    },
+    {
+      "start": 165.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching."
+    },
+    {
+      "start": 166.02,
+      "desc": "A basketball game is being played, with players from Houston and Cleveland on the court near a basket."
+    },
+    {
+      "start": 167.0,
+      "desc": "A basketball player dribbles the ball while another player prepares to defend during a game."
+    },
+    {
+      "start": 168.0,
+      "desc": "A basketball player dribbles the ball during a game, with \"Rebound 98\" displayed on screen."
+    },
+    {
+      "start": 169.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 170.0,
+      "desc": "A basketball player celebrates after a successful play during a game."
+    },
+    {
+      "start": 171.0,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching."
+    },
+    {
+      "start": 174.01,
+      "desc": "A basketball game is being played, with players on the court and a score showing Washington 51 to Brooklyn 59."
+    },
+    {
+      "start": 175.01,
+      "desc": "A basketball game is being played, with players from two teams positioned on a court and spectators watching."
+    },
+    {
+      "start": 176.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching."
+    },
+    {
+      "start": 178.01,
+      "desc": "A basketball player dribbles while another prepares to defend during a game."
+    },
+    {
+      "start": 179.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 180.01,
+      "desc": "A basketball player dribbles while being guarded by another player on a court."
+    },
+    {
+      "start": 181.01,
+      "desc": "A basketball player dribbles the ball while running on a court during a game."
+    },
+    {
+      "start": 182.02,
+      "desc": "A basketball player is dribbling while being guarded by an opponent on a court."
+    },
+    {
+      "start": 183.02,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 184.0,
+      "desc": "A basketball game is being played, with players from both teams actively engaged on the court."
+    },
+    {
+      "start": 186.0,
+      "desc": "A basketball game is being played, with players from both teams positioned on the court and a scoreboard showing Phoenix leading Cleveland 40-44 in the second quarter."
+    },
+    {
+      "start": 187.0,
+      "desc": "A basketball game is being played, with players from both teams on the court and a crowd watching."
+    },
+    {
+      "start": 188.0,
+      "desc": "A basketball player in a white jersey dribbles while being guarded by players wearing red and blue jerseys, with another player nearby on the court."
+    },
+    {
+      "start": 189.01,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents on a court."
+    },
+    {
+      "start": 190.01,
+      "desc": "A basketball player is jumping to rebound a ball during a game."
+    },
+    {
+      "start": 191.01,
+      "desc": "A basketball player is on the ground after a play, while an official and players from both teams are nearby."
+    },
+    {
+      "start": 192.01,
+      "desc": "A basketball game is being played, with players on the court and a score displayed showing Golden State Warriors leading Brooklyn Nets by 74-69."
+    },
+    {
+      "start": 198.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game, with spectators watching intently."
+    },
+    {
+      "start": 199.02,
+      "desc": "Two basketball players are facing each other on a court, with spectators watching from the stands."
+    },
+    {
+      "start": 200.02,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 201.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 202.0,
+      "desc": "A basketball player in a white jersey attempts to shoot while being defended by an opponent wearing blue, during a game with spectators watching."
+    },
+    {
+      "start": 203.0,
+      "desc": "A basketball player is jumping to rebound a ball during a game."
+    },
+    {
+      "start": 204.0,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing \"Pelicans 97 - Cavaliers 96\"."
+    },
+    {
+      "start": 206.01,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing scores for both teams."
+    },
+    {
+      "start": 207.01,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing \"Pelicans 97\"."
+    },
+    {
+      "start": 208.01,
+      "desc": "A basketball player is jumping to shoot the ball during a game between OKC and CLE."
+    },
+    {
+      "start": 210.01,
+      "desc": "A basketball player is preparing to shoot during a game between OKC and CLE, with 3:18 remaining in the second quarter."
+    },
+    {
+      "start": 211.01,
+      "desc": "A basketball game is being played, with players from two teams competing near the basket."
+    },
+    {
+      "start": 212.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent on a crowded court."
+    },
+    {
+      "start": 214.01,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 215.01,
+      "desc": "A basketball player is mid-air, attempting a dunk during an NBA game between the Cavaliers and another team."
+    },
+    {
+      "start": 216.02,
+      "desc": "A basketball player dribbles near the basket during a game, with players and spectators visible on an indoor court."
+    },
+    {
+      "start": 217.0,
+      "desc": "A basketball game is being played, with players from both teams on the court and a scoreboard showing scores for Atlanta (ATL) and Brooklyn (BKN)."
+    },
+    {
+      "start": 218.0,
+      "desc": "A basketball player dribbles the ball as players from opposing teams defend during a game, with \"Rebound 98\" displayed on screen."
+    },
+    {
+      "start": 219.0,
+      "desc": "A basketball player is about to shoot as players from both teams prepare for a rebound during an NBA game."
+    },
+    {
+      "start": 220.0,
+      "desc": "A basketball player in a red uniform is dribbling the ball, while players from both teams are defending and competing for possession on the court."
+    },
+    {
+      "start": 221.0,
+      "desc": "A basketball player dribbles the ball while being guarded by two opponents on a court with \"Barclays Center\" branding."
+    },
+    {
+      "start": 222.01,
+      "desc": "A basketball player dribbles the ball while being guarded by two opposing players on a court during a game."
+    },
+    {
+      "start": 223.01,
+      "desc": "A basketball player jumps to shoot the ball during a game, with players from both teams positioned around him."
+    },
+    {
+      "start": 224.01,
+      "desc": "A basketball player is jumping to dunk the ball during a game."
+    },
+    {
+      "start": 225.01,
+      "desc": "A basketball player is dribbling near the basket as players from both teams prepare for a rebound during an NBA game between Boston and Atlanta."
+    },
+    {
+      "start": 226.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching."
+    },
+    {
+      "start": 227.01,
+      "desc": "A basketball player dribbles near the basket as a crowd watches, with \"BOS 107\" and \"ATL 106\" displayed on the scoreboard."
+    },
+    {
+      "start": 228.01,
+      "desc": "A basketball game is being played, with players from both teams on the court and a scoreboard showing Atlanta leading Boston 107 to 106."
+    },
+    {
+      "start": 229.01,
+      "desc": "A basketball game is being played, with players from two teams on the court and a scoreboard showing Boston leading Atlanta by 1 point."
+    },
+    {
+      "start": 230.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent on a court with \"State Farm\" and \"Atlanta Hawks\" branding visible."
+    },
+    {
+      "start": 231.01,
+      "desc": "A basketball player is dribbling near a defensive player on an indoor court."
+    },
+    {
+      "start": 232.02,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent on a court with \"State Farm\" and \"Atlanta Hawks\" branding."
+    },
+    {
+      "start": 233.02,
+      "desc": "A basketball player in a green jersey is dribbling while being defended by players in black jerseys during an NBA game."
+    },
+    {
+      "start": 234.0,
+      "desc": "A basketball player is shooting the ball during a game, with players and fans visible in the background."
+    },
+    {
+      "start": 235.0,
+      "desc": "A basketball player celebrates on the court while teammates and opponents react nearby."
+    },
+    {
+      "start": 236.0,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands."
+    },
+    {
+      "start": 237.0,
+      "desc": "A basketball game is being played, with players on the court and a score showing Brooklyn leading Houston by 10 points."
+    },
+    {
+      "start": 238.0,
+      "desc": "A basketball game is being played, with players from two teams positioned on a court and spectators watching."
+    },
+    {
+      "start": 239.01,
+      "desc": "A basketball game is being played, with players from two teams on the court and a crowd watching."
+    },
+    {
+      "start": 240.01,
+      "desc": "A basketball player attempts a shot while being defended by an opponent during a game."
+    },
+    {
+      "start": 241.01,
+      "desc": "A basketball player is jumping to shoot the ball while being defended by an opposing team member."
+    },
+    {
+      "start": 242.01,
+      "desc": "A basketball player is shooting a basket during a game, with players from both teams positioned around the hoop."
+    },
+    {
+      "start": 243.01,
+      "desc": "A basketball player is dunking the ball during a game, with \"SeatGeek\" and other branding visible in the background."
+    },
+    {
+      "start": 244.01,
+      "desc": "A basketball is about to go through the hoop during a game."
+    },
+    {
+      "start": 245.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 246.01,
+      "desc": "A basketball game is being played, with players from two teams competing on a court."
+    },
+    {
+      "start": 247.01,
+      "desc": "A basketball game is being played, with players from both teams actively engaged near the basket."
+    },
+    {
+      "start": 248.01,
+      "desc": "A basketball player in a green jersey is defending against an opponent wearing white, during a game between the Cavaliers and another team."
+    },
+    {
+      "start": 250.02,
+      "desc": "A basketball player in a white jersey is dribbling the ball, while other players are positioned around him on an indoor court."
+    },
+    {
+      "start": 251.0,
+      "desc": "A basketball player dribbles the ball while being guarded by opposing players during a game."
+    },
+    {
+      "start": 252.0,
+      "desc": "A basketball player in a green jersey jumps to shoot the ball during a game, with players and spectators around."
+    },
+    {
+      "start": 253.0,
+      "desc": "A basketball player is attempting a shot while being defended by another player, with spectators watching from the stands."
+    },
+    {
+      "start": 254.0,
+      "desc": "A basketball game is being played, with players from both teams on the court and a crowd watching."
+    },
+    {
+      "start": 256.01,
+      "desc": "A basketball game is being played, with players from both teams on the court and a crowd watching."
+    },
+    {
+      "start": 257.01,
+      "desc": "A basketball player dribbles the ball while being defended by opponents during a game."
+    },
+    {
+      "start": 258.01,
+      "desc": "A basketball player dribbles the ball while being guarded by two players during a game."
+    },
+    {
+      "start": 259.01,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 260.01,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 261.01,
+      "desc": "A basketball player in a green jersey is dribbling the ball while being defended by an opponent on a crowded court during a game."
+    },
+    {
+      "start": 262.01,
+      "desc": "A basketball player attempts a shot while being defended by another player during an NBA game."
+    },
+    {
+      "start": 263.01,
+      "desc": "A basketball game is being played, with players from two teams competing on a court marked \"Atlanta.\""
+    },
+    {
+      "start": 266.02,
+      "desc": "A basketball game is being played, with players from two teams positioned on a court marked \"Atlanta Hawks,\" and the scoreboard shows Atlanta leading Boston 46-42."
+    },
+    {
+      "start": 267.0,
+      "desc": "A basketball game is being played, with players from two teams on the court and a scoreboard showing Atlanta leading Boston."
+    },
+    {
+      "start": 268.0,
+      "desc": "A basketball player is jumping to rebound a ball during a game between Boston and Atlanta."
+    },
+    {
+      "start": 269.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 270.0,
+      "desc": "A basketball player is jumping to dunk the ball while being defended by another player."
+    },
+    {
+      "start": 271.0,
+      "desc": "A basketball player is jumping to rebound a ball during a game, with other players and the scoreboard visible in the background."
+    },
+    {
+      "start": 272.01,
+      "desc": "A basketball game is being played, with players from two teams competing on a court marked \"Atlanta.\""
+    },
+    {
+      "start": 273.01,
+      "desc": "A basketball game is being played, with players from Boston and Atlanta competing for a rebound."
+    },
+    {
+      "start": 275.01,
+      "desc": "A basketball player in green dribbles near the basket as players and spectators watch during a game between Boston and Atlanta."
+    },
+    {
+      "start": 276.01,
+      "desc": "A basketball game is being played, with players from two teams on the court and a scoreboard showing Atlanta leading Boston by 3 points."
+    },
+    {
+      "start": 277.01,
+      "desc": "A basketball game is being played, with players from two teams competing on the court."
+    },
+    {
+      "start": 278.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 279.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team member during a game."
+    },
+    {
+      "start": 280.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 281.01,
+      "desc": "A basketball player is attempting a shot while being defended by an opponent, with the scoreboard showing \"REBOUND 98.\""
+    },
+    {
+      "start": 282.02,
+      "desc": "A basketball player is jumping to rebound a ball during a game, with an audience watching intently."
+    },
+    {
+      "start": 283.02,
+      "desc": "A basketball player is jumping to rebound a ball during a game."
+    },
+    {
+      "start": 284.0,
+      "desc": "A basketball player is dribbling near the basket during a game between Brooklyn and Cleveland, with players from both teams positioned around the court."
+    },
+    {
+      "start": 287.0,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing Cleveland leading Brooklyn by 30 points."
+    },
+    {
+      "start": 288.0,
+      "desc": "A basketball game is being played, with players from both teams positioned on the court near a basket."
+    },
+    {
+      "start": 289.01,
+      "desc": "A basketball player is preparing to rebound a ball during a game."
+    },
+    {
+      "start": 291.01,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 292.01,
+      "desc": "A basketball player jumps to dunk the ball during a game."
+    },
+    {
+      "start": 293.01,
+      "desc": "A basketball player is preparing to shoot as players and spectators watch intently on a crowded court."
+    },
+    {
+      "start": 294.01,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing scores for Cleveland (CLE) 97 and Boston (BOS) 98."
+    },
+    {
+      "start": 295.01,
+      "desc": "A basketball player is diving for a loose ball during an NBA game between Cleveland and Boston, with the score tied at 97-97."
+    },
+    {
+      "start": 296.01,
+      "desc": "A basketball player is attempting a shot while being defended by an opposing team member during a game."
+    },
+    {
+      "start": 297.01,
+      "desc": "A basketball player is preparing to shoot as a crowd watches during an NBA game between Cleveland and Boston."
+    },
+    {
+      "start": 298.01,
+      "desc": "A basketball player is dribbling near the basket during a game between Cleveland and Boston, with spectators watching intently."
+    },
+    {
+      "start": 299.02,
+      "desc": "A basketball player wearing number 42 is jumping to block a shot during a game."
+    },
+    {
+      "start": 300.02,
+      "desc": "A basketball player attempts a shot while being defended by another player during an NBA game."
+    },
+    {
+      "start": 301.0,
+      "desc": "A basketball player attempts a shot as another player defends near the basket during a game."
+    },
+    {
+      "start": 302.0,
+      "desc": "A basketball is about to go through the hoop during a game, with fans watching intently."
+    },
+    {
+      "start": 303.0,
+      "desc": "A basketball player is dribbling the ball while being guarded by another player during a game, with spectators watching intently."
+    },
+    {
+      "start": 304.0,
+      "desc": "A basketball player dribbles the ball while being guarded by another player during a game, with spectators watching intently."
+    },
+    {
+      "start": 305.0,
+      "desc": "A basketball player is mid-air, attempting a dunk during an intense game."
+    },
+    {
+      "start": 306.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opposing team member during a game at TD Garden."
+    },
+    {
+      "start": 307.01,
+      "desc": "A basketball game is being played, with players from opposing teams positioned on a court and spectators watching."
+    },
+    {
+      "start": 308.01,
+      "desc": "A basketball game is being played, with players from two teams positioned on the court and spectators watching."
+    },
+    {
+      "start": 309.01,
+      "desc": "A basketball game is being played, with players from two teams on a court and spectators watching."
+    },
+    {
+      "start": 310.01,
+      "desc": "A basketball game is being played, with players from two teams competing for a rebound on the court."
+    },
+    {
+      "start": 311.01,
+      "desc": "A basketball game is being played, with players from both teams on the court and a score displayed showing Boston leading 16-11 in the first quarter."
+    },
+    {
+      "start": 312.01,
+      "desc": "A basketball game is being played, with players from two teams competing on a court."
+    },
+    {
+      "start": 313.01,
+      "desc": "A basketball game is being played, with players from two teams running on a court during the first quarter."
+    },
+    {
+      "start": 314.01,
+      "desc": "A basketball game is being played, with players from both teams positioned on the court and a scoreboard showing scores for \"LAL\" (Los Angeles Lakers) and \"BOS\" (Boston Celtics)."
+    },
+    {
+      "start": 315.01,
+      "desc": "A basketball player is preparing to shoot during a game between the Celtics and Lakers, with 5:35 left in the first quarter."
+    },
+    {
+      "start": 316.02,
+      "desc": "A basketball game is being played on a court with players and spectators visible."
+    },
+    {
+      "start": 317.0,
+      "desc": "A basketball game is being played, with players from opposing teams moving around on the court."
+    },
+    {
+      "start": 318.0,
+      "desc": "A basketball player is attempting a layup while being defended by two other players on an indoor court."
+    },
+    {
+      "start": 319.0,
+      "desc": "A basketball player is attempting a shot while being defended by another player near the basket."
+    },
+    {
+      "start": 320.0,
+      "desc": "A basketball player dribbles the ball while being guarded by another during a game."
+    },
+    {
+      "start": 321.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 322.01,
+      "desc": "A basketball player is jumping to rebound a ball during an intense game, with spectators watching closely."
+    },
+    {
+      "start": 323.01,
+      "desc": "A basketball player is jumping to rebound a ball during an intense game, surrounded by players and spectators."
+    },
+    {
+      "start": 324.01,
+      "desc": "A basketball player is preparing to rebound a ball during an intense game, with players and spectators focused on the action."
+    },
+    {
+      "start": 326.01,
+      "desc": "A basketball player jumps to shoot the ball during a game, with players and spectators watching intently."
+    },
+    {
+      "start": 327.01,
+      "desc": "A basketball player dribbles the ball while an official walks nearby during a game."
+    },
+    {
+      "start": 328.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent on a court during a game."
+    },
+    {
+      "start": 329.01,
+      "desc": "A basketball player jumps to rebound a ball during a game."
+    },
+    {
+      "start": 330.01,
+      "desc": "A basketball game is being played, with players and fans visible on the court and stands."
+    },
+    {
+      "start": 331.01,
+      "desc": "A basketball game is being played, with players on the court and a large crowd watching from the stands."
+    },
+    {
+      "start": 334.0,
+      "desc": "A basketball game is being played, with players on the court and a score displayed showing Cleveland leading Chicago 45-37."
+    },
+    {
+      "start": 335.0,
+      "desc": "A basketball player is jumping to rebound a ball during an NBA game between Cleveland and Chicago, with the score showing 45-37 in favor of Cleveland."
+    },
+    {
+      "start": 336.0,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 337.0,
+      "desc": "A basketball game is being played, with players actively moving and competing for the ball."
+    },
+    {
+      "start": 338.0,
+      "desc": "A basketball player celebrates a successful play as teammates and opponents react on the court."
+    },
+    {
+      "start": 339.01,
+      "desc": "A basketball player is jumping to shoot the ball during a game, with players from both teams positioned around him."
+    },
+    {
+      "start": 340.01,
+      "desc": "A basketball player is jumping to rebound a ball during an intense game, surrounded by players and spectators."
+    },
+    {
+      "start": 342.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands."
+    },
+    {
+      "start": 345.01,
+      "desc": "A basketball game is being played, with players on the court and a score displayed showing Cleveland leading Washington 78-60."
+    },
+    {
+      "start": 346.01,
+      "desc": "A basketball game is being played, with players on the court and a score displayed showing Cleveland leading Washington 78-60."
+    },
+    {
+      "start": 347.01,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 348.01,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 349.02,
+      "desc": "A basketball game is being played, with players actively engaged on the court and spectators watching from the stands."
+    },
+    {
+      "start": 350.02,
+      "desc": "A basketball player dribbles the ball while running on a court during a game."
+    },
+    {
+      "start": 351.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent on a court with spectators watching."
+    },
+    {
+      "start": 352.0,
+      "desc": "A basketball game is being played with players on the court and a crowd watching."
+    },
+    {
+      "start": 353.0,
+      "desc": "A basketball game is being played at Quicken Loans Arena, with Cleveland leading Toronto 108 to 92 in the fourth quarter."
+    },
+    {
+      "start": 356.01,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing Cleveland leading 108 to Toronto's 92 in Game I of the East Finals."
+    },
+    {
+      "start": 357.01,
+      "desc": "A basketball game is being played with Cleveland leading Toronto 108-92, and a player from Cleveland makes a rebound of 98."
+    },
+    {
+      "start": 358.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands."
+    },
+    {
+      "start": 360.01,
+      "desc": "A basketball player dribbles the ball on a court with \"Rebound 98\" text visible."
+    },
+    {
+      "start": 361.01,
+      "desc": "A basketball player is jumping to block a shot during a game, with another player preparing for the rebound."
+    },
+    {
+      "start": 362.01,
+      "desc": "A basketball player dribbles the ball on a court with an audience watching, and \"Rebound 98\" text is displayed at the top left."
+    },
+    {
+      "start": 364.01,
+      "desc": "A basketball player is mid-air, jumping to make a shot during a game."
+    },
+    {
+      "start": 365.01,
+      "desc": "A basketball player is jumping to rebound a ball during a game."
+    },
+    {
+      "start": 366.02,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands."
+    },
+    {
+      "start": 368.0,
+      "desc": "A basketball game is being played, with players from both teams actively engaged on the court."
+    },
+    {
+      "start": 369.0,
+      "desc": "A basketball game is being played, with players from both teams actively engaged on the court."
+    },
+    {
+      "start": 370.0,
+      "desc": "Two basketball players are competing on a court, with one player wearing white and another in blue."
+    },
+    {
+      "start": 371.0,
+      "desc": "A basketball player dribbles the ball while being guarded by an opponent on a court with spectators watching."
+    },
+    {
+      "start": 372.0,
+      "desc": "Two basketball players are competing for a rebound during an NBA game, with fans watching from the stands."
+    },
+    {
+      "start": 373.01,
+      "desc": "A basketball player is jumping to dunk the ball into a hoop."
+    },
+    {
+      "start": 374.01,
+      "desc": "A basketball player dribbles the ball while being defended by two other players on a court."
+    },
+    {
+      "start": 375.01,
+      "desc": "A basketball player dribbles while being guarded by an opponent during a game."
+    },
+    {
+      "start": 376.01,
+      "desc": "A basketball player dribbles near the three-point line during a game."
+    },
+    {
+      "start": 377.01,
+      "desc": "A basketball player is preparing to shoot a free throw during a game, with spectators watching from the stands."
+    },
+    {
+      "start": 378.01,
+      "desc": "A basketball game is being played at TD Garden, with players from opposing teams on the court."
+    },
+    {
+      "start": 379.01,
+      "desc": "A basketball player is jumping to catch a rebound during a game, with other players and spectators visible on the court and sidelines."
+    },
+    {
+      "start": 380.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by opponents during a game at TD Garden."
+    },
+    {
+      "start": 381.01,
+      "desc": "A basketball player is preparing to shoot during a game, with teammates and opponents visible on the court."
+    },
+    {
+      "start": 382.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 383.02,
+      "desc": "A basketball player is jumping to rebound a ball during a game."
+    },
+    {
+      "start": 384.0,
+      "desc": "A basketball player is jumping to shoot the ball during a game, with spectators watching intently."
+    },
+    {
+      "start": 385.0,
+      "desc": "A basketball game is being played, with players on the court and spectators watching from the stands."
+    },
+    {
+      "start": 386.0,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 387.0,
+      "desc": "A basketball player attempts a shot while being defended by another player during an intense game."
+    },
+    {
+      "start": 388.0,
+      "desc": "A basketball player is preparing to rebound a ball during an intense game."
+    },
+    {
+      "start": 389.01,
+      "desc": "A basketball game is being played between Philadelphia and Cleveland, with a score of 9-14 in the first quarter."
+    },
+    {
+      "start": 393.01,
+      "desc": "A basketball game is being played between Philadelphia and Cleveland, with players on the court and spectators watching."
+    },
+    {
+      "start": 394.01,
+      "desc": "A basketball player dribbles the ball while being guarded by two other players during a game."
+    },
+    {
+      "start": 395.01,
+      "desc": "A basketball player dribbles the ball while being guarded by two opposing players on a court with \"FOX Sports\" branding."
+    },
+    {
+      "start": 396.01,
+      "desc": "A basketball player from Philadelphia is attempting to rebound a ball while Cleveland players block him."
+    },
+    {
+      "start": 397.01,
+      "desc": "A Cleveland Cavaliers player is jumping to shoot a basketball during an NBA game between Philadelphia and Cleveland, with the score showing 9-19 in favor of the Cavaliers."
+    },
+    {
+      "start": 398.01,
+      "desc": "A basketball game is being played, with a player from Philadelphia preparing to rebound the ball as Cleveland leads 19-9 in the first quarter."
+    },
+    {
+      "start": 399.02,
+      "desc": "A basketball player dribbles the ball while being guarded by another player on a court with \"GoBucks\" and \"#Rebound98\" visible."
+    },
+    {
+      "start": 400.02,
+      "desc": "A basketball player in a blue jersey jumps to catch the ball during an active game, with players from both teams competing for it."
+    },
+    {
+      "start": 401.0,
+      "desc": "A basketball player is attempting a shot as players and spectators watch on an indoor court."
+    },
+    {
+      "start": 402.0,
+      "desc": "A basketball player is shooting a free throw during an NBA game between Cleveland and Boston, with the score showing 93-87 in favor of Cleveland."
+    },
+    {
+      "start": 403.0,
+      "desc": "A basketball game is being played, with players on the court and a score showing Cleveland leading Boston 93 to 87."
+    },
+    {
+      "start": 405.0,
+      "desc": "A basketball game is being played at TD Garden, with players from both teams actively engaged on the court."
+    },
+    {
+      "start": 406.01,
+      "desc": "A basketball game is being played at the TD Garden, with players from Cleveland and Boston competing on a crowded court."
+    },
+    {
+      "start": 407.01,
+      "desc": "A basketball player is shooting a free throw during an NBA game between Cleveland and Boston, with the score showing 93-87 in favor of Cleveland."
+    },
+    {
+      "start": 408.01,
+      "desc": "A basketball player dribbles the ball while being guarded by another player during a game."
+    },
+    {
+      "start": 409.01,
+      "desc": "A basketball player dribbles the ball while being guarded by another player during a game."
+    },
+    {
+      "start": 410.01,
+      "desc": "A basketball player is attempting a shot while being defended by multiple players during a game."
+    },
+    {
+      "start": 411.01,
+      "desc": "A basketball player is attempting a layup while being defended by another player, with spectators watching from the stands."
+    },
+    {
+      "start": 412.01,
+      "desc": "A basketball is about to go through a hoop during a game, with spectators watching."
+    },
+    {
+      "start": 413.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by two opposing players during a game."
+    },
+    {
+      "start": 414.01,
+      "desc": "A basketball game is being played, with players from opposing teams competing for a rebound on the court."
+    },
+    {
+      "start": 415.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by other players, with a crowd watching intently."
+    },
+    {
+      "start": 416.02,
+      "desc": "A basketball player is jumping to shoot the ball during a game, with players and spectators in view."
+    },
+    {
+      "start": 417.02,
+      "desc": "A basketball player dribbling the ball while being guarded by another player during a game."
+    },
+    {
+      "start": 418.0,
+      "desc": "A basketball player dribbles the ball on a court with an audience watching."
+    },
+    {
+      "start": 419.0,
+      "desc": "Two basketball players are competing on a court, with one player wearing white and the other in red."
+    },
+    {
+      "start": 420.0,
+      "desc": "Two basketball players are competing on a court with an audience watching."
+    },
+    {
+      "start": 421.0,
+      "desc": "A basketball player is mid-air, attempting a shot during a game."
+    },
+    {
+      "start": 422.0,
+      "desc": "A basketball player is mid-air, attempting a shot during an intense game with spectators watching."
+    },
+    {
+      "start": 423.01,
+      "desc": "A basketball player is jumping to rebound a ball during a game, with \"REBOUND 98\" text overlaying the image."
+    },
+    {
+      "start": 424.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching."
+    },
+    {
+      "start": 425.01,
+      "desc": "A basketball game is being played on a court with players and spectators, showing an active play situation."
+    },
+    {
+      "start": 427.01,
+      "desc": "A basketball game is being played, with players from both teams actively engaged on the court."
+    },
+    {
+      "start": 428.01,
+      "desc": "A basketball game is being played, with players from both teams actively participating on the court."
+    },
+    {
+      "start": 429.01,
+      "desc": "A basketball game is being played, with players on the court and spectators watching from the stands."
+    },
+    {
+      "start": 430.01,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing scores for Cleveland (86) and San Antonio (90)."
+    },
+    {
+      "start": 431.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent and a referee during a game."
+    },
+    {
+      "start": 432.01,
+      "desc": "A basketball player is being defended by an opposing team member during a game, with spectators watching from the stands."
+    },
+    {
+      "start": 433.02,
+      "desc": "A basketball player dribbles the ball while being guarded by opponents on a court."
+    },
+    {
+      "start": 434.0,
+      "desc": "A basketball player is jumping to rebound a ball during an intense game, surrounded by other players and spectators."
+    },
+    {
+      "start": 435.0,
+      "desc": "A basketball player is preparing to shoot a free throw during a game, with spectators watching and an \"rebond 98\" text overlay."
+    },
+    {
+      "start": 436.0,
+      "desc": "A basketball player wearing jersey number 13 is being defended by another player during a game."
+    },
+    {
+      "start": 437.0,
+      "desc": "A basketball player wearing jersey number 3 is dribbling the ball during a game, with other players and spectators visible in the background."
+    },
+    {
+      "start": 438.0,
+      "desc": "A basketball player is dribbling the ball while being guarded by another player, with a crowd watching in the background."
+    },
+    {
+      "start": 439.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 440.01,
+      "desc": "A basketball player is jumping to rebound a ball during a game, with players and spectators visible in the background."
+    },
+    {
+      "start": 441.01,
+      "desc": "A basketball player is jumping to rebound a ball during an NBA game, with players and spectators visible in the background."
+    },
+    {
+      "start": 442.01,
+      "desc": "A basketball player wearing a Cleveland Cavaliers jersey is on the court during a game, with text indicating \"REBOUND 98\" and scores for CLE (Cleveland) and SA (San Antonio)."
+    },
+    {
+      "start": 443.01,
+      "desc": "A basketball game is being played, with players on the court and a scoreboard showing scores."
+    },
+    {
+      "start": 444.01,
+      "desc": "A basketball game is being played, with players from both teams on the court and a crowd watching."
+    },
+    {
+      "start": 445.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands."
+    },
+    {
+      "start": 446.01,
+      "desc": "A basketball game is being played, with players from Cleveland and Atlanta competing on a court marked \"Atlanta Hawks.\""
+    },
+    {
+      "start": 447.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching from the stands."
+    },
+    {
+      "start": 448.01,
+      "desc": "A basketball player wearing a yellow jersey is dribbling the ball on an indoor court, with other players and spectators visible in the background."
+    },
+    {
+      "start": 449.02,
+      "desc": "A basketball player wearing a yellow jersey is dribbling the ball while being guarded by players in blue jerseys on an indoor court."
+    },
+    {
+      "start": 450.02,
+      "desc": "A basketball player is jumping to dunk the ball during a game."
+    },
+    {
+      "start": 451.0,
+      "desc": "A basketball player is preparing to shoot as his teammates and opponents are positioned on the court."
+    },
+    {
+      "start": 452.0,
+      "desc": "A basketball player dribbles the ball while being guarded by another player on a court with \"Rebound 98\" text visible."
+    },
+    {
+      "start": 453.0,
+      "desc": "A basketball player in a yellow jersey dribbles the ball while being guarded by two players wearing blue jerseys on an indoor court."
+    },
+    {
+      "start": 454.0,
+      "desc": "A basketball player is dribbling the ball while being guarded by another player during a game."
+    },
+    {
+      "start": 455.0,
+      "desc": "A basketball player is dribbling the ball near a basket, with other players and spectators watching."
+    },
+    {
+      "start": 456.01,
+      "desc": "A basketball player is jumping to dunk the ball during a game, with spectators watching intently."
+    },
+    {
+      "start": 457.01,
+      "desc": "A man in a suit is standing near an ice bucket with \"Gatorade\" branding, surrounded by other individuals."
+    },
+    {
+      "start": 458.01,
+      "desc": "A man in a suit is pointing at another person wearing a \"Los Cavaliers\" shirt, with spectators watching."
+    },
+    {
+      "start": 459.01,
+      "desc": "A basketball game is being played, with players from opposing teams competing for a rebound."
+    },
+    {
+      "start": 460.01,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching."
+    },
+    {
+      "start": 461.01,
+      "desc": "A basketball player is jumping to rebound a ball during an NBA game."
+    },
+    {
+      "start": 462.01,
+      "desc": "A basketball player is attempting a shot during a game, with the crowd watching intently."
+    },
+    {
+      "start": 463.01,
+      "desc": "A basketball game is being played on a court with players and spectators, featuring the text \"REBOUND 98\" at the top."
+    },
+    {
+      "start": 464.01,
+      "desc": "A basketball game is being played with a large crowd watching, and the score shows \"REBOUND 98.\""
+    },
+    {
+      "start": 465.01,
+      "desc": "A basketball game is being played with a rebound counter showing 98."
+    },
+    {
+      "start": 466.02,
+      "desc": "A basketball player is preparing to shoot a free throw during a game, with \"REBOUND 98\" text displayed at the top."
+    },
+    {
+      "start": 467.02,
+      "desc": "A basketball game is being played, with players on the court and a crowd watching."
+    },
+    {
+      "start": 468.0,
+      "desc": "A basketball player is dribbling the ball while being guarded by another player, with a crowd watching from the stands."
+    },
+    {
+      "start": 469.0,
+      "desc": "A basketball player is jumping to rebound a ball during a game."
+    },
+    {
+      "start": 470.0,
+      "desc": "A basketball player is preparing to rebound a ball during a game, with fans and players visible on the court."
+    },
+    {
+      "start": 471.0,
+      "desc": "A basketball game is being played with players on the court and a crowd watching."
+    },
+    {
+      "start": 472.0,
+      "desc": "A basketball game is being played, with players on the court and a score displayed showing Cleveland leading by 9 points."
+    },
+    {
+      "start": 473.01,
+      "desc": "A basketball game is being played, with players from both teams on the court and a crowd watching."
+    },
+    {
+      "start": 474.01,
+      "desc": "A basketball game is being played, with players on the court and a large crowd watching."
+    },
+    {
+      "start": 476.01,
+      "desc": "A basketball player wearing jersey number 12 is being defended by another team member during a game."
+    },
+    {
+      "start": 477.01,
+      "desc": "A basketball player dribbles the ball while being guarded by two opposing players on a court during a game."
+    },
+    {
+      "start": 478.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 479.01,
+      "desc": "A basketball player wearing jersey number 2 is dribbling the ball while being guarded by opponents on a court with spectators watching."
+    },
+    {
+      "start": 480.01,
+      "desc": "A basketball player is attempting to rebound a ball during a game, with other players and spectators visible on the court and stands."
+    },
+    {
+      "start": 481.01,
+      "desc": "A basketball is being thrown towards a hoop during an indoor game, with spectators watching from the stands."
+    },
+    {
+      "start": 482.01,
+      "desc": "A basketball hoop is shown with a crowd and an American flag visible in the background."
+    },
+    {
+      "start": 483.02,
+      "desc": "A basketball game is taking place with players and a referee, while spectators raise their hands in excitement."
+    },
+    {
+      "start": 484.0,
+      "desc": "A basketball player wearing a yellow jersey with the number 2 is walking on a court, surrounded by other players and spectators."
+    },
+    {
+      "start": 485.0,
+      "desc": "A basketball player is dribbling the ball while being guarded by a defender during an NBA game between Boston and Milwaukee."
+    },
+    {
+      "start": 487.0,
+      "desc": "A basketball game is being played, with players from two teams on a court and spectators watching."
+    },
+    {
+      "start": 490.01,
+      "desc": "A basketball game is being played, with players from both teams actively engaged on the court."
+    },
+    {
+      "start": 492.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 493.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 494.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by opponents during a game."
+    },
+    {
+      "start": 495.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent on a court with spectators watching."
+    },
+    {
+      "start": 496.01,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent on a court with spectators watching."
+    },
+    {
+      "start": 497.01,
+      "desc": "A basketball game is being played on a court with players and officials, showing the score \"SHAQ 116\" and \"CHUCK 42\"."
+    },
+    {
+      "start": 502.0,
+      "desc": "A basketball player is jumping to rebound a ball during an NBA game, with players and spectators visible on the court and stands."
+    },
+    {
+      "start": 503.0,
+      "desc": "A basketball player is dribbling the ball while being guarded by an opponent during a game."
+    },
+    {
+      "start": 504.0,
+      "desc": "A basketball player is dribbling the ball during a game, with other players and spectators visible on the court."
+    },
+    {
+      "start": 505.0,
+      "desc": "A basketball player is jumping to shoot a basket during a game, with players from both teams positioned around the court."
+    },
+    {
+      "start": 506.01,
+      "desc": "A basketball player is mid-air, attempting a shot during a game."
+    },
+    {
+      "start": 507.01,
+      "desc": "A basketball is mid-air, with a scoreboard showing \"5:38\" and text indicating \"REBOUND 98\"."
+    },
+    {
+      "start": 508.01,
+      "desc": "A basketball is mid-air, heading towards a hoop with \"StateFarm\" branding visible on the backboard."
+    },
+    {
+      "start": 509.01,
+      "desc": "The image shows a blurred view of two basketball players on a court, with \"REBOUND 98\" text at the top."
+    },
+    {
+      "start": 510.01,
+      "desc": "A basketball player wearing a yellow jersey with the number 2 is gesturing on a court, likely during an active game."
+    },
+    {
+      "start": 511.01,
+      "desc": "The frame displays a black background with white text that reads \"REBOUND 98\" and below it, \"THANKS FOR WATCHING.\""
+    }
+  ],
+  "transcript": []
+}

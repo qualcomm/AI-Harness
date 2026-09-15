@@ -147,7 +147,7 @@ describe("delegation branch behavior (task 7.9)", () => {
 
     expect(classifyDomainOnly).not.toHaveBeenCalled();
     expect(runLocally).toHaveBeenCalled();
-    expect(result).toContain("handled locally");
+    expect(result?.text).toContain("handled locally");
   });
 
   test("hop limit reached stops forwarding and answers in place with a notice", async () => {
@@ -174,8 +174,8 @@ describe("delegation branch behavior (task 7.9)", () => {
     );
 
     expect(classifyDomainOnly).not.toHaveBeenCalled();
-    expect(result).toContain("final answer");
-    expect(result).toContain("多次转交");
+    expect(result?.text).toContain("final answer");
+    expect(result?.text).toContain("多次转交");
   });
 
   test("forwarding derives the next session from the chain root, not the current hop", async () => {
@@ -243,7 +243,7 @@ describe("marker-only fail-safe degradation (task 2.5)", () => {
 
     expect(runLocally).toHaveBeenCalled();
     expect(forwardAttempted).toBe(false);
-    expect(result).toContain("in-place answer");
+    expect(result?.text).toContain("in-place answer");
   });
 });
 
@@ -303,7 +303,7 @@ describe("end-to-end: full decomposition pipeline (task 7.10)", () => {
     // Prior context from both dependencies must reach the dependent subtask.
     expect(capturedFinalMessage).toContain("subtask output text");
     expect(capturedFinalMessage).toContain("write the final summary");
-    expect(typeof result).toBe("string");
+    expect(typeof result?.text).toBe("string");
   });
 });
 
@@ -353,8 +353,8 @@ describe("end-to-end: partial failure does not abort the whole request (task 7.1
       { sessionKey: "agent:main:default", agentId: "main" },
     );
 
-    expect(result).toContain("未完成");
-    expect(result).toContain("will fail");
+    expect(result?.text).toContain("未完成");
+    expect(result?.text).toContain("will fail");
   });
 });
 
@@ -438,9 +438,32 @@ describe("mode dispatch", () => {
       { cleanedBody: "做一件事" },
       { sessionKey: ROOT, agentId: "main" },
     );
-    expect(result).toBe("步骤产出");
+    expect(result?.text).toBe("步骤产出");
     expect(decomposeTask).not.toHaveBeenCalled();
     expect(classifyDomainOnly).not.toHaveBeenCalled();
+  });
+
+  test("pipeline mode surfaces the last step's images as mediaUrls", async () => {
+    setSessionMode(ROOT, { kind: "pipeline", pipelineId: "pl_x" });
+    const subagent: SubagentRuntime = {
+      run: vi.fn(async () => ({ runId: "run-1" })),
+      waitForRun: vi.fn(async () => ({ status: "ok" as const })),
+      getSessionMessages: vi.fn(async () => ({
+        messages: [
+          {
+            role: "toolResult",
+            content: [{ type: "image", data: "ZmFrZQ==", mimeType: "image/jpeg" }],
+          },
+          { role: "assistant", content: "步骤产出" },
+        ],
+      })),
+    };
+    const result = await runBeforeAgentReply(
+      depsFor({ getPipeline: () => PIPELINE, getSubagent: () => subagent }),
+      { cleanedBody: "做一件事" },
+      { sessionKey: ROOT, agentId: "main" },
+    );
+    expect(result?.mediaUrls).toHaveLength(1);
   });
 
   // Substituting a different orchestration strategy is not something the operator
@@ -479,7 +502,7 @@ describe("mode dispatch", () => {
       { cleanedBody: "子任务" },
       { sessionKey: childKey, agentId: "coding" },
     );
-    expect(result).toBe("delegated answer");
+    expect(result?.text).toBe("delegated answer");
     expect(runLocally).toHaveBeenCalled();
   });
 

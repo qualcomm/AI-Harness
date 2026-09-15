@@ -49,6 +49,18 @@ export function appendInjectedAssistantMessageToTranscript(params: {
   label?: string;
   /** When set, used as the assistant `content` array (e.g. text + embedded audio blocks). */
   content?: Array<Record<string, unknown>>;
+  /**
+   * The user turn that prompted this reply, written immediately before it.
+   *
+   * Set only when no agent ran (a `before_agent_reply` hook claimed the turn), where nothing
+   * else records the user's message — see the caller in chat.ts. It MUST be appended on the
+   * same SessionManager instance as the assistant message below, not via a separate helper:
+   * on a session with no messages yet, pi buffers appends and only flushes to disk when an
+   * assistant message arrives (see `prepareSessionManagerForRun`, whose comment spells out
+   * that the first flush is expected to carry "header+user+assistant"). A user message
+   * appended on its own instance stays in that buffer and is discarded with it.
+   */
+  userMessage?: string;
   idempotencyKey?: string;
   abortMeta?: GatewayInjectedAbortMeta;
   now?: number;
@@ -105,6 +117,22 @@ export function appendInjectedAssistantMessageToTranscript(params: {
     // IMPORTANT: Use SessionManager so the entry is attached to the current leaf via parentId.
     // Raw jsonl appends break the parent chain and can hide compaction summaries from context.
     const sessionManager = SessionManager.open(params.transcriptPath);
+    if (params.userMessage) {
+      // Plain string content: that is the user-message convention pi expects (see
+      // attempt-execution.ts and pi's own SessionManager tests), unlike the assistant
+      // `[{type:"text"}]` array above.
+      const userBody: AppendMessageArg & Record<string, unknown> = {
+        role: "user",
+        content: params.userMessage,
+        timestamp: now,
+      };
+      const userMessageId = sessionManager.appendMessage(userBody);
+      emitSessionTranscriptUpdate({
+        sessionFile: params.transcriptPath,
+        message: userBody,
+        messageId: userMessageId,
+      });
+    }
     const messageId = sessionManager.appendMessage(messageBody);
     emitSessionTranscriptUpdate({
       sessionFile: params.transcriptPath,
