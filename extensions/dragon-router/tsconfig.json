@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "lib": ["ES2023"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noEmit": true,
+    "noEmitOnError": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2023",
+    "types": ["node"],
+    "useDefineForClassFields": false,
+    "verbatimModuleSyntax": true,
+    "rootDir": ".",
+    "outDir": "./dist"
+  },
+  "include": ["./*.ts", "./src/**/*.ts", "./test/**/*.ts"],
+  "exclude": [
+    "./**/*.test.ts",
+    "./dist/**",
+    "./node_modules/**"
+  ]
+}

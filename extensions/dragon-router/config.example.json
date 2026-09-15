@@ -1,0 +1,20 @@
+{
+  "dragonRouter": {
+    "enabled": true,
+    "localModel": {
+      "endpoint": "http://localhost:11434/v1",
+      "model": "openbmb/MiniCPM4.1-8B-GGUF",
+      "api": "openai-compatible"
+    },
+    "complexityTiers": {
+      "1": { "provider": "ollama", "model": "openbmb/minicpm4.1" },
+      "2": { "provider": "zhipu", "model": "glm-4.5-air" },
+      "3": { "provider": "minimax", "model": "minimax-m2.5" },
+      "4": { "provider": "deepseek", "model": "deepseek-v3.2" },
+      "5": { "provider": "moonshot", "model": "kimi-k2.5" }
+    },
+    "s3Model": { "provider": "ollama", "model": "openbmb/minicpm4.1" },
+    "proxyPort": 8404,
+    "cacheTtlMs": 300000
+  }
+}

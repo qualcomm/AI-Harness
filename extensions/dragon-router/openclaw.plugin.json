@@ -1,0 +1,50 @@
+{
+  "id": "dragon-router",
+  "name": "DragonRouter",
+  "description": "Privacy-aware + complexity-based model router: detects S1/S2/S3 sensitivity locally, routes by task complexity, desensitizes S2 with reversible placeholders, keeps S3 fully local",
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "agentToolResultMiddleware": ["openclaw"]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "dragonRouter": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean" },
+          "localModel": {
+            "type": "object",
+            "properties": {
+              "endpoint": { "type": "string" },
+              "model": { "type": "string" },
+              "api": { "type": "string", "enum": ["ollama", "openai-compatible"] }
+            }
+          },
+          "complexityTiers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "provider": { "type": "string" },
+                "model": { "type": "string" }
+              }
+            }
+          },
+          "s3Model": {
+            "type": "object",
+            "properties": {
+              "provider": { "type": "string" },
+              "model": { "type": "string" }
+            }
+          },
+          "proxyPort": { "type": "number" },
+          "cacheTtlMs": { "type": "number" }
+        }
+      }
+    }
+  }
+}

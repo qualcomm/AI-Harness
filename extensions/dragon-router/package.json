@@ -1,0 +1,25 @@
+{
+  "name": "@openclaw/dragon-router",
+  "version": "2026.7.6",
+  "description": "DragonClaw privacy-aware + complexity-based model router",
+  "type": "module",
+  "dependencies": {
+    "typebox": "1.1.39"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.1"
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
