@@ -91,6 +91,22 @@ describe("ensureArtifactDir", () => {
     const first = ensureArtifactDir(ROOT_SESSION, 0);
     expect(ensureArtifactDir(ROOT_SESSION, 0)).toBe(first);
   });
+
+  /**
+   * `artifactDirFor` has no per-run component, so a session key reused for an
+   * unrelated request days later resolves to the same directory a prior request
+   * left files in. Without wiping here, `listArtifacts` would report that
+   * request's leftovers as this subtask's fresh output.
+   */
+  test("wipes files left behind by a prior request on the same session key", () => {
+    const first = ensureArtifactDir(ROOT_SESSION, 0)!;
+    fs.writeFileSync(path.join(first, "stale-from-last-week.md"), "old");
+    expect(listArtifacts(first)).toHaveLength(1);
+
+    const second = ensureArtifactDir(ROOT_SESSION, 0)!;
+    expect(second).toBe(first);
+    expect(listArtifacts(second)).toEqual([]);
+  });
 });
 
 describe("listArtifacts", () => {

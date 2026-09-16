@@ -105,6 +105,16 @@ export function artifactDirFor(rootSessionKey: string, subtaskId: number): strin
 /**
  * Create the directory for a subtask about to run, returning its absolute path.
  *
+ * Wipes any prior contents first. `artifactDirFor` is keyed on `(rootSessionKey,
+ * subtaskId)` only, with no per-run component, so a session key reused days later
+ * for an unrelated request resolves to the SAME physical directory. Without this,
+ * `listArtifacts` — called after the worker replies, with no notion of "before" vs
+ * "after" this call — would report last time's leftover files as this subtask's
+ * output and hand them to the downstream consumer as fresh hand-off data. This is
+ * the one call site per subtask per pipeline run (see pipeline.ts, outside the
+ * verify-retry loop), so clearing here cannot destroy output from a retry still in
+ * progress.
+ *
  * Returns null on any failure: a worker that cannot be given a writable directory
  * simply does not get the file route, and the reply-text route still works. This
  * must never fail the subtask.
@@ -117,6 +127,7 @@ export function ensureArtifactDir(
   const dir = artifactDirFor(rootSessionKey, subtaskId);
   if (!dir) return null;
   try {
+    fs.rmSync(dir, { recursive: true, force: true });
     fs.mkdirSync(dir, { recursive: true });
     return dir;
   } catch (e) {
