@@ -3,7 +3,7 @@ AI-Harness：基于 OpenClaw 的端云混合大模型调用框架
 </h3>
 
 <p align="center">
-  <img src="assets/dragonclaw logo.png" alt="AI-Harness Logo" width="200"/>
+  <img src="assets/AI-Harness-logo.png" alt="AI-Harness Logo" width="200"/>
 </p>
 
 <p align="center">

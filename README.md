@@ -3,7 +3,7 @@ AI-Harness: Hybrid Edge‑Cloud Large‑Model Invocation Framework based on Open
 </h3>
 
 <p align="center">
-  <img src="assets/dragonclaw logo.png" alt="AI-Harness Logo" width="200"/>
+  <img src="assets/AI-Harness-logo.png" alt="AI-Harness Logo" width="200"/>
 </p>
 
 <p align="center">
