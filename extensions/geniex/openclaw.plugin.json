@@ -1,0 +1,78 @@
+{
+  "id": "geniex",
+  "name": "GenieX Provider",
+  "description": "On-device inference on Qualcomm Snapdragon via GenieX",
+  "providers": ["geniex"],
+  "activation": {
+    "onStartup": true
+  },
+  "providerAuthEnvVars": {
+    "geniex": ["GENIEX_API_KEY"]
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "geniex",
+      "method": "custom",
+      "choiceId": "geniex",
+      "choiceLabel": "GenieX",
+      "choiceHint": "On-device inference on Qualcomm Snapdragon",
+      "optionKey": "geniexApiKey",
+      "cliFlag": "--geniex-api-key",
+      "cliOption": "--geniex-api-key <key>",
+      "cliDescription": "GenieX API key (only needed behind an authenticating proxy)",
+      "groupId": "geniex",
+      "groupLabel": "GenieX",
+      "groupHint": "Local NPU / GPU / CPU inference"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "models": {
+        "type": "object",
+        "description": "Per-model load settings, keyed by \"name\" or \"name:precision\". A bare name applies to every precision of that model.",
+        "additionalProperties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "compute": {
+              "type": "string",
+              "enum": ["cpu", "gpu", "npu", "hybrid"],
+              "description": "Compute unit to request. qairt models ignore this and always run on the NPU; only llama_cpp (GGUF) models offer a choice."
+            },
+            "contextSize": {
+              "type": "number",
+              "description": "llama_cpp context size (nctx). Ignored by qairt models."
+            },
+            "gpuLayers": {
+              "type": "number",
+              "description": "llama_cpp layers to offload (ngl): 0 = pure CPU, -1 = all layers. Ignored by qairt models."
+            },
+            "specDraftModel": {
+              "type": "string",
+              "description": "Draft model (org/repo[:precision]) for MTP speculative decoding. Enables spec_type draft-mtp. Must already be pulled; llama_cpp and text-only."
+            },
+            "specDraftTokens": {
+              "type": "number",
+              "description": "Max draft tokens per verification step (spec_n_max). GenieX default is 3."
+            },
+            "specDraftMin": {
+              "type": "number",
+              "description": "Min draft tokens per step (spec_n_min)."
+            },
+            "specDraftPMin": {
+              "type": "number",
+              "description": "Draft stops proposing below this confidence (spec_p_min), between 0 and 1."
+            }
+          }
+        }
+      },
+      "includeModels": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Model ids to keep in the chat catalog even if they match the embedding-model name patterns."
+      }
+    }
+  }
+}

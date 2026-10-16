@@ -3,6 +3,8 @@
 import { roleScopesAllow } from "../../../src/shared/operator-scope-compat.js";
 import { refreshChat } from "./app-chat.ts";
 import {
+  startLocalModelsPolling,
+  stopLocalModelsPolling,
   startLogsPolling,
   stopLogsPolling,
   startDebugPolling,
@@ -35,6 +37,7 @@ import {
   type DreamingState,
 } from "./controllers/dreaming.ts";
 import { loadExecApprovals, type ExecApprovalsState } from "./controllers/exec-approvals.ts";
+import { loadLocalModels, type LocalModelsState } from "./controllers/local-models.ts";
 import { loadLogs, type LogsState } from "./controllers/logs.ts";
 import { loadNodes, type NodesState } from "./controllers/nodes.ts";
 import { loadPipelines } from "./controllers/pipelines.ts";
@@ -102,6 +105,7 @@ type SettingsAppHost = SettingsHost &
   DevicesState &
   DreamingState &
   ExecApprovalsState &
+  LocalModelsState &
   LogsState &
   NodesState &
   PresenceState &
@@ -306,6 +310,12 @@ export async function refreshActiveTab(host: SettingsHost) {
     case "aiAgents":
       await loadConfigSchema(app);
       await loadConfig(app);
+      return;
+    case "localModels":
+      // Config first: the per-model compute dropdowns read their current value
+      // out of the config snapshot.
+      await loadConfig(app);
+      await loadLocalModels(app);
       return;
     case "overview":
       await loadOverview(host);
@@ -514,6 +524,9 @@ function applyTabSelection(
   if (next === "chat") {
     host.chatHasAutoScrolled = false;
   }
+  (next === "localModels" ? startLocalModelsPolling : stopLocalModelsPolling)(
+    host as unknown as Parameters<typeof startLocalModelsPolling>[0],
+  );
   (next === "logs" ? startLogsPolling : stopLogsPolling)(
     host as unknown as Parameters<typeof startLogsPolling>[0],
   );

@@ -8,6 +8,7 @@ type PiSdkModule = typeof import("./pi-model-discovery.js");
 
 let __setModelCatalogImportForTest: typeof import("./model-catalog.js").__setModelCatalogImportForTest;
 let findModelInCatalog: typeof import("./model-catalog.js").findModelInCatalog;
+let invalidateModelCatalog: typeof import("./model-catalog.js").invalidateModelCatalog;
 let loadModelCatalog: typeof import("./model-catalog.js").loadModelCatalog;
 let resetModelCatalogCacheForTest: typeof import("./model-catalog.js").resetModelCatalogCacheForTest;
 let augmentCatalogMock: ReturnType<typeof vi.fn>;
@@ -72,6 +73,7 @@ describe("loadModelCatalog", () => {
     ({
       __setModelCatalogImportForTest,
       findModelInCatalog,
+      invalidateModelCatalog,
       loadModelCatalog,
       resetModelCatalogCacheForTest,
     } = await import("./model-catalog.js"));
@@ -377,6 +379,22 @@ describe("loadModelCatalog", () => {
     );
     expect(matches).toHaveLength(1);
     expect(matches[0]?.name).toBe("Kilo Auto");
+  });
+
+  it("invalidateModelCatalog forces the next load to re-run discovery", async () => {
+    mockSingleOpenAiCatalogModel();
+    const cfg = {} as OpenClawConfig;
+    expect(await loadModelCatalog({ config: cfg })).toHaveLength(1);
+
+    // Cached: a changed registry is not seen.
+    mockPiDiscoveryModels([
+      { id: "gpt-4.1", provider: "openai", name: "GPT-4.1" },
+      { id: "local-1", provider: "geniex", name: "local-1" },
+    ]);
+    expect(await loadModelCatalog({ config: cfg })).toHaveLength(1);
+
+    invalidateModelCatalog();
+    expect(await loadModelCatalog({ config: cfg })).toHaveLength(2);
   });
 
   it("matches models across canonical provider aliases", () => {

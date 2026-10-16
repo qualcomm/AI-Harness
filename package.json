@@ -1176,6 +1176,7 @@
     "gateway:dev:reset": "OPENCLAW_SKIP_CHANNELS=1 node scripts/run-node.mjs --dev gateway --reset",
     "gateway:watch": "node scripts/watch-node.mjs gateway --force",
     "gen:host-env-policy:swift": "node scripts/generate-host-env-security-policy-swift.mjs --write",
+    "geniex:install": "node scripts/geniex-install.mjs",
     "ghsa:patch": "node scripts/ghsa-patch.mjs",
     "ios:beta": "bash scripts/ios-beta-release.sh",
     "ios:beta:archive": "bash scripts/ios-beta-archive.sh",

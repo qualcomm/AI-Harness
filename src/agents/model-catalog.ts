@@ -11,6 +11,7 @@ import {
 import { resolveOpenClawAgentDir } from "./agent-paths.js";
 import type { ModelCatalogEntry, ModelInputType } from "./model-catalog.types.js";
 import { ensureOpenClawModelsJson } from "./models-config.js";
+import { MODELS_JSON_STATE } from "./models-config-state.js";
 import { normalizeProviderId } from "./provider-id.js";
 
 const log = createSubsystemLogger("model-catalog");
@@ -50,6 +51,19 @@ function shouldLogModelCatalogTiming(): boolean {
 function loadModelSuppression() {
   modelSuppressionPromise ??= import("./model-suppression.runtime.js");
   return modelSuppressionPromise;
+}
+
+/**
+ * Drops both catalog caches so the next `loadModelCatalog()` re-runs provider
+ * discovery. For plugins whose models change at runtime (e.g. a local model
+ * finishes downloading). Clearing only `modelCatalogPromise` is not enough:
+ * `ensureOpenClawModelsJson` fingerprints config/auth/models.json, none of
+ * which change when a provider's discoverable models do, so it would keep
+ * returning its cached "up to date" result and discovery would never rerun.
+ */
+export function invalidateModelCatalog() {
+  modelCatalogPromise = null;
+  MODELS_JSON_STATE.readyCache.clear();
 }
 
 export function resetModelCatalogCacheForTest() {

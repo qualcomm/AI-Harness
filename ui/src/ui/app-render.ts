@@ -48,6 +48,20 @@ import {
   removeConfigFormValue,
 } from "./controllers/config.ts";
 import {
+  clearLocalModelsActionMessage,
+  loadLocalModels,
+  forgetLocalModelPullJob,
+  pauseLocalModelPull,
+  resumeLocalModelPull,
+  removeLocalModel,
+  restartLocalModelsServe,
+  setLocalModelCompute,
+  setLocalModelsChipset,
+  startLocalModelPull,
+  startLocalModelsServe,
+  stopLocalModelsServe,
+} from "./controllers/local-models.ts";
+import {
   loadCronJobsPage,
   loadCronRuns,
   loadMoreCronRuns,
@@ -135,6 +149,7 @@ import { renderConfig, type ConfigProps } from "./views/config.ts";
 import { renderDreaming } from "./views/dreaming.ts";
 import { renderExecApprovalPrompt } from "./views/exec-approval.ts";
 import { renderGatewayUrlConfirmation } from "./views/gateway-url-confirmation.ts";
+import { renderLocalModels } from "./views/local-models.ts";
 import { renderLoginGate } from "./views/login-gate.ts";
 import { renderOverview } from "./views/overview.ts";
 import { renderPipelines } from "./views/pipelines.ts";
@@ -778,6 +793,57 @@ export function renderApp(state: AppViewState) {
           onSubsectionChange: (section) => (state.aiAgentsActiveSubsection = section),
           navRootLabel: "AI & Agents",
           includeSections: [...AI_AGENTS_SECTION_KEYS],
+        });
+      case "localModels":
+        return renderLocalModels({
+          status: state.localModelsStatus,
+          statusLoading: state.localModelsStatusLoading,
+          statusError: state.localModelsStatusError,
+          cached: state.localModelsCached,
+          cachedLoading: state.localModelsCachedLoading,
+          cachedError: state.localModelsCachedError,
+          available: state.localModelsAvailable,
+          availableLoading: state.localModelsAvailableLoading,
+          availableError: state.localModelsAvailableError,
+          chipset: state.localModelsChipset,
+          chipsets: state.localModelsChipsets,
+          jobs: state.localModelsJobs,
+          actionPending: state.localModelsActionPending,
+          actionMessage: state.localModelsActionMessage,
+          selectedAvailable: state.localModelsSelectedAvailable,
+          manualInput: state.localModelsManualInput,
+          onRefresh: () => void loadLocalModels(state),
+          onSelectedAvailableChange: (value) => (state.localModelsSelectedAvailable = value),
+          onManualInputChange: (value) => (state.localModelsManualInput = value),
+          onPausePull: (jobId) => void pauseLocalModelPull(state, jobId),
+          onResumePull: (jobId) => void resumeLocalModelPull(state, jobId),
+          onForgetJob: (jobId) => void forgetLocalModelPullJob(state, jobId),
+          onDismissMessage: () => {
+            clearLocalModelsActionMessage(state);
+            requestHostUpdate?.();
+          },
+          onRemove: (name) => void removeLocalModel(state, name),
+          onPull: (model) => {
+            void (async () => {
+              await startLocalModelPull(state, model);
+              // Clear the manual field only on the manual path so a failed AI Hub
+              // pull keeps its selection for a retry.
+              if (model === state.localModelsManualInput) {
+                state.localModelsManualInput = "";
+              }
+            })();
+          },
+          computeByModel: (modelName) =>
+            state.localModelsCached.find((model) => model.name === modelName)?.compute ?? "",
+          onComputeChange: (model, compute) => void setLocalModelCompute(state, model, compute),
+          onChipsetChange: (chipset) => {
+            if (chipset) {
+              void setLocalModelsChipset(state, chipset);
+            }
+          },
+          onServeStart: () => void startLocalModelsServe(state),
+          onServeStop: () => void stopLocalModelsServe(state),
+          onServeRestart: () => void restartLocalModelsServe(state),
         });
       default:
         return nothing;

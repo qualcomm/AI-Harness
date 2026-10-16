@@ -20,6 +20,7 @@ export const TAB_GROUPS = [
       "automation",
       "infrastructure",
       "aiAgents",
+      "localModels",
       "debug",
       "logs",
     ],
@@ -43,6 +44,7 @@ export type Tab =
   | "automation"
   | "infrastructure"
   | "aiAgents"
+  | "localModels"
   | "debug"
   | "logs"
   | "dreams"
@@ -65,6 +67,7 @@ const TAB_PATHS: Record<Tab, string> = {
   automation: "/automation",
   infrastructure: "/infrastructure",
   aiAgents: "/ai-agents",
+  localModels: "/local-models",
   debug: "/debug",
   logs: "/logs",
   dreams: "/dreaming",
@@ -193,6 +196,10 @@ export function iconForTab(tab: Tab): IconName {
       return "globe";
     case "aiAgents":
       return "brain";
+    // The page is about getting models onto this machine, so the download icon
+    // reads more directly than a generic chip/hardware one would.
+    case "localModels":
+      return "download";
     case "debug":
       return "bug";
     case "logs":

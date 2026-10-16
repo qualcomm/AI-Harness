@@ -45,6 +45,8 @@
     "pipelines.unavailableBody",
     "pipelines.unavailableTitle",
     "pipelines.unsaved",
+    "subtitles.localModels",
+    "tabs.localModels",
     "taskOrchestrator.adjustPlaceholder",
     "taskOrchestrator.adjustSubmit",
     "taskOrchestrator.allPassed",
@@ -94,12 +96,12 @@
     "taskOrchestrator.unscheduled",
     "taskOrchestrator.verifyPassed"
   ],
-  "generatedAt": "2026-09-15T05:53:42.508Z",
+  "generatedAt": "2026-10-08T06:26:07.078Z",
   "locale": "id",
   "model": "gpt-5.4",
   "provider": "openai",
-  "sourceHash": "2ac6b98f9258b0a627f0a3a0f0819a78f4e00ef31a7364257f17d0a2d9ce4359",
-  "totalKeys": 790,
+  "sourceHash": "dedd9039f58a8f000bf2c1c910b5f4620bf796846df0f039e159f2ec548553ba",
+  "totalKeys": 792,
   "translatedKeys": 697,
   "workflow": 1
 }

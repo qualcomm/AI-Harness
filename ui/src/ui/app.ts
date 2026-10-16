@@ -85,6 +85,13 @@ import type {
 import type { ExecApprovalRequest } from "./controllers/exec-approval.ts";
 import type { ExecApprovalsFile, ExecApprovalsSnapshot } from "./controllers/exec-approvals.ts";
 import type {
+  GenieXAvailableModel,
+  GenieXCachedModel,
+  GenieXChipset,
+  GenieXPullJob,
+  GenieXStatus,
+} from "./controllers/local-models.ts";
+import type {
   ClawHubSearchResult,
   ClawHubSkillDetail,
   SkillMessage,
@@ -284,6 +291,29 @@ export class OpenClawApp extends LitElement {
   @state() configUiHints: ConfigUiHints = {};
   @state() configForm: Record<string, unknown> | null = null;
   @state() configFormOriginal: Record<string, unknown> | null = null;
+  @state() localModelsStatus: GenieXStatus | null = null;
+  @state() localModelsStatusLoading = false;
+  @state() localModelsStatusError: string | null = null;
+  @state() localModelsCached: GenieXCachedModel[] = [];
+  @state() localModelsCachedLoading = false;
+  @state() localModelsCachedError: string | null = null;
+  @state() localModelsAvailable: GenieXAvailableModel[] = [];
+  @state() localModelsAvailableLoading = false;
+  @state() localModelsAvailableError: string | null = null;
+  @state() localModelsChipset: string | null = null;
+  @state() localModelsChipsets: GenieXChipset[] = [];
+  @state() localModelsJobs: GenieXPullJob[] = [];
+  /** Ids of succeeded pull jobs already reflected in `localModelsCached`. */
+  @state() localModelsRefreshedJobIds: string[] = [];
+  @state() localModelsFailedJobIds: string[] = [];
+  @state() localModelsDismissedJobIds: string[] = [];
+  @state() localModelsJobsSeeded = false;
+  @state() localModelsActionPending = false;
+  @state() localModelsActionMessage: { kind: "success" | "error"; text: string } | null = null;
+  // Not `@state()`: timer bookkeeping, never rendered.
+  localModelsMessageTimer: number | null = null;
+  @state() localModelsSelectedAvailable = "";
+  @state() localModelsManualInput = "";
   @state() dreamingStatusLoading = false;
   @state() dreamingStatusError: string | null = null;
   @state() dreamingStatus: DreamingStatus | null = null;

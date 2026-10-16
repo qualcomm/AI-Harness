@@ -132,6 +132,30 @@ export type AppViewState = {
   configUiHints: ConfigUiHints;
   configForm: Record<string, unknown> | null;
   configFormOriginal: Record<string, unknown> | null;
+  localModelsStatus: import("./controllers/local-models.js").GenieXStatus | null;
+  localModelsStatusLoading: boolean;
+  localModelsStatusError: string | null;
+  localModelsCached: import("./controllers/local-models.js").GenieXCachedModel[];
+  localModelsCachedLoading: boolean;
+  localModelsCachedError: string | null;
+  localModelsAvailable: import("./controllers/local-models.js").GenieXAvailableModel[];
+  localModelsAvailableLoading: boolean;
+  localModelsAvailableError: string | null;
+  localModelsChipset: string | null;
+  localModelsChipsets: import("./controllers/local-models.js").GenieXChipset[];
+  localModelsJobs: import("./controllers/local-models.js").GenieXPullJob[];
+  /** Ids of succeeded pull jobs already reflected in `localModelsCached`. */
+  localModelsRefreshedJobIds: string[];
+  /** False until the first jobs poll has run; suppresses banners for pre-existing jobs. */
+  localModelsJobsSeeded: boolean;
+  /** Ids of failed pull jobs already surfaced in the banner. */
+  localModelsFailedJobIds: string[];
+  localModelsActionPending: boolean;
+  localModelsActionMessage: { kind: "success" | "error"; text: string } | null;
+  /** Pending auto-clear timer for a success message; null when none is armed. */
+  localModelsMessageTimer: number | null;
+  localModelsSelectedAvailable: string;
+  localModelsManualInput: string;
   dreamingStatusLoading: boolean;
   dreamingStatusError: string | null;
   dreamingStatus: import("./controllers/dreaming.js").DreamingStatus | null;

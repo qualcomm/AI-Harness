@@ -2,17 +2,40 @@
 // SPDX-License-Identifier: MIT
 import type { DebugState } from "./controllers/debug.ts";
 import { loadDebug } from "./controllers/debug.ts";
+import type { LocalModelsState } from "./controllers/local-models.ts";
+import { loadLocalModelsJobs } from "./controllers/local-models.ts";
 import type { LogsState } from "./controllers/logs.ts";
 import { loadLogs } from "./controllers/logs.ts";
 import type { NodesState } from "./controllers/nodes.ts";
 import { loadNodes } from "./controllers/nodes.ts";
 
 type PollingHost = {
+  localModelsPollInterval: number | null;
   nodesPollInterval: number | null;
   logsPollInterval: number | null;
   debugPollInterval: number | null;
   tab: string;
 };
+
+export function startLocalModelsPolling(host: PollingHost) {
+  if (host.localModelsPollInterval != null) {
+    return;
+  }
+  host.localModelsPollInterval = window.setInterval(() => {
+    if (host.tab !== "localModels") {
+      return;
+    }
+    void loadLocalModelsJobs(host as unknown as LocalModelsState);
+  }, 1000);
+}
+
+export function stopLocalModelsPolling(host: PollingHost) {
+  if (host.localModelsPollInterval == null) {
+    return;
+  }
+  clearInterval(host.localModelsPollInterval);
+  host.localModelsPollInterval = null;
+}
 
 export function startNodesPolling(host: PollingHost) {
   if (host.nodesPollInterval != null) {

@@ -1,0 +1,39 @@
+{
+  "id": "geniex-manager",
+  "name": "GenieX Manager",
+  "description": "Manages the geniex serve process and on-device model downloads for the GenieX provider",
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "serve": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "How the gateway manages the `geniex serve` process.",
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": ["auto", "always", "never"],
+            "description": "auto (default): reuse an instance already listening on the host, otherwise start one. always: always start our own. never: leave the process to the operator."
+          },
+          "host": {
+            "type": "string",
+            "description": "Bind address for the managed server (default 127.0.0.1:18181)."
+          },
+          "compute": {
+            "type": "string",
+            "enum": ["cpu", "gpu", "npu", "hybrid"],
+            "description": "Default compute unit for requests that do not specify one. Per-model settings on the geniex provider plugin override this."
+          },
+          "keepAliveSeconds": {
+            "type": "number",
+            "description": "Idle seconds before GenieX unloads the cached model."
+          }
+        }
+      }
+    }
+  }
+}

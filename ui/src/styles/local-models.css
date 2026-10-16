@@ -1,0 +1,291 @@
+/* Local Models tab (GenieX on-device inference).
+   Layout-only: colors, radii, and spacing all come from the tokens in base.css,
+   and the table reuses the shared .data-table system from components.css. */
+
+.local-models {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Serve status bar ─────────────────────────────────────────────────── */
+
+.local-models__status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.local-models__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: currentColor;
+  flex: none;
+}
+
+.local-models__status-pill--running {
+  border-color: var(--ok-subtle);
+  background: var(--ok-subtle);
+  color: var(--ok);
+}
+
+.local-models__status-pill--stopped {
+  border-color: var(--warn-subtle);
+  background: var(--warn-subtle);
+  color: var(--warn);
+}
+
+.local-models__meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.local-models__spacer {
+  flex: 1;
+}
+
+/* ── Table cells ──────────────────────────────────────────────────────── */
+
+.local-models__name {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--text-strong);
+  word-break: break-all;
+}
+
+.local-models__size {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.local-models__runtime {
+  font-family: var(--mono);
+}
+
+.local-models__runtime--qairt {
+  color: var(--accent-2);
+  background: var(--accent-2-subtle);
+}
+
+.local-models__runtime--llama {
+  color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+.local-models__download-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-full);
+  flex: none;
+}
+
+.local-models__download-running {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.local-models__download-elapsed {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.local-models__download-dot--running {
+  background: var(--danger);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--danger) 42%, transparent);
+  animation: local-models-download-pulse 1s ease-in-out infinite;
+}
+
+.local-models__download-dot--succeeded {
+  background: var(--ok);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 32%, transparent);
+}
+
+.local-models__download-dot--paused {
+  background: var(--warn);
+}
+
+.local-models__download-dot--failed {
+  background: var(--danger);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--danger) 28%, transparent);
+}
+
+.local-models__download-failed {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 420px;
+}
+
+.local-models__download-error {
+  color: var(--danger);
+  font-size: 12px;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+@keyframes local-models-download-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--danger) 42%, transparent);
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--danger) 0%, transparent);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--danger) 0%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .local-models__download-dot--running {
+    animation: none;
+  }
+}
+
+/* ── Deploy controls ──────────────────────────────────────────────────── */
+
+.local-models__deploy {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.local-models__deploy .field.full {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.local-models__deploy .field.full input,
+.local-models__deploy .field.full select {
+  width: 100%;
+}
+
+.local-models__hint {
+  width: 100%;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.45;
+}
+
+.local-models__hint code {
+  font-family: var(--mono);
+  background: var(--bg-muted);
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  font-size: 11.5px;
+}
+
+.local-models__divider {
+  height: 1px;
+  background: var(--border);
+  margin: 18px 0;
+}
+
+/* ── Download status ──────────────────────────────────────────────────── */
+
+.local-models__progress {
+  margin-top: 14px;
+  padding: 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.local-models__progress-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  margin-bottom: 9px;
+  flex-wrap: wrap;
+}
+
+.local-models__progress--failed {
+  border-color: var(--danger-subtle);
+}
+
+/* ── Empty / guidance states ──────────────────────────────────────────── */
+
+.local-models__empty {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.local-models__empty-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-strong);
+  margin-bottom: 8px;
+}
+
+.local-models__empty-text {
+  margin: 0 auto 16px;
+  max-width: 470px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.local-models__empty-text code {
+  font-family: var(--mono);
+  background: var(--bg-muted);
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  font-size: 11.5px;
+}
+
+.local-models__url {
+  font-family: var(--mono);
+  font-size: 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  text-align: left;
+  max-width: 560px;
+  margin: 0 auto 14px;
+  color: var(--text-strong);
+  overflow-x: auto;
+}
+
+.local-models__callout {
+  display: flex;
+  gap: 9px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-size: 12.5px;
+  background: var(--warn-subtle);
+  border: 1px solid var(--warn-subtle);
+  color: var(--text);
+  margin-top: 14px;
+  text-align: left;
+}
+
+.local-models__callout-icon {
+  color: var(--warn);
+  flex: none;
+}
+
+.local-models__callout--error {
+  background: var(--danger-subtle);
+  border-color: var(--danger-subtle);
+}
+
+.local-models__callout--error .local-models__callout-icon {
+  color: var(--danger);
+}
